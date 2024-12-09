@@ -64,7 +64,7 @@
                         "value": "party",
                         "action": [
                             "q.print(q.run_script('cobblemon:gs_gym_leader_difficulty'));",
-                            "q.dialogue.set_page('okbye');"
+                            "q.dialogue.set_page('difficultycheck');"
                         ]
                     }
 
@@ -78,6 +78,17 @@
                 "Alright, see you later!"
             ],
             "input": "q.dialogue.close();"
-        }
+        },
+                {
+            "id": "difficultycheck",
+            "speaker": "npc",
+            "lines": [
+                {
+                "type": "expression",
+                "expression": "q.player.data.gym_stage",
+                }
+            ],
+            "input": "q.dialogue.close();"
+        },
     ]
 }
