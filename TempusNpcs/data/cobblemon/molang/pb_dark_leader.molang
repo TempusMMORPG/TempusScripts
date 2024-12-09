@@ -1,0 +1,25 @@
+'Stores the dark gym leaders pokemon information';
+'TODO: Refactor solution to be more modular/reusable if possible';
+
+t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
+
+t.data == 'EASY' ? {
+q.party.add_by_properties('impidimp moves=assurance,faketears,swagger,suckerpunch nature=timid held_item=cobblemon:sitrus_berry ability=prankster hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+q.party.add_by_properties('sneasel moves=taunt,metalclaw,icywind,quickattack nature=lax held_item=cobblemon:sitrus_berry ability=innerfocus hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+q.party.add_by_properties('deino moves=headbutt,workup,assurance,dragonbreath nature=brave held_item=cobblemon:black_glasses ability=hustle hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=' + (q.player.party.highest_level + 1));
+};
+
+t.data == 'MEDIUM' ? {
+q.party.add_by_properties('morgrem moves=lightscreen,reflect,playrough,throatchop nature=lonely held_item=cobblemon:sitrus_berry ability=prankster hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 attack_ev=100 level=' + (q.player.party.highest_level));
+q.party.add_by_properties('weavile moves=tripleaxel,knockoff,lowkick,iceshard nature=lonely held_item=cobblemon:never_melt_ice ability=pressure hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
+q.party.add_by_properties('absol moves=nightslash,psychocut,shadowclaw,stoneedge nature=naive held_item=cobblemon:scope_lens ability=superluck hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
+q.party.add_by_properties('zweilous moves=crunch,outrage,stompingtantrum,zenheadbutt nature=jolly held_item=cobblemon:life_orb ability=hustle hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level + 1));
+};
+
+t.data == 'HARD' ? {
+q.party.add_by_properties('grimmsnarl moves=reflect,lightscreen,partingshot,playrough nature=impish held_item=cobblemon:light_clay ability=prankster hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 defence_ev=200 level=' + (q.player.party.highest_level));
+q.party.add_by_properties('weavile moves=tripleaxel,knockoff,poisonjab,lowkick nature=adamant held_item=cobblemon:choice_band ability=pressure hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+q.party.add_by_properties('meowscarada moves=flowertrick,knockoff,uturn,playrough nature=jolly held_item=cobblemon:expert_belt ability=protean hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+q.party.add_by_properties('absol moves=closecombat,knockoff,playrough,suckerpunch nature=adamant held_item=cobblemon:life_orb ability=superluck hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+q.party.add_by_properties('hydreigon moves=nastyplot,dracometeor,flashcannon,darkpulse nature=timid held_item=cobblemon:life_orb ability=levitate hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level + 1));
+};
