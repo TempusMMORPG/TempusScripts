@@ -1,0 +1,57 @@
+{
+  "hitbox": "player",
+  "resourceIdentifier": "cobblemon:flyingleader",    
+  "names": [
+    "Flying Gym Leader"
+  ],
+  "presets": [
+    "cobblemon:battler_test",
+    "cobblemon:battler_commands",
+    "cobblemon:battler_cooldown",
+    "cobblemon:battler_scripts",
+    "cobblemon:looks",
+    "cobblemon:stays_put"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:flying_gym_interaction"
+  },
+  "battleConfiguration": {
+    "canChallenge": true
+  },
+  "config": [
+    {
+      "variableName": "on_player_wins",
+      "displayName": "npc.variable.on_player_wins.name",
+      "description": "npc.variable.on_player_wins.desc",
+      "type": "TEXT",
+      "defaultValue": "v.player.set_npc_variable(v.npc, 'defeated', true);"
+    }
+  ],
+  "canDespawn": false,
+  "isMovable": false,
+  "isInvulnerable": true,
+  "isLeashable": false,
+  "allowProjectileHits": false,
+  "autoHealParty": true,
+  "ai": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "idle",
+      "tasksByPriority": {
+        "0": [
+          "look_at_target"
+        ],
+        "1": [
+          "look_at_entities"
+        ]
+      }
+    }
+  ],
+  "skill": 5,
+  "party": {
+    "type": "script",
+    "script": "cobblemon:pb_flying_leader",
+    "isStatic": false
+  }
+}

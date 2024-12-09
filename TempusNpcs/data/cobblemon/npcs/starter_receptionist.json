@@ -1,0 +1,34 @@
+{
+  "hitbox": "player",
+  "resourceIdentifier": "cobblemon:flyingtrainer",
+  "presets": [
+   "cobblemon:looks", 
+   "cobblemon:chats"
+  ],
+  "names": [
+    "Receptionist"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:starter_receptionist_interaction"
+  },
+ "ai": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "idle",
+      "tasksByPriority": {
+        "0": [
+          "look_at_target"
+        ],
+        "1": [
+          "look_at_entities"
+        ]
+      }
+    }
+  ],
+  "canDespawn": false,
+  "isMovable": false,
+  "isInvulnerable": true,
+  "isLeashable": false,
+  "allowProjectileHits": false
+ }

@@ -1,0 +1,12 @@
+{
+  "hitbox": "player",
+  "resourceIdentifier": "cobblemon:sacchi",    
+  "names": [
+    "npc.sacchi.name"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:sacchi_interaction"
+  },
+  "canDespawn": false
+}

@@ -1,0 +1,58 @@
+{
+  "hitbox": "player",
+  "resourceIdentifier": "cobblemon:skin",    
+  "presets": [
+
+  ],
+  "variation": {
+    "dirt": [
+      "clean",
+      "slightly_dirty",
+      "dirty",
+      "filthy"
+    ],
+    "net": {
+      "type": "weighted",
+      "options": [
+        {
+          "aspect": "green",
+          "weight": 10
+        },
+        {
+          "aspect": "blue",
+          "weight": 5
+        },
+        {
+          "aspect": "red",
+          "weight": 1
+        }
+      ]
+    }
+  },
+  "config": [
+    {
+      "variableName": "challenge_distance",
+      "displayName": "cobblemon.npc.challenge_distance",
+      "description": "cobblemon.npc.challenge_distance.description",
+      "type": "number",
+      "default": "5"
+    }
+  ],
+  "names": [
+    "Ozzy"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:npc-example"
+  },
+  "battleConfiguration": {
+    "canChallenge": true
+  },
+  "skill": 5,
+  "party": {
+    "type": "simple",
+    "pokemon": [
+      "poliwrath level=100 shiny=yes moves=splash,firepunch,flamethrower,swift"
+    ]
+  }
+}

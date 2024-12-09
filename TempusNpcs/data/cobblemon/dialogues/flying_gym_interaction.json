@@ -1,0 +1,66 @@
+{
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Hello, and welcome to the Unity City Flying Gym."
+            ],
+            "input": "q.dialogue.set_page('accept_teleport');"
+        },
+        {
+            "id": "accept_teleport",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to challenge the Flying Gym?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Battle",
+                        "value": "battle",
+                        "isSelectable": "q.player.get_npc_variable(q.npc, 'defeated') == false",
+                        "action": [
+                          "q.dialogue.close();",
+                          "v.battle = q.npc.start_battle(q.player);",
+                          "v.npc = q.npc;",
+                          "v.reward = 'A new reward!!! POGGERS';",
+                          "q.run_script('set_npc_battle_reward');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.set_page('okbye');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "okbye",
+            "speaker": "npc",
+            "lines": [
+                "Alright, see you later!"
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}
