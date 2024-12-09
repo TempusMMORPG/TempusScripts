@@ -85,10 +85,10 @@
             "lines": [
                 {
                 "type": "expression",
-                "expression": "q.player.data.gym_stage",
+                "expression": "q.player.data.gym_stage"
                 }
             ],
             "input": "q.dialogue.close();"
-        },
+        }
     ]
 }
