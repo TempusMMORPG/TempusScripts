@@ -37,7 +37,7 @@
                     {
                         "text": "Battle",
                         "value": "battle",
-                        "isSelectable": "q.player.get_npc_variable(q.npc, 'defeated') == false",
+                        "isSelectable": "q.player.get_npc_variable(q.npc, 'battleable') == true;",
                         "action": [
                           "q.dialogue.close();",
                           "v.battle = q.npc.start_battle(q.player);",
@@ -49,7 +49,22 @@
                     {
                         "text": "No",
                         "value": "no",
-                        "action": "q.dialogue.set_page('okbye');"
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    },
+                    {
+                        "text": "Reset",
+                        "value": "reset",
+                        "action": [
+                            "q.run_script('cobblemon:gs_gym_leader_clear_battleable');",
+                            "q.dialogue.close();"
+                        ]
+                    },
+                    {
+                        "text": "Info",
+                        "value": "information",
+                        "action": "q.dialogue.set_page('info');"
                     }
                 ]
             }
@@ -59,6 +74,17 @@
             "speaker": "npc",
             "lines": [
                 "Alright, see you later!"
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "info",
+            "speaker": "npc",
+            "lines": [
+                {
+                "type": "expression",
+                "expression": "q.player.get_npc_variable(q.npc, 'battleable');"
+                }
             ],
             "input": "q.dialogue.close();"
         }
