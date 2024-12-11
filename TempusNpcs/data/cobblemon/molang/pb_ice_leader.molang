@@ -1,0 +1,26 @@
+'Stores the ice gym leaders pokemon information';
+'TODO: Refactor solution to be more modular/reusable if possible';
+
+t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
+
+t.data == 'EASY' ? {
+    q.party.add_by_properties('vulpix alolan moves=disable,aurorabeam,confuseray,icywind nature=gentle held_item=cobblemon:sitrus_berry ability=snowcloak hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('spheal moves=defensecurl,brine,rollout,powdersnow nature=naive held_item=cobblemon:sitrus_berry ability=thickfat hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('cryogonal moves=iceshard,confuseray,ancientpower,icespinner nature=lonely held_item=cobblemon:never_melt_ice ability=levitate hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=' + (q.player.party.highest_level + 1));
+};
+
+t.data == 'MEDIUM' ? {
+    q.party.add_by_properties('ninetales alolan moves=freezedry,dazzlinggleam,icebeam,nastyplot nature=hasty held_item=cobblemon:never_melt_ice ability=snowcloak hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('sealeo moves=iciclespear,waterfall,bodyslam,earthquake nature=naughty held_item=cobblemon:loaded_dice ability=thickfat hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 attack_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('cryogonal moves=recover,hail,freezedry,knockoff nature=gentle held_item=cobblemon:leftovers ability=levitate hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 special_defence_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('beartic moves=iciclecrash,closecombat,earthquake,stoneedge nature=adamant held_item=cobblemon:life_orb ability=slushrush hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level + 1));
+};
+
+t.data == 'HARD' ? {
+    q.party.add_by_properties('ninetales alolan moves=blizzard,moonblast,hypnosis,auroraveil nature=timid held_item=cobblemon:icy_rock ability=snowwarning hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('walrein moves=swordsdance,iciclespear,waterfall,earthquake nature=adamant held_item=cobblemon:leftovers ability=icebody hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('cryogonal moves=recover,knockoff,blizzard,freezedry nature=calm held_item=cobblemon:leftovers ability=levitate hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 special_defence_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('beartic moves=iciclecrash,closecombat,earthquake,stoneedge nature=jolly held_item=cobblemon:life_orb ability=slushrush hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('arctozolt moves=blizzard,boltbeak,lowkick,stompingtantrum nature=naive held_item=cobblemon:life_orb ability=slushrush hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level + 1));
+
+};
