@@ -17,7 +17,7 @@
     "dialogue": "cobblemon:flying_gym_interaction"
   },
   "battleConfiguration": {
-    "canChallenge": true
+    "canChallenge": false
   },
   "config": [
     {
@@ -25,7 +25,7 @@
       "displayName": "npc.variable.on_player_wins.name",
       "description": "npc.variable.on_player_wins.desc",
       "type": "TEXT",
-      "defaultValue": "v.player.set_npc_variable(v.npc, 'defeated', true);"
+      "defaultValue": "v.player.set_npc_variable(v.npc, 'battleable', false);"
     }
   ],
   "canDespawn": false,
