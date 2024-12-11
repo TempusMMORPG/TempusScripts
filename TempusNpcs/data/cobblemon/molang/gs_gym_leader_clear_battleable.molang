@@ -1,0 +1,5 @@
+'Sets the battleable variable to false for debugging';
+
+t.npc = q.player.get_npc_data(q.npc);
+t.response = q.player.data.set_npc_variable(t.npc, 'battleable', 0.0);
+q.player.save_data();
