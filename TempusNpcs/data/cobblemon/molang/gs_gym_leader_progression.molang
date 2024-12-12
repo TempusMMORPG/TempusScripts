@@ -1,4 +1,4 @@
-'Executes when a gym leader is defeated.';
+'Executes when a gym leader is defeated';
 
 q.player.data.gym_stage >= 18 ? {
     q.player.data.gym_stage = 18;
