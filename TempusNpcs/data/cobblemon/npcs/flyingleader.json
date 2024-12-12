@@ -17,7 +17,7 @@
     "dialogue": "cobblemon:flying_gym_interaction"
   },
   "battleConfiguration": {
-    "canChallenge": false
+    "canChallenge": true
   },
   "config": [
     {
