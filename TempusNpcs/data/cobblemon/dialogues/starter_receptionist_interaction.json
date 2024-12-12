@@ -32,7 +32,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Yes",
@@ -53,20 +53,28 @@
                         "text": "Reset Gym Stage",
                         "value": "reset",
                         "action": [
-                            "q.player.data.gym_stage = 0.0;",
+                            "q.player.data.gym_stage = 0.0;",   
                             "q.player.save_data();",
                             "q.print(q.player.data.gym_stage);",
                             "q.dialogue.set_page('okbye');"
                         ]
                     },
                     {
-                        "text": "Party Check",
+                        "text": "Difficulty Check",
                         "value": "party",
                         "action": [
                             "q.print(q.run_script('cobblemon:gs_gym_leader_difficulty'));",
-                            "q.dialogue.set_page('difficultycheck');"
+                            "q.dialogue.set_page('difficulty');"
+                        ]
+                    },
+                    {
+                        "text": "Party Info",
+                        "value": "partyinfo",
+                        "action": [
+                            "q.dialogue.set_page('party_info');"
                         ]
                     }
+
 
                 ]
             }
@@ -79,13 +87,28 @@
             ],
             "input": "q.dialogue.close();"
         },
-                {
-            "id": "difficultycheck",
+        {
+            "id": "difficulty",
             "speaker": "npc",
             "lines": [
                 {
-                "type": "expression",
-                "expression": "q.player.data.gym_stage"
+                    "type": "expression",
+                    "expression": "'Difficulty: ' + q.run_script('gs_gym_leader_difficulty');"
+                },
+                {
+                    "type": "expression",
+                    "expression": "'Badge Count: ' + math.ceil(q.player.data.gym_stage);"
+                }
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "party_info",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Party: ' + q.player.party.count;"
                 }
             ],
             "input": "q.dialogue.close();"
