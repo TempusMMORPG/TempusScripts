@@ -1,0 +1,13 @@
+'Finds Pokemon of matching name in party';
+t.party_pokemon = q.player.party.find_all_by_properties('bidoof');
+
+'Level Requirement for trade and Pokemon to Trade';
+for_each(t.trademon, t.party_pokemon, {
+  t.trademon.level >= 10 ? {
+    q.player.party.remove_by_id(t.trademon.id);
+    q.player.party.add_by_properties('pikachu level=100');
+    return 'Trade successful!';
+};
+    return 1;
+  }
+);
