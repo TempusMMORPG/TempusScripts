@@ -2,7 +2,6 @@
 
 q.player.data.gym_stage >= 18 ? {
     q.player.data.gym_stage = 18;
-    q.print('You have already obtained 18 gym badges');
 } : {
     q.player.data.gym_stage = q.player.data.gym_stage + 1;
 };
