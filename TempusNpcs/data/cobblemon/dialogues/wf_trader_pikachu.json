@@ -29,6 +29,7 @@
                     {
                         "text": "Yes",
                         "value": "yes",
+                        "isSelectable": "q.player.party.count_by_properties('bidoof') >= 1",
                         "action": "q.dialogue.set_page('confirmation');"
                     },
                     {
@@ -53,9 +54,10 @@
                         "text": "Yes",
                         "value": "yes",
                         "isSelectable": "q.player.party.count_by_properties('bidoof') >= 1",
-                        "action": ["q.run_script('trade_pikachu');",
-                                    "q.dialogue.set_page('thanks');"
-                                ]
+                        "action": [
+                            "q.run_script('trade_pikachu');",
+                            "q.dialogue.close();"
+                        ]
                     },
                     {
                         "text": "No",
@@ -70,14 +72,6 @@
             "speaker": "npc",
             "lines": [
                 "Alright, see you later!"
-            ],
-            "input": "q.dialogue.close();"
-        },
-        {
-            "id": "thanks",
-            "speaker": "npc",
-            "lines": [
-                "Thanks for the trade! Enjoy your Pikachu!"
             ],
             "input": "q.dialogue.close();"
         }
