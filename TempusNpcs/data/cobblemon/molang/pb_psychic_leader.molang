@@ -1,0 +1,29 @@
+'Stores the psychic gym leaders pokemon information';
+
+t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
+
+t.data == 'EASY' ? {
+    q.party.add_by_properties('elgyem moves=psybeam,teleport,growl,guardsplit nature=hasty held_item=cobblemon:sitrus_berry ability=synchronize hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('kadabra moves=recover,psybeam,reflect,teleport nature=lonely held_item=cobblemon:sitrus_berry ability=synchronize hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('metang moves=zenheadbutt,bulletpunch,honeclaws,agility nature=naughty held_item=cobblemon:twisted_spoon ability=clearbody hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'MEDIUM' ? {
+    q.party.add_by_properties('sigilyph moves=airslash,psychic,heatwave,energyball nature=rash held_item=cobblemon:sharp_beak ability=magicguard hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('beheeyem moves=energyball,psychic,thunderbolt,flashcannon nature=mild held_item=cobblemon:colbur_berry ability=synchronize hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 special_attack_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('alakazam moves=psychic,focusblast,dazzlinggleam,shadowball nature=modest held_item=cobblemon:life_orb ability=magicguard hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level + 1));
+    q.party.add_by_properties('metang moves=bulletpunch,zenheadbutt,earthquake,ironhead nature=lonely held_item=cobblemon:metal_coat ability=clearbody hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 attack_ev=100 level=' + (q.player.party.highest_level));
+    return 1.0;
+};
+
+t.data == 'HARD' ? {
+    q.party.add_by_properties('beheeyem moves=meteorbeam,psychic,shadowball,thunderbolt nature=quiet held_item=cobblemon:power_herb ability=analytic hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 hp_ev=200 special_attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('sigilyph moves=airslash,heatwave,roost,energyball nature=timid held_item=cobblemon:life_orb ability=magicguard hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('wyrdeer moves=psyshieldbash,earthquake,megahorn,jumpkick nature=adamant held_item=cobblemon:choice_band ability=intimidate hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('alakazam moves=nastyplot,psychic,focusblast,shadowball nature=timid held_item=cobblemon:focus_sash ability=magicguard hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('metagross moves=psychicfangs,meteormash,knockoff,bulletpunch nature=adamant held_item=cobblemon:leftovers ability=clearbody hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+return 0.0;
