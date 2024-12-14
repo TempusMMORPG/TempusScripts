@@ -1,27 +1,25 @@
-'Stores the flying gym leaders pokemon information';
-
 t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
 
 t.data == 'EASY' ? {
-    q.party.add_by_properties('drifloon moves=astonish,gust,payback,shadowball nature=lax held_item=cobblemon:sitrus_berry ability=aftermath hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('murkrow moves=wingattack,nightshade,astonish,haze nature=quiet held_item=cobblemon:sitrus_berry ability=insomnia hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('drifloon moves=astonish,gust,payback,shadowball nature=lax held_item=cobblemon:sitrus_berry ability=aftermath hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level)); 
+    q.party.add_by_properties('wingull moves=wingattack,waterpulse,supersonic,growl nature=gentle held_item=cobblemon:sitrus_berry ability=keeneye hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
     q.party.add_by_properties('swellow moves=aerialace,quickattack,roost,growl nature=naughty held_item=cobblemon:sharp_beak ability=guts hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=' + (q.player.party.highest_level + 1));
     return 1.0;
 };
 
 t.data == 'MEDIUM' ? {
+    q.party.add_by_properties('pelipper moves=scald,hurricane,uturn,roost nature=rash held_item=cobblemon:mystic_water ability=drizzle hp_iv=31 attack_iv=31 defence_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 special_attack_ev=100 level=' + (q.player.party.highest_level));
     q.party.add_by_properties('drifblim moves=acrobatics,willowisp,destinybond,knockoff nature=lonely held_item=cobblemon:sitrus_berry ability=unburden hp_iv=31 attack_iv=31 defence_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('honchkrow moves=suckerpunch,nightslash,drillpeck,steelwing nature=naive held_item=cobblemon:black_glasses ability=superluck hp_iv=31 attack_iv=31 defence_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('gliscor moves=brickbreak,earthquake,knockoff,roost nature=naughty held_item=cobblemon:figy_berry ability=hypercutter hp_iv=31 attack_iv=31 defence_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 attack_ev=100 level=' + (q.player.party.highest_level)); 
+    q.party.add_by_properties('charizard moves=flamethrower,scorchingsands,weatherball,hurricane nature=hasty held_item=cobblemon:passho_berry ability=blaze hp_iv=31 attack_iv=31 defence_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level)); 
     q.party.add_by_properties('swellow moves=facade,bravebird,roost,quickattack nature=jolly held_item=cobblemon:flame_orb ability=guts hp_iv=31 attack_iv=31 defence_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level + 1));
     return 1.0;
 };
 
 t.data == 'HARD' ? {
+    q.party.add_by_properties('pelipper moves=hurricane,scald,uturn,roost nature=bold held_item=cobblemon:damp_rock ability=drizzle hp_iv=31 attack_iv=31 defence_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 defence_ev=200 level=' + (q.player.party.highest_level));
     q.party.add_by_properties('drifblim moves=acrobatics,willowisp,destinybond,knockoff nature=adamant held_item=cobblemon:sitrus_berry ability=unburden hp_iv=31 attack_iv=31 defence_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('honchkrow moves=suckerpunch,bravebird,superpower,roost nature=jolly held_item=cobblemon:life_orb ability=superluck hp_iv=31 attack_iv=31 defence_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('gliscor moves=facade,earthquake,swordsdance,roost nature=adamant held_item=cobblemon:toxic_orb ability=poisonheal hp_iv=31 attack_iv=31 defence_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 attack_ev=200 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('corviknight moves=brickbreak,earthquake,knockoff,roost nature=impish held_item=cobblemon:leftovers ability=unnerve hp_iv=31 attack_iv=31 defence_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 defence_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('charizard moves=hurricane,weatherball,scorchingsands,fireblast nature=timid held_item=cobblemon:choice_specs ability=blaze hp_iv=31 attack_iv=31 defence_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('corviknight moves=bravebird,bodypress,roost,uturn nature=impish held_item=cobblemon:leftovers ability=unnerve hp_iv=31 attack_iv=31 defence_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 defence_ev=200 level=' + (q.player.party.highest_level));
     q.party.add_by_properties('swellow moves=boomburst,airslash,heatwave,uturn nature=timid held_item=cobblemon:choice_specs ability=scrappy hp_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level + 1));
     return 1.0;
 };
