@@ -37,13 +37,10 @@
                     {
                         "text": "Battle",
                         "value": "battle",
-                        "isSelectable": "q.player.get_npc_variable(q.npc, 'battleable') == true;",
+                        "isSelectable": "q.player.get_npc_variable(q.npc, 'battleable')",
                         "action": [
                           "q.dialogue.close();",
-                          "v.battle = q.npc.start_battle(q.player);",
-                          "v.npc = q.npc;",
-                          "v.reward = 'A new reward!!! POGGERS';",
-                          "q.run_script('set_npc_battle_reward');"
+                          "v.battle = q.npc.start_battle(q.player);"
                         ]
                     },
                     {
