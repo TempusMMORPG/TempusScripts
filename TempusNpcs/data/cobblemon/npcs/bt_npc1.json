@@ -1,0 +1,21 @@
+{
+  "hitbox": "player",
+  "resourceIdentifier": "cobblemon:flyingleader",    
+  "names": [
+    "Battle Tower NPC 1"
+  ],
+  "presets": [
+    "cobblemon:base_npc",
+    "cobblemon:battle_npc"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:bt_npc_interaction"
+  },
+  "skill": 5,
+  "party": {
+    "type": "script",
+    "script": "cobblemon:pb_flying_leader",
+    "isStatic": false
+  }
+}
