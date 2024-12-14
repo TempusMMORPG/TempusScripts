@@ -58,7 +58,7 @@
                         "value": "yes",
                         "isSelectable": "q.player.party.count_by_properties(q.npc.config.trade_requested) >= 1",
                         "action": [
-                            "q.run_script('trade_pkmn');",
+                            "q.run_script('pt_trade_pkmn');",
                             "q.dialogue.close();"
                         ]
                     },
