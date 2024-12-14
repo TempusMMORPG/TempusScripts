@@ -1,0 +1,12 @@
+{
+    "presets": [
+        "cobblemon:battler_test",
+        "cobblemon:battler_commands",
+        "cobblemon:battler_cooldown",
+        "cobblemon:battler_scripts"
+    ],
+    "battleConfiguration": {
+        "canChallenge": true
+    },
+    "autoHealParty": true
+}
