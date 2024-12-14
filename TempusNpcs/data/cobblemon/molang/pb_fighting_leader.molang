@@ -1,0 +1,27 @@
+t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
+
+t.data == 'EASY' ? {
+    q.party.add_by_properties('riolu moves=metalclaw,rocksmash,quickattack,workup nature=sassy held_item=cobblemon:sitrus_berry ability=innerfocus hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('machop moves=lowsweep,knockoff,revenge,focusenergy nature=lax held_item=cobblemon:sitrus_berry ability=guts hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('monferno moves=flamewheel,machpunch,furyswipes,brickbreak nature=lonely held_item=cobblemon:black_belt ability=blaze hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'MEDIUM' ? {
+    q.party.add_by_properties('lilligant hisuian moves=victorydance,axekick,leafblade,icespinner nature=hasty held_item=cobblemon:miracle_seed ability=chlorophyll hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('infernape moves=flamethrower,vacuumwave,aurasphere,calmmind nature=naive held_item=cobblemon:iapapa_berry ability=blaze hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('lucario moves=aurasphere,flashcannon,dragonpulse,psychic nature=naive held_item=cobblemon:shuca_berry ability=innerfocus hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('machamp moves=closecombat,knockoff,bulletpunch,facade nature=adamant held_item=cobblemon:flame_orb ability=guts hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=128 attack_ev=128 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'HARD' ? {
+    q.party.add_by_properties('lilligant hisuian moves=closecombat,leafblade,icespinner,victorydance nature=jolly held_item=cobblemon:life_orb ability=hustle hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('infernape moves=overheat,grassknot,focusblast,scorchingsands nature=timid held_item=cobblemon:choice_specs ability=blaze hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('lucario moves=nastyplot,aurasphere,flashcannon,vacuumwave nature=timid held_item=cobblemon:life_orb ability= hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('toxicroak moves=gunkshot,suckerpunch,earthquake,closecombat nature=adamant held_item=cobblemon:life_orb ability=dryskin hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('machamp moves=closecombat,bulletpunch,facade,knockoff nature=adamant held_item=cobblemon:flame_orb ability=guts hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+return 0.0;

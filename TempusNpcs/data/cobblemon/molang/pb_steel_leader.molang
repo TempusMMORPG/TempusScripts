@@ -1,0 +1,27 @@
+t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
+
+t.data == 'EASY' ? {
+    q.party.add_by_properties('shieldon moves=tackle,protect,takedown,swagger nature=bold held_item=cobblemon:sitrus_berry ability=sturdy hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('tinkatuff moves=brutalswing,rocksmash,metalclaw,sweetkiss nature=lax held_item=cobblemon:sitrus_berry ability=moldbreaker hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('honedge moves=nightslash,slash,aerialace,ironhead nature=naughty held_item=cobblemon:metal_coat ability=noguard hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'MEDIUM' ? {
+    q.party.add_by_properties('tinkaton moves=gigatonhammer,playrough,knockoff,fakeout nature=lonely held_item=cobblemon:sitrus_berry ability=moldbreaker hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 attack_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('bastiodon moves=rockslide,irondefense,bodypress,ironhead nature=sassy held_item=cobblemon:chople_berry ability=sturdy hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=100 defence_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('skarmory moves=drillpeck,swordsdance,ironhead,slash nature=lonely held_item=cobblemon:aguav_berry ability=sturdy hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('aegislash moves=kingsshield,shadowball,airslash,flashcannon nature=modest held_item=cobblemon:life_orb ability=stancechange hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=128 special_attack_ev=128 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'HARD' ? {
+    q.party.add_by_properties('skarmory moves=spikes,stealthrock,bodypress,roost nature=bold held_item=cobblemon:leftovers ability=sturdy hp_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 defence_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('tinkaton moves=gigatonhammer,knockoff,playrough,stoneedge nature=adamant held_item=cobblemon:air_balloon ability=pickpocket hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('scizor moves=bulletpunch,uturn,closecombat,knockoff nature=adamant held_item=cobblemon:choice_band ability=technician hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('bastiodon moves=metalburst,irondefense,bodypress,stoneedge nature=impish held_item=cobblemon:rocky_helmet ability=sturdy hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 defence_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('aegislash moves=shadowball,flashcannon,steelbeam,closecombat nature=rash held_item=cobblemon:choice_specs ability=stancechange hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+return 0.0;

@@ -1,0 +1,27 @@
+t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
+
+t.data == 'EASY' ? {
+    q.party.add_by_properties('roselia moves=toxicspikes,megadrain,growth,stunspore nature=quiet held_item=cobblemon:sitrus_berry ability=poisonpoint hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('pumpkaboo pumpkin_size=super moves=trickortreat,razorleaf,shadowsneak,leechseed nature=naive held_item=cobblemon:sitrus_berry ability=pickup hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('grotle moves=bite,curse,razorleaf,tackle nature=naughty held_item=cobblemon:miracle_seed ability=overgrow hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'MEDIUM' ? {
+    q.party.add_by_properties('roserade moves=energyball,extrasensory,sludgebomb,toxicspikes nature=hasty held_item=cobblemon:occa_berry ability=poisonpoint hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('tropius moves=airslash,energyball,leechseed,substitute nature=quiet held_item=cobblemon:yache_berry ability=chlorophyll hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 special_attack_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('gourgeist pumpkin_size=super moves=seedbomb,flamecharge,willowisp,shadowsneak nature=gentle held_item=cobblemon:sitrus_berry ability=pickup hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 special_defence_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('torterra tree=spruce moves=earthquake,woodhammer,crunch,heavyslam nature=adamant held_item=cobblemon:life_orb ability=overgrow hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=128 attack_ev=128 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'HARD' ? {
+    q.party.add_by_properties('roserade moves=toxicspikes,gigadrain,sludgebomb,sleeppowder nature=timid held_item=cobblemon:black_sludge ability=poisonpoint hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('gourgeist pumpkin_size=super moves=poltergeist,powerwhip,rockslide,willowisp nature=adamant held_item=cobblemon:leftovers ability=insomnia hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('tropius moves=leechseed,gigadrain,airslash,dragonpulse nature=modest held_item=cobblemon:sitrus_berry ability=harvest hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 special_attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('tangrowth moves=gigadrain,sludgebomb,focusblast,ancientpower nature=modest held_item=cobblemon:assault_vest ability=regenerator hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 special_attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('torterra tree=spruce moves=bulletseed,rockblast,headlongrush,shellsmash nature=jolly held_item=cobblemon:loaded_dice ability=shellarmor hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+return 0.0;

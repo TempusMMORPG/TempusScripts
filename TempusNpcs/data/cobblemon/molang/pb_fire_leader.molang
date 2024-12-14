@@ -1,0 +1,27 @@
+t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
+
+t.data == 'EASY' ? {
+    q.party.add_by_properties('numel moves=lavaplume,incinerate,bulldoze,amnesia nature=naive held_item=cobblemon:sitrus_berry ability=simple hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('slugma moves=clearsmog,ancientpower,ember,rockthrow nature=lonely held_item=cobblemon:sitrus_berry ability=flamebody hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('pignite moves=rollout,armthrust,flamecharge,defensecurl nature=naughty held_item=cobblemon:coal_stick ability=blaze hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'MEDIUM' ? {
+    q.party.add_by_properties('camerupt moves=lavaplume,scorchingsands,stealthrock,explosion nature=quiet held_item=cobblemon:coal_stick ability=solidrock hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 special_attack_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('magcargo moves=shellsmash,fireblast,powergem,earthpower nature=rash held_item=cobblemon:white_herb ability=flamebody hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 special_attack_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('emboar moves=hammerarm,knockoff,heatcrash,earthquake nature=naughty held_item=cobblemon:muscle_band ability=blaze hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 attack_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('ceruledge moves=shadowclaw,shadowsneak,bitterblade,nightslash nature=adamant held_item=cobblemon:life_orb ability=flashfire hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'HARD' ? {
+    q.party.add_by_properties('torkoal moves=lavaplume,stealthrock,willowisp,bodypress nature=bold held_item=cobblemon:heat_rock ability=drought hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 defence_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('magcargo moves=powergem,lavaplume,willowisp,explosion nature=naughty held_item=cobblemon:custap_berry ability=flamebody hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('emboar moves=flareblitz,wildcharge,earthquake,headsmash nature=adamant held_item=cobblemon:choice_band ability=reckless hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('camerupt moves=fireblast,earthpower,flashcannon,eruption nature=modest held_item=cobblemon:assault_vest ability=solidrock hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 special_attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('ceruledge moves=poltergeist,bitterblade,shadowsneak,closecombat nature=jolly held_item=cobblemon:life_orb ability=weakarmor hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+return 0.0;

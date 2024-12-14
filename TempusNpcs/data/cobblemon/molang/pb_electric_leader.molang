@@ -1,0 +1,27 @@
+t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
+
+t.data == 'EASY' ? {
+    q.party.add_by_properties('voltorb moves=electroball,chargebeam,sonicboom,rollout nature=relaxed held_item=cobblemon:sitrus_berry ability=soundproof hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('elekid moves=thunderwave,shockwave,swift,quickattack nature=lax held_item=cobblemon:sitrus_berry ability=static hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('pikachu moves=thunderbolt,nuzzle,sweetkiss,charm nature=naive held_item=cobblemon:magnet ability=static hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'MEDIUM' ? {
+    q.party.add_by_properties('pincurchin moves=memento,thunderbolt,surf,spikes nature=lax held_item=cobblemon:magnet ability=lightningrod hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 defence_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('electabuzz moves=thunderbolt,lowkick,icepunch,thunderwave nature=quiet held_item=cobblemon:sitrus_berry ability=static hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 special_attack_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('electrode moves=thunderbolt,explosion,thunderwave,foulplay nature=hasty held_item=cobblemon:shuca_berry ability=static hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('raichu alolan moves=psychic,thunderbolt,alluringvoice,calmmind nature=modest held_item=cobblemon:life_orb ability=surgesurfer hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'HARD' ? {
+    q.party.add_by_properties('pincurchin moves=risingvoltage,sclad,spikes,memento nature=bold held_item=cobblemon:terrain_extender ability=electricsurge hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 defence_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('electivire moves=supercellslam,crosschop,icepunch,firepunch nature=jolly held_item=cobblemon:expert_belt ability=motordrive hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('electrode moves=foulplay,voltswitch,explosion,thunderbolt nature=hasty held_item=cobblemon:life_orb ability=aftermath hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('rotom moves=shadowball,risingvoltage,darkpulse,voltswitch nature=timid held_item=cobblemon:choice_specs ability=levitate hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('raichu alolan moves=risingvoltage,grassknot,psychic,focusblast nature=modest held_item=cobblemon:life_orb ability=surgesurfer hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+return 0.0;

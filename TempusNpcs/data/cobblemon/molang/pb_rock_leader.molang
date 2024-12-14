@@ -1,0 +1,27 @@
+t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
+
+t.data == 'EASY' ? {
+    q.party.add_by_properties('roggenrola moves=stealthrock,mudslap,smackdown,irondefense nature=careful held_item=cobblemon:sitrus_berry ability=sturdy hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('aron moves=metalclaw,rocktomb,headbutt,roar nature=hardy held_item=cobblemon:sitrus_berry ability=sturdy hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('naclstack moves=rockslide,saltcure,headbutt,irondefense nature=lonely held_item=cobblemon:hard_stone ability=purifyingsalt hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'MEDIUM' ? {
+    q.party.add_by_properties('gigalith moves=stealthrock,toxic,heavyslam,rockslide nature=impish held_item=cobblemon:sitrus_berry ability=sandstream hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 attack_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('lairon moves=ironhead,rockslide,superpower,shadowclaw nature=naughty held_item=cobblemon:metal_coat ability=sturdy hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 attack_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('rhyhorn moves=rockslide,earthquake,crunch,bodypress nature=naughty held_item=cobblemon:hard_stone ability=rockhead hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=100 defence_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('garganacl moves=saltcure,recover,bodypress,curse nature=impish held_item=cobblemon:leftovers ability=purifyingsalt hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=128 defence_ev=128 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'HARD' ? {
+    q.party.add_by_properties('gigalith moves=stealthrock,toxic,heavyslam,stoneedge nature=adamant held_item=cobblemon:smooth_rock ability=sandstream hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 attack_ev_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('aggron moves=headsmash,heavyslam,earthquake,superpower nature=adamant held_item=cobblemon:choice_band ability=rockhead hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('garganacl moves=saltcure,recover,bodypress,curse nature=careful held_item=cobblemon:leftovers ability=purifyingsalt hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 special_defence_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('rhyperior moves=earthquake,stoneedge,firepunch,megahorn nature=adamant held_item=cobblemon:weakness_policy ability=solidrock hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('aerodactyl moves=dragondance,earthquake,stoneedge,dualwingbeat nature=jolly held_item=cobblemon:life_orb ability=unnerve hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+return 0.0;

@@ -1,0 +1,27 @@
+t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
+
+t.data == 'EASY' ? {
+    q.party.add_by_properties('grimer moves=pound,poisongas,sludge,mudshot nature=gentle held_item=cobblemon:sitrus_berry ability=stench hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('koffing moves=tackle,smog,smokescreen,poisongas nature=docile held_item=cobblemon:sitrus_berry ability=levitate hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('qwilfish hisuian moves=fellstinger,bite,harden,poisonjab nature=naughty held_item=cobblemon:poisonbarb ability=poisonpoint hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'MEDIUM' ? {
+    q.party.add_by_properties('muk moves=toxicspikes,poisonjab,toxic,drainpunch nature=relaxed held_item=cobblemon:sitrus_berry ability=stench hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 defence_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('weezing moves=sludgebomb,flamethrower,shadowball,thunderbolt nature=rash held_item=cobblemon:figy_berry ability=levitate hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 special_attack_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('revavroom moves=shiftgear,poisonjab,ironhead,highhorsepower nature=naughty held_item=cobblemon:poisonbarb ability=overcoat hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('overqwil moves=scaleshot,barbbarrage,crunch,swordsdance nature=adamant held_item=cobblemon:loaded_dice ability=poisonpoint hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'HARD' ? {
+    q.party.add_by_properties('muk moves=poisonjab,drainpunch,toxicspikes,knockoff nature=impish held_item=cobblemon:rocky_helmet ability=poisontouch hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 defence_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('weezing moves=fireblast,thunderbolt,sludgewave,shadowball nature=modest held_item=cobblemon:assault_vest ability=levitate hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 special_attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('revavroom moves=highhorsepower,ironhead,gunkshot,shiftgear nature=jolly held_item=cobblemon:air_balloon ability=filter hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('dragalge moves=sludgewave,dracometeor,flipturn,focusblast nature=modest held_item=cobblemon:life_orb ability=adaptability hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 special_attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('overqwil moves=swordsdance,crunch,scaleshot,gunkshot nature=jolly held_item=cobblemon:life_orb ability=intimidate hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+return 0.0;

@@ -1,0 +1,27 @@
+t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
+
+t.data == 'EASY' ? {
+    q.party.add_by_properties('baltoy moves=ancientpower,psybeam,rocktomb,mudslap nature=naive held_item=cobblemon:sitrus_berry ability=levitate hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('golett moves=shadowpunch,stompingtantrum,nightshade,curse nature=relaxed held_item=cobblemon:sitrus_berry ability=ironfist hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('cubone moves=retaliate,stompingtantrum,tailwhip,dig nature=lonely held_item=cobblemon:soft_sand ability=rockhead hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'MEDIUM' ? {
+    q.party.add_by_properties('claydol moves=earthpower,extrasensory,stealthrock,icebeam nature=calm held_item=cobblemon:iapapa_berry ability=levitate hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 special_attack_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('golurk moves=shadowpunch,heavyslam,megapunch,highhorsepower nature=lonely held_item=cobblemon:sitrus_berry ability=ironfist hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 attack_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('dugtrio moves=earthquake,nightslash,rockslide,slash nature=naughty held_item=cobblemon:soft_sand ability=arenatrap hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('marowak moves=bonemerang,knockoff,thunderpunch,firepunch nature=adamant held_item=cobblemon:thick_club ability=rockhead hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=128 attack_ev=128 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'HARD' ? {
+    q.party.add_by_properties('claydol moves=scorchingsands,psychic,dazzlinggleam,teleport nature=modest held_item=cobblemon:leftovers ability=levitate hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 special_attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('golurk moves=poltergeist,dynamicpunch,stoneedge,earthquake nature=adamant held_item=cobblemon:choice_band ability=noguard hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('dugtrio moves=earthquake,suckerpunch,stoneedge,swordsdance nature=jolly held_item=cobblemon:life_orb ability=arenatrap hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('excadrill moves=earthquake,ironhead,poisonjab,xscissor nature=adamant held_item=cobblemon:life_orb ability=moldbreaker hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('marowak moves=bonemerang,knockoff,firepunch,thunderpunch nature=adamant held_item=cobblemon:thick_club ability=rockhead hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+return 0.0;

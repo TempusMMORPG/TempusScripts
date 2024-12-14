@@ -1,0 +1,27 @@
+t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
+
+t.data == 'EASY' ? {
+    q.party.add_by_properties('stufful moves=brutalswing,strength,babydolleyes nature=relaxed held_item=cobblemon:sitrus_berry ability=fluffy hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('munchlax moves=covet,lick,bite,stockpile nature=lax held_item=cobblemon:sitrus_berry ability=thickfat hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('aipom moves=sandattack,facade,astonish,tickle nature=naughty held_item=cobblemon:silk_scarf ability=pickup hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'MEDIUM' ? {
+    q.party.add_by_properties('bewear moves=doubleedge,drainpunch,darkestlariat,swordsdance nature=lonely held_item=cobblemon:silk_scarf ability=fluffy hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 attack_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('snorlax moves=bodyslam,earthquake,zenheadbutt,firepunch nature=naughty held_item=cobblemon:aguav_berry ability=thickfat hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 attack_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('ambipom moves=tailslap,fakeout,uturn,knockoff nature=naive held_item=cobblemon:silk_scarf ability=technician hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('ursaring moves=facade,closecombat,earthquake,icepunch nature=jolly held_item=cobblemon:flame_orb ability=guts hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=128 attack_ev=128 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+t.data == 'HARD' ? {
+    q.party.add_by_properties('bewear moves=closecombat,doubleedge,darkestlariat,earthquake nature=adamant held_item=cobblemon:life_orb ability=fluffy hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('ambipom moves=tailslap,tripleaxel,uturn,fakeout nature=jolly held_item=cobblemon:loaded_dice ability=technician hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('snorlax moves=bodyslam,heatcrash,earthquake,rest nature=adamant held_item=cobblemon:leftovers ability=thickfat hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('komala moves=bodyslam,knockoff,earthquake,knockoff nature=adamant held_item=cobblemon:assault_vest ability=comatose hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 attack_ev=200 level=' + (q.player.party.highest_level));
+    q.party.add_by_properties('ursaluna moves=headlongrush,facade,playrough,drainpunch nature=adamant held_item=cobblemon:flame_orb ability=guts hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level + 1));
+    return 1.0;
+};
+
+return 0.0;
