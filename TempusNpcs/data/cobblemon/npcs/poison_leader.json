@@ -1,0 +1,21 @@
+{
+    "hitbox": "player",
+    "resourceIdentifier": "cobblemon:poisonleader",    
+    "names": [
+      "Poison Gym Leader"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:battle_npc",
+      "cobblemon:gym_leader_npc"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:flying_gym_interaction"
+    },
+    "party": {
+      "type": "script",
+      "script": "cobblemon:pb_poison_leader",
+      "isStatic": false
+    }
+  }
