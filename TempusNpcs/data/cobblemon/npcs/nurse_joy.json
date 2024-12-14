@@ -1,0 +1,19 @@
+{
+  "hitbox": "player",
+  "resourceIdentifier": "cobblemon:nurse_joy",
+  "presets": [
+    "cobblemon:chats"
+  ],
+  "names": [
+    "Nurse Joy"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:nursejoy_interaction"
+  },
+  "canDespawn": false,
+  "isMovable": false,
+  "isInvulnerable": true,
+  "isLeashable": false,
+  "allowProjectileHits": false
+ }
