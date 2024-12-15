@@ -1,0 +1,20 @@
+{
+  "initializationAction": "c.npc.set_chatting();",
+  "speakers": {
+    "npc": {
+      "name": {
+        "type": "expression",
+        "expression": "q.npc.name"
+      },
+      "face": "q.npc.face();"
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": ["Thank you for waiting. We've restored your Pokémon to full health. We hope to see you again!"],
+      "input": "q.dialogue.close();"
+    }
+  ]
+}

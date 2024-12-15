@@ -1,0 +1,117 @@
+{
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Hello, and welcome to Tempus"
+            ],
+            "input": "q.dialogue.set_page('accept_teleport');"
+        },
+        {
+            "id": "accept_teleport",
+            "speaker": "npc",
+            "lines": [
+                "Hello"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "action": [
+                            "q.run_script('cobblemon:gs_gym_leader_progression');",
+                            "q.dialogue.set_page('okbye');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": [
+                            "q.dialogue.set_page('okbye');"
+                        ]
+                    },
+                    {
+                        "text": "Reset Gym Stage",
+                        "value": "reset",
+                        "action": [
+                            "q.player.data.gym_stage = 0.0;",   
+                            "q.player.save_data();",
+                            "q.print(q.player.data.gym_stage);",
+                            "q.dialogue.set_page('okbye');"
+                        ]
+                    },
+                    {
+                        "text": "Difficulty Check",
+                        "value": "party",
+                        "action": [
+                            "q.print(q.run_script('cobblemon:gs_gym_leader_difficulty'));",
+                            "q.dialogue.set_page('difficulty');"
+                        ]
+                    },
+                    {
+                        "text": "Party Info",
+                        "value": "partyinfo",
+                        "action": [
+                            "q.dialogue.set_page('party_info');"
+                        ]
+                    }
+
+
+                ]
+            }
+        },
+        {
+            "id": "okbye",
+            "speaker": "npc",
+            "lines": [
+                "Alright, see you later!"
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "difficulty",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Difficulty: ' + q.run_script('gs_gym_leader_difficulty');"
+                },
+                {
+                    "type": "expression",
+                    "expression": "'Badge Count: ' + math.ceil(q.player.data.gym_stage);"
+                }
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "party_info",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Party: ' + q.player.party.count;"
+                }
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

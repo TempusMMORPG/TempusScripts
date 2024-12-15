@@ -1,0 +1,82 @@
+{
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hey there trainer! Would you like to trade your ' + q.npc.config.trade_requested_display + ' for a ' + q.npc.config.trade_offered_display + '?'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "isSelectable": "q.player.party.count_by_properties(q.npc.config.trade_requested) >= 1",
+                        "action": "q.dialogue.set_page('confirmation');"
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.set_page('okbye');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "confirmation",
+            "speaker": "npc",
+            "lines": [
+                "Are you sure you want to trade?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "isSelectable": "q.player.party.count_by_properties(q.npc.config.trade_requested) >= 1",
+                        "action": [
+                            "q.run_script('pt_trade_pkmn');",
+                            "q.dialogue.close();"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.set_page('okbye');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "okbye",
+            "speaker": "npc",
+            "lines": [
+                "Alright, see you later!"
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}
