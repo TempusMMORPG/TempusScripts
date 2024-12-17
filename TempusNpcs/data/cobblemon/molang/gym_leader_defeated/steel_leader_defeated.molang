@@ -1,0 +1,6 @@
+q.run_script('cobblemon:gs_gym_leader_progression');
+q.player.data.steel_gym_completed = true;
+
+'Do other functions on win';
+
+q.player.save_data();
