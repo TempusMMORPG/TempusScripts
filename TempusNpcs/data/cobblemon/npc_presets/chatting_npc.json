@@ -1,0 +1,36 @@
+{
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:chatter_interaction"
+    },
+    "config": [
+      {
+        "variableName": "greeting",
+        "displayName": "Greeting",
+        "description": "The greeting for the NPC (Required)",
+        "type": "TEXT",
+        "defaultValue": ""
+      },
+      {
+        "variableName": "dialogue_1",
+        "displayName": "Dialogue 1",
+        "description": "Dialogue for the NPC (Optional)",
+        "type": "TEXT",
+        "defaultValue": ""
+      },
+      {
+        "variableName": "dialogue_2",
+        "displayName": "Dialogue 2",
+        "description": "Dialogue for the NPC (Optional)",
+        "type": "TEXT",
+        "defaultValue": ""
+      },
+      {
+        "variableName": "dialogue_3",
+        "displayName": "Dialogue 3",
+        "description": "Dialogue for the NPC (Optional)",
+        "type": "TEXT",
+        "defaultValue": ""
+      }
+    ]
+}
