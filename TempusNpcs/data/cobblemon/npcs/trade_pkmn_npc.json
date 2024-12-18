@@ -1,0 +1,39 @@
+{
+    "names": [
+      "Trader Joe"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:trader_npc"
+    ],
+    "config": [
+      {
+        "variableName": "trade_offered_display",
+        "displayName": "Trade Offer Pokemon for GUI",
+        "description": "Trade Offer Pokemon (What is shown to user)",
+        "type": "TEXT",
+        "defaultValue": "Pikachu"
+      },
+      {
+        "variableName": "trade_offered",
+        "displayName": "Trade Offer Pokemon for MoLang",
+        "description": "Trade Offer Pokemon (All lowercase)",
+        "type": "TEXT",
+        "defaultValue": "pikachu"
+      },
+      {
+        "variableName": "trade_requested_display",
+        "displayName": "Trade Requested Pokemon for GUI",
+        "description": "Trade Requested Pokemon (What is shown to user)",
+        "type": "TEXT",
+        "defaultValue": "Bidoof"
+      },
+      {
+        "variableName": "trade_requested",
+        "displayName": "Trade Request Pokemon for MoLang",
+        "description": "Trade Request Pokemon (All lowercase)",
+        "type": "TEXT",
+        "defaultValue": "bidoof"
+      }
+    ]
+}

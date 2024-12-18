@@ -1,0 +1,10 @@
+{
+    "resourceIdentifier": "cobblemon:flyingleader",
+    "names": [
+        "Jason"
+    ],
+    "presets": [
+        "cobblemon:base_npc",
+        "cobblemon:chatting_npc"
+    ]
+}
