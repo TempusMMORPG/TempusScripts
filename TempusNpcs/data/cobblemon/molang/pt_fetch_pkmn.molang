@@ -1,0 +1,6 @@
+'Finds Pokemon of matching name in party and takes it';
+t.party_pokemon = q.player.party.find_by_properties(q.npc.config.fetch_requested);
+t.party_pokemon != 0 ? {
+    q.player.tell(q.npc.name + ' took your ' + q.npc.config.fetch_requested_display + ' away...');
+    q.player.party.remove_by_id(t.party_pokemon.id);
+} : return 0;
