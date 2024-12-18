@@ -53,7 +53,7 @@
                         "text": "Reset Gym Stage",
                         "value": "reset",
                         "action": [
-                            "q.player.data.gym_stage = 0.0;",   
+                            "q.player.data.gym_stage = 0;",   
                             "q.player.save_data();",
                             "q.print(q.player.data.gym_stage);",
                             "q.dialogue.set_page('okbye');"

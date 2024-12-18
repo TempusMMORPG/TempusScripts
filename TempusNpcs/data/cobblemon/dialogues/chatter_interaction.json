@@ -1,0 +1,64 @@
+{
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "q.npc.config.greeting;"
+                }
+            ],
+            "input": "q.npc.config.dialogue_1 != '' ? q.dialogue.set_page('dialogue_1') : q.dialogue.close();"
+        },
+        {
+            "id": "dialogue_1",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "q.npc.config.dialogue_1;"
+                }
+            ],
+            "input": "q.npc.config.dialogue_2 != '' ? q.dialogue.set_page('dialogue_2') : q.dialogue.close();"
+        },
+        {
+            "id": "dialogue_2",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "q.npc.config.dialogue_2;"
+                }
+            ],
+            "input": "q.npc.config.dialogue_3 != '' ? q.dialogue.set_page('dialogue_3') : q.dialogue.close();"
+        },
+        {
+            "id": "dialogue_3",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "q.npc.config.dialogue_3;"
+                }
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}
