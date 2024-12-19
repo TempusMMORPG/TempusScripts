@@ -1,11 +1,15 @@
 {
   "names": [
-      "Smash Plugin"
+    "Smash Plugin"
   ],
   "resourceIdentifier": "cobblemon:flyingleader",
   "presets": [
-      "cobblemon:base_npc"
+    "cobblemon:base_npc"
   ],
+  "interaction": {
+    "type": "custom_script",
+    "script": "c.player.tell(q.npc.name + ': ' + c.npc.config.dialogue);"
+  },
   "config": [
       {
         "variableName": "dialogue",
@@ -13,6 +17,13 @@
         "description": "The dialogue for the NPC (Required)",
         "type": "TEXT",
         "defaultValue": "Hello!"
+      },
+      {
+        "variableName": "resource",
+        "displayName": "Resource Identifier",
+        "description": "The resource for the NPC skin (Required)",
+        "type": "TEXT",
+        "defaultValue": "cobblemon:flyingleader"
       }
   ]
 }
