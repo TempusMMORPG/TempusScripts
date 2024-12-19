@@ -1,18 +1,18 @@
 {
-    "names": [
-        "Smash Plugin"
-    ],
-    "resourceIdentifier": "cobblemon:flyingleader",
-    "presets": [
-        "cobblemon:base_npc"
-    ],
-    "config": [
-        {
-          "variableName": "dialogue",
-          "displayName": "Dialogue",
-          "description": "The dialogue for the NPC (Required)",
-          "type": "TEXT",
-          "defaultValue": "Hello!"
-        }
-    ]
+  "names": [
+      "Smash Plugin"
+  ],
+  "resourceIdentifier": "cobblemon:flyingleader",
+  "presets": [
+      "cobblemon:base_npc"
+  ],
+  "config": [
+      {
+        "variableName": "dialogue",
+        "displayName": "Dialogue",
+        "description": "The dialogue for the NPC (Required)",
+        "type": "TEXT",
+        "defaultValue": "Hello!"
+      }
+  ]
 }
