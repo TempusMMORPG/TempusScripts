@@ -1,12 +1,14 @@
 'Finds Pokemon of matching name in party and transacts trade';
 t.party_pokemon = q.player.party.find_all_by_properties(q.npc.config.trade_requested);
+t.trade_requested_min_level = q.npc.config.trade_requested_min_level;
+t.trade_offer = q.npc.config.trade_offered;
 t.found = 0;
 
 'Level Requirement for trade and Pokemon to Trade';
 for_each(t.trademon, t.party_pokemon, {
-  t.trademon.level >= 10 ? {
+  t.trademon.level >= t.trade_requested_min_level ? {
     q.player.party.remove_by_id(t.trademon.id);
-    q.player.party.add_by_properties(q.npc.config.trade_offered + ' level=10');
+    q.player.party.add_by_properties(t.trade_offer);
     q.player.tell('Trade was succesfully made!');
     t.found = 1;
     break;
