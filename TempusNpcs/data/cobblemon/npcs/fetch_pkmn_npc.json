@@ -17,7 +17,7 @@
     {
       "variableName": "fetch_requested",
       "displayName": "Fetch Request Pokemon for MoLang",
-      "description": "Fetch Request Pokemon (All lowercase)",
+      "description": "Fetch Request Pokemon along with any properties (All lowercase)",
       "type": "TEXT",
       "defaultValue": "vaporeon"
     }

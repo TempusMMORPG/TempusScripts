@@ -17,9 +17,9 @@
     {
       "variableName": "trade_offered",
       "displayName": "Trade Offer Pokemon for MoLang",
-      "description": "Trade Offer Pokemon (All lowercase)",
+      "description": "Trade Offer Pokemon along with any properties (All lowercase)",
       "type": "TEXT",
-      "defaultValue": "pikachu"
+      "defaultValue": "pikachu level=10"
     },
     {
       "variableName": "trade_requested_display",
@@ -31,9 +31,16 @@
     {
       "variableName": "trade_requested",
       "displayName": "Trade Request Pokemon for MoLang",
-      "description": "Trade Request Pokemon (All lowercase)",
+      "description": "Trade Request Pokemon along with any properties (All lowercase)",
       "type": "TEXT",
       "defaultValue": "bidoof"
+    },
+    {
+      "variableName": "trade_requested_min_level",
+      "displayName": "Minimum Level for Trade",
+      "description": "Minimum Level for Trade",
+      "type": "NUMBER",
+      "defaultValue": 10
     }
   ]
 }
