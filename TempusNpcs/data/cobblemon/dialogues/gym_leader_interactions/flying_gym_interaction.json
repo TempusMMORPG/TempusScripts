@@ -22,13 +22,13 @@
             "lines": [
                 "Hello, and welcome to the Unity City Flying Gym."
             ],
-            "input": "q.dialogue.set_page('accept_teleport');"
+            "input": "q.dialogue.set_page('battle_prompt');"
         },
         {
-            "id": "accept_teleport",
+            "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "Would you like to challenge the Flying Gym?"
+                "So, what do you say? Would you like to challenge me to a battle?"
             ],
             "input": {
                 "type": "option",
@@ -38,28 +38,27 @@
                         "text": "Battle",
                         "value": "battle",
                         "isSelectable": "q.player.data.flying_gym_completed == false",
-                        "action": [
-                          "q.dialogue.close();",
-                          "v.battle = q.npc.start_battle(q.player);"
-                        ]
+                        "action": "q.dialogue.set_page('battle_start');"
                     },
                     {
                         "text": "No",
                         "value": "no",
-                        "action": [
-                            "q.dialogue.close();"
-                        ]
+                        "action": "q.dialogue.close();"
                     }
                 ]
             }
         },
         {
-            "id": "okbye",
+            "id": "battle_start",
             "speaker": "npc",
             "lines": [
-                "Alright, see you later!"
+                "That's what I like to see! Now, show me what you got, Trainer!"
             ],
-            "input": "q.dialogue.close();"
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
         }
     ]
 }
