@@ -1,6 +1,4 @@
 q.run_script('cobblemon:gs_gym_leader_progression');
 q.player.data.ghost_gym_completed = true;
-
-'Do other functions on win';
-
 q.player.save_data();
+q.player.tell(q.npc.name + ': You\'ve got a lot of potential. I\'m excited to see where your journey takes you.');

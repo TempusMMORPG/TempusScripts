@@ -1,6 +1,4 @@
 q.run_script('cobblemon:gs_gym_leader_progression');
 q.player.data.fire_gym_completed = true;
-
-'Do other functions on win';
-
 q.player.save_data();
+q.player.tell(q.npc.name + ': I can clearly see your skills aren\'t raw. I\'m looking forward to seeing great things from you.');
