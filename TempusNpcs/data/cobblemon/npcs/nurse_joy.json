@@ -5,7 +5,7 @@
     "cobblemon:base_npc"
   ],
   "names": [
-    "Nurse Joy"
+    "§lNurse Joy§r"
   ],
   "interaction": {
     "type": "dialogue",

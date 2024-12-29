@@ -1,7 +1,7 @@
 {
   "resourceIdentifier": "cobblemon:flyingleader",    
   "names": [
-    "Battle Tower NPC 1"
+    "§lBattle Tower NPC 1§r"
   ],
   "presets": [
     "cobblemon:base_npc",

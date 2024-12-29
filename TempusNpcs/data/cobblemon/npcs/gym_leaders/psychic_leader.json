@@ -1,12 +1,11 @@
 {
   "resourceIdentifier": "cobblemon:psychicleader",    
   "names": [
-    "Psychic Gym Leader"
+    "§lPsychic Gym Leader§r"
   ],
   "presets": [
     "cobblemon:base_npc",
-    "cobblemon:battle_npc",
-    "cobblemon:gym_leader_npc"
+    "cobblemon:battle_npc"
   ],
   "interaction": {
     "type": "dialogue",
@@ -21,6 +20,7 @@
       "defaultValue": "q.run_script('cobblemon:psychic_leader_defeated');"
     }
   ],
+  "skill": 5,
   "party": {
     "type": "script",
     "script": "cobblemon:psychic_leader",
