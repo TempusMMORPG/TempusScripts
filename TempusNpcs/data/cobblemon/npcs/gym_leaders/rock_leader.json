@@ -5,7 +5,8 @@
   ],
   "presets": [
     "cobblemon:base_npc",
-    "cobblemon:battle_npc"
+    "cobblemon:battle_npc",
+    "cobblemon:quest_npc"
   ],
   "interaction": {
     "type": "dialogue",
