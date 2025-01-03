@@ -9,7 +9,7 @@ for_each(t.trademon, t.party_pokemon, {
   t.trademon.level >= t.trade_requested_min_level ? {
     q.player.party.remove_by_id(t.trademon.id);
     q.player.party.add_by_properties(t.trade_offer);
-    q.player.tell('Trade was succesfully made!');
+    q.player.tell('§a§l[✔] Trade was succesfully made! [✔]§r');
     t.found = 1;
     break;
   };
@@ -17,5 +17,5 @@ for_each(t.trademon, t.party_pokemon, {
 
 t.found ? return 1;
 
-q.player.tell('Something tells you that your trade is a scam due to its low level...');
+q.player.tell('§c§lLevel up ' + q.npc.config.trade_requested_display + ' to level ' + t.trade_requested_min_level + ' to complete trade!§r');
 return t.found;
