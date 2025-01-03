@@ -47,15 +47,18 @@
             "id": "confirmation",
             "speaker": "npc",
             "lines": [
-                "Are you sure you want to trade?"
+                {
+                    "type": "expression",
+                    "expression": "'Are you SURE you want to give your §6§l' + q.npc.config.fetch_requested_display + '§r away?';"
+                }
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Yes",
-                        "value": "yes",
+                        "text": "§b🎁 Give 🎁§r",
+                        "value": "give",
                         "isSelectable": "q.player.party.count_by_properties(q.npc.config.fetch_requested) >= 1",
                         "action": [
                             "q.run_script('pt_fetch_pkmn');",

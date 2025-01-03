@@ -35,7 +35,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Battle",
+                        "text": "§c⚔ Battle ⚔§r",
                         "value": "battle",
                         "isSelectable": "q.player.data.flying_gym_completed == false",
                         "action": "q.dialogue.set_page('battle_start');"

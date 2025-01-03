@@ -47,15 +47,18 @@
             "id": "confirmation",
             "speaker": "npc",
             "lines": [
-                "Are you sure you want to trade?"
+                {
+                    "type": "expression",
+                    "expression": "'Are you SURE you want to trade your §6§l' + q.npc.config.trade_requested_display + '§r?';"
+                }
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Yes",
-                        "value": "yes",
+                        "text": "§b🔁 Trade 🔁§r",
+                        "value": "trade",
                         "isSelectable": "q.player.party.count_by_properties(q.npc.config.trade_requested) >= 1",
                         "action": [
                             "q.run_script('pt_trade_pkmn');",
