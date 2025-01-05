@@ -1,0 +1,18 @@
+{
+    "names": [
+        "§lSmash Plugin§r"
+      ],
+    "interaction": {
+      "type": "custom_script",
+      "script": "c.player.tell(q.npc.name + ': ' + c.npc.config.dialogue);"
+    },
+    "config": [
+        {
+          "variableName": "dialogue",
+          "displayName": "Dialogue",
+          "description": "The dialogue for the NPC (Required)",
+          "type": "TEXT",
+          "defaultValue": "Hello!"
+        }
+    ]
+  }
