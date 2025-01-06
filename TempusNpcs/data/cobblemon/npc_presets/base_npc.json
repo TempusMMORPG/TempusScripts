@@ -1,7 +1,6 @@
 {
     "hitbox": "player",
     "presets": [
-      "cobblemon:looks",
       "cobblemon:stays_put"
     ],
     "canDespawn": false,
@@ -11,16 +10,11 @@
     "allowProjectileHits": false,
     "ai": [
       {
-        "type": "add_tasks_to_activity",
-        "activity": "idle",
-        "tasksByPriority": {
-          "0": [
-            "look_at_target"
-          ],
-          "1": [
-            "look_at_entities"
-          ]
-        }
-      }
+        "type": "apply_presets",
+        "presets": [
+          "cobblemon:looks",
+          "cobblemon:chats"
+        ]
+      }  
     ]
 }
