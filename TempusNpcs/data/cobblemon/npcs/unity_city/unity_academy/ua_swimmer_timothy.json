@@ -1,13 +1,22 @@
 {
     "resourceIdentifier": "cobblemon:global_skins",
     "presets": [
-      "cobblemon:base_npc"
+     "cobblemon:base_npc",
+     "cobblemon:battle_npc"
     ],
     "names": [
-      "§lSwimmer Timothy§r"
+        "§lSwimmer Timothy§r"
     ],
     "interaction": {
-      "type": "dialogue",
-      "dialogue": "cobblemon:ua_swimmer_timothy_challenge"
+        "type": "dialogue",
+        "dialogue": "cobblemon:ua_swimmer_timothy_challenge"
+    },
+    "skill": 3,
+    "party": {
+        "type": "simple",
+        "pokemon": [
+            "poliwag level=11 nature=docile ability=damp hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
+            "tentacool level=12 nature=docile ability=clearbody hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10"
+        ]
     }
-  }
+}
