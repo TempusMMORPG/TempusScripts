@@ -9,7 +9,7 @@
     ],
     "interaction": {
       "type": "dialogue",
-      "dialogue": "cobblemon:camper_interaction"
+      "dialogue": "cobblemon:general_trainer_interaction"
     },
     "skill": 3,
     "party": {

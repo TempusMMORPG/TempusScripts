@@ -9,7 +9,7 @@
     ],
     "interaction": {
       "type": "dialogue",
-      "dialogue": "cobblemon:pokemaniac_interaction"
+      "dialogue": "cobblemon:general_trainer_interaction"
     },
     "skill": 4,
     "party": {
