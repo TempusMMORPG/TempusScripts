@@ -1,0 +1,305 @@
+{
+    "resourceIdentifier": "cobblemon:pokemaniac",    
+    "names": [
+      "Poke Maniac"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:battle_npc"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:pokemaniac_interaction"
+    },
+    "skill": 4,
+    "party": {
+      "type": "pool",
+      "minPokemon": 2,
+      "maxPokemon": 4,
+      "isStatic": false,
+      "pool": [
+        {
+          "pokemon": "kangaskhan level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "mrmime level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "scyther level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "jynx level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "pinsir level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "tauros level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "omastar level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "kabutops level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "aerodactyl level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "snorlax level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "skarmory level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "cradily level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "armaldo level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "milotic level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "huntail level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "gorebyss level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "relicanth level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "luvdisc level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "rampardos level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "bastiodon level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "rhyperior level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "magnezone level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "lickilicky level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "electivire level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "magmortar level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "yanmega level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "dusknoir level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "lilligant hisuian level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "zoroark hisuian level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "volcarona level=63 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "2"
+        },
+        {
+          "pokemon": "tyrantrum level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "aurorus level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "goodra hisuian level=60 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "5"
+        },
+        {
+          "pokemon": "decidueye hisuian level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "typhlosion hisuian level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "samurott hisuian level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "dracozolt level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "dracovish level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "arctozolt level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "arctovish level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "wyrdeer level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "scizor level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "kleavor level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "ursaluna level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "basculegion level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "sneasler level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "overqwil level=55 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        }
+      ]
+    }
+  }

@@ -1,0 +1,197 @@
+{
+    "resourceIdentifier": "cobblemon:youngster",    
+    "names": [
+      "Youngster"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:battle_npc"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:_interaction"
+    },
+    "skill": 3,
+    "party": {
+      "type": "pool",
+      "minPokemon": 2,
+      "maxPokemon": 4,
+      "isStatic": false,
+      "pool": [
+        {
+          "pokemon": "pidgey level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "rattata level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "rattata alolan level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "spearow level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "meowth level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "meowth alolan level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "meowth galarian level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "sentret level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "hoothoot level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "poochyena level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "zigzagoon level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "zigzagoon galarian level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "lotad level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "seedot level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "shinx level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "starly level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "bidoof level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "lillipup level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "patrat level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "pidove level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "purrloin level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "bunnelby level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "fletchling level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "pikipek level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "rookidee level=15 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "nickit level=20 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "wooloo level=20 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "lechonk level=20 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "wattrel level=20 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        }
+      ]
+    }
+  }
