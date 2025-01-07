@@ -1,7 +1,8 @@
 {
     "resourceIdentifier": "cobblemon:global_skins",
     "presets": [
-      "cobblemon:base_npc"
+      "cobblemon:base_npc",
+      "cobblemon:battle_npc"
     ],
     "names": [
       "§lSwimmer Gabriella§r"
@@ -9,5 +10,13 @@
     "interaction": {
       "type": "dialogue",
       "dialogue": "cobblemon:ua_swimmer_gabriella_challenge"
+    },
+    "skill": 3,
+    "party": {
+        "type": "simple",
+        "pokemon": [
+            "arrokuda level=10 nature=docile ability=swiftswim hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
+            "wooper level=13 nature=docile ability=waterabsorb hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10"
+       ]
     }
   }
