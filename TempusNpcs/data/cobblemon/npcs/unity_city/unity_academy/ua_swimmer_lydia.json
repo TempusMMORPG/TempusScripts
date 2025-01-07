@@ -1,0 +1,13 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",
+    "presets": [
+      "cobblemon:base_npc"
+    ],
+    "names": [
+      "§lSwimmer Lydia§r"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:ua_swimmer_lydia_challenge"
+    }
+  }

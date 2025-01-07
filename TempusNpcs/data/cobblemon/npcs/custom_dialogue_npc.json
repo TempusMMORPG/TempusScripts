@@ -1,0 +1,18 @@
+{
+  "names": [
+    "§lCustom§r"
+  ],
+  "presets": [
+    "cobblemon:base_npc",
+    "cobblemon:dialogue_npc"
+  ],
+  "config": [
+    {
+      "variableName": "custom_dialogue",
+      "displayName": "Dialolgue Text",
+      "description": "Displays in Dialogue GUI",
+      "type": "TEXT",
+      "defaultValue": "This is a test dialogue. Use /npcedit for more"
+    }
+  ]
+}

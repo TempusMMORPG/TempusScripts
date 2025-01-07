@@ -1,0 +1,10 @@
+{
+    "names": [
+      "§lSmash Plugin§r"
+    ],
+    "resourceIdentifier": "cobblemon:global_skins",
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:shopkeeper_npc"
+    ]
+  }

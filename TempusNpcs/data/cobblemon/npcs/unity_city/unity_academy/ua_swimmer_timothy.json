@@ -1,0 +1,13 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",
+    "presets": [
+      "cobblemon:base_npc"
+    ],
+    "names": [
+      "§lSwimmer Timothy§r"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:ua_swimmer_timothy_challenge"
+    }
+  }

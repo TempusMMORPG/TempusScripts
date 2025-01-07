@@ -1,0 +1,7 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:custom_dialogue"
+    }
+}

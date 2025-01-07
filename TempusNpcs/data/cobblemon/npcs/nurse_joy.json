@@ -1,11 +1,10 @@
 {
   "resourceIdentifier": "cobblemon:nurse_joy",
   "presets": [
-    "cobblemon:chats",
     "cobblemon:base_npc"
   ],
   "names": [
-    "§lNurse Joy§r"
+    "§d§lNurse Joy§r"
   ],
   "interaction": {
     "type": "dialogue",

@@ -2,7 +2,7 @@
   "names": [
     "§lSmash Plugin§r"
   ],
-  "resourceIdentifier": "cobblemon:flyingleader",
+  "resourceIdentifier": "cobblemon:global_skins",
   "presets": [
     "cobblemon:base_npc",
     "cobblemon:chatter_npc"
