@@ -1,15 +1,15 @@
 {
     "resourceIdentifier": "cobblemon:global_skins",
     "presets": [
-     "cobblemon:base_npc",
-     "cobblemon:battle_npc"
+      "cobblemon:base_npc",
+      "cobblemon:battle_npc"
     ],
     "names": [
-        "§lSwimmer Timothy§r"
+      "§lSwimmer Timothy§r"
     ],
     "interaction": {
-        "type": "dialogue",
-        "dialogue": "cobblemon:ua_swimmer_timothy_challenge"
+      "type": "dialogue",
+      "dialogue": "cobblemon:ua_swimmer_timothy_challenge"
     },
     "skill": 3,
     "party": {

@@ -22,7 +22,7 @@
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'Hey there trainer! I am' + q.npc.name + ' are you ready to battle?';"
+                    "expression": "'Hey there trainer! I am ' + q.npc.name + ' are you ready to battle?';"
                 }
             ],
             "input": "q.dialogue.set_page('battle_prompt');"

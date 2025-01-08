@@ -9,7 +9,7 @@
   "config": [
     {
       "variableName": "custom_dialogue",
-      "displayName": "Dialolgue Text",
+      "displayName": "Dialogue Text",
       "description": "Displays in Dialogue GUI",
       "type": "TEXT",
       "defaultValue": "This is a test dialogue. Use /npcedit for more"
