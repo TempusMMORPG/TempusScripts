@@ -1,0 +1,149 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",    
+    "names": [
+      "blackbelt"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:battle_npc"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:general_trainer_interaction"
+    },
+    "skill": 3,
+    "party": {
+      "type": "pool",
+      "minPokemon": 2,
+      "maxPokemon": 4,
+      "isStatic": false,
+      "pool": [
+        {
+          "pokemon": "primeape level=38 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "7"
+        },
+        {
+          "pokemon": "poliwrath level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "machoke level=38 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "7"
+        },
+        {
+          "pokemon": "hitmonlee level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "hitmonchan level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "heracross level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "sneasel hisui level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "hitmontop level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "breloom level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "hariyama level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "blaziken level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "4"
+        },
+        {
+          "pokemon": "infernape level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "4"
+        },
+        {
+          "pokemon": "lucario level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "gallade level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "emboar level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "4"
+        },
+        {
+          "pokemon": "gurdurr level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "lilligant hisui level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "chesnaught level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "4"
+        },
+        {
+          "pokemon": "decidueye hisui level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "4"
+        },
+        {
+          "pokemon": "hakamoo level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "4"
+        },
+        {
+          "pokemon": "quaquaval level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "4"
+        }
+      ]
+    }
+  }

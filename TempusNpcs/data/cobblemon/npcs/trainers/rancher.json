@@ -1,0 +1,159 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",    
+    "names": [
+      "Rancher"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:battle_npc"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:general_trainer_interaction"
+    },
+    "skill": 3,
+    "party": {
+      "type": "pool",
+      "minPokemon": 2,
+      "maxPokemon": 4,
+      "isStatic": false,
+      "pool": [
+        {
+          "pokemon": "rapidash level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1
+        },
+        {
+          "pokemon": "rapidash galarian level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1
+        },
+        {
+          "pokemon": "exeggutor level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "exeggutor alolan level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "rhyhorn level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "5"
+        },
+        {
+          "pokemon": "tauros level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "ampharos level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "5"
+        },
+        {
+          "pokemon": "granbull level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "arcanine level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "breloom level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "camerupt level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "5"
+        },
+        {
+          "pokemon": "tropius level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "stoutland level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "5"
+        },
+        {
+          "pokemon": "pignite level=30 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "5"
+        },
+        {
+          "pokemon": "durant level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "gourgeist level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "ribombee level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "mudsdale level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "5"
+        },
+        {
+          "pokemon": "dubwool level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "boltund level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "oinkologne level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "10"
+        },
+        {
+          "pokemon": "dachsbun level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "9"
+        },
+        {
+          "pokemon": "mabosstiff level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "weight": 10,
+          "selectableTimes": 1,
+          "levelVariation": "5"
+        }
+      ]
+    }
+  }
