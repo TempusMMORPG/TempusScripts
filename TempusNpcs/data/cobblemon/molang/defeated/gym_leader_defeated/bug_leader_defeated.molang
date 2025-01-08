@@ -1,0 +1,4 @@
+q.run_script('cobblemon:gs_gym_leader_progression');
+q.player.data.bug_gym_defeated = true;
+q.player.save_data();
+q.player.tell(q.npc.name + ': I see you\'ve got a real knack for battling. Here is a badge for your collection.');

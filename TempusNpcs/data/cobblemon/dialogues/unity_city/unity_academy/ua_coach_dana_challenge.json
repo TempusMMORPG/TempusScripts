@@ -40,7 +40,7 @@
                     {
                         "text": "§c⚔ Battle ⚔§r",
                         "value": "battle",
-                        "isSelectable": "q.player.data.ua_timothy_defeated == false",
+                        "isSelectable": "q.player.data.ua_timothy_defeated == false && q.player.data.ua_gabriella_defeated && q.player.data.ua_timothy_defeated && q.player.data.ua_lydia_defeated",
                         "action": "q.dialogue.set_page('battle_start');"
                     },
                     {

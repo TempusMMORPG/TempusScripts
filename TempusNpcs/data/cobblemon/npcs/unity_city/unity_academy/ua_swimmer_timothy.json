@@ -11,6 +11,15 @@
       "type": "dialogue",
       "dialogue": "cobblemon:ua_swimmer_timothy_challenge"
     },
+    "config": [
+      {
+        "variableName": "on_player_wins",
+        "displayName": "npc.variable.on_player_wins.name",
+        "description": "npc.variable.on_player_wins.desc",
+        "type": "TEXT",
+        "defaultValue": "q.player.data.ua_timothy_defeated = true; q.player.save_data();"
+      }
+    ],
     "skill": 3,
     "party": {
         "type": "simple",
