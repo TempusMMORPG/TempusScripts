@@ -25,7 +25,8 @@
     "party": {
         "type": "simple",
         "pokemon": [
-
+          "scraggy level=9 nature=docile ability=shedskin hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
+          "makuhita level=11 nature=docile ability=thickfat hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10"
        ]
     }
   }
