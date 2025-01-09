@@ -1,0 +1,50 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",
+    "presets": [
+        "cobblemon:base_npc"
+    ],
+    "names": [
+        "§lShuttle Hiroku :3§r"
+    ],
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:teleport_1_way"
+    },
+    "config": [
+        {
+          "variableName": "teleport_display",
+          "displayName": "Teleport Display Text",
+          "description": "Teleport Display (What is shown to user)",
+          "type": "TEXT",
+          "defaultValue": "Unity City"
+        },
+        {
+          "variableName": "teleport_location",
+          "displayName": "Teleport Location Cordination",
+          "description": "Teleport location (X Y Z Rotation(X) Rotation(Y))",
+          "type": "TEXT",
+          "defaultValue": "0 10 0 ~ ~"
+        },
+        {
+          "variableName": "consume_item_display",
+          "displayName": "Consume Item Display",
+          "description": "The item to be consumed from the player",
+          "type": "TEXT",
+          "defaultValue": "Paper"
+        },
+        {
+          "variableName": "consume_item",
+          "displayName": "Consume Item",
+          "description": "The item to be consumed from the player",
+          "type": "TEXT",
+          "defaultValue": "minecraft:paper"
+        },
+        {
+          "variableName": "consume_item_amount",
+          "displayName": "Consume Item Amount",
+          "description": "The amount of item to be consumed from the player",
+          "type": "TEXT",
+          "defaultValue": "1"
+        }
+    ]
+}

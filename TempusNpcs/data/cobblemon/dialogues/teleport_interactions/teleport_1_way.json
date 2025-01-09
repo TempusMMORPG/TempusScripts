@@ -1,0 +1,55 @@
+{
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "teleport",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Where do you want to go? Please keep in mind that this will take x' + q.npc.config.consume_item_amount + ' ' + q.npc.config.consume_item_display + '!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "q.npc.config.teleport_display"
+                        },
+                        "value": "location",
+                        "isSelectable": "q.player.main_held_item.is_of(q.npc.config.consume_item) || q.player.off_held_item.is_of(q.npc.config.consume_item)",
+                        "action": [
+                            "q.run_command('clear ' + q.player.username + ' ' + q.npc.config.consume_item + ' ' + q.npc.config.consume_item_amount);",
+                            "q.run_command('tp ' + q.player.username + ' ' + q.npc.config.teleport_location);",
+                            "q.dialogue.close();",
+                            "q.player.tell('§a§l[✔] Used x' + q.npc.config.consume_item_amount + ' ' + q.npc.config.consume_item_display + ' to travel to ' + q.npc.config.teleport_display + ' [✔]§r');"
+                        ]
+                    },
+                    {
+                        "text": "Exit",
+                        "value": "exit",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        }
+    ]
+}
