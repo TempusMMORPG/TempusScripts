@@ -22,7 +22,7 @@
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'Where do you want to go? Please keep in mind that this will take x' + q.npc.config.consume_item_amount + ' ' + q.npc.config.consume_item_display + '!';"
+                    "expression": "'Where do you want to go? Please keep in mind that this will cost §6§lx' + q.npc.config.consume_item_amount + ' ' + q.npc.config.consume_item_display + '§r';"
                 }
             ],
             "input": {
