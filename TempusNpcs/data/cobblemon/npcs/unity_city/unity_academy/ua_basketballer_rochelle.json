@@ -6,11 +6,11 @@
       "cobblemon:battle_npc"
     ],
     "names": [
-      "§lSwimmer Lydia§r"
+      "§lSBasketballer Rochelle§r"
     ],
     "interaction": {
       "type": "dialogue",
-      "dialogue": "cobblemon:ua_swimmer_lydia_challenge"
+      "dialogue": "cobblemon:ua_basketballer_rochelle_challenge"
     },
     "config": [
       {
@@ -18,15 +18,14 @@
         "displayName": "npc.variable.on_player_wins.name",
         "description": "npc.variable.on_player_wins.desc",
         "type": "TEXT",
-        "defaultValue": "q.player.data.ua_lydia_defeated = true; q.player.save_data();"
+        "defaultValue": "q.player.data.ua_rochelle_defeated = true; q.player.save_data();"
       }
     ],
     "skill": 3,
     "party": {
         "type": "simple",
         "pokemon": [
-            "spheal level=11 nature=docile ability=thickfat hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
-            "frillish level=11 nature=docile ability=waterabsorb hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10"
+
        ]
     }
   }

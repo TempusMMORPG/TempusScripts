@@ -2,6 +2,7 @@
     "resourceIdentifier": "cobblemon:global_skins",
     "presets": [
       "cobblemon:base_npc",
+      "cobblemon:looks_in_one_direction",
       "cobblemon:battle_npc"
     ],
     "names": [
