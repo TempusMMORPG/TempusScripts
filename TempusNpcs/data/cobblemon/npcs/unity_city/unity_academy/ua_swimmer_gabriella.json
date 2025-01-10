@@ -25,8 +25,8 @@
     "party": {
         "type": "simple",
         "pokemon": [
-            "arrokuda level=10 nature=docile ability=swiftswim hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
-            "wooper level=13 nature=docile ability=waterabsorb hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10"
+            "arrokuda uncatchable=true level=10 nature=docile ability=swiftswim hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
+            "wooper uncatchable=true level=13 nature=docile ability=waterabsorb hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10"
        ]
     }
   }

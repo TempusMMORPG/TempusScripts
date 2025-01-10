@@ -25,9 +25,9 @@
     "party": {
         "type": "simple",
         "pokemon": [
-          "riolu level=14 nature=docile ability=guts hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
-          "sneasel hisuian level=15 nature=docile ability=guts hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
-          "monferno level=17 nature=docile ability=guts hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10"          
+          "riolu uncatchable=true level=14 nature=docile ability=guts hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
+          "sneasel uncatchable=true hisuian level=15 nature=docile ability=guts hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
+          "monferno uncatchable=true level=17 nature=docile ability=guts hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10"          
        ]
     }
   }

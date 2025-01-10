@@ -25,8 +25,8 @@
     "party": {
         "type": "simple",
         "pokemon": [
-            "poliwag level=11 nature=docile ability=damp hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
-            "tentacool level=12 nature=docile ability=clearbody hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10"
+            "poliwag uncatchable=true level=11 nature=docile ability=damp hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
+            "tentacool uncatchable=true level=12 nature=docile ability=clearbody hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10"
         ]
     }
 }

@@ -19,145 +19,145 @@
       "isStatic": false,
       "pool": [
         {
-          "pokemon": "pidgeot level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "pidgeot level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "5"
         },
         {
-          "pokemon": "fearow level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "fearow level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "10"
         },
         {
-          "pokemon": "dodrio level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "dodrio level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "4"
         },
         {
-          "pokemon": "farfetchd level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "farfetchd level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "10"
         },
         {
-          "pokemon": "noctowl level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "noctowl level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "10"
         },
         {
-          "pokemon": "xatu level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "xatu level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "10"
         },
         {
-          "pokemon": "murkrow level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "murkrow level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "10"
         },
         {
-          "pokemon": "skarmory level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "skarmory level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "10"
         },
         {
-          "pokemon": "swellow level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "swellow level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "10"
         },
         {
-          "pokemon": "pelipper level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "pelipper level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "10"
         },
         {
-          "pokemon": "staraptor level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "staraptor level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "4"
         },
         {
-          "pokemon": "drifblim level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "drifblim level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "5"
         },
         {
-          "pokemon": "chatot level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "chatot level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "10"
         },
         {
-          "pokemon": "unfezant level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "unfezant level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "5"
         },
         {
-          "pokemon": "swoobat level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "swoobat level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "10"
         },
         {
-          "pokemon": "sigilyph level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "sigilyph level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "10"
         },
         {
-          "pokemon": "talonflame level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "talonflame level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "5"
         },
         {
-          "pokemon": "emolga level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "emolga level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "10"
         },
         {
-          "pokemon": "vivillon level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "vivillon level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "10"
         },
         {
-          "pokemon": "toucannon level=38 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "toucannon level=38 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "7"
         },
         {
-          "pokemon": "corviknight level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "corviknight level=40 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "2"
         },
         {
-          "pokemon": "cramorant level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "cramorant level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "10"
         },
         {
-          "pokemon": "squawkabilly level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "squawkabilly level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "10"
         },
         {
-          "pokemon": "kilowattrel level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10",
+          "pokemon": "kilowattrel level=35 hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true",
           "weight": 10,
           "selectableTimes": 1,
           "levelVariation": "10"

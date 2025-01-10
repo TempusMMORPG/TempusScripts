@@ -25,9 +25,9 @@
     "party": {
         "type": "simple",
         "pokemon": [
-          "horsea level=14 nature=docile ability=guts hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
-          "buizel level=15 nature=docile ability=guts hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
-          "prinplup level=17 nature=docile ability=guts hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10"          
+          "horsea uncatchable=true level=14 nature=docile ability=guts hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
+          "buizel uncatchable=true level=15 nature=docile ability=guts hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
+          "prinplup uncatchable=true level=17 nature=docile ability=guts hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10"          
        ]
     }
   }

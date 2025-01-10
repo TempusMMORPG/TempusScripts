@@ -25,8 +25,8 @@
     "party": {
         "type": "simple",
         "pokemon": [
-          "tyrogue level=10 nature=docile ability=guts hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
-          "timburr level=13 nature=docile ability=guts hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10"
+          "tyrogue uncatchable=true level=10 nature=docile ability=guts hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
+          "timburr uncatchable=true level=13 nature=docile ability=guts hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10"
        ]
     }
   }
