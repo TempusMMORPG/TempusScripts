@@ -1,8 +1,5 @@
 {
     "hitbox": "player",
-    "presets": [
-      "cobblemon:stays_put"
-    ],
     "canDespawn": false,
     "isMovable": false,
     "isInvulnerable": true,

@@ -1,7 +1,8 @@
 {
   "resourceIdentifier": "cobblemon:flyingtrainer",
   "presets": [
-   "cobblemon:base_npc"
+   "cobblemon:base_npc",
+   "cobblemon:looks_in_one_direction"
   ],
   "names": [
     "§lReceptionist§r"
