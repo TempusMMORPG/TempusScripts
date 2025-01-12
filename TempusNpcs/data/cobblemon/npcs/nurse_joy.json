@@ -1,7 +1,8 @@
 {
   "resourceIdentifier": "cobblemon:nurse_joy",
   "presets": [
-    "cobblemon:base_npc"
+    "cobblemon:base_npc",
+    "cobblemon:looks_in_one_direction"
   ],
   "names": [
     "§d§lNurse Joy§r"
