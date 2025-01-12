@@ -3,10 +3,11 @@
     "presets": [
       "cobblemon:base_npc",
       "cobblemon:looks_in_one_direction",
-      "cobblemon:battle_npc"
+      "cobblemon:battle_npc",
+      "cobblemon:battle_quest_npc"
     ],
     "names": [
-      "§lSBasketballer Kyle§r"
+      "§lBasketballer Kyle§r"
     ],
     "interaction": {
       "type": "dialogue",

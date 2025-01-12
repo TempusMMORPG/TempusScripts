@@ -1,0 +1,18 @@
+{
+    "config": [
+        {
+          "variableName": "quest_id",
+          "displayName": "Quest ID",
+          "description": "The quest ID that this NPC is associated with.",
+          "type": "TEXT",
+          "defaultValue": "57C719DFABA561F8"
+        },
+        {
+          "variableName": "quest_update_on_player_wins",
+          "displayName": "Quest Update MoLang",
+          "description": "Quest Update MoLang",
+          "type": "TEXT",
+          "defaultValue": "q.run_command('ftbquests change_progress ' + q.player.username + ' complete ' + q.npc.config.quest_id);"
+        }
+    ]
+}

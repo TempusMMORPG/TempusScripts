@@ -1,4 +1,7 @@
 {
+    "initializationAction": [
+        "q.player.data.ua_gavin_defeated ? q.dialogue.set_page('post_defeat');"
+    ],
     "speakers": {
         "npc": {
             "name": {
@@ -22,7 +25,7 @@
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'Hey there trainer! My name is ' + q.npc.name + ' are you ready to battle?';"
+                    "expression": "'Hey there trainer! My name is ' + q.npc.name + ' are you ready to battle? ';"
                 }
             ],
             "input": "q.dialogue.set_page('battle_prompt');"
@@ -31,7 +34,7 @@
             "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "So, what do you say? Would you like to challenge me to a battle?"
+                "So, what do you say? Would you like to challenge me to a battle? I'll only accept after you defeat my students!"
             ],
             "input": {
                 "type": "option",
@@ -55,13 +58,21 @@
             "id": "battle_start",
             "speaker": "npc",
             "lines": [
-                "That's what I like to see! Now, show me what you got, Trainer!"
+                "Prepare yourself, I won't go easy on you!"
             ],
             "escapeAction": "0",
             "input": [
                 "q.dialogue.close();",
                 "v.battle = q.npc.start_battle(q.player);"
             ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "Still want to train a bit more, huh? Well, that's too bad."
+            ],
+            "input": "q.dialogue.close();"
         }
     ]
 }

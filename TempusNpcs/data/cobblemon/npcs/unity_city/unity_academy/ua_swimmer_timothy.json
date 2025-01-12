@@ -3,7 +3,8 @@
     "presets": [
       "cobblemon:base_npc",
       "cobblemon:looks_in_one_direction",
-      "cobblemon:battle_npc"
+      "cobblemon:battle_npc",
+      "cobblemon:battle_quest_npc"
     ],
     "names": [
       "§lSwimmer Timothy§r"

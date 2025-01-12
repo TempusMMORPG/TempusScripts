@@ -1,4 +1,7 @@
 {
+    "initializationAction": [
+        "q.player.data.ua_gabriella_defeated ? q.dialogue.set_page('post_defeat');"
+    ],
     "speakers": {
         "npc": {
             "name": {
@@ -55,13 +58,21 @@
             "id": "battle_start",
             "speaker": "npc",
             "lines": [
-                "That's what I like to see! Now, show me what you got, Trainer!"
+                "I love swimming, but I also love battling too!"
             ],
             "escapeAction": "0",
             "input": [
                 "q.dialogue.close();",
                 "v.battle = q.npc.start_battle(q.player);"
             ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "Just keep swimming, just keep swimming, just keep swimming swimming swimming!"
+            ],
+            "input": "q.dialogue.close();"
         }
     ]
 }

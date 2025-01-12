@@ -9,7 +9,7 @@ for_each(t.trademon, t.party_pokemon, {
   t.trademon.level >= t.trade_requested_min_level ? {
     q.player.party.remove_by_id(t.trademon.id);
     q.player.party.add_by_properties(t.trade_offer);
-    q.player.tell('§a§l[✔] Trade was succesfully made! [✔]§r');
+    q.player.tell('§a§l[✔] Trade was successfully made! [✔]§r');
     t.found = 1;
     break;
   };
