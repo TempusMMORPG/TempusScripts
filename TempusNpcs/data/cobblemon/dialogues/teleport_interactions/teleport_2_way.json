@@ -40,7 +40,21 @@
                             "q.run_command('clear ' + q.player.username + ' ' + q.npc.config.consume_item + ' ' + q.npc.config.consume_item_amount);",
                             "q.run_command('tp ' + q.player.username + ' ' + q.npc.config.teleport_location_1);",
                             "q.dialogue.close();",
-                            "q.player.tell('§a§l[✔] Used x' + q.npc.config.consume_item_amount + ' ' + q.npc.config.consume_item_display + ' to travel to ' + q.npc.config.teleport_display_1 + '[✔]§r');"
+                            "q.player.tell('§a§l[✔] Used x' + q.npc.config.consume_item_amount + ' ' + q.npc.config.consume_item_display + ' to travel to ' + q.npc.config.teleport_display_1 + ' [✔]§r');"
+                        ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "q.npc.config.teleport_display_2"
+                        },
+                        "value": "location2",
+                        "isSelectable": "q.player.main_held_item.is_of(q.npc.config.consume_item) || q.player.off_held_item.is_of(q.npc.config.consume_item)",
+                        "action": [
+                            "q.run_command('clear ' + q.player.username + ' ' + q.npc.config.consume_item + ' ' + q.npc.config.consume_item_amount);",
+                            "q.run_command('tp ' + q.player.username + ' ' + q.npc.config.teleport_location_2);",
+                            "q.dialogue.close();",
+                            "q.player.tell('§a§l[✔] Used x' + q.npc.config.consume_item_amount + ' ' + q.npc.config.consume_item_display + ' to travel to ' + q.npc.config.teleport_display_2 + ' [✔]§r');"
                         ]
                     },
                     {
