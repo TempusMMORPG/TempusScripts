@@ -49,7 +49,7 @@
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'Are you SURE you want to trade your §6§l' + q.npc.config.trade_requested_display + '§r?';"
+                    "expression": "'Are you SURE you want to trade your ' + q.npc.config.trade_requested_display + '?';"
                 }
             ],
             "input": {

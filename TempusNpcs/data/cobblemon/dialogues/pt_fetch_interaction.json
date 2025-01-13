@@ -49,7 +49,7 @@
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'Are you SURE you want to give your §6§l' + q.npc.config.fetch_requested_display + '§r away?';"
+                    "expression": "'Are you SURE you want to give your ' + q.npc.config.fetch_requested_display + ' away?';"
                 }
             ],
             "input": {

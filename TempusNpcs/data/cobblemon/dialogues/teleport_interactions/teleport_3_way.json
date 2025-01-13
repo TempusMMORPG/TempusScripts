@@ -22,7 +22,7 @@
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'Where do you want to go? The trip will cost you §6§l' + q.npc.config.consume_item_amount + 'x§r §6§l' + q.npc.config.consume_item_display + '§r. When you are ready, show it in your hands so I can see it.';"
+                    "expression": "'Where do you want to go? The trip will cost you ' + q.npc.config.consume_item_amount + 'x ' + q.npc.config.consume_item_display + '. When you are ready, show it in your hands so I can see it.';"
                 }
             ],
             "input": {
