@@ -6,6 +6,13 @@
           "description": "The quest ID that this NPC is associated with.",
           "type": "TEXT",
           "defaultValue": "57C719DFABA561F8"
+        },
+        {
+          "variableName": "complete_quest_command",
+          "displayName": "Complete Quest Command",
+          "description": "The MoLang that gets executed to complete the player's quest.",
+          "type": "TEXT",
+          "defaultValue": "q.run_command('ftbquests change_progress ' + q.player.username + ' complete ' + q.npc.config.quest_id);"
         }
     ]
 }
