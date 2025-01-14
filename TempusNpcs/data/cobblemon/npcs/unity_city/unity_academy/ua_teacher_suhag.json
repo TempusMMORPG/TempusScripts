@@ -1,0 +1,15 @@
+{
+  "resourceIdentifier": "cobblemon:global_skins",
+  "presets": [
+    "cobblemon:base_npc",
+    "cobblemon:looks_in_one_direction",
+    "cobblemon:base_quest_npc"
+  ],
+  "names": [
+    "§lMr. Suhag§r"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:ua_teacher_suhag_quiz"
+  }
+}

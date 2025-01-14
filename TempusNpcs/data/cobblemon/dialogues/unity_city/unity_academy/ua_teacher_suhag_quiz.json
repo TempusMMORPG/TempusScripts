@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.ua_ryori_completed ? q.dialogue.set_page('post_completed');"
+        "q.player.data.ua_suhag_completed ? q.dialogue.set_page('post_completed');"
     ],
     "speakers": {
         "npc": {
@@ -25,7 +25,7 @@
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'Hello there, trainer! My name is ' + q.npc.name + ' and I am the English instructor here at Unity Academy. I have a quiz for you, are you ready?'"
+                    "expression": "'Hello there, trainer! My name is ' + q.npc.name + ' and I am the math instructor here at Unity Academy. Would you like to take a quiz to test your knowledge?'"
                 }
             ],
             "input": {
@@ -35,7 +35,7 @@
                     {
                         "text": "§bStart Quiz!§r",
                         "value": "start_quiz",
-                        "isSelectable": "q.player.data.ua_ryori_completed == false",
+                        "isSelectable": "q.player.data.ua_suhag_completed == false",
                         "action": "q.dialogue.set_page('quiz_question_1');"
                     },
                     {
@@ -50,7 +50,7 @@
             "id": "quiz_question_1",
             "speaker": "npc",
             "lines": [
-                "Alright, here is your first question. Which one of these Pokemon names isn't spelled correctly?"
+                "Alright, let's get started! If Johnny has a level 35 Lapras and has 47 Rare Candies... What level will the Lapras be once all the Rare Candies are used?"
             ],
             "escapeAction": "0",
             "input": {
@@ -58,22 +58,22 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "A. Arceus",
+                        "text": "A. 76",
                         "value": "answer1",
                         "action": "q.dialogue.set_page('incorrect');"
                     },
                     {
-                        "text": "B. Pikchu",
+                        "text": "B. 82",
                         "value": "answer2",
                         "action": "q.dialogue.set_page('correct1');"
                     },
                     {
-                        "text": "C. Aggron",
+                        "text": "C. 87",
                         "value": "answer3",
                         "action": "q.dialogue.set_page('incorrect');"
                     },
                     {
-                        "text": "D. Charmander",
+                        "text": "D. 90",
                         "value": "answer4",
                         "action": "q.dialogue.set_page('incorrect');"
                     }
@@ -84,7 +84,7 @@
             "id": "quiz_question_2",
             "speaker": "npc",
             "lines": [
-                "Which one of these Pokemon names isn't spelled correctly?"
+                "If you have 2 Ultra Balls and each Ultra Ball has a 50% chance to catch a Pokemon. What is the chance to catch the Pokemon when using both?"
             ],
             "escapeAction": "0",
             "input": {
@@ -92,22 +92,22 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "A. Beedrill",
+                        "text": "A. 0%",
                         "value": "answer1",
                         "action": "q.dialogue.set_page('incorrect');"
                     },
                     {
-                        "text": "B. Greninja",
+                        "text": "B. 25%",
                         "value": "answer2",
                         "action": "q.dialogue.set_page('incorrect');"
                     },
                     {
-                        "text": "C. Charizard",
+                        "text": "C. 50%",
                         "value": "answer3",
                         "action": "q.dialogue.set_page('incorrect');"
                     },
                     {
-                        "text": "D. Clefary",
+                        "text": "D. 75%",
                         "value": "answer4",
                         "action": "q.dialogue.set_page('correct2');"
                     }
@@ -118,7 +118,7 @@
             "id": "quiz_question_3",
             "speaker": "npc",
             "lines": [
-                "Which one of these Pokemon names isn't spelled correctly?"
+                "If I have a level 67 Toxel and a level 59 Popplio, how many Rare Candies will I need to get them both to level 100?"
             ],
             "escapeAction": "0",
             "input": {
@@ -126,22 +126,22 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "A. Chestnaut",
+                        "text": "A. 64",
                         "value": "answer1",
-                        "action": "q.dialogue.set_page('correct3');"
-                    },
-                    {
-                        "text": "B. Emboar",
-                        "value": "answer2",
                         "action": "q.dialogue.set_page('incorrect');"
                     },
                     {
-                        "text": "C. Giratina",
+                        "text": "B. 74",
+                        "value": "answer2",
+                        "action": "q.dialogue.set_page('correct3');"
+                    },
+                    {
+                        "text": "C. 76",
                         "value": "answer3",
                         "action": "q.dialogue.set_page('incorrect');"
                     },
                     {
-                        "text": "D. Suicune",
+                        "text": "D. 84",
                         "value": "answer4",
                         "action": "q.dialogue.set_page('incorrect');"
                     }
@@ -152,7 +152,7 @@
             "id": "quiz_question_4",
             "speaker": "npc",
             "lines": [
-                "Which one of these Pokemon names isn't spelled correctly?"
+                "If a Pokeball has a 25% chance to catch a Pokemon, what is the chance of a successful capture when using 3 Pokeballs?"
             ],
             "escapeAction": "0",
             "input": {
@@ -160,56 +160,22 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "A. Swadloon",
+                        "text": "A. 50%",
                         "value": "answer1",
                         "action": "q.dialogue.set_page('incorrect');"
                     },
                     {
-                        "text": "B. Galade",
+                        "text": "B. 66%",
                         "value": "answer2",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    },
+                    {
+                        "text": "C. 58%",
+                        "value": "answer3",
                         "action": "q.dialogue.set_page('correct4');"
                     },
                     {
-                        "text": "C. Milotic",
-                        "value": "answer3",
-                        "action": "q.dialogue.set_page('incorrect');"
-                    },
-                    {
-                        "text": "D. Shinx",
-                        "value": "answer4",
-                        "action": "q.dialogue.set_page('incorrect');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "quiz_question_5",
-            "speaker": "npc",
-            "lines": [
-                "Which one of these Pokemon names isn't spelled correctly?"
-            ],
-            "escapeAction": "0",
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "A. Salamance",
-                        "value": "answer1",
-                        "action": "q.dialogue.set_page('correct5');"
-                    },
-                    {
-                        "text": "B. Gossifleur",
-                        "value": "answer2",
-                        "action": "q.dialogue.set_page('incorrect');"
-                    },
-                    {
-                        "text": "C. Darmanitan",
-                        "value": "answer3",
-                        "action": "q.dialogue.set_page('incorrect');"
-                    },
-                    {
-                        "text": "D. Whirlipede",
+                        "text": "D. 75%",
                         "value": "answer4",
                         "action": "q.dialogue.set_page('incorrect');"
                     }
@@ -220,7 +186,7 @@
             "id": "correct1",
             "speaker": "npc",
             "lines": [
-                "Correct! The correct spelling is Pikachu. Here is your next question..."
+                "Correct! The Lapras will be level 82 after all the Rare Candies are used. Let's move on to the next question..."
             ],
             "escapeAction": "0",
             "input": "q.dialogue.set_page('quiz_question_2');"
@@ -229,38 +195,26 @@
             "id": "correct2",
             "speaker": "npc",
             "lines": [
-                "Correct! The correct spelling is Clefairy. Let's move to the next question..."
+                "Correct! The chance to catch the Pokemon when using both Ultra Balls is 75%. Ok, just two more questions..."
             ],
-            "escapeAction": "0",
             "input": "q.dialogue.set_page('quiz_question_3');"
         },
         {
             "id": "correct3",
             "speaker": "npc",
             "lines": [
-                "Correct! The correct spelling is Chesnaught. Ok, just two more questions..."
+                "Correct! You will need 74 Rare Candies to get both Toxel and Popplio to level 100. Just one more question!"
             ],
-            "escapeAction": "0",
             "input": "q.dialogue.set_page('quiz_question_4');"
         },
         {
             "id": "correct4",
             "speaker": "npc",
             "lines": [
-                "Correct! The correct spelling is Gallade. Now, onto the last question..."
+                "Correct! The chance of a successful capture when using 3 Pokeballs is 58%. Congrats! You've successfully passed Math!"
             ],
-            "escapeAction": "0",
-            "input": "q.dialogue.set_page('quiz_question_5');"
-        },
-        {
-            "id": "correct5",
-            "speaker": "npc",
-            "lines": [
-                "Correct! The correct spelling is Salamence. Congratulations, you have passed English!"
-            ],
-            "escapeAction": "0",
             "input": [
-                "q.player.data.ua_ryori_completed = true; q.player.save_data();",
+                "q.player.data.ua_suhag_completed = true; q.player.save_data();",
                 "q.run_molang(q.npc.config.complete_quest_command);",
                 "q.dialogue.set_page('post_completed');"
             ]
@@ -269,7 +223,7 @@
             "id": "incorrect",
             "speaker": "npc",
             "lines": [
-                "Sorry, but that was not the correct answer. Make sure you study up and try again once you are ready."
+                "Sorry, but that answer is incorrect. Make sure to double check your math before trying again!"
             ],
             "input": "q.dialogue.close();"
         },
@@ -277,7 +231,7 @@
             "id": "post_completed",
             "speaker": "npc",
             "lines": [
-                "If you haven't already, make sure to check out the other teachers in Unity Academy. They have quizzes for you as well!"
+                "If you haven't already, make sure to visit the other instructors here at Unity Academy. They have a lot to teach you!"
             ],
             "input": "q.dialogue.close();"
         }
