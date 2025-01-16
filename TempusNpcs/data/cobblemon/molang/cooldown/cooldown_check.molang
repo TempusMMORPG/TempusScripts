@@ -1,0 +1,2 @@
+t.cooldown_time = q.player.get_npc_variable(q.npc, 'cooldown_time');
+q.system_time_millis <= t.cooldown_time ? return true : return false;
