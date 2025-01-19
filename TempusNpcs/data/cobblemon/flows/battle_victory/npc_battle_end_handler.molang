@@ -22,5 +22,5 @@ for_each(t.loser, c.npc_losers, {
       q.player.set_npc_variable(t.loser.npc, 'cooldown_time', t.cooldown_time);
       q.player.save_data();
     });
-  }
+  };
 });

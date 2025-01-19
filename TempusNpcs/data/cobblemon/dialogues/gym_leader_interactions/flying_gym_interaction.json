@@ -23,7 +23,15 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Hello, and welcome to the Unity City Flying Gym."
+                "Oh? Another trainer? I'm Capt. Atlas, the pilot of this flight and a proud gym leader."
+            ],
+            "input": "q.dialogue.set_page('greeting2');"
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                "So, I take it you are here for a battle? Well, the skies are only for those who demand precision and determination."
             ],
             "input": "q.dialogue.set_page('battle_prompt');"
         },
@@ -31,7 +39,7 @@
             "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "So, what do you say? Would you like to challenge me to a battle?"
+                "Do you think you have what it takes to match a veteran of the Venola Air Force?"
             ],
             "input": {
                 "type": "option",
@@ -55,7 +63,7 @@
             "id": "battle_start",
             "speaker": "npc",
             "lines": [
-                "That's what I like to see! Now, show me what you got, Trainer!"
+                "I see, then let’s see if you can truly soar higher!"
             ],
             "escapeAction": "0",
             "input": [
@@ -67,7 +75,7 @@
             "id": "post_defeat",
             "speaker": "npc",
             "lines": [
-                "I see you came back for more! Well, I'm glad to see you are always up for a challenge."
+                "Back for another flight, huh? I’ll gladly chat about strategy, but remember, you’ve already bested me. I appreciate the thought nevertheless."
             ],
             "input": "q.dialogue.close();"
         }
