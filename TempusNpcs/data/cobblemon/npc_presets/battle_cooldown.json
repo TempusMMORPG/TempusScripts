@@ -5,7 +5,7 @@
           "displayName": "Cooldown Time (IN HOURS)",
           "description": "The time in hours that the player must wait before utilizing this NPC again.",
           "type": "NUMBER",
-          "defaultValue": "0.5"
+          "defaultValue": "0.333"
         }
     ]
 }
