@@ -1,0 +1,83 @@
+{
+    "initializationAction": [
+        "q.player.data.normal_gym_defeated ? q.dialogue.set_page('post_defeat');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Oh? Another trainer? I'm Capt. Atlas, the pilot of this flight and a proud gym leader."
+            ],
+            "input": "q.dialogue.set_page('greeting2');"
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                "So, I take it you are here for a battle? Well, the skies are only for those who demand precision and determination."
+            ],
+            "input": "q.dialogue.set_page('battle_prompt');"
+        },
+        {
+            "id": "battle_prompt",
+            "speaker": "npc",
+            "lines": [
+                "Do you think you have what it takes to match a veteran of the Venola Air Force?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "isSelectable": "q.player.data.normal_gym_defeated == false",
+                        "action": "q.dialogue.set_page('battle_start');"
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "battle_start",
+            "speaker": "npc",
+            "lines": [
+                "I see, then let’s see if you can truly soar higher!"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "Back for another flight, huh? I’ll gladly chat about strategy, but remember, you’ve already bested me. I appreciate the thought nevertheless."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

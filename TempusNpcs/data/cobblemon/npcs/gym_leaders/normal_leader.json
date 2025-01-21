@@ -11,7 +11,7 @@
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:flying_gym_interaction"
+    "dialogue": "cobblemon:normal_gym_interaction"
   },
   "config": [
     {
