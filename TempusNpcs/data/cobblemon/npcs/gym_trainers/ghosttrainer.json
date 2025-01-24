@@ -1,0 +1,22 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",    
+    "names": [
+      "Staff"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:battle_npc",
+      "cobblemon:battle_quest_npc",
+      "cobblemon:looks_in_one_direction"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:ghost_trainer_interaction"
+    },
+    "skill": 3,
+    "party": {
+      "type": "script",
+      "script": "cobblemon:ghosttrainer",
+      "isStatic": false
+    }
+  }

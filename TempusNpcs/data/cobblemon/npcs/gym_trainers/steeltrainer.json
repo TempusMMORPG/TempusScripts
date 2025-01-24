@@ -1,0 +1,22 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",    
+    "names": [
+      "Gladiator"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:battle_npc",
+      "cobblemon:battle_quest_npc",
+      "cobblemon:looks_in_one_direction"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:steel_trainer_interaction"
+    },
+    "skill": 3,
+    "party": {
+      "type": "script",
+      "script": "cobblemon:steeltrainer",
+      "isStatic": false
+    }
+  }
