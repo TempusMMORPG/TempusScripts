@@ -1,0 +1,11 @@
+{
+    "config": [
+        {
+            "variableName": "base_defeat_count",
+            "displayName": "Defeat Count",
+            "description": "Defeat Count",
+            "type": "NUMBER",
+            "defaultValue": "4.0"
+        }
+    ]
+}

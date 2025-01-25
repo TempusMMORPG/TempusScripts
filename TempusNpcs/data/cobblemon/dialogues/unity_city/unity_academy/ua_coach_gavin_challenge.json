@@ -25,7 +25,7 @@
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'Hey there trainer! My name is ' + q.npc.name + ' are you ready to battle? ';"
+                    "expression": "'Hey there trainer! My name is ' + q.npc.name + ' are you ready to battle?';"
                 }
             ],
             "input": "q.dialogue.set_page('battle_prompt');"
