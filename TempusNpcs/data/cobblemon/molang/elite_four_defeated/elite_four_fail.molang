@@ -1,0 +1,4 @@
+q.player.data.e4_ghost_dark = 0;
+q.player.data.e4_water_electric = 0;
+q.player.data.e4_fire_psychic = 0;
+q.player.data.e4_steel_fairy = 0;
