@@ -1,0 +1,38 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",    
+    "names": [
+      "§lElite Four§r"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:battle_npc",
+      "cobblemon:battle_quest_npc",
+      "cobblemon:looks_in_one_direction"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:e4_fire_psychic"
+    },
+    "config": [
+      {
+        "variableName": "on_player_wins",
+        "displayName": "npc.variable.on_player_wins.name",
+        "description": "npc.variable.on_player_wins.desc",
+        "type": "TEXT",
+        "defaultValue": "q.run_script('cobblemon:e4_fire_psychic_defeated');"
+      },
+      {
+        "variableName": "on_player_loses",
+        "displayName": "npc.variable.on_player_loses.name",
+        "description": "npc.variable.on_player_loses.desc",
+        "type": "TEXT",
+        "defaultValue": "q.run_script('cobblemon:elite_four_fail');"
+      }
+    ],
+    "skill": 5,
+    "party": {
+      "type": "script",
+      "script": "cobblemon:e4_fire_psychic",
+      "isStatic": false
+    }
+  }
