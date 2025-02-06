@@ -11,7 +11,7 @@
     ],
     "interaction": {
       "type": "dialogue",
-      "dialogue": "cobblemon:e4_fire_psychic"
+      "dialogue": "cobblemon:e4_fire_psychic_interaction"
     },
     "config": [
       {

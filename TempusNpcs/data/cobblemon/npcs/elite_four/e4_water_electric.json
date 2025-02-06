@@ -11,7 +11,7 @@
     ],
     "interaction": {
       "type": "dialogue",
-      "dialogue": "cobblemon:e4_water_electric"
+      "dialogue": "cobblemon:e4_water_electric_interaction"
     },
     "config": [
       {

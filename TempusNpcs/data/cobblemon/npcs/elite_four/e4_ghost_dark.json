@@ -11,7 +11,7 @@
     ],
     "interaction": {
       "type": "dialogue",
-      "dialogue": "cobblemon:e4_ghost_dark"
+      "dialogue": "cobblemon:e4_ghost_dark_interaction"
     },
     "config": [
       {

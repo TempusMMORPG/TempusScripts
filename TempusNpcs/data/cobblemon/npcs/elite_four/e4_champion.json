@@ -11,7 +11,7 @@
     ],
     "interaction": {
       "type": "dialogue",
-      "dialogue": "cobblemon:e4_champion"
+      "dialogue": "cobblemon:e4_champion_interaction"
     },
     "config": [
       {
