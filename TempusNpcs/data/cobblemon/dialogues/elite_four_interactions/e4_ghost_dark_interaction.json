@@ -43,7 +43,7 @@
                     {
                         "text": "§c⚔ Battle ⚔§r",
                         "value": "battle",
-                        "isSelectable": "q.player.data.gym_stage == 18",
+                        "isSelectable": "q.player.data.gym_stage == 18 && q.player.data.e4_ghost_dark_defeated == false",
                         "action": "q.dialogue.set_page('battle_start');"
                     },
                     {
