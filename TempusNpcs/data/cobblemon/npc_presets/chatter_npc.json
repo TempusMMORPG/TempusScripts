@@ -14,5 +14,6 @@
           "type": "TEXT",
           "defaultValue": "Hello!"
         }
-    ]
+    ],
+    "hideNameTag": true
   }
