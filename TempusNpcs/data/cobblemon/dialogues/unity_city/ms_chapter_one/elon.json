@@ -1,0 +1,137 @@
+{
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Professor Laurel is pretty busy these days, and my father is as well I think."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "Who is your father?"
+                        },
+                        "value": "who_is_father_",
+                        "action": [
+                            "q.dialogue.set_page('elon_who_is_your_father');"
+                        ]
+                    },
+                    {
+                        "text": "why is she so busy?",
+                        "value": "busy",
+                        "action": [
+                            "q.dialogue.set_page('elon_why_is_she_so_busy');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "elon_who_is_your_father",
+            "speaker": "npc",
+            "lines": [
+                "My father is Professor Conifer, he works in the field researching Pokemon.",
+                "Although, no one has seen my dad for a few weeks. "
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "why is she so busy?",
+                        "value": "busy",
+                        "action": [
+                            "q.dialogue.set_page(elon_why_is_she_so_busy');"
+                        ]
+                    }
+                        ]
+                    }
+            },
+        {
+            "id": "elon_why_is_she_so_busy",
+            "speaker": "npc",
+            "lines": [
+                "Well we're all very busy lately, there's been a major issue with Tempus.",
+                "The Regalis recently resurfaced after hundreds of years in hiding to try and regain control of Tempus."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Continue...",
+                        "value": "continue",
+                        "action": [
+                            "q.dialogue.set_page(elon_continue');"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "elon_continue",
+            "speaker": "npc",
+            "lines": [
+                "Knowing my father he's probably trying to throw a wrench in their plans.",
+                "I'm sure he has found a way to stop them, can you help him?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Sure, where is he?",
+                        "value": "sure",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 1B731C3E9885A0D4' );",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "elon_sure_where_is_he",
+            "speaker": "npc",
+            "lines": [
+                "I heard there's been some strange things going on in the sewers under the city, try checking there first."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Sure, where is he?",
+                        "value": "sure",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 18D4996D81ABC3F5' );",
+                            "q.player.data.dialogue.elon = 1;",
+                            "q.player.save_data();",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                        ]
+                    }
+        }
+    ]
+}

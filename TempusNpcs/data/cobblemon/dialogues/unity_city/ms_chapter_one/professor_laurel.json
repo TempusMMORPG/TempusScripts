@@ -1,0 +1,90 @@
+{
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "I'm a little busy at the moment, can you… Oh you must be a new trainer. Well I'm &dProfessor Laurel&f! I'm one of two professors in Tempus,",
+                "the other is my friend &bProfessor Conifer&f.",
+                "I guess you'll be wanting to start your journey, so I won't hold you up for too long.",
+                "Let me just get the Pokemon ready.... Now before you choose what is your name?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "q.player.username"
+                        },
+                        "value": "playername",
+                        "action": [
+                            "q.dialogue.set_page('claim_pokedex');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "claim_pokedex",
+            "speaker": "npc",
+            "lines": [
+                "Alright, now here is your very own &dPokedex&f! It's a high-tech device that records data on Pokemon you've seen or caught.",
+                "It's a very important tool for any trainer, so make sure to use it often."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Obtain the Pokedex",
+                        "value": "pokedex",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 77EFA770EBB83009' );",
+                            "q.dialogue.set_page('talk_to_elon');"
+                        ]
+                    }
+                        ]
+                    }
+            },
+        {
+            "id": "talk_to_elon",
+            "speaker": "npc",
+            "lines": [
+                "Professor Laurel is pretty busy these days, and my father is as well I think.",
+                "Now that you have your Pokemon, you're ready to start your journey. Good luck, &b[playername]&f!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Goodbye",
+                        "value": "close dialogue",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 1B731C3E9885A0D4' );",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                        ]
+                    }
+        }
+    ]
+}
