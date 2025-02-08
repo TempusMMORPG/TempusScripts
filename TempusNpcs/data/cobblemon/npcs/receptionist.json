@@ -1,0 +1,30 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",
+    "presets": [
+        "cobblemon:base_npc",
+        "cobblemon:looks_in_one_direction"
+    ],
+    "names": [
+        "§lReceptionist§r"
+    ],
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:recepionist"
+    },
+    "config": [
+        {
+          "variableName": "teleport_display_1",
+          "displayName": "Teleport Display Text 1",
+          "description": "Teleport Display (What is shown to user)",
+          "type": "TEXT",
+          "defaultValue": "Unity City Lab"
+        },
+        {
+          "variableName": "teleport_location_1",
+          "displayName": "Teleport Location Cordination 1",
+          "description": "Teleport location (X Y Z Rotation(X) Rotation(Y))",
+          "type": "TEXT",
+          "defaultValue": "0 10 0 ~ ~"
+        }
+    ]
+}
