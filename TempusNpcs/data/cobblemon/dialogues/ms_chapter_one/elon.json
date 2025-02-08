@@ -61,12 +61,12 @@
                         "text": "why is she so busy?",
                         "value": "busy",
                         "action": [
-                            "q.dialogue.set_page(elon_why_is_she_so_busy');"
+                            "q.dialogue.set_page('elon_why_is_she_so_busy');"
                         ]
                     }
-                        ]
-                    }
-            },
+                ]
+            }
+        },
         {
             "id": "elon_why_is_she_so_busy",
             "speaker": "npc",
@@ -82,11 +82,11 @@
                         "text": "Continue...",
                         "value": "continue",
                         "action": [
-                            "q.dialogue.set_page(elon_continue');"
+                            "q.dialogue.set_page('elon_continue');"
                         ]
                     }
-                        ]
-                    }
+                ]
+            }
         },
         {
             "id": "elon_continue",
@@ -107,8 +107,8 @@
                             "q.dialogue.close();"
                         ]
                     }
-                        ]
-                    }
+                ]
+            }
         },
         {
             "id": "elon_sure_where_is_he",
@@ -130,8 +130,8 @@
                             "q.dialogue.close();"
                         ]
                     }
-                        ]
-                    }
+                ]
+            }
         }
     ]
 }
