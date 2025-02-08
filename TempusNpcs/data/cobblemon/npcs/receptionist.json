@@ -9,7 +9,7 @@
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:recepionist"
+        "dialogue": "cobblemon:receptionist"
     },
     "config": [
         {
