@@ -34,7 +34,7 @@
                         ]
                     },
                     {
-                        "text": "why is she so busy?",
+                        "text": "Why is she so busy?",
                         "value": "busy",
                         "action": [
                             "q.dialogue.set_page('elon_why_is_she_so_busy');"
