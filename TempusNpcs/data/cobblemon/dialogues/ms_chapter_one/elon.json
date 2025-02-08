@@ -27,11 +27,8 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": {
-                            "type": "expression",
-                            "expression": "Who is your father?"
-                        },
-                        "value": "who_is_father_",
+                        "text": "Who is your father?",
+                        "value": "who_is_your_father",
                         "action": [
                             "q.dialogue.set_page('elon_who_is_your_father');"
                         ]
