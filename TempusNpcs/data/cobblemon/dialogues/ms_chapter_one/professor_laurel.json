@@ -20,8 +20,8 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I'm a little busy at the moment, can you… Oh you must be a new trainer. Well I'm &dProfessor Laurel&f! I'm one of two professors in Tempus,",
-                "the other is my friend &bProfessor Conifer&f.",
+                "I'm a little busy at the moment, can you… Oh you must be a new trainer. Well I'm §dProfessor Laurel§r! I'm one of two professors in Tempus,",
+                "the other is my friend §6Professor Conifer§r.",
                 "I guess you'll be wanting to start your journey, so I won't hold you up for too long.",
                 "Let me just get the Pokemon ready.... Now before you choose what is your name?"
             ],
@@ -46,7 +46,7 @@
             "id": "claim_pokedex",
             "speaker": "npc",
             "lines": [
-                "Alright, now here is your very own &dPokedex&f! It's a high-tech device that records data on Pokemon you've seen or caught.",
+                "Alright, now here is your very own §6Pokedex§r! It's a high-tech device that records data on Pokemon you've seen or caught.",
                 "It's a very important tool for any trainer, so make sure to use it often."
             ],
             "input": {
