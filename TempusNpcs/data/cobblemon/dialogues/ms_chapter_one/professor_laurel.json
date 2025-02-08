@@ -69,7 +69,7 @@
             "speaker": "npc",
             "lines": [
                 "Professor Laurel is pretty busy these days, and my father is as well I think.",
-                "Now that you have your Pokemon, you're ready to start your journey. Good luck, &b[playername]&f!"
+                "Now that you have your Pokemon, you're ready to start your journey. Good luck!"
             ],
             "input": {
                 "type": "option",
