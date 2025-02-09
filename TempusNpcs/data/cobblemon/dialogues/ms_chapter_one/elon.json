@@ -1,4 +1,7 @@
 {
+    "initializationAction": [
+        "q.player.data.dialogue.elon ? q.dialogue.set_page('farewell');"
+    ],
     "speakers": {
         "npc": {
             "name": {
@@ -18,6 +21,7 @@
     "pages": [
         {
             "id": "greeting",
+            "escapeAction": "0",
             "speaker": "npc",
             "lines": [
                 "Professor Laurel is pretty busy these days, and my father is as well I think."
@@ -45,6 +49,7 @@
         },
         {
             "id": "elon_who_is_your_father",
+            "escapeAction": "0",
             "speaker": "npc",
             "lines": [
                 "My father is Professor Conifer, he works in the field researching Pokemon.",
@@ -66,6 +71,7 @@
         },
         {
             "id": "elon_why_is_she_so_busy",
+            "escapeAction": "0",
             "speaker": "npc",
             "lines": [
                 "Well we're all very busy lately, there's been a major issue with Tempus.",
@@ -87,6 +93,7 @@
         },
         {
             "id": "elon_continue",
+            "escapeAction": "0",
             "speaker": "npc",
             "lines": [
                 "Knowing my father he's probably trying to throw a wrench in their plans.",
@@ -108,6 +115,7 @@
         },
         {
             "id": "elon_sure_where_is_he",
+            "escapeAction": "0",
             "speaker": "npc",
             "lines": [
                 "I heard there's been some strange things going on in the sewers under the city, try checking there first."
@@ -117,12 +125,33 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Sure, where is he?",
+                        "text": "leave",
                         "value": "sure",
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 18D4996D81ABC3F5');",
-                            "q.player.data.dialogue.elon = 1;",
+                            "q.player.data.dialogue.elon = true;",
                             "q.player.save_data();",
+                            "q.dialogue.set_page();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "farewell",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Good luck, and be careful."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "leave",
+                        "value": "Goodbye",
+                        "action": [
                             "q.dialogue.close();"
                         ]
                     }
