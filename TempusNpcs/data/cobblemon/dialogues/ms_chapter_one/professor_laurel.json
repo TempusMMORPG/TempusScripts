@@ -1,4 +1,7 @@
 {
+    "initializationAction": [
+        "q.player.data.dialogue.professor_laurel ? q.dialogue.set_page('goodbye');"
+    ],
     "speakers": {
         "npc": {
             "name": {
@@ -57,7 +60,7 @@
                         "text": "Obtain the Pokedex",
                         "value": "pokedex",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 77EFA770EBB83009');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 1B731C3E9885A0D4');",
                             "q.dialogue.set_page('talk_to_elon');"
                         ]
                     }
@@ -69,7 +72,27 @@
             "speaker": "npc",
             "lines": [
                 "Professor Laurel is pretty busy these days, and my father is as well I think.",
-                "Now that you have your Pokemon, you're ready to start your journey. Good luck!"
+                "Now that you have your Pokemon, you're ready to start your journey. Go and talk to Elon when you're ready. Good luck!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Ok thanks!",
+                        "value": "okay",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "goodbye",
+            "speaker": "npc",
+            "lines": [
+                "Bye!"
             ],
             "input": {
                 "type": "option",
@@ -77,9 +100,8 @@
                 "options": [
                     {
                         "text": "Goodbye",
-                        "value": "close dialogue",
+                        "value": "goodbye",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 1B731C3E9885A0D4');",
                             "q.dialogue.close();"
                         ]
                     }
