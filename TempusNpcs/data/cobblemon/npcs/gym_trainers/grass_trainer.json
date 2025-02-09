@@ -20,7 +20,7 @@
         "displayName": "npc.variable.on_player_wins.name",
         "description": "npc.variable.on_player_wins.desc",
         "type": "TEXT",
-        "defaultValue": "q.player.data.flying_trainer_defeat_count = q.player.data.flying_trainer_defeat_count + 1;q.player.save_data();q.player.data.flying_trainer_defeat_count == q.npc.config.base_defeat_count ? q.run_molang(q.npc.config.complete_quest_command);"
+        "defaultValue": "q.player.data.grass_trainer_defeat_count = q.player.data.grass_trainer_defeat_count + 1;q.player.save_data();q.player.data.grass_trainer_defeat_count == q.npc.config.base_defeat_count ? q.run_molang(q.npc.config.complete_quest_command);"
       }
     ],
     "skill": 3,
