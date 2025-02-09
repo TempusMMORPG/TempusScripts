@@ -1,0 +1,117 @@
+{
+    "initializationAction": [
+        "q.player.data.dialogue.professor_conifer_crypt ? q.dialogue.set_page('farewell');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Hey trainer! Looks like you're slower than me."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Whats the situation?",
+                        "value": "situation",
+                        "action": [
+                            "q.dialogue.set_page('conifer_one');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "conifer_one",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Looks like someone broke in and stole an artifact from the coffin."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "What Artifact?",
+                        "value": "what_artifact",
+                        "action": [
+                            "q.dialogue.set_page('conifer_two');"
+                        ]
+                    }
+                        ]
+                    }
+            },
+        {
+            "id": "conifer_two",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Someone's curious... Well it's not like you can steal it now. "
+            ],
+            "input": "q.dialogue.set_page('conifer_three');"
+        },
+        {
+            "id": "conifer_three",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I think I have a plan. I just got a call from one of my contacts, Grace. She's at the Graveyard and she's found something that might help us. I'll meet you there."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Ok thanks!",
+                        "value": "okay",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2BB5F23B276D745D');",
+                            "q.player.data.dialogue.professor_conifer_crypt = true; q.player.save_data();",
+                            "q.dialogue.set_page('farewell');"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "farewell",
+            "speaker": "npc",
+            "lines": [
+                "See ya later!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Goodbye",
+                        "value": "goodbye",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                        ]
+                    }
+        }
+    ]
+}

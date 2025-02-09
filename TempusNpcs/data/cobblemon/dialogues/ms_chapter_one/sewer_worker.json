@@ -1,0 +1,108 @@
+{
+    "initializationAction": [
+        "q.player.data.dialogue.sewer_worker ? q.dialogue.set_page('farewell');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Hey trainer! What are you doing down here?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "I'm looking for Professor Conifer",
+                        "value": "looking_for_conifer",
+                        "action": [
+                            "q.dialogue.set_page('sewer_worker_one');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "sewer_worker_one",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Oh Professor Conifer? You just missed him. He's gone to the Graveyard to investigate something. He was with a girl named Grace."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Did he say what he was investigating?",
+                        "value": "regalis",
+                        "action": [
+                            "q.dialogue.set_page('sewer_worker_two');"
+                        ]
+                    }
+                        ]
+                    }
+            },
+        {
+            "id": "sewer_worker_two",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I don't know man, I'm just a sewer worker. I don't get involved in that stuff."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Oh I see...",
+                        "value": "okay",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2BB5F23B276D745D');",
+                            "q.player.data.dialogue.sewer_worker = true; q.player.save_data();",
+                            "q.dialogue.set_page('farewell');"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "farewell",
+            "speaker": "npc",
+            "lines": [
+                "Stop bothering me, I have work to do."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Goodbye",
+                        "value": "goodbye",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                        ]
+                    }
+        }
+    ]
+}

@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.dialogue.professor_conifer_sewer ? q.dialogue.set_page('farewell');"
+        "q.player.data.dialogue.professor_conifer_archives == 1 ? q.dialogue.set_page('stop_them') || q.player.data.dialogue.professor_conifer_archives == 2 ? q.dialogue.set_page('farewell')"
     ],
     "speakers": {
         "npc": {
@@ -24,69 +24,80 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Hey trainer! What are you doing down here?"
+                "Shhh! Keep it down! They're talking about something down there."
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Elon sent me",
-                        "value": "elon_sent_me",
+                        "text": "Who?",
+                        "value": "who",
                         "action": [
-                            "q.dialogue.set_page('conifer_one');"
+                            "q.dialogue.set_page('stop_them');"
                         ]
                     }
                 ]
             }
         },
         {
-            "id": "conifer_one",
+            "id": "stop_them",
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Elon? I guess he really is worried about me. I've been down here researching Pokemon for a while now."
+                "The Regalis! I can't quite hear what they're saying, but they're ripping pages out of the books. Quick we need to stop them! Get down there!"
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "The Regalis",
-                        "value": "regalis",
+                        "text": "Okay!",
+                        "value": "okay",
                         "action": [
-                            "q.dialogue.set_page('conifer_two');"
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2BB5F23B276D745D');",
+                            "q.player.data.dialogue.professor_conifer_archives = 1; q.player.save_data();",
+                            "q.dialogue.close();"
                         ]
                     }
                         ]
                     }
             },
         {
-            "id": "conifer_two",
+            "id": "after_regalis_grunts",
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Ah yes, the Regalis are extremely troublesome. I've been trying to figure out how to stop them for a while."
+                "Nice work! Give me the pages..."
             ],
-            "input": "q.dialogue.set_page('conifer_three');"
+            "input": "q.dialogue.set_page('page_crafting');"
         },
         {
-            "id": "conifer_three",
+            "id": "page_crafting",
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "I think I have a plan. I just got a call from one of my contacts, Grace. She's at the Graveyard and she's found something that might help us. I'll meet you there."
+                "..."
+            ],
+            "input": "q.dialogue.set_page('after_page_crafting');"
+        },
+        {
+            "id": "after_page_crafting",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Ok, I'm finished. It's a book detailing the process to access the Distortion World..."
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Ok thanks!",
-                        "value": "okay",
+                        "text": "What do they want with the Distortion World?",
+                        "value": "distortion_world",
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2BB5F23B276D745D');",
-                            "q.player.data.dialogue.professor_conifer_sewer = true; q.player.save_data();",
+                            "q.player.data.dialogue.professor_conifer_crypt = true; q.player.save_data();",
                             "q.dialogue.set_page('farewell');"
                         ]
                     }

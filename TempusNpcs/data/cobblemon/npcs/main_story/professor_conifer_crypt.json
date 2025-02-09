@@ -1,0 +1,14 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",
+    "presets": [
+        "cobblemon:base_npc",
+        "cobblemon:looks_in_one_direction"
+    ],
+    "names": [
+        "§lProfessor Conifer§r"
+    ],
+    "interaction": {
+        "type": "custom_script",
+        "script": "c.player.data.dialogue.grace == 1 ? c.npc.run_dialogue(c.player, 'professor_conifer_crypt') : c.player.data.dialogue.professor_conifer_crypt == 1 ? c.npc.run_dialogue(c.player, 'professor_conifer_archives');"
+    }
+}
