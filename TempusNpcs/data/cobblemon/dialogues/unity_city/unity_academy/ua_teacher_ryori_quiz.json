@@ -261,7 +261,7 @@
             "escapeAction": "0",
             "input": [
                 "q.player.data.ua_ryori_completed = true; q.player.save_data();",
-                "q.run_molang(q.npc.config.complete_quest_command);",
+                "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 149187207DD45947');",
                 "q.dialogue.set_page('post_completed');"
             ]
         },
