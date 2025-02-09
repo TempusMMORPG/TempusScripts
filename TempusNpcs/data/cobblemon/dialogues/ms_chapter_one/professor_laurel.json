@@ -82,7 +82,8 @@
                         "text": "Ok thanks!",
                         "value": "okay",
                         "action": [
-                            "q.dialogue.close();"
+                            "q.dialogue.close();",
+                            "q.player.data.dialogue.professor_laurel = true; q.player.save_data();"
                         ]
                     }
                         ]
