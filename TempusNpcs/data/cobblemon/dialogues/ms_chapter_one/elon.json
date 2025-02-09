@@ -120,7 +120,7 @@
                         "text": "Sure, where is he?",
                         "value": "sure",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 18D4996D81ABC3F5' );",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 18D4996D81ABC3F5');",
                             "q.player.data.dialogue.elon = 1;",
                             "q.player.save_data();",
                             "q.dialogue.close();"
