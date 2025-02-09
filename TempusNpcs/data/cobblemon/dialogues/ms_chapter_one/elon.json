@@ -60,7 +60,7 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": "why is she so busy?",
+                        "text": "Why is she so busy?",
                         "value": "busy",
                         "action": [
                             "q.dialogue.set_page('elon_why_is_she_so_busy');"
@@ -125,12 +125,12 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": "leave",
-                        "value": "sure",
+                        "text": "I'll check it out.",
+                        "value": "check",
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 18D4996D81ABC3F5');",
                             "q.player.data.dialogue.elon = true; q.player.save_data();",
-                            "q.dialogue.set_page();"
+                            "q.dialogue.set_page('farewell');"
                         ]
                     }
                 ]
@@ -147,7 +147,7 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": "leave",
+                        "text": "Leave",
                         "value": "Goodbye",
                         "action": [
                             "q.dialogue.close();"
