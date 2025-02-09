@@ -30,7 +30,7 @@ t.data == 'EASY' ? {
  t.27 = 'patrat held_item=cobblemon:oran_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
  t.28 = 'lillipup held_item=cobblemon:oran_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
  t.29 = 'pidove held_item=cobblemon:oran_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
- t.30 = 'zorua hisui held_item=cobblemon:oran_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
+ t.30 = 'zorua hisuian held_item=cobblemon:oran_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
  t.31 = 'deerling held_item=cobblemon:oran_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
  t.32 = 'bunnelby held_item=cobblemon:oran_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
  t.33 = 'trumbeak held_item=cobblemon:oran_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
@@ -74,7 +74,7 @@ t.data == 'MEDIUM' ? {
  t.27 = 'watchog held_item=cobblemon:sitrus_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
  t.28 = 'stoutland held_item=cobblemon:sitrus_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
  t.29 = 'unfezant held_item=cobblemon:sitrus_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
- t.30 = 'zoroark hisui held_item=cobblemon:sitrus_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
+ t.30 = 'zoroark hisuian held_item=cobblemon:sitrus_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
  t.31 = 'sawsbuck held_item=cobblemon:sitrus_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
  t.32 = 'diggersby held_item=cobblemon:sitrus_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
  t.33 = 'toucannon held_item=cobblemon:sitrus_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
@@ -128,7 +128,7 @@ t.data == 'HARD' ? {
  t.27 = 'watchog held_item=cobblemon:sitrus_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
  t.28 = 'stoutland held_item=cobblemon:sitrus_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
  t.29 = 'unfezant held_item=cobblemon:sitrus_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
- t.30 = 'zoroark hisui held_item=cobblemon:sitrus_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
+ t.30 = 'zoroark hisuian held_item=cobblemon:sitrus_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
  t.31 = 'sawsbuck held_item=cobblemon:sitrus_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
  t.32 = 'diggersby held_item=cobblemon:sitrus_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
  t.33 = 'toucannon held_item=cobblemon:sitrus_berry hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true level=' + (q.player.party.highest_level - 3);
