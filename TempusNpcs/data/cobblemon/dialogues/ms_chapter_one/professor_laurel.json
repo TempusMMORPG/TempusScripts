@@ -57,7 +57,7 @@
                         "text": "Obtain the Pokedex",
                         "value": "pokedex",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 77EFA770EBB83009' );",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 77EFA770EBB83009');",
                             "q.dialogue.set_page('talk_to_elon');"
                         ]
                     }
@@ -79,7 +79,7 @@
                         "text": "Goodbye",
                         "value": "close dialogue",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 1B731C3E9885A0D4' );",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 1B731C3E9885A0D4');",
                             "q.dialogue.close();"
                         ]
                     }
