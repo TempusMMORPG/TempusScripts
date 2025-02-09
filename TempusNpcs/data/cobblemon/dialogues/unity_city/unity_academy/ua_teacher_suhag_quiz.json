@@ -215,7 +215,7 @@
             ],
             "input": [
                 "q.player.data.ua_suhag_completed = true; q.player.save_data();",
-                "q.run_molang(q.npc.config.complete_quest_command);",
+                "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 528C385B9A4C9013');",
                 "q.dialogue.set_page('post_completed');"
             ]
         },
