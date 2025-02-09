@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.dialogue.professor_conifer_one ? q.dialogue.set_page('farewell');"
+        "q.player.data.dialogue.professor_conifer_sewer ? q.dialogue.set_page('farewell');"
     ],
     "speakers": {
         "npc": {
@@ -86,7 +86,7 @@
                         "value": "okay",
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2BB5F23B276D745D');",
-                            "q.player.data.dialogue.professor_conifer_one = true; q.player.save_data();",
+                            "q.player.data.dialogue.professor_conifer_sewer = true; q.player.save_data();",
                             "q.dialogue.set_page('farewell');"
                         ]
                     }
