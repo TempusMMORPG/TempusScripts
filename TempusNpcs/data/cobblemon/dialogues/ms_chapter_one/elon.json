@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.dialogue.elon ? q.dialogue.set_page('farewell');"
+        "q.player.data.dialogue.professor_laurel == false || q.player.data.dialogue.elon ? q.dialogue.set_page('farewell');"
     ],
     "speakers": {
         "npc": {
@@ -139,7 +139,6 @@
         },
         {
             "id": "farewell",
-            "escapeAction": "0",
             "speaker": "npc",
             "lines": [
                 "Good luck, and be careful."
