@@ -1,0 +1,14 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",
+    "presets": [
+        "cobblemon:base_npc",
+        "cobblemon:looks_in_one_direction"
+    ],
+    "names": [
+        "§lGrace§r"
+    ],
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:grace"
+    }
+}
