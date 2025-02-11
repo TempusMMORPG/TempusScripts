@@ -9,6 +9,6 @@
     ],
     "interaction": {
         "type": "custom_script",
-        "script": "c.player.data.dialogue.grace == 1 ? c.npc.run_dialogue(c.player, 'professor_conifer_crypt') : c.player.data.dialogue.professor_conifer_crypt == 1 ? c.npc.run_dialogue(c.player, 'professor_conifer_archives');"
+        "script": "c.player.data.dialogue.professor_conifer_crypt && c.player.data.dialogue.professor_conifer_archives == false ? c.npc.run_dialogue(c.player, 'professor_conifer_archives'); c.player.data.dialogue.grace && c.player.data.dialogue.professor_conifer_crypt == false ? c.npc.run_dialogue(c.player, 'professor_conifer_crypt');"
     }
 }
