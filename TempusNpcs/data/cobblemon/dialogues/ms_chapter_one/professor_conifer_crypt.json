@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.dialogue.professor_conifer_crypt ? q.dialogue.set_page('farewell');"
+        "q.player.data.dialogue.professor_conifer_crypt || q.player.data.crypt_police_defeat_count != 4 ? q.dialogue.set_page('idle');"
     ],
     "speakers": {
         "npc": {
@@ -98,6 +98,26 @@
             "speaker": "npc",
             "lines": [
                 "See ya later!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Goodbye",
+                        "value": "goodbye",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "idle",
+            "speaker": "npc",
+            "lines": [
+                "..."
             ],
             "input": {
                 "type": "option",
