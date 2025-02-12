@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.dialogue.elon == false || q.player.data.dialogue.grace ? q.dialogue.set_page('farewell');"
+        "q.player.data.dialogue.sewer_worker == false || q.player.data.dialogue.grace ? q.dialogue.set_page('farewell');"
     ],
     "speakers": {
         "npc": {
