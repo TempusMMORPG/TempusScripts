@@ -24,7 +24,7 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "You're the trainer that Elon sent, right? I'm Grace. Conifer beat you here. He told me you were coming."
+                "You're the trainer that Elon sent, right? I'm Grace, an associate of the Professor."
             ],
             "input": "q.dialogue.set_page('grace_one');"
         },
@@ -33,7 +33,7 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                 "Head down into the Crypt. Conifer is waiting for you there. He found something."
+                 "Head down into the Crypt. Professor Conifer is waiting for you there. He said he's found something."
             ],
             "input": {
                 "type": "option",
