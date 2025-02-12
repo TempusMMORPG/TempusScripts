@@ -1,4 +1,7 @@
 {
+    "initializationAction": [
+        "q.player.data.crypt_police_defeat_count == 4 ? q.dialogue.set_page('idle');"
+    ],
     "speakers": {
         "npc": {
             "name": {
@@ -50,6 +53,26 @@
                 "q.dialogue.close();",
                 "v.battle = q.npc.start_battle(q.player);"
             ]
+        },
+        {
+            "id": "idle",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Goodbye",
+                        "value": "goodbye",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                        ]
+                    }
         }
     ]
 }
