@@ -9,6 +9,6 @@
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:professor_confier_crypt"
+        "dialogue": "cobblemon:professor_confier_archives"
     }
 }
