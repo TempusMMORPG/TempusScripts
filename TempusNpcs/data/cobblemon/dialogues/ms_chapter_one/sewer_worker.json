@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.dialogue.sewer_worker ? q.dialogue.set_page('farewell');"
+        "q.player.data.dialogue.sewer_worker == 0 ? q.dialogue.set_page('farewell');"
     ],
     "speakers": {
         "npc": {
