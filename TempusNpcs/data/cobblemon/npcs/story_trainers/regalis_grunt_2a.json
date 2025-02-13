@@ -12,7 +12,7 @@
     ],
     "interaction": {
       "type": "dialogue",
-      "dialogue": "cobblemon:regalis_grunt_1"
+      "dialogue": "cobblemon:regalis_grunt_2a"
     },
     "skill": 3,
     "party": {
