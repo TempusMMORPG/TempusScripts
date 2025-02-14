@@ -1,4 +1,4 @@
 q.run_script('cobblemon:gs_gym_leader_progression');
 q.player.data.flying_gym_defeated = true;
 q.player.save_data();
-q.player.tell(q.npc.name + " : Heh... seems you got some pretty impressive instincts. Even the best pilots hit turbulence sometimes. I hope this badge serves you well.");
+q.player.tell(q.npc.name + ': Heh... seems you got some pretty impressive instincts. Even the best pilots hit turbulence sometimes. I hope this badge serves you well.');
