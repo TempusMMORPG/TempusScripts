@@ -1,4 +1,4 @@
 q.run_script('cobblemon:gs_gym_leader_progression');
 q.player.data.electric_gym_defeated = true;
 q.player.save_data();
-q.player.tell(q.npc.name + " : You have got a real spark in you. Here, take this badge as a token of your victory.");
+q.player.tell(q.npc.name + ': You have got a real spark in you. Here, take this badge as a token of your victory.');
