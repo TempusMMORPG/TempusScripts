@@ -1,4 +1,4 @@
 q.run_script('cobblemon:gs_gym_leader_progression');
 q.player.data.normal_gym_defeated = true;
 q.player.save_data();
-q.player.tell(q.npc.name + ": Congratuations! You\'ve earned this badge! I hope you learned a lot from our battle.");
+q.player.tell(q.npc.name + ": Congratuations! You have earned this badge! I hope you learned a lot from our battle.");
