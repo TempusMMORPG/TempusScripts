@@ -1,4 +1,4 @@
 q.run_script('cobblemon:gs_gym_leader_progression');
 q.player.data.steel_gym_defeated = true;
 q.player.save_data();
-q.player.tell(q.npc.name + " : That was some fine work. You earned this badge. Keep it up.");
+q.player.tell(q.npc.name + ': That was some fine work. You earned this badge. Keep it up.');
