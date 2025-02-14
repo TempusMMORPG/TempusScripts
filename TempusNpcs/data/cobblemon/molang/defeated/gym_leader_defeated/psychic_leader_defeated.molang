@@ -1,4 +1,4 @@
 q.run_script('cobblemon:gs_gym_leader_progression');
 q.player.data.psychic_gym_defeated = true;
 q.player.save_data();
-q.player.tell(q.npc.name + ': You\'re win was no coincidence. Here, take this badge as a symbol of our exchange.');
+q.player.tell(q.npc.name + ": You\'re win was no coincidence. Here, take this badge as a symbol of our exchange.");

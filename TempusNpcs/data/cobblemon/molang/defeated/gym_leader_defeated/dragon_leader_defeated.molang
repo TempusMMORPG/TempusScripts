@@ -1,4 +1,4 @@
 q.run_script('cobblemon:gs_gym_leader_progression');
 q.player.data.dragon_gym_defeated = true;
 q.player.save_data();
-q.player.tell(q.npc.name + ': You\'ve got the heart of a dragon for sure. I hope this badge servers as a reminder of your victory.');
+q.player.tell(q.npc.name + ": You\'ve got the heart of a dragon for sure. I hope this badge servers as a reminder of your victory.");

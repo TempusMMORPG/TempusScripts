@@ -1,4 +1,4 @@
 q.run_script('cobblemon:gs_gym_leader_progression');
 q.player.data.dark_gym_defeated = true;
 q.player.save_data();
-q.player.tell(q.npc.name + ': Don\'t get too cocky. You\'ve earned this badge, but there\'s still a long way to go.');
+q.player.tell(q.npc.name + ": Don\'t get too cocky. You\'ve earned this badge, but there\'s still a long way to go.");
