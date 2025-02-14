@@ -13,6 +13,15 @@
       "type": "dialogue",
       "dialogue": "cobblemon:king_bastien_interaction"
     },
+    "config": [
+    {
+      "variableName": "on_player_wins",
+      "displayName": "npc.variable.on_player_wins.name",
+      "description": "npc.variable.on_player_wins.desc",
+      "type": "TEXT",
+      "defaultValue": "q.run_script('cobblemon:king_bastien_defeated');"
+    }
+  ],
     "skill": 5,
     "party": {
       "type": "script",
