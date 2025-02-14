@@ -1,4 +1,4 @@
 q.run_script('cobblemon:gs_gym_leader_progression');
 q.player.data.rock_gym_defeated = true;
 q.player.save_data();
-q.player.tell(q.npc.name + ": Well, dang. You reall have earned this badge. Keep up the good work.");
+q.player.tell(q.npc.name + " : Well, dang. You reall have earned this badge. Keep up the good work.");

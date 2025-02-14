@@ -1,4 +1,4 @@
 q.run_script('cobblemon:gs_gym_leader_progression');
 q.player.data.ghost_gym_defeated = true;
 q.player.save_data();
-q.player.tell(q.npc.name + ": That gave me a fright! Well done! I am excited to see where your journey takes you.");
+q.player.tell(q.npc.name + " : That gave me a fright! Well done! I am excited to see where your journey takes you.");

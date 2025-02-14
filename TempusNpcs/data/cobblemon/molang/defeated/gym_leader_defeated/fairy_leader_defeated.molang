@@ -1,4 +1,4 @@
 q.run_script('cobblemon:gs_gym_leader_progression');
 q.player.data.fairy_gym_defeated = true;
 q.player.save_data();
-q.player.tell(q.npc.name + ": Very well done! You have earned this badge. I am excited to see what you do next.");
+q.player.tell(q.npc.name + " : Very well done! You have earned this badge. I am excited to see what you do next.");

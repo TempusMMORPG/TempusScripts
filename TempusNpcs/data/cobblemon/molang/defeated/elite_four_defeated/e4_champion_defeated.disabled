@@ -1,3 +1,0 @@
-q.player.data.efour_champion_defeated = true;
-q.player.save_data();
-q.player.tell(q.npc.name + ": You have got a lot of potential. I am excited to see where your journey takes you.");
