@@ -1,3 +1,3 @@
 q.player.data.prince_hadrian_defeated = true;
 q.player.save_data();
-q.player.tell(Leave me.);
+q.player.tell("Leave me.");

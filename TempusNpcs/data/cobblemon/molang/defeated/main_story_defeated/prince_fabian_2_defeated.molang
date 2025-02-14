@@ -1,3 +1,3 @@
 q.player.data.prince_fabian_2_defeated = true;
 q.player.save_data();
-q.player.tell(Don't rub it in my face. Just go and lose to my parents already.);
+q.player.tell("Do not rub it in my face. Just go and lose to my parents already.");
