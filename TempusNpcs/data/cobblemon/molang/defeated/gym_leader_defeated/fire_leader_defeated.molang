@@ -1,4 +1,4 @@
 q.run_script('cobblemon:gs_gym_leader_progression');
 q.player.data.fire_gym_defeated = true;
 q.player.save_data();
-q.player.tell(q.npc.name + " : I can clearly see your skills are not raw. I am looking forward to seeing great things from you.");
+q.player.tell(q.npc.name + ': I can clearly see your skills are not raw. I am looking forward to seeing great things from you.');
