@@ -1,0 +1,30 @@
+{
+    "names": [
+      "§lKeyer§r"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:base_quest_npc",
+      "cobblemon:looks_in_one_direction"
+    ],
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:key_item_dialogue"
+    },
+    "config": [
+      {
+        "variableName": "dialogue_1",
+        "displayName": "Dialogue 1",
+        "description": "First dialogue",
+        "type": "TEXT",
+        "defaultValue": "Hello!"
+      },
+      {
+        "variableName": "dialogue_2",
+        "displayName": "Dialogue 2",
+        "description": "Last dialogue",
+        "type": "TEXT",
+        "defaultValue": "You already have talked to me lol"
+      }
+    ]
+  }
