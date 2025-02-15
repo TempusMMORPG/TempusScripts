@@ -1,6 +1,7 @@
 {
     "initializationAction": [
-        "q.player.data.dialogue.professor_conifer_archives == 1 ? q.dialogue.set_page('stop_them') || q.player.data.dialogue.professor_conifer_archives == 2 ? q.dialogue.set_page('farewell')"
+        "q.player.data.dialogue.professor_conifer_archives_stage == 1 ? q.dialogue.set_page('stop_them');",
+        "q.player.data.dialogue.professor_conifer_archives_stage == 2 ? q.dialogue.set_page('farewell');"
     ],
     "speakers": {
         "npc": {
@@ -56,7 +57,7 @@
                         "value": "okay",
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2BB5F23B276D745D');",
-                            "q.player.data.dialogue.professor_conifer_archives = 1; q.player.save_data();",
+                            "q.player.data.dialogue.professor_conifer_archives_stage = 1; q.player.save_data();",
                             "q.dialogue.close();"
                         ]
                     }
