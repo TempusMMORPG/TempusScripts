@@ -98,7 +98,7 @@
                         "value": "distortion_world",
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2BB5F23B276D745D');",
-                            "q.player.data.dialogue.professor_conifer_crypt = true; q.player.save_data();",
+                            "q.player.data.dialogue.professor_conifer_archives_stage = 2; q.player.save_data();",
                             "q.dialogue.set_page('farewell');"
                         ]
                     }
