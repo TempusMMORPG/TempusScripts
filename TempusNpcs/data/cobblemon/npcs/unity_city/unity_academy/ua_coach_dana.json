@@ -22,7 +22,7 @@
         "defaultValue": "q.player.data.ua_dana_defeated = true; q.player.save_data();"
       }
     ],
-    "skill": 3,
+    "skill": 5,
     "party": {
         "type": "simple",
         "pokemon": [
