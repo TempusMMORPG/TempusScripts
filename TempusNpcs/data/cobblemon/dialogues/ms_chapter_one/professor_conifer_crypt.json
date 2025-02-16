@@ -1,6 +1,7 @@
 {
     "initializationAction": [
-        "q.player.data.dialogue.professor_conifer_crypt || q.player.data.crypt_police_defeat_count != 4 ? q.dialogue.set_page('idle');"
+        "q.player.data.dialogue.professor_conifer_crypt ? q.dialogue.set_page('idle');",
+        "q.player.data.crypt_police_bob_defeated == false || q.player.data.crypt_police_brook_defeated == false || q.player.data.crypt_police_dan_defeated == false || q.player.data.crypt_police_steven_defeated == false ? q.dialogue.set_page('idle');"
     ],
     "speakers": {
         "npc": {
