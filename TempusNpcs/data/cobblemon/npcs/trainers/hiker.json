@@ -12,7 +12,7 @@
       "type": "dialogue",
       "dialogue": "cobblemon:general_trainer_interaction"
     },
-    "skill": 3,
+    "skill": 5,
     "party": {
       "type": "pool",
       "minPokemon": 2,
