@@ -22,7 +22,7 @@
         "defaultValue": "q.player.data.ua_kevin_defeated = true; q.player.save_data();"
       }
     ],
-    "skill": 5,
+    "skill": 3,
     "party": {
         "type": "simple",
         "pokemon": [

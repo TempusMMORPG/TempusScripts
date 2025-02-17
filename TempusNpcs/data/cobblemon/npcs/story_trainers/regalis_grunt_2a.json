@@ -14,7 +14,7 @@
       "type": "dialogue",
       "dialogue": "cobblemon:regalis_grunt_2a"
     },
-    "skill": 5,
+    "skill": 3,
     "party": {
       "type": "pool",
       "minPokemon": 2,

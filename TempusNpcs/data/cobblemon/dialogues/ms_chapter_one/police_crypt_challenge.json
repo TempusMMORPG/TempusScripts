@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.crypt_police_dan_defeated ? q.dialogue.set_page('post_defeat');"
+        "q.player.data.crypt_police_defeat_count == 4 ? q.dialogue.set_page('idle');"
     ],
     "speakers": {
         "npc": {
@@ -23,7 +23,7 @@
             "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "You are being detained!"
+                "Hey you! Stop right there!"
             ],
             "input": {
                 "type": "option",
@@ -32,7 +32,6 @@
                     {
                         "text": "§c⚔ Battle ⚔§r",
                         "value": "battle",
-                        "isSelectable": "q.player.data.crypt_police_dan_defeated == false",
                         "action": "q.dialogue.set_page('battle_start');"
                     },
                     {
@@ -47,7 +46,7 @@
             "id": "battle_start",
             "speaker": "npc",
             "lines": [
-                "Don't move!"
+                "Behold the power of justice!"
             ],
             "escapeAction": "0",
             "input": [
@@ -56,7 +55,7 @@
             ]
         },
         {
-            "id": "post_defeat",
+            "id": "idle",
             "speaker": "npc",
             "lines": [
                 "..."
