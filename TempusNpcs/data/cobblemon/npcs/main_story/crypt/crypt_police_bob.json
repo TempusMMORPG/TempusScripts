@@ -4,7 +4,6 @@
       "cobblemon:base_npc",
       "cobblemon:looks_in_one_direction",
       "cobblemon:battle_npc",
-      "cobblemon:base_defeat_count",
       "cobblemon:battle_quest_npc"
     ],
     "names": [
@@ -12,21 +11,21 @@
     ],
     "interaction": {
       "type": "dialogue",
-      "dialogue": "cobblemon:police_crypt_challenge"
+      "dialogue": "cobblemon:crypt_police_bob_challenge"
     },
     "config": [
-        {
+          {
             "variableName": "on_player_wins",
             "displayName": "npc.variable.on_player_wins.name",
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
-            "defaultValue": "q.player.data.crypt_police_defeat_count = q.player.data.crypt_police_defeat_count + 1;q.player.save_data();q.player.data.crypt_police_defeat_count == q.npc.config.base_defeat_count ? q.run_molang(q.npc.config.complete_quest_command);"
+            "defaultValue": "q.player.data.crypt_police_bob_defeated = true;q.player.save_data();"
           }
     ],
-    "skill": 3,
+    "skill": 5,
     "party": {
       "type": "pool",
-      "minPokemon": 2,
+      "minPokemon": 3,
       "maxPokemon": 3,
       "isStatic": false,
       "pool": [
@@ -68,4 +67,4 @@
         }
       ]
     }
-  }
+}

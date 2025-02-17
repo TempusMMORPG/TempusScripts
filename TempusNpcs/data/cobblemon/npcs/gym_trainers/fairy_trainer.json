@@ -23,7 +23,7 @@
         "defaultValue": "q.player.data.fairy_trainer_defeat_count = q.player.data.fairy_trainer_defeat_count + 1;q.player.save_data();q.player.data.fairy_trainer_defeat_count == q.npc.config.base_defeat_count ? q.run_molang(q.npc.config.complete_quest_command);"
       }
     ],
-    "skill": 3,
+    "skill": 5,
     "party": {
       "type": "script",
       "script": "cobblemon:fairy_trainer",
