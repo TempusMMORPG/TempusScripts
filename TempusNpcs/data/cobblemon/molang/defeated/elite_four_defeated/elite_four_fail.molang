@@ -1,5 +1,5 @@
-q.player.data.efour_ghost_dark_defeated = 0;
-q.player.data.efour_water_electric_defeated = 0;
-q.player.data.efour_fire_psychic_defeated = 0;
-q.player.data.efour_steel_fairy_defeated = 0;
+q.player.data.e4_ghost_dark_defeated = 0;
+q.player.data.e4_water_electric_defeated = 0;
+q.player.data.e4_fire_psychic_defeated = 0;
+q.player.data.e4_steel_fairy_defeated = 0;
 q.player.save_data();
