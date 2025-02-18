@@ -1,3 +1,2 @@
 q.player.data.king_bastien_defeated = true;
 q.player.save_data();
-q.player.tell(q.npc.name + ': Even with all this power I have been defeated...');

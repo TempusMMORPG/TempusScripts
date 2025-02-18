@@ -1,3 +1,2 @@
 q.player.data.prince_fabian_defeated = true;
 q.player.save_data();
-q.player.tell(q.npc.name + ': Damn it! I didn\'t think I\'d lose to some random commoner like you!');

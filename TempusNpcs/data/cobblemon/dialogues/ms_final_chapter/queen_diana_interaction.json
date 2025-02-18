@@ -1,4 +1,7 @@
 {
+  "initializationAction": [
+        "q.player.data.queen_diana_defeated ? q.dialogue.set_page('post_defeat');"
+    ],
     "speakers": {
         "npc": {
             "name": {
@@ -61,6 +64,14 @@
                 "q.dialogue.close();",
                 "v.battle = q.npc.start_battle(q.player);"
             ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "No clue she's barely a character lmao"
+            ],
+            "input": "q.dialogue.close();"
         }
     ]
 }

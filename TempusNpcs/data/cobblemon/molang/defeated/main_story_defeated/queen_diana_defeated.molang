@@ -1,3 +1,2 @@
 q.player.data.queen_diana_defeated = true;
 q.player.save_data();
-q.player.tell(q.npc.name + ': It matters not that I failed. My husband shall be victorious for the sake of all Regalis.');
