@@ -3,3 +3,4 @@ q.player.data.e4_water_electric_defeated = 0;
 q.player.data.e4_fire_psychic_defeated = 0;
 q.player.data.e4_steel_fairy_defeated = 0;
 q.player.save_data();
+q.run_command('tp ' + q.player.username + ' -200 101 2086')
