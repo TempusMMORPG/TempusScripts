@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.get_npc_variable(q.npc, 'completed') ? q.dialogue.set_page('dialouge_2');"
+        "q.player.get_npc_variable(q.npc, 'completed') ? q.dialogue.set_page('dialogue_2');"
     ],
     "speakers": {
         "npc": {
@@ -20,7 +20,7 @@
     },
     "pages": [
         {
-            "id": "dialouge_1",
+            "id": "dialogue_1",
             "speaker": "npc",
             "lines": [
                 {
@@ -36,7 +36,7 @@
             ]
         },
         {
-            "id": "dialouge_2",
+            "id": "dialogue_2",
             "speaker": "npc",
             "lines": [
                 {
