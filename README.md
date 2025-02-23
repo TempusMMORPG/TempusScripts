@@ -11,7 +11,7 @@ This repo contains a **giga-chad** datapack filled with Cobblemon NPC and Molang
 - 💀 **Zero NPC behavior left unmogged** – They **witowy** do what you tell them.  
 
 ## 📥 Installation (So easy even an NPC could do it)  
-1. **Download** the datapack from the repo (Click the green “Code” button, then “Download ZIP” like a true **Sigma**) OR **Fork** your own copy of the datapack.
+1. **Download** the datapack from the repo (Click the green “Code” button, then “Download ZIP” like a true **Sigma**) AND/OR **Fork** your own copy of the datapack.
 2. **Extract** it and slap that bad boy into your `datapacks` folder in your Cobblemon world.
 
 ## 🔧 Usage 
@@ -29,7 +29,7 @@ This project is licensed under the **GNU General Public License v3.0**, which ba
 For full details, check the [`LICENSE`](LICENSE) file. **Stay mogging, stay open source.** 🔥  
 
 ## ❓ Additional Support Information
-Please **skibidi** the documentation and **mog** the source code here:
+Please **skibidi** the documentation and **mew** the source code here:
 - https://gitlab.com/cable-mc/cobblemon/-/blob/main/common/src/main/kotlin/com/cobblemon/mod/common/api/npc/README.md
 - https://gitlab.com/cable-mc/cobblemon/-/tree/main/common/src/main/resources/data/cobblemon
 - https://gitlab.com/cable-mc/cobblemon/-/tree/main/common/src/main/kotlin/com/cobblemon/mod/common/api
