@@ -3,7 +3,7 @@
 Welcome to **TempusScripts**, the **sigma grindset** of Cobblemon NPC & Molang scripting examples. If you're trying to mog other devs with your scripting skills, this is the **W Rizzpack** for you. **FR FR, NO CAP.**
 
 ## 🔥 What is this?  
-This repo contains a **giga-chad** datapack filled with Cobblemon NPC and Molang script examples that will have you outcoding the **NPCs IRL**. You wanna add **schmovin'** Pokémon or NPCs with the **most giga AI?** This is your chance, my friend.
+This repo contains a **giga-chad** datapack filled with Cobblemon NPC and Molang script examples that will have you outcoding the **NPCs IRL**. You wanna add **schmovin'** NPCs with the **most giga AI?** This is your chance, my friend.
 
 ## 📜 Features (Mogging Edition)  
 - 🏆 **Sigma-tier Cobblemon NPC scripting** – These NPCs do more than just stand there like **Ohio Final Bosses**.  
