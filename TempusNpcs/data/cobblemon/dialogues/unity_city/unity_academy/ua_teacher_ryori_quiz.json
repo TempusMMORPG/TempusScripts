@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.ua_ryori_completed ? q.dialogue.set_page('post_completed');"
+        "q.player.data.ua_ryori_completed == true? q.dialogue.set_page('post_completed');"
     ],
     "speakers": {
         "npc": {
