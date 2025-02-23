@@ -1,6 +1,7 @@
 {
     "initializationAction": [
-        "q.player.data.dialogue.professor_laurel ? q.dialogue.set_page('goodbye');"
+        "q.player.data.dialogue.professor_laurel ? q.dialogue.set_page('goodbye');",
+        "q.player.data.dialogue.professor_conifer_archives_stage == 2 ? q.dialogue.set_page('warn_laurel');"
     ],
     "speakers": {
         "npc": {
@@ -25,8 +26,7 @@
             "lines": [
                 "I'm a little busy at the moment, can you… Oh you must be a new trainer. Well I'm §dProfessor Laurel§r! I'm one of two professors in Tempus,",
                 "the other is my friend §6Professor Conifer§r.",
-                "I guess you'll be wanting to start your journey, so I won't hold you up for too long.",
-                "Let me just get the Pokemon ready.... Now before you choose what is your name?"
+                "Let me just get a few things ready... Now before we start, what is your name?"
             ],
             "input": {
                 "type": "option",
@@ -71,7 +71,6 @@
             "id": "talk_to_elon",
             "speaker": "npc",
             "lines": [
-                "Professor Laurel is pretty busy these days, and my father is as well I think.",
                 "Now that you have your Pokemon, you're ready to start your journey. Go and talk to Elon when you're ready. Good luck!"
             ],
             "input": {
@@ -84,6 +83,56 @@
                         "action": [
                             "q.dialogue.close();",
                             "q.player.data.dialogue.professor_laurel = true; q.player.save_data();"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "warn_laurel",
+            "speaker": "player",
+            "lines": [
+                "Professor Conifer and I found something in the archives, it's important! You need to know!"
+            ],
+            "input": ["q.dialogue.set_page('inform_laurel');"]
+        },
+        {
+            "id": "inform_laurel",
+            "speaker": "npc",
+            "lines": [
+                "§o§7**You tell Professor Laurel about the archives**§r"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "So did you get all that?",
+                        "value": "didyougetallthat",
+                        "action": [
+                            "q.dialogue.set_page('laurel_shocked');"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "laurel_shocked",
+            "speaker": "npc",
+            "lines": [
+                "Oh my! This is very concerning! You'll need some help with this.", 
+                "Take these items and go and go back Professor Conifer.",
+                "I'll let you know if I find anything. In the meantime, keep up the good work!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Goodbye",
+                        "value": "goodbye",
+                        "action": [
+                            "q.dialogue.close();"
                         ]
                     }
                         ]
