@@ -28,7 +28,7 @@ This project is licensed under the **GNU General Public License v3.0**, which ba
 
 For full details, check the [`LICENSE`](LICENSE) file. **Stay mogging, stay open source.** 🔥  
 
-## ❓ Addition Support
+## ❓ Additional Support Information
 Please **skibidi** the documentation and **mog** the source code here:
 - https://gitlab.com/cable-mc/cobblemon/-/blob/main/common/src/main/kotlin/com/cobblemon/mod/common/api/npc/README.md
 - https://gitlab.com/cable-mc/cobblemon/-/tree/main/common/src/main/resources/data/cobblemon
