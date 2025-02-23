@@ -34,6 +34,7 @@ Please **skibidi** the documentation and **mog** the source code here:
 - https://gitlab.com/cable-mc/cobblemon/-/tree/main/common/src/main/resources/data/cobblemon
 - https://gitlab.com/cable-mc/cobblemon/-/tree/main/common/src/main/kotlin/com/cobblemon/mod/common/api
 - https://bedrock.dev/docs/stable/Molang
+- https://gitlab.com/cable-mc/cobblemon/-/blob/main/common/src/main/kotlin/com/cobblemon/mod/common/api/molang/MoLangFunctions.kt
 
 ## 🔥 Final Thoughts  
 This pack is here to **rizz up** your Cobblemon experience. Download it, tweak it, and start mogging every other server owner out there. **Ong, no cap, goated with the source.**
