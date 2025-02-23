@@ -4,7 +4,7 @@
       ],
     "interaction": {
       "type": "custom_script",
-      "script": "c.player.tell(q.npc.name + ': ' + c.npc.config.dialogue);"
+      "script": "c.player.tell(q.npc.name + ': ' + c.npc.config.dialogue);q.npc.config.toggle_animation == true ? q.npc.play_animation(q.npc.config.animation_name);"
     },
     "config": [
         {
@@ -13,6 +13,20 @@
           "description": "The dialogue for the NPC (Required)",
           "type": "TEXT",
           "defaultValue": "Hello!"
+        },
+        {
+          "variableName": "animation_name",
+          "displayName": "Name of the animation",
+          "description": "Enter the name of the animation at the end of the namespace.E.g.'wave' for 'animation.trainer.generic.wave'",
+          "type": "TEXT",
+          "defaultValue": "wave"
+        },
+        {
+          "variableName": "toggle_animation",
+          "displayName": "Toggle Animation",
+          "description": "Toggle the animation true or false",
+          "type": "BOOLEAN",
+          "defaultValue": "false"
         }
     ],
     "hideNameTag": true

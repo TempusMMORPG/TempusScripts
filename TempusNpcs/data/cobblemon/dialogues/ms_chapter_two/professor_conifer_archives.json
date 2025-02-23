@@ -57,7 +57,7 @@
                         "text": "Okay!",
                         "value": "okay",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2BB5F23B276D745D');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 4859F624CD9E4298');",
                             "q.player.data.dialogue.professor_conifer_archives_stage = 1; q.player.save_data();",
                             "q.dialogue.close();"
                         ]
@@ -98,7 +98,7 @@
                         "text": "What do they want with the Distortion World?",
                         "value": "distortion_world",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2BB5F23B276D745D');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 388F89F300513468');",
                             "q.player.data.dialogue.professor_conifer_archives_stage = 2; q.player.save_data();",
                             "q.dialogue.set_page('inform_laurel');"
                         ]
