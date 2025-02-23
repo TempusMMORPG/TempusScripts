@@ -5,8 +5,6 @@
     ],
     "presets": [
       "cobblemon:base_npc",
-      "cobblemon:base_quest_npc",
-      "cobblemon:base_defeat_count",
       "cobblemon:battle_npc",
       "cobblemon:looks_in_one_direction"
     ],
