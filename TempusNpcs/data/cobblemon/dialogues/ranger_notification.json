@@ -1,0 +1,41 @@
+{
+  "initializationAction": "c.npc.set_chatting();q.player.run_command('playsound cobblemon:evolution.notification master')",
+  "speakers": {
+    "npc": {
+      "name": {
+        "type": "expression",
+        "expression": "q.npc.name"
+      },
+      "face": "q.npc.face();"
+    }
+  },
+  "pages": [
+    {
+      "id": "attention",
+      "speaker": "npc",
+      "lines": [
+        "ATTENTION ALL TRAINERS!", 
+        "A RAMPAGING EMBOAR HAS BEEN SPOTTED IN THE AREA!"
+              ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "§aAccept Challenge§r",
+            "value": "yes",
+            "action": [
+              "q.player.run_command('spawnpokemonat -760.31 65.50 77.65 emboar lvl=100 ');",
+              "q.dialogue.close();"
+            ]
+          },
+          {
+            "text": "§cReject§r",
+            "value": "no",
+            "action": "q.dialogue.close();"
+          }
+        ]
+      }
+    }
+  ]
+}
