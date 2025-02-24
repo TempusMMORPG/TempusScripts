@@ -1,12 +1,11 @@
 {
-  "resourceIdentifier": "cobblemon:flyingleader",    
+  "resourceIdentifier": "cobblemon:global_skins",    
   "names": [
-    "§lBattle Tower NPC 1§r"
+    "Battle Tower NPC 1"
   ],
   "presets": [
     "cobblemon:base_npc",
-    "cobblemon:battle_npc",
-    "cobblemon:looks_in_one_direction"
+    "cobblemon:battle_npc"
   ],
   "interaction": {
     "type": "dialogue",
@@ -15,7 +14,7 @@
   "skill": 5,
   "party": {
     "type": "script",
-    "script": "cobblemon:pb_flying_leader",
+    "script": "cobblemon:battle_tower_1",
     "isStatic": false
   }
 }

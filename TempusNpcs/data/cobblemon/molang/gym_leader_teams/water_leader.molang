@@ -1,3 +1,5 @@
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack special_defence_iv=31 speed_iv=31 uncatchable=true';
+
 t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
 
 t.data == 'EASY' ? {
