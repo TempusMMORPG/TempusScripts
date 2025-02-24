@@ -5,10 +5,10 @@
         "cobblemon:looks_in_one_direction"
     ],
     "names": [
-        "§lProfessor Conifer§r"
+        "§6Sigma§r"
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:professor_conifer_archives"
+        "dialogue": "cobblemon:test_speakers"
     }
 }

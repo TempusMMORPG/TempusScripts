@@ -1,0 +1,124 @@
+{
+    "escapeAction": "q.dialogue.set_page('quitter')",
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I am the npc talking and doing stuff"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "I'm the player and I'm going to do stuff",
+                        "value": "iamplayer",
+                        "action": [
+                            "q.dialogue.set_page('playerdostuff');"
+                        ]
+                    },
+                    {
+                        "text": "can npc do stuff",
+                        "value": "npcdostuff",
+                        "action": [
+                            "q.dialogue.set_page('npcdostuff');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "playerdostuff",
+            "escapeAction": "0",
+            "speaker": "player",
+            "lines": [
+                "My father is Professor Conifer, he works in the field researching Pokemon.",
+                "Although, no one has seen my dad for a few weeks. "
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Why is she so busy?",
+                        "value": "busy",
+                        "action": [
+                            "q.dialogue.set_page('elon_why_is_she_so_busy');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "npcdostuff",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I am the npc talking and doing stuff",
+                "Look how sigma I am"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "What is sigma?",
+                        "value": "whatissigma",
+                        "action": [
+                            "q.dialogue.set_page('whatissigma');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "whatissigma",
+            "escapeAction": "0",
+            "speaker": "player",
+            "lines": [
+                "So what does this sigma word mean?",
+                "I havent heard it before."
+            ],
+            "input": "q.dialogue.set_page('sigmameans');"
+        },
+        {
+            "id": "sigmameans",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Sigma means you are really cool and smart, and most certainly a Gemmer."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "I'll become a Gemmer",
+                        "value": "cclose",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}  

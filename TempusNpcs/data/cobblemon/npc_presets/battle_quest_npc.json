@@ -5,7 +5,7 @@
           "displayName": "Quest ID",
           "description": "The quest ID that this NPC is associated with.",
           "type": "TEXT",
-          "defaultValue": "57C719DFABA561F8"
+          "defaultValue": "aaaaaaaaaaaaaaaa"
         },
         {
           "variableName": "quest_update_on_player_wins",

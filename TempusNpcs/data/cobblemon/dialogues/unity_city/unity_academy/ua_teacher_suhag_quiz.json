@@ -55,6 +55,10 @@
             "escapeAction": "0",
             "input": {
                 "type": "option",
+                "timeout": {
+                    "delay": 10,
+                    "action": "q.dialogue.set_page('too_slow');"
+                },   
                 "vertical": false,
                 "options": [
                     {
@@ -89,6 +93,10 @@
             "escapeAction": "0",
             "input": {
                 "type": "option",
+                "timeout": {
+                    "delay": 10,
+                    "action": "q.dialogue.set_page('too_slow');"
+                },   
                 "vertical": false,
                 "options": [
                     {
@@ -123,6 +131,10 @@
             "escapeAction": "0",
             "input": {
                 "type": "option",
+                "timeout": {
+                    "delay": 10,
+                    "action": "q.dialogue.set_page('too_slow');"
+                },   
                 "vertical": false,
                 "options": [
                     {
@@ -157,6 +169,10 @@
             "escapeAction": "0",
             "input": {
                 "type": "option",
+                "timeout": {
+                    "delay": 10,
+                    "action": "q.dialogue.set_page('too_slow');"
+                },   
                 "vertical": false,
                 "options": [
                     {
@@ -224,6 +240,14 @@
             "speaker": "npc",
             "lines": [
                 "Sorry, but that answer is incorrect. Make sure to double check your math before trying again!"
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "too_slow",
+            "speaker": "npc",
+            "lines": [
+                "Sorry, but you ran out of time. Make sure you try again once you are ready."
             ],
             "input": "q.dialogue.close();"
         },

@@ -1,7 +1,8 @@
 {
     "initializationAction": [
         "q.player.data.dialogue.professor_conifer_archives_stage == 1 ? q.dialogue.set_page('stop_them');",
-        "q.player.data.dialogue.professor_conifer_archives_stage == 2 ? q.dialogue.set_page('farewell');"
+        "q.player.data.dialogue.professor_conifer_archives_stage == 2 ? q.dialogue.set_page('hurry');",
+        "q.player.data.regalis_grunt_2a_1_defeated == 1 && q.player.data.regalis_grunt_2a_2_defeated == 1 && q.player.data.regalis_grunt_2a_3_defeated == 1 && q.player.data.regalis_grunt_2a_4_defeated == 1 && q.player.data.regalis_grunt_2a_5_defeated == 1 ? q.dialogue.set_page('after_regalis_grunts');"
     ],
     "speakers": {
         "npc": {
@@ -56,7 +57,7 @@
                         "text": "Okay!",
                         "value": "okay",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2BB5F23B276D745D');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 4859F624CD9E4298');",
                             "q.player.data.dialogue.professor_conifer_archives_stage = 1; q.player.save_data();",
                             "q.dialogue.close();"
                         ]
@@ -97,9 +98,49 @@
                         "text": "What do they want with the Distortion World?",
                         "value": "distortion_world",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2BB5F23B276D745D');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 388F89F300513468');",
                             "q.player.data.dialogue.professor_conifer_archives_stage = 2; q.player.save_data();",
-                            "q.dialogue.set_page('farewell');"
+                            "q.dialogue.set_page('inform_laurel');"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "inform_laurel",
+            "speaker": "npc",
+            "lines": [
+                "Go and tell Professor Laurel! I'll meet you back here!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Goodbye",
+                        "value": "goodbye",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "hurry",
+            "speaker": "npc",
+            "lines": [
+                "Quickly! Go and tell Professor Laurel!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Goodbye",
+                        "value": "goodbye",
+                        "action": [
+                            "q.dialogue.close();"
                         ]
                     }
                         ]

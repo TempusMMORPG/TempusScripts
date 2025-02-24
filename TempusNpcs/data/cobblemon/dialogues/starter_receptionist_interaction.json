@@ -1,4 +1,7 @@
 {
+    "initializationAction": [
+        "q.npc.play_animation('wave', q.player.uuid);"
+    ],
     "speakers": {
         "npc": {
             "name": {
@@ -20,7 +23,10 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Hello, and welcome to Tempus"
+                {
+                    "type": "expression",
+                    "expression": "'hello! ';"
+                }
             ],
             "input": "q.dialogue.set_page('accept_teleport');"
         },

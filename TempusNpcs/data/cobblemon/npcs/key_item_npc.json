@@ -7,6 +7,7 @@
       "cobblemon:base_quest_npc",
       "cobblemon:looks_in_one_direction"
     ],
+    "resourceIdentifier": "cobblemon:global_skins",
     "interaction": {
         "type": "dialogue",
         "dialogue": "cobblemon:key_item_dialogue"
