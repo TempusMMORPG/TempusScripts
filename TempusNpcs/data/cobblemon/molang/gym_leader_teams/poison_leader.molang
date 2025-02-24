@@ -1,29 +1,31 @@
+t.constants = 'hp_iv=31 attack_iv=31 defence_iv=31 special_attack special_defence_iv=31 speed_iv=31 uncatchable=true';
+
 t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
 
 t.data == 'EASY' ? {
-    q.party.add_by_properties('spinarak uncatchable=true moves=shadowsneak,nightshade,infestation,poisonsting nature=lax held_item=cobblemon:sitrus_berry ability=insomnia hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 hp_ev=52 speed_ev=52 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('tentacool uncatchable=true moves=waterpulse,supersonic,acid,wrap nature=gentle held_item=cobblemon:sitrus_berry ability=clearbody hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 hp_ev=52 special_attack_ev=52 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('zubat uncatchable=true moves=poisonfang,astonish,supersonic,absorb nature=brave held_item=cobblemon:sitrus_berry ability=innerfocus hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 attack_ev=52 speed_ev=52 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('ivysaur uncatchable=true moves=seedbomb,leechseed,poisonpowder,venoshock nature=impish held_item=cobblemon:poison_barb ability=overgrow hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=80 attack_ev=80 level=' + (q.player.party.highest_level + 1));
+    q.party.add_by_properties('spinarak moves=shadowsneak,nightshade,infestation,poisonsting nature=lax held_item=cobblemon:sitrus_berry ability=insomnia hp_ev=52 speed_ev=52 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('tentacool moves=waterpulse,supersonic,acid,wrap nature=gentle held_item=cobblemon:sitrus_berry ability=clearbody hp_ev=52 special_attack_ev=52 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('zubat moves=poisonfang,astonish,supersonic,absorb nature=brave held_item=cobblemon:sitrus_berry ability=innerfocus attack_ev=52 speed_ev=52 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('ivysaur moves=seedbomb,leechseed,poisonpowder,venoshock nature=impish held_item=cobblemon:poison_barb ability=overgrow hp_ev=80 attack_ev=80 level=' + (q.player.party.highest_level + 1) + t.constants);
     return 1;
 };
 
 t.data == 'MEDIUM' ? {
-    q.party.add_by_properties('ariados uncatchable=true moves=toxicspikes,stickyweb,leechlife,shadowsneak nature=naive held_item=cobblemon:sitrus_berry ability=insomnia hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('tentacruel uncatchable=true moves=surf,flipturn,icebeam,venoshock nature=mild held_item=cobblemon:mystic_water ability=clearbody hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 special_attack_ev=100 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('overqwil uncatchable=true moves=poisonjab,crunch,aquajet,liquidation nature=naughty held_item=cobblemon:poison_barb ability=poisonpoint hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('golbat uncatchable=true moves=dualwingbeat,crosspoison,bite,roost nature=lonely held_item=cobblemon:sharp_beak ability=innerfocus hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('venusaur uncatchable=true moves=gigadrain,sludgebomb,earthpower,synthesis nature=modest held_item=cobblemon:black_sludge ability=overgrow hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=128 special_attack_ev=128 level=' + (q.player.party.highest_level + 1));
+    q.party.add_by_properties('ariados moves=toxicspikes,stickyweb,leechlife,shadowsneak nature=naive held_item=cobblemon:sitrus_berry ability=insomnia hp_ev=100 speed_ev=100 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('tentacruel moves=surf,flipturn,icebeam,venoshock nature=mild held_item=cobblemon:mystic_water ability=clearbody hp_ev=100 special_attack_ev=100 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('overqwil moves=poisonjab,crunch,aquajet,liquidation nature=naughty held_item=cobblemon:poison_barb ability=poisonpoint attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('golbat moves=dualwingbeat,crosspoison,bite,roost nature=lonely held_item=cobblemon:sharp_beak ability=innerfocus attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('venusaur moves=gigadrain,sludgebomb,earthpower,synthesis nature=modest held_item=cobblemon:black_sludge ability=overgrow hp_ev=128 special_attack_ev=128 level=' + (q.player.party.highest_level + 1) + t.constants);
     return 1;
 };
 
 t.data == 'HARD' ? {
-    q.party.add_by_properties('ariados uncatchable=true moves=megahorn,stickyweb,shadowsneak,toxicspikes nature=jolly held_item=cobblemon:focus_sash ability=insomnia hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('tentacruel uncatchable=true moves=flipturn,surf,icebeam,venoshock nature=modest held_item=cobblemon:black_sludge ability=clearbody hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 special_attack_ev=200 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('overqwil uncatchable=true moves=gunkshot,aquajet,crunch,liquidation nature=jolly held_item=cobblemon:life_orb ability=intimidate hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('glimmora uncatchable=true moves=meteorbeam,sludgewave,energyball,earthpower nature=timid held_item=cobblemon:power_herb ability=toxicdebris hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('crobat uncatchable=true moves=acrobatics,leechlife,roost,toxic nature=jolly held_item=cobblemon:flying_gem ability=innerfocus hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('venusaur mega uncatchable=true moves=gigadrain,sludgebomb,earthpower,synthesis nature=modest ability=thickfat hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level + 1));
+    q.party.add_by_properties('ariados moves=megahorn,stickyweb,shadowsneak,toxicspikes nature=jolly held_item=cobblemon:focus_sash ability=insomnia attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('tentacruel moves=flipturn,surf,icebeam,venoshock nature=modest held_item=cobblemon:black_sludge ability=clearbody hp_ev=200 special_attack_ev=200 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('overqwil moves=gunkshot,aquajet,crunch,liquidation nature=jolly held_item=cobblemon:life_orb ability=intimidate attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('glimmora moves=meteorbeam,sludgewave,energyball,earthpower nature=timid held_item=cobblemon:power_herb ability=toxicdebris special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('crobat moves=acrobatics,leechlife,roost,toxic nature=jolly held_item=cobblemon:flying_gem ability=innerfocus attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('venusaur mega moves=gigadrain,sludgebomb,earthpower,synthesis nature=modest ability=thickfat hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level + 1) + t.constants);
     return 1;
 };
 
