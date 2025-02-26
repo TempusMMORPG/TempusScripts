@@ -1,4 +1,4 @@
-t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack special_defence_iv=31 speed_iv=31 uncatchable=true';
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true';
 
 q.party.add_by_properties('pelipper moves=knockoff,scald,roost,hurricane nature=relaxed held_item=cobblemon:damp_rock ability=drizzle hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=0 hp_ev=248 defence_ev=252 special_defence_ev=8 level=100' + t.constants);
 q.party.add_by_properties('barraskewda moves=liquidation,flipturn,closecombat,psychicfangs nature=adamant held_item=cobblemon:choice_band ability=swiftswim attack_ev=252 defence_ev=4 speed_ev=252 level=100' + t.constants);
