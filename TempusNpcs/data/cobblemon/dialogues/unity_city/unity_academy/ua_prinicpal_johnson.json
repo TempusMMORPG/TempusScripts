@@ -1,0 +1,89 @@
+{
+    "initializationAction": [
+        "q.player.data.ua_gavin_defeated == 1 && q.player.data.ua_dana_defeated == 1 && q.player.data.ua_ryori_completed == 1 && q.player.data.ua_suhag_completed == 1 ? q.dialogue.set_page('greeting');",
+        "q.player.data.dialogue.principal_johnson == 1 ? q.dialogue.set_page('idle');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "idle",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Goodbye",
+                        "value": "goodbye",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "greeting",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Oh I see you've completed all your studies! Well done!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Is that all I get?",
+                        "value": "that_all",
+                        "action": [
+                            "q.dialogue.set_page('give_title');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "give_title",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Of course not. You've earned the title of '§dGraduate§7'! Wear it with pride!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Thank you!",
+                        "value": "thank_you",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 4859F624CD9E4298');",
+                            "q.run_command('lp user '+ q.player.username + ' permission set cobbletags.tag.graduate true');",
+                            "q.player.data.dialogue.principal_johnson = 1; q.player.save_data();",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                        ]
+                    }
+            }
+    ]
+}
