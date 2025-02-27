@@ -1,7 +1,8 @@
 {
     "initializationAction": [
         "q.player.data.ua_gavin_defeated == 1 && q.player.data.ua_dana_defeated == 1 && q.player.data.ua_ryori_completed == 1 && q.player.data.ua_suhag_completed == 1 ? q.dialogue.set_page('greeting');",
-        "q.player.data.dialogue.principal_johnson == 1 ? q.dialogue.set_page('idle');"
+        "q.player.data.dialogue.principal_johnson == 1 ? q.dialogue.set_page('idle');",
+        "q.player.data.dialogue.principal_johnson == 0 ? q.dialogue.set_page('idle');"
     ],
     "speakers": {
         "npc": {
