@@ -5,7 +5,7 @@ t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
 t.data == 'EASY' ? {
     q.party.add_by_properties('drifloon pokeball=ancient_jet_ball moves=aircutter,nightshade,thunderwave,shadowball nature=lax held_item=cobblemon:sitrus_berry ability=aftermath special_attack_ev=52 speed_ev=52 level=' + (q.player.party.highest_level) + t.constants); 
     q.party.add_by_properties('wingull pokeball=ancient_jet_ball moves=aircutter,waterpulse,supersonic,icywind nature=gentle held_item=cobblemon:sitrus_berry ability=keeneye hp_ev=52 defence=52 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('corviknight pokeball=ancient_jet_ball moves=pluck,rocksmash,roost,uturn nature=impish held_item=cobblemon:leftovers ability=unnerve hp_ev=52 defence=52 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('corvisquire pokeball=ancient_jet_ball moves=pluck,rocksmash,roost,uturn nature=impish held_item=cobblemon:leftovers ability=unnerve hp_ev=52 defence=52 level=' + (q.player.party.highest_level) + t.constants); 
     q.party.add_by_properties('pidgeotto pokeball=ancient_jet_ball moves=roost,aerialace,quickattack,steelwing nature=naughty held_item=cobblemon:sharp_beak ability=keeneye attack_ev=80 speed_ev=80 level=' + (q.player.party.highest_level + 1) + t.constants); 
     return 1;
 };
