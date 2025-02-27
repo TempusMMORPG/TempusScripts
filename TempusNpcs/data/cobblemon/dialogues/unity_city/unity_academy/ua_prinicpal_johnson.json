@@ -76,7 +76,7 @@
                         "text": "Thank you!",
                         "value": "thank_you",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 4859F624CD9E4298');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 65B8B70D066C0D02');",
                             "q.run_command('lp user '+ q.player.username + ' permission set cobbletags.tag.graduate true');",
                             "q.player.data.dialogue.principal_johnson = 1; q.player.save_data();",
                             "q.dialogue.close();"
