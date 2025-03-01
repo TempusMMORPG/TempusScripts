@@ -1,0 +1,20 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",    
+    "names": [
+      "Battle Tower NPC"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:battle_npc"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:bt_npc_interaction"
+    },
+    "skill": 5,
+    "party": {
+      "type": "script",
+      "script": "cobblemon:battle_tower_1boss",
+      "isStatic": false
+    }
+  }
