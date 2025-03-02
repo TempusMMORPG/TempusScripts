@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.dialogue.lachlan || q.player.data.ch2_completed == false ? q.dialogue.set_page('farewell');"
+        "q.player.data.dialogue.shelby || q.player.data.dialogue.bernard_confront == false ? q.dialogue.set_page('farewell');"
     ],
     "speakers": {
         "npc": {
@@ -31,7 +31,7 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Do you have the Lunala key?",
+                        "text": "Where are the family records kept?",
                         "value": "1",
                         "action": [
                             "q.dialogue.set_page('1');"
@@ -45,14 +45,14 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Not anymore... I sold it to Bernard the CEO of UBank, he gave me an amazing interest rate on the loan for this house in return!"
+                "Are you looking for anything in particular?"
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Where is he?",
+                        "text": "Well, I need a record that's 400 years old",
                         "value": "2",
                         "action": [
                             "q.dialogue.set_page('2');"
@@ -66,14 +66,14 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Bernard? Oh he's usually in his office in Unity City above the UBank branch there. Why do you need that key?"
+                "Oh? Well our archives here only go back 200 years. So you're not in luck."
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Sorry, no time",
+                        "text": "Do you know where I could find them?",
                         "value": "3",
                         "action": [
                             "q.dialogue.set_page('3');"
@@ -87,18 +87,39 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Oh... Ok then."
+                "Well the only town that's been around for more than 400 years is Caligo."
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "See you later",
-                        "value": "okay",
+                        "text": "Oh?",
+                        "value": "4",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 5E71528E150E9FF4');",
-                            "q.player.data.dialogue.lachlan = true; q.player.save_data();",
+                            "q.dialogue.set_page('4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "4",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "It's known as the \"town that survived\" and has been pretty much untouched since. I'd try talking to the historian, Petra, regarding that."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Ok, thank you!",
+                        "value": "4",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 761AE451B6F25782');",
+                            "q.player.data.dialogue.shelby = true; q.player.save_data();",
                             "q.dialogue.close();"
                         ]
                     }
@@ -109,7 +130,7 @@
             "id": "farewell",
             "speaker": "npc",
             "lines": [
-                "Why do people keep saying my name sounds familiar? I don't even know what a \"Fortnite\" is!"
+                "Family trees are such a fascinating thing, don't you think?"
             ],
             "input": {
                 "type": "option",

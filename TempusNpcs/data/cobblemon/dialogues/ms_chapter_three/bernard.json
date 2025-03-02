@@ -1,0 +1,172 @@
+{
+    "initializationAction": [
+        "q.player.data.dialogue.bernard_confront ? q.dialogue.set_page('farewell');",
+        "q.player.data.banker_1_defeated && q.player.data.banker_2_defeated && q.player.data.banker_3_defeated && q.player.data.banker_4_defeated && q.player.data.banker_5_defeated && q.player.data.banker_6_defeated && q.player.data.banker_7_defeated && q.player.data.banker_8_defeated && q.player.data.banker_9_defeated && q.player.data.banker_10_defeated ? q.dialogue.set_page('0');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "farewell",
+            "speaker": "npc",
+            "lines": [
+                "Go away, I'm busy."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Goodbye",
+                        "value": "goodbye",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "0",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "How did you get passed my workers!?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Where's the key?",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "1",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "You're not getting your hands on it. I know what you're up to and you can't stop us."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "You're working with the Regalis!?",
+                        "value": "2",
+                        "action": [
+                            "q.dialogue.set_page('2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "2",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "They've told me I'm a descendant of a Duke promised me my rightful place once they finish their goal. So I will assist them in their endeavour however I can."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "They're lying to you Bernard!",
+                        "value": "3",
+                        "action": [
+                            "q.dialogue.set_page('3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "3",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Yeah? Do you have anyway to prove it?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Well, no...but",
+                        "value": "3",
+                        "action": [
+                            "q.dialogue.set_page('4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "4",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Well, the only way I'm going to listen to a word you say is if you can provide some form of evidence to disprove the Regalis."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "I'll find a way",
+                        "value": "4",
+                        "action": [
+                            "q.dialogue.set_page('5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "5",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Now, please leave. I have more important things to do than listen to you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "I'll be back",
+                        "value": "5",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 0645C0AD6908A490');",
+                            "q.player.data.dialogue.bernard_confront = true; q.player.save_data();",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
