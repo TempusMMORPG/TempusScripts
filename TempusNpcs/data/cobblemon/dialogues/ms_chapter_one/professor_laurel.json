@@ -132,6 +132,8 @@
                         "text": "Goodbye",
                         "value": "goodbye",
                         "action": [
+                            "q.player.data.dialogue.laurel_inform = true; q.player.save_data();",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 6CC2EE32C134F1CC');",
                             "q.dialogue.close();"
                         ]
                     }

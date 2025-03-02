@@ -2,6 +2,8 @@
     "initializationAction": [
         "q.player.data.dialogue.professor_conifer_archives_stage == 1 ? q.dialogue.set_page('stop_them');",
         "q.player.data.dialogue.professor_conifer_archives_stage == 2 ? q.dialogue.set_page('hurry');",
+        "q.player.data.dialogue.professor_conifer_archives_stage == 3 ? q.dialogue.set_page('go_to_dan');",
+        "q.player.data.dialogue.laurel_inform ? q.dialogue.set_page('return_to_conifer');",
         "q.player.data.regalis_grunt_2a_1_defeated == 1 && q.player.data.regalis_grunt_2a_2_defeated == 1 && q.player.data.regalis_grunt_2a_3_defeated == 1 && q.player.data.regalis_grunt_2a_4_defeated == 1 && q.player.data.regalis_grunt_2a_5_defeated == 1 ? q.dialogue.set_page('after_regalis_grunts');"
     ],
     "speakers": {
@@ -119,6 +121,52 @@
                     {
                         "text": "Goodbye",
                         "value": "goodbye",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "return_to_conifer",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "All done? Good, so it says in the book there are four keys needed to access the Distortion World.", 
+                "The Regalis already have the Arceus Key which only leaves three somewhere out there."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "What should I do?",
+                        "value": "what_should_i_do",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 388F89F300513468');",
+                            "q.player.data.dialogue.professor_conifer_archives_stage = 3; q.player.save_data();",
+                            "q.dialogue.set_page('go_to_dan');"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "go_to_dan",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Well.... I have a friend who might know where the Giratina Key is.", 
+                "His name is Daniel, he's the museum curator in La Relance and he really knows his stuff."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "I'll see what I can do",
+                        "value": "ill_see_what_i_can_do",
                         "action": [
                             "q.dialogue.close();"
                         ]
