@@ -31,7 +31,7 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Where are the family records kept?",
+                        "text": "Where are family records kept?",
                         "value": "1",
                         "action": [
                             "q.dialogue.set_page('1');"
@@ -52,7 +52,7 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Well, I need a record that's 400 years old",
+                        "text": "Well, I need...",
                         "value": "2",
                         "action": [
                             "q.dialogue.set_page('2');"
@@ -73,7 +73,7 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Do you know where I could find them?",
+                        "text": "Do you know where I could?",
                         "value": "3",
                         "action": [
                             "q.dialogue.set_page('3');"

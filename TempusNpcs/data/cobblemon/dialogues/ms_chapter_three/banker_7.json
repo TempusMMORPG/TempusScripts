@@ -22,14 +22,14 @@
         {
             "id": "greeting",
             "speaker": "npc",
-            "lines": ["Are you here for crypto advice?"],
+            "lines": ["Did someone say U-coin?"],
             "input": "q.dialogue.set_page('battle_prompt');"
         },
         {
             "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "Would you like to invest in U-coin?"
+                "Investing today keeps the Redditors away!"
             ],
             "input": {
                 "type": "option",
@@ -53,7 +53,7 @@
             "id": "battle_start",
             "speaker": "npc",
             "lines": [
-                "A very smart choice!"
+                "Jokes on you, I'm a Discord mod!"
             ],
             "escapeAction": "0",
             "input": [

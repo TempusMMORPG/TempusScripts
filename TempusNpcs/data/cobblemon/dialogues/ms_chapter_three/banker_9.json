@@ -29,7 +29,7 @@
             "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "Do you care to invest?"
+                "Do you care to invest in the future?"
             ],
             "input": {
                 "type": "option",

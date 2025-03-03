@@ -1,9 +1,9 @@
 {
     "initializationAction": [
         "q.player.data.dialogue.bernard_proof ? q.dialogue.set_page('15');",
-        "q.player.data.dialogue.regalis_keeper ? q.dialogue.set_page('6');",
-        "q.player.data.dialogue.bernard_confront ? q.dialogue.set_page('farewell');",
-        "q.player.data.banker_1_defeated && q.player.data.banker_2_defeated && q.player.data.banker_3_defeated && q.player.data.banker_4_defeated && q.player.data.banker_5_defeated && q.player.data.banker_6_defeated && q.player.data.banker_7_defeated && q.player.data.banker_8_defeated && q.player.data.banker_9_defeated && q.player.data.banker_10_defeated ? q.dialogue.set_page('0');"
+        "q.player.data.dialogue.regalis_keeper && q.player.data.dialogue.bernard_proof == false ? q.dialogue.set_page('6');",
+        "q.player.data.dialogue.bernard_confront && q.player.data.dialogue.regalis_keeper == false ? q.dialogue.set_page('farewell');",
+        "q.player.data.banker_1_defeated && q.player.data.banker_2_defeated && q.player.data.banker_3_defeated && q.player.data.banker_4_defeated && q.player.data.banker_5_defeated && q.player.data.banker_6_defeated && q.player.data.banker_7_defeated && q.player.data.banker_8_defeated && q.player.data.banker_9_defeated && q.player.data.banker_10_defeated && q.player.data.dialogue.bernard_confront == false ? q.dialogue.set_page('0');"
     ],
     "speakers": {
         "npc": {
@@ -201,19 +201,7 @@
                 "...",
                 "..."
             ],
-            "input": {
-                "type": "option",
-                "vertical": true,
-                "options": [
-                    {
-                        "text": "Sure did",
-                        "value": "1",
-                        "action": [
-                            "q.dialogue.set_page('8');"
-                        ]
-                    }
-                ]
-            }
+            "input": "q.dialogue.set_page('8');"
         },
         {
             "id": "8",
@@ -265,7 +253,7 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Do you know where another key may be?",
+                        "text": "Actually...",
                         "value": "1",
                         "action": [
                             "q.dialogue.set_page('13');"
@@ -279,7 +267,7 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "I only found the one I had after Lachlan put it up as collateral for his loan."
+                "I sadly do not have any other keys... I only found the one I had after Lachlan put it up as collateral for his loan."
             ],
             "input": "q.dialogue.set_page('14');"
         },
@@ -301,7 +289,7 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "If you need more assistance then let me know, I'd be happy to help."
+                "If you need more assistance then let me know, I'd be happy to help... It's the least I can do."
             ],
             "input": "q.dialogue.close();"
         }
