@@ -292,7 +292,7 @@
             ],
             "input": [
                 "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 00C6C52681CB368E');",
-                "q.player.data.dialogue.bernard_proof = true; q.player.save_data();",
+                "q.player.data.dialogue.bernard_proof = true; q.player.data.ch3_completed = true; q.player.save_data();",
                 "q.dialogue.close();"
             ]
         },
