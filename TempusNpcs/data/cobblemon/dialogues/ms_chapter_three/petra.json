@@ -24,12 +24,54 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Oh, you're looking for an old record related to the Regalis?"
+                "Oh, hey.... Can I help you...?"
             ],
-            "input": "q.dialogue.set_page('1');"
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "I'm looking for old records",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('1');"
+                        ]
+                    }
+                ]
+            }
         },
         {
             "id": "1",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "There's no place here that stores old documents... Not even the bank..."
+            ],
+            "input": "q.dialogue.set_page('2');"
+        },
+        {
+            "id": "2",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "But... There is one building that hasn't been searched or touched for 400 years."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Which one?",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "3",
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
