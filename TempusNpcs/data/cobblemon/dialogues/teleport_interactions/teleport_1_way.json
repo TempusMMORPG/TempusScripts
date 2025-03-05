@@ -42,7 +42,7 @@
                             "q.run_command('title ' + q.player.username + ' title {\"text\":\"a\",\"font\":\"filter:fill\",\"color\":\"#000000\"}');",
                             "q.run_command('tp ' + q.player.username + ' ' + q.npc.config.teleport_location_1);",
                             "q.dialogue.close();",
-                            "q.player.tell('§a§l[✔] Used x' + q.npc.config.consume_item_amount + ' ' + q.npc.config.consume_item_display + ' to travel to ' + q.npc.config.teleport_display_1 + '[✔]§r');"
+                            "q.player.tell('§a§l[✔] Used x' + q.npc.config.consume_item_amount + ' ' + q.npc.config.consume_item_display + ' to travel to ' + q.npc.config.teleport_display_1 + ' [✔]§r');"
                         ]
                     },
                     {
