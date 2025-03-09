@@ -22,14 +22,14 @@
         {
             "id": "greeting",
             "speaker": "npc",
-            "lines": ["Say, you look like you could use a checking account!"],
+            "lines": ["Say, you look like you could use a credit card!"],
             "input": "q.dialogue.set_page('battle_prompt');"
         },
         {
             "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "Would you like to start one?"
+                "Would you like one?"
             ],
             "input": {
                 "type": "option",
