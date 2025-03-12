@@ -25,7 +25,10 @@
             "lines": [
                 "Oh? Another trainer? I'm Capt. Atlas, the pilot of this flight and a proud gym leader."
             ],
-            "input": "q.dialogue.set_page('greeting2');"
+            "input": [
+                "q.npc.play_animation('chatting', q.player.uuid);",
+                "q.dialogue.set_page('greeting2');"
+            ]
         },
         {
             "id": "greeting2",
@@ -33,7 +36,10 @@
             "lines": [
                 "So, I take it you are here for a battle? Well, the skies are only for those who demand precision and determination."
             ],
-            "input": "q.dialogue.set_page('battle_prompt');"
+            "input": [
+                "q.npc.play_animation('thinking', q.player.uuid);",
+                "q.dialogue.set_page('battle_prompt');"
+            ]
         },
         {
             "id": "battle_prompt",
@@ -49,7 +55,10 @@
                         "text": "§c⚔ Battle ⚔§r",
                         "value": "battle",
                         "isSelectable": "q.player.data.flying_gym_defeated == false",
-                        "action": "q.dialogue.set_page('battle_start');"
+                        "action": [
+                            "q.npc.play_animation('salute', q.player.uuid);",
+                            "q.dialogue.set_page('battle_start');"
+                        ]
                     },
                     {
                         "text": "No",

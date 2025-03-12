@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.normal_gym_defeated ? q.dialogue.set_page('post_defeat');"
+        "q.player.data.poison_gym_defeated ? q.dialogue.set_page('post_defeat');"
     ],
     "speakers": {
         "npc": {
@@ -23,7 +23,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Well, well. Another challenger, huh? I hope you didn’t come here expecting a warm welcome."
+                "Welcome trainer, are you here for a battle? I would like to clock out soon if I can..."
             ],
             "input": [
                 "q.npc.play_animation('thinking', q.player.uuid);",
@@ -34,7 +34,7 @@
             "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "You think you have what it takes to outsmart me and my team? Don’t waste my time if you’re not serious."
+                "Alright, let's get this over with—I do my job, you do yours. Sounds good with you?"
             ],
             "input": {
                 "type": "option",
@@ -43,9 +43,9 @@
                     {
                         "text": "§c⚔ Battle ⚔§r",
                         "value": "battle",
-                        "isSelectable": "q.player.data.normal_gym_defeated == false",
+                        "isSelectable": "q.player.data.poison_gym_defeated == false",
                         "action": [
-                            "q.npc.play_animation('thinking', q.player.uuid);",
+                            "q.npc.play_animation('nod', q.player.uuid);",
                             "q.dialogue.set_page('battle_start');"
                         ]
                     },
@@ -61,7 +61,7 @@
             "id": "battle_start",
             "speaker": "npc",
             "lines": [
-                "Interesting. Let’s see if you can back up your words with skill."
+                "Fine with me. My Pokemon deserve a good fight, at least. Bring it."
             ],
             "escapeAction": "0",
             "input": [
@@ -73,7 +73,7 @@
             "id": "post_defeat",
             "speaker": "npc",
             "lines": [
-                "Even in defeat, I find something to learn. I strongly encourage you to do the same."
+                "Don't take this the wrong way, but I kinda envy you—being able to come and go as you please..."
             ],
             "input": "q.dialogue.close();"
         }
