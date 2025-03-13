@@ -23,4 +23,26 @@ for_each(t.loser, c.npc_losers, {
       q.player.save_data();
     });
   };
+
+  t.loser.npc.config.toggle_battle_reward_p ? {
+    for_each(t.player_winner, c.player_winners, {
+      v.player = t.player_winner.player;
+      v.npc = t.loser.npc;
+      q.set_query('player', t.player_winner.player);
+      q.set_query('npc', t.loser.npc);
+      q.run_molang(t.loser.npc.config.battle_reward_p);
+      q.player.tell('You have recieved ' + t.loser.npc.config.battle_reward_amount_p + '₽');
+    });
+  };
+
+  t.loser.npc.config.toggle_battle_reward_b ? {
+    for_each(t.player_winner, c.player_winners, {
+      v.player = t.player_winner.player;
+      v.npc = t.loser.npc;
+      q.set_query('player', t.player_winner.player);
+      q.set_query('npc', t.loser.npc);
+      q.run_molang(t.loser.npc.config.battle_reward_b);
+      q.player.tell('You have recieved ' + t.loser.npc.config.battle_reward_amount_b + ' BP');
+    });
+  };
 });

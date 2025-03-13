@@ -1,0 +1,25 @@
+{
+    "config": [
+        {
+            "variableName": "toggle_battle_reward_p",
+            "displayName": "Toggle Battle Reward",  
+            "description": "Determines if this trainer should give a reward to the player after the battle.",
+            "type": "BOOLEAN",
+            "defaultValue": "0"
+          },
+          {
+            "variableName": "battle_reward_amount_p",
+            "displayName": "Battle Payout",  
+            "description": "Determines the payout for the player.",
+            "type": "NUMBER",
+            "defaultValue": "0.0"
+          },
+          {
+            "variableName": "battle_reward_p",
+            "displayName": "Battle Reward Command",  
+            "description": "For changing the command that should run after winning a battle",
+            "type": "TEXT",
+            "defaultValue": "q.run_command('deposit ' + q.npc.config.battle_reward_amount_p + ' impactor:pokedollars ' + q.player.username);"
+          }
+    ]
+}

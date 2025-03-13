@@ -14,15 +14,15 @@ t.data == 'MEDIUM' ? {
     q.party.add_by_properties('politoed moves=scald,earthpower,icebeam,raindance nature=mild held_item=cobblemon:mystic_water ability=damp hp_ev=100 special_attack_ev=100 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('ludicolo moves=raindance,gigadrain,icebeam,scald nature=quiet held_item=cobblemon:miracle_seed ability=swiftswim hp_ev=100 special_attack_ev=100 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('floatzel moves=liquidation,aquajet,icespinner,crunch nature=naive held_item=cobblemon:mystic_water ability=swiftswim attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('mantine moves=airslash,surf,psybeam,roost nature=quiet held_item=cobblemon:sharp_beak ability=swiftswim special_attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('mantine moves=airslash,surf,psybeam,roost nature=quiet held_item=cobblemon:wacan_berry ability=swiftswim special_attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('slowbro moves=scald,psychic,slackoff,bodypress nature=modest held_item=cobblemon:life_orb ability=leftovers hp_ev=128 special_attack_ev=128 level=' + (q.player.party.highest_level + 1) + t.constants);
     return 1;
 };
 
 t.data == 'HARD' ? {
     q.party.add_by_properties('politoed moves=earthpower,icebeam,scald,toxic nature=bold held_item=cobblemon:damp_rock ability=drizzle hp_ev=200 defence_ev=200 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('quagsire moves=earthquake,liquidation,recover,yawn nature=impish held_item=cobblemon:leftovers ability=unaware hp_ev=200 defence_ev=200 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('mantine moves=hurricane,hydropump,icebeam,roost nature=modest held_item=cobblemon:leftovers ability=swiftswim special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('quagsire moves=earthquake,liquidation,recover,yawn nature=impish held_item=cobblemon:rindo_berry ability=unaware hp_ev=200 defence_ev=200 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('mantine moves=hurricane,hydropump,icebeam,roost nature=modest held_item=cobblemon:wacan_berry ability=swiftswim special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('ludicolo moves=gigadrain,surf,icebeam,leafstorm nature=modest held_item=cobblemon:life_orb ability=swiftswim hp_ev=200 special_attack_ev=200 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('floatzel moves=wavecrash,flipturn,icespinner,lowkick nature=adamant held_item=cobblemon:choice_band ability=swiftswim attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('slowbro mega moves=scald,psychic,bodypress,slackoff nature=modest ability=shellarmor hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level + 1) + t.constants);
