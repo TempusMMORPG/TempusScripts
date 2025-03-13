@@ -22,7 +22,7 @@
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'Where do you want to go? The trip will cost you ' + q.npc.config.consume_item_amount + 'x ' + q.npc.config.consume_item_display + '. When you are ready, show it in your hands so I can see it.';"
+                    "expression": "'Where do you want to go? The trip will cost you 1x ' + q.npc.config.consume_item_display + '. When you are ready, show it in your hands so I can see it.';"
                 }
             ],
             "input": {
@@ -37,12 +37,12 @@
                         "value": "location1",
                         "isSelectable": "q.player.main_held_item.is_of(q.npc.config.consume_item) || q.player.off_held_item.is_of(q.npc.config.consume_item)",
                         "action": [
-                            "q.run_command('clear ' + q.player.username + ' ' + q.npc.config.consume_item + ' ' + q.npc.config.consume_item_amount);",
+                            "q.run_command('clear ' + q.player.username + ' ' + q.npc.config.consume_item + ' 1');",
                             "q.run_command('title ' + q.player.username + ' times 0 10 20');",
                             "q.run_command('title ' + q.player.username + ' title {\"text\":\"a\",\"font\":\"filter:fill\",\"color\":\"#000000\"}');",
                             "q.run_command('tp ' + q.player.username + ' ' + q.npc.config.teleport_location_1);",
                             "q.dialogue.close();",
-                            "q.player.tell('§a§l[✔] Used x' + q.npc.config.consume_item_amount + ' ' + q.npc.config.consume_item_display + ' to travel to ' + q.npc.config.teleport_display_1 + ' [✔]§r');"
+                            "q.player.tell('§a§l[✔] Used x1 ' + q.npc.config.consume_item_display + ' to travel to ' + q.npc.config.teleport_display_1 + ' [✔]§r');"
                         ]
                     },
                     {
@@ -53,12 +53,12 @@
                         "value": "location2",
                         "isSelectable": "q.player.main_held_item.is_of(q.npc.config.consume_item) || q.player.off_held_item.is_of(q.npc.config.consume_item)",
                         "action": [
-                            "q.run_command('clear ' + q.player.username + ' ' + q.npc.config.consume_item + ' ' + q.npc.config.consume_item_amount);",
+                            "q.run_command('clear ' + q.player.username + ' ' + q.npc.config.consume_item + ' 1');",
                             "q.run_command('title ' + q.player.username + ' times 0 10 20');",
                             "q.run_command('title ' + q.player.username + ' title {\"text\":\"a\",\"font\":\"filter:fill\",\"color\":\"#000000\"}');",
                             "q.run_command('tp ' + q.player.username + ' ' + q.npc.config.teleport_location_2);",
                             "q.dialogue.close();",
-                            "q.player.tell('§a§l[✔] Used x' + q.npc.config.consume_item_amount + ' ' + q.npc.config.consume_item_display + ' to travel to ' + q.npc.config.teleport_display_2 + ' [✔]§r');"
+                            "q.player.tell('§a§l[✔] Used x1 ' + q.npc.config.consume_item_display + ' to travel to ' + q.npc.config.teleport_display_2 + ' [✔]§r');"
                         ]
                     },
                     {
@@ -69,12 +69,12 @@
                         "value": "location3",
                         "isSelectable": "q.player.main_held_item.is_of(q.npc.config.consume_item) || q.player.off_held_item.is_of(q.npc.config.consume_item)",
                         "action": [
-                            "q.run_command('clear ' + q.player.username + ' ' + q.npc.config.consume_item + ' ' + q.npc.config.consume_item_amount);",
+                            "q.run_command('clear ' + q.player.username + ' ' + q.npc.config.consume_item + ' 1');",
                             "q.run_command('title ' + q.player.username + ' times 0 10 20');",
                             "q.run_command('title ' + q.player.username + ' title {\"text\":\"a\",\"font\":\"filter:fill\",\"color\":\"#000000\"}');",
                             "q.run_command('tp ' + q.player.username + ' ' + q.npc.config.teleport_location_3);",
                             "q.dialogue.close();",
-                            "q.player.tell('§a§l[✔] Used x' + q.npc.config.consume_item_amount + ' ' + q.npc.config.consume_item_display + ' to travel to ' + q.npc.config.teleport_display_3 + ' [✔]§r');"
+                            "q.player.tell('§a§l[✔] Used x1 ' + q.npc.config.consume_item_display + ' to travel to ' + q.npc.config.teleport_display_3 + ' [✔]§r');"
                         ]
                     },
                     {
