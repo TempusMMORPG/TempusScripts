@@ -26,7 +26,7 @@ This project is licensed under the **GNU General Public License v3.0**, which ba
 - ❌ No slapping a paywall on this – **F monetization, we share the sauce**.  
 - ❌ No claiming this as your own – don’t be an **NPC**, give credit where it’s due.  
 
-For full details, check the [`LICENSE`](LICENSE) file. **Stay mogging, stay open source.** 🔥  
+For full details, check the [`LICENSE`](LICENSE) file. **Stay mogging, stay open source.** 🔥🔥🔥
 
 ## ❓ Additional Support Information
 Please **skibidi** the documentation and **mew** the source code here:
