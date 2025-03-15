@@ -166,10 +166,10 @@
       },
       {
         "variableName": "pos_radius",
-        "displayName": "Position Radius (1.5 or higher)",
+        "displayName": "Position Radius (3 or higher)",
         "description": "Position Radius before the NPC starts to go to a new location",
         "type": "NUMBER",
-        "defaultValue": "1.5"
+        "defaultValue": "3"
       },
       {
         "variableName": "speed",
