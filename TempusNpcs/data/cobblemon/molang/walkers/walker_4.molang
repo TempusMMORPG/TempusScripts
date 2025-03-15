@@ -1,0 +1,72 @@
+t.should_run = q.entity.is_doing_activity('idle') && !q.entity.has_walk_target && q.entity.config.toggle_walk;
+!t.should_run ? return 0;
+
+t.pos_radius = q.entity.config.pos_radius;
+t.speed = q.entity.config.speed;
+
+t.y4 = q.entity.config.y4;
+t.z4 = q.entity.config.z4;
+t.x4 = q.entity.config.x4;
+
+t.x3 = q.entity.config.x3;
+t.y3 = q.entity.config.y3;
+t.z3 = q.entity.config.z3;
+
+t.x2 = q.entity.config.x2;
+t.y2 = q.entity.config.y2;
+t.z2 = q.entity.config.z2;
+
+t.x1 = q.entity.config.x1;
+t.y1 = q.entity.config.y1;
+t.z1 = q.entity.config.z1;
+
+q.entity.data.prev_target_pos == 0 ? { 
+    q.entity.data.prev_target_pos = 1; 
+    q.entity.save_data();
+};
+
+t.is_too_far_from_pos1 = q.entity.distance_to_pos(t.x1, t.y1, t.z1) > t.pos_radius && !(t.x1 == 0 && t.y1 == 0 && t.z1 == 0);
+t.is_too_far_from_pos2 = q.entity.distance_to_pos(t.x2, t.y2, t.z2) > t.pos_radius && !(t.x2 == 0 && t.y2 == 0 && t.z2 == 0);
+t.is_too_far_from_pos3 = q.entity.distance_to_pos(t.x3, t.y3, t.z3) > t.pos_radius && !(t.x3 == 0 && t.y3 == 0 && t.z3 == 0);
+t.is_too_far_from_pos4 = q.entity.distance_to_pos(t.x4, t.y4, t.z4) > t.pos_radius && !(t.x4 == 0 && t.y4 == 0 && t.z4 == 0);
+
+t.should_move_to_pos1 = (!t.is_too_far_from_pos4 || q.entity.data.prev_target_pos == 1) && t.should_run;
+t.should_move_to_pos2 = (!t.is_too_far_from_pos1 || q.entity.data.prev_target_pos == 2) && t.should_run;
+t.should_move_to_pos3 = (!t.is_too_far_from_pos2 || q.entity.data.prev_target_pos == 3) && t.should_run;
+t.should_move_to_pos4 = (!t.is_too_far_from_pos3 || q.entity.data.prev_target_pos == 4) && t.should_run;
+
+t.should_move_to_pos4 && !t.is_too_far_from_pos4 ? {
+    t.should_move_to_pos4 = false;
+};
+
+t.should_move_to_pos4 ? {
+    q.entity.walk_to(t.x4, t.y4, t.z4, t.speed);
+    q.run_command('say §a§l[✔] Moving to Pos 4 [✔]§r');
+    q.entity.data.prev_target_pos = 4;
+    q.entity.save_data();
+    return 1;
+};
+
+t.should_move_to_pos3 ? {
+    q.entity.walk_to(t.x3, t.y3, t.z3, t.speed);
+    q.run_command('say §a§l[✔] Moving to Pos 3 [✔]§r');
+    q.entity.data.prev_target_pos = 3;
+    q.entity.save_data();
+    return 1;
+};
+
+t.should_move_to_pos2 ? {
+    q.entity.walk_to(t.x2, t.y2, t.z2, t.speed);
+    q.run_command('say §a§l[✔] Moving to Pos 2 [✔]§r');
+    q.entity.data.prev_target_pos = 2;
+    q.entity.save_data();
+    return 1;
+};
+
+t.should_move_to_pos1 ? {
+    q.entity.walk_to(t.x1, t.y1, t.z1, t.speed);
+    q.run_command('say §a§l[✔] Moving to Pos 1 [✔]§r');
+    q.entity.data.prev_target_pos = 1;
+    q.entity.save_data();
+    return 1;
+};
