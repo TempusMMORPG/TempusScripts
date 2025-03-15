@@ -21,7 +21,7 @@
             "0": [
               {
                 "type": "run_script",
-                "script": "cobblemon:walker_4"
+                "script": "cobblemon:walker_6"
               }
             ],
             "1": [
