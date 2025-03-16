@@ -57,7 +57,7 @@
                 "type": "option",
                 "timeout": {
                     "delay": 10,
-                    "action": "q.dialogue.set_page('too_slow');"
+                    "action": "q.dialogue.set_page('too_slow'); q.npc.play_animation('shake_head', q.player.uuid);"
                 },          
                 "vertical": false,
                 "options": [
@@ -69,7 +69,7 @@
                     {
                         "text": "B. Pikchu",
                         "value": "answer2",
-                        "action": "q.dialogue.set_page('correct1');"
+                        "action": "q.dialogue.set_page('correct1'); q.npc.play_animation('nod', q.player.uuid);"
                     },
                     {
                         "text": "C. Aggron",
@@ -95,7 +95,7 @@
                 "type": "option",
                 "timeout": {
                     "delay": 10,
-                    "action": "q.dialogue.set_page('too_slow');"
+                    "action": "q.dialogue.set_page('too_slow'); q.npc.play_animation('shake_head', q.player.uuid);"
                 },   
                 "vertical": false,
                 "options": [
@@ -117,7 +117,7 @@
                     {
                         "text": "D. Clefary",
                         "value": "answer4",
-                        "action": "q.dialogue.set_page('correct2');"
+                        "action": "q.dialogue.set_page('correct2'); q.npc.play_animation('nod', q.player.uuid);"
                     }
                 ]
             }
@@ -133,14 +133,14 @@
                 "type": "option",
                 "timeout": {
                     "delay": 10,
-                    "action": "q.dialogue.set_page('too_slow');"
+                    "action": "q.dialogue.set_page('too_slow'); q.npc.play_animation('shake_head', q.player.uuid);"
                 },   
                 "vertical": false,
                 "options": [
                     {
                         "text": "A. Chestnaut",
                         "value": "answer1",
-                        "action": "q.dialogue.set_page('correct3');"
+                        "action": "q.dialogue.set_page('correct3'); q.npc.play_animation('nod', q.player.uuid);"
                     },
                     {
                         "text": "B. Emboar",
@@ -171,7 +171,7 @@
                 "type": "option",
                 "timeout": {
                     "delay": 10,
-                    "action": "q.dialogue.set_page('too_slow');"
+                    "action": "q.dialogue.set_page('too_slow'); q.npc.play_animation('shake_head', q.player.uuid);"
                 },   
                 "vertical": false,
                 "options": [
@@ -183,7 +183,7 @@
                     {
                         "text": "B. Galade",
                         "value": "answer2",
-                        "action": "q.dialogue.set_page('correct4');"
+                        "action": "q.dialogue.set_page('correct4'); q.npc.play_animation('nod', q.player.uuid);"
                     },
                     {
                         "text": "C. Milotic",
@@ -209,14 +209,14 @@
                 "type": "option",
                 "timeout": {
                     "delay": 10,
-                    "action": "q.dialogue.set_page('too_slow');"
+                    "action": "q.dialogue.set_page('too_slow'); q.npc.play_animation('shake_head', q.player.uuid);"
                 },   
                 "vertical": false,
                 "options": [
                     {
                         "text": "A. Salamance",
                         "value": "answer1",
-                        "action": "q.dialogue.set_page('correct5');"
+                        "action": "q.dialogue.set_page('correct5'); q.npc.play_animation('nod', q.player.uuid);"
                     },
                     {
                         "text": "B. Gossifleur",

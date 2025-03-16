@@ -57,7 +57,7 @@
                 "type": "option",
                 "timeout": {
                     "delay": 10,
-                    "action": "q.dialogue.set_page('too_slow');"
+                    "action": "q.dialogue.set_page('too_slow'); q.npc.play_animation('shake_head', q.player.uuid);"
                 },   
                 "vertical": false,
                 "options": [
@@ -69,7 +69,7 @@
                     {
                         "text": "B. 82",
                         "value": "answer2",
-                        "action": "q.dialogue.set_page('correct1');"
+                        "action": "q.dialogue.set_page('correct1'); q.npc.play_animation('nod', q.player.uuid);"
                     },
                     {
                         "text": "C. 87",
@@ -95,7 +95,7 @@
                 "type": "option",
                 "timeout": {
                     "delay": 10,
-                    "action": "q.dialogue.set_page('too_slow');"
+                    "action": "q.dialogue.set_page('too_slow'); q.npc.play_animation('shake_head', q.player.uuid);"
                 },   
                 "vertical": false,
                 "options": [
@@ -117,7 +117,7 @@
                     {
                         "text": "D. 75%",
                         "value": "answer4",
-                        "action": "q.dialogue.set_page('correct2');"
+                        "action": "q.dialogue.set_page('correct2'); q.npc.play_animation('nod', q.player.uuid);"
                     }
                 ]
             }
@@ -133,7 +133,7 @@
                 "type": "option",
                 "timeout": {
                     "delay": 10,
-                    "action": "q.dialogue.set_page('too_slow');"
+                    "action": "q.dialogue.set_page('too_slow'); q.npc.play_animation('shake_head', q.player.uuid);"
                 },   
                 "vertical": false,
                 "options": [
@@ -145,7 +145,7 @@
                     {
                         "text": "B. 74",
                         "value": "answer2",
-                        "action": "q.dialogue.set_page('correct3');"
+                        "action": "q.dialogue.set_page('correct3'); q.npc.play_animation('nod', q.player.uuid);"
                     },
                     {
                         "text": "C. 76",
@@ -171,7 +171,7 @@
                 "type": "option",
                 "timeout": {
                     "delay": 10,
-                    "action": "q.dialogue.set_page('too_slow');"
+                    "action": "q.dialogue.set_page('too_slow'); q.npc.play_animation('shake_head', q.player.uuid);"
                 },   
                 "vertical": false,
                 "options": [
@@ -188,7 +188,7 @@
                     {
                         "text": "C. 58%",
                         "value": "answer3",
-                        "action": "q.dialogue.set_page('correct4');"
+                        "action": "q.dialogue.set_page('correct4'); q.npc.play_animation('nod', q.player.uuid);"
                     },
                     {
                         "text": "D. 75%",
