@@ -30,8 +30,8 @@ for_each(t.loser, c.npc_losers, {
       v.npc = t.loser.npc;
       q.set_query('player', t.player_winner.player);
       q.set_query('npc', t.loser.npc);
-      q.run_molang(t.loser.npc.config.battle_reward_p);
-      q.player.tell('You have recieved ' + t.loser.npc.config.battle_reward_amount_p + '₽');
+      q.run_command('deposit ' + (q.npc.config.battle_reward_amount_p * (q.player.data.ng.modifier ?? 1)) + ' impactor:pokedollars ' + q.player.username);
+      q.player.tell('§a§lYou have received ₽' + t.loser.npc.config.battle_reward_amount_p + ' for winning!§r');
     });
   };
 
@@ -41,8 +41,8 @@ for_each(t.loser, c.npc_losers, {
       v.npc = t.loser.npc;
       q.set_query('player', t.player_winner.player);
       q.set_query('npc', t.loser.npc);
-      q.run_molang(t.loser.npc.config.battle_reward_b);
-      q.player.tell('You have recieved ' + t.loser.npc.config.battle_reward_amount_b + ' BP');
+      q.run_command('deposit ' + q.npc.config.battle_reward_amount_b + ' impactor:battlepoints ' + q.player.username);
+      q.player.tell('§b§lYou have received ' + t.loser.npc.config.battle_reward_amount_b + ' BP for winning!§r');
     });
   };
 });
