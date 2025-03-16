@@ -1,8 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.ua_gavin_defeated == 1 && q.player.data.ua_dana_defeated == 1 && q.player.data.ua_ryori_completed == 1 && q.player.data.ua_suhag_completed == 1 ? q.dialogue.set_page('greeting');",
-        "q.player.data.dialogue.principal_johnson == 1 ? q.dialogue.set_page('idle');",
-        "q.player.data.dialogue.principal_johnson == 0 ? q.dialogue.set_page('idle');"
+        "q.player.data.ua_gavin_defeated && q.player.data.ua_dana_defeated && q.player.data.ua_ryori_completed && q.player.data.ua_suhag_completed && q.player.data.dialogue.principal_johnson == false ? q.dialogue.set_page('greeting');"
     ],
     "speakers": {
         "npc": {
@@ -56,7 +54,8 @@
                         "text": "Is that all I get?",
                         "value": "that_all",
                         "action": [
-                            "q.dialogue.set_page('give_title');"
+                            "q.dialogue.set_page('give_title');",
+                            "q.npc.play_animation('clap', q.player.uuid);"
                         ]
                     }
                 ]
@@ -79,7 +78,7 @@
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 65B8B70D066C0D02');",
                             "q.run_command('lp user '+ q.player.username + ' permission set cobbletags.tag.graduate true');",
-                            "q.player.data.dialogue.principal_johnson = 1; q.player.save_data();",
+                            "q.player.data.dialogue.principal_johnson = true; q.player.save_data();",
                             "q.dialogue.close();"
                         ]
                     }

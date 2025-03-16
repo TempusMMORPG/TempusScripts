@@ -23,10 +23,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                {
-                    "type": "expression",
-                    "expression": "'Hey there trainer! My name is ' + q.npc.name + ' are you ready to battle?';"
-                }
+                "I'm the coach here at Unity Academy. I train the best of the best!"
             ],
             "input": "q.dialogue.set_page('battle_prompt');"
         },

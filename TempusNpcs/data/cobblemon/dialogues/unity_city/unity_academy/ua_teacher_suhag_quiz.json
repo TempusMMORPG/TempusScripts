@@ -64,7 +64,7 @@
                     {
                         "text": "A. 76",
                         "value": "answer1",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "B. 82",
@@ -74,12 +74,12 @@
                     {
                         "text": "C. 87",
                         "value": "answer3",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "D. 90",
                         "value": "answer4",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     }
                 ]
             }
@@ -102,17 +102,17 @@
                     {
                         "text": "A. 0%",
                         "value": "answer1",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "B. 25%",
                         "value": "answer2",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "C. 50%",
                         "value": "answer3",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "D. 75%",
@@ -140,7 +140,7 @@
                     {
                         "text": "A. 64",
                         "value": "answer1",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "B. 74",
@@ -150,12 +150,12 @@
                     {
                         "text": "C. 76",
                         "value": "answer3",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "D. 84",
                         "value": "answer4",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     }
                 ]
             }
@@ -178,12 +178,12 @@
                     {
                         "text": "A. 50%",
                         "value": "answer1",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "B. 66%",
                         "value": "answer2",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "C. 58%",
@@ -193,7 +193,7 @@
                     {
                         "text": "D. 75%",
                         "value": "answer4",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     }
                 ]
             }
@@ -232,6 +232,7 @@
             "input": [
                 "q.player.data.ua_suhag_completed = true; q.player.save_data();",
                 "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 528C385B9A4C9013');",
+                "q.npc.play_animation('clap', q.player.uuid);",
                 "q.dialogue.set_page('post_completed');"
             ]
         },

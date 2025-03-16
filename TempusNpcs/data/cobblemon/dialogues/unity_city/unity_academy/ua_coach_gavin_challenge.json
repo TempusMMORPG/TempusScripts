@@ -23,10 +23,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                {
-                    "type": "expression",
-                    "expression": "'Hey there trainer! My name is ' + q.npc.name + ' are you ready to battle?';"
-                }
+                "I'm the coach here at Unity Academy. I'm always looking for new talent to challenge me in a battle."
             ],
             "input": "q.dialogue.set_page('battle_prompt');"
         },
@@ -43,7 +40,7 @@
                     {
                         "text": "§c⚔ Battle ⚔§r",
                         "value": "battle",
-                        "isSelectable": "q.player.data.ua_gavin_defeated == false && q.player.data.ua_kevin_defeated && q.player.data.ua_kyle_defeated && q.player.data.ua_lydia_defeated",
+                        "isSelectable": "q.player.data.ua_gavin_defeated == false && q.player.data.ua_kevin_defeated && q.player.data.ua_kyle_defeated && q.player.data.ua_rochelle_defeated",
                         "action": "q.dialogue.set_page('battle_start');"
                     },
                     {

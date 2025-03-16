@@ -23,10 +23,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                {
-                    "type": "expression",
-                    "expression": "'Hey there trainer! My name is ' + q.npc.name + ' are you ready to battle?';"
-                }
+                "My training runs deep, just like the ocean."
             ],
             "input": "q.dialogue.set_page('battle_prompt');"
         },
@@ -34,7 +31,7 @@
             "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "So, what do you say? Would you like to challenge me to a battle?"
+                "Can you keep up with my swimming skills?"
             ],
             "input": {
                 "type": "option",

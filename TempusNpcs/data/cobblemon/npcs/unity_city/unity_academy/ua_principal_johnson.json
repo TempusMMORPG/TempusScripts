@@ -10,21 +10,5 @@
   "interaction": {
     "type": "dialogue",
     "dialogue": "cobblemon:ua_principal_johnson"
-  },
-  "config": [
-    {
-      "variableName": "animation_name",
-      "displayName": "Name of the animation",
-      "description": "Enter the name of the animation at the end of the namespace.E.g.'wave' for 'animation.trainer.generic.wave'",
-      "type": "TEXT",
-      "defaultValue": "wave"
-    },
-    {
-      "variableName": "toggle_animation",
-      "displayName": "Toggle Animation",
-      "description": "Toggle the animation true or false",
-      "type": "BOOLEAN",
-      "defaultValue": "false"
-    }
-  ]
+  }
 }

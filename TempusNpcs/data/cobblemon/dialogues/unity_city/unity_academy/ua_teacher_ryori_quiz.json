@@ -64,7 +64,7 @@
                     {
                         "text": "A. Arceus",
                         "value": "answer1",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "B. Pikchu",
@@ -74,12 +74,12 @@
                     {
                         "text": "C. Aggron",
                         "value": "answer3",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "D. Charmander",
                         "value": "answer4",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     }
                 ]
             }
@@ -102,17 +102,17 @@
                     {
                         "text": "A. Beedrill",
                         "value": "answer1",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "B. Greninja",
                         "value": "answer2",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "C. Charizard",
                         "value": "answer3",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "D. Clefary",
@@ -145,17 +145,17 @@
                     {
                         "text": "B. Emboar",
                         "value": "answer2",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "C. Giratina",
                         "value": "answer3",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "D. Suicune",
                         "value": "answer4",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     }
                 ]
             }
@@ -178,7 +178,7 @@
                     {
                         "text": "A. Swadloon",
                         "value": "answer1",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "B. Galade",
@@ -188,12 +188,12 @@
                     {
                         "text": "C. Milotic",
                         "value": "answer3",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "D. Shinx",
                         "value": "answer4",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     }
                 ]
             }
@@ -221,17 +221,17 @@
                     {
                         "text": "B. Gossifleur",
                         "value": "answer2",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "C. Darmanitan",
                         "value": "answer3",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     },
                     {
                         "text": "D. Whirlipede",
                         "value": "answer4",
-                        "action": "q.dialogue.set_page('incorrect');"
+                        "action": "q.dialogue.set_page('incorrect'); q.npc.play_animation('shake_head', q.player.uuid);"
                     }
                 ]
             }
@@ -282,6 +282,7 @@
             "input": [
                 "q.player.data.ua_ryori_completed = true; q.player.save_data();",
                 "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 149187207DD45947');",
+                "q.npc.play_animation('clap', q.player.uuid);",
                 "q.dialogue.set_page('post_completed');"
             ]
         },
