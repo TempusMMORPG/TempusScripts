@@ -8,7 +8,8 @@
       "cobblemon:base_quest_npc",
       "cobblemon:base_defeat_count",
       "cobblemon:battle_npc",
-      "cobblemon:looks_in_one_direction"
+      "cobblemon:looks_in_one_direction",
+      "cobblemon:battle_reward_pokedollars"
     ],
     "interaction": {
       "type": "dialogue",

@@ -5,7 +5,8 @@
       "cobblemon:looks_in_one_direction",
       "cobblemon:battle_npc",
       "cobblemon:base_defeat_count",
-      "cobblemon:battle_quest_npc"
+      "cobblemon:battle_quest_npc",
+      "cobblemon:battle_reward_pokedollars"
     ],
     "names": [
       "§lOfficer Bob§r"
