@@ -17,21 +17,13 @@
     },
     "pages": [
         {
-            "id": "greeting",
+            "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'Hey there trainer! I am ' + q.npc.name + ' are you ready to battle?';"
+                    "expression": "q.run_script('cobblemon:random_trainer_battle_prompt');"
                 }
-            ],
-            "input": "q.dialogue.set_page('battle_prompt');"
-        },
-        {
-            "id": "battle_prompt",
-            "speaker": "npc",
-            "lines": [
-                "So, what do you say? Would you like to challenge me to a battle?"
             ],
             "input": {
                 "type": "option",
@@ -40,7 +32,10 @@
                     {
                         "text": "§c⚔ Battle ⚔§r",
                         "value": "battle",
-                        "action": "q.dialogue.set_page('battle_start');"
+                        "action": [
+                            "q.dialogue.close();",
+                            "v.battle = q.npc.start_battle(q.player);"
+                        ]
                     },
                     {
                         "text": "No",
@@ -49,18 +44,6 @@
                     }
                 ]
             }
-        },
-        {
-            "id": "battle_start",
-            "speaker": "npc",
-            "lines": [
-                "That's what I like to see! Now, show me what you got, Trainer!"
-            ],
-            "escapeAction": "0",
-            "input": [
-                "q.dialogue.close();",
-                "v.battle = q.npc.start_battle(q.player);"
-            ]
         }
     ]
 }
