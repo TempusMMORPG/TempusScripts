@@ -9,7 +9,7 @@ for_each(t.loser, c.npc_losers, {
     });
   };
 
-  !q.is_blank(t.loser.npc.config.battle_cooldown_time) ? {
+  t.loser.npc.config.toggle_battle_cooldown && !q.is_blank(t.loser.npc.config.battle_cooldown_time) ? {
     for_each(t.player_winner, c.player_winners, {
       v.player = t.player_winner.player;
       v.npc = t.loser.npc;

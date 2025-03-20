@@ -1,6 +1,13 @@
 {
     "config": [
         {
+          "variableName": "toggle_battle_cooldown",
+          "displayName": "Toggle Battle Cooldown",  
+          "description": "Toggles the battle cooldown",
+          "type": "BOOLEAN",
+          "defaultValue": "0"
+        },
+        {
           "variableName": "battle_cooldown_time",
           "displayName": "Cooldown Time (IN HOURS)",
           "description": "The time in hours that the player must wait before utilizing this NPC again.",

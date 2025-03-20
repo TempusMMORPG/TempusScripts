@@ -1,4 +1,7 @@
 {
+    "initializationAction": [
+        "q.npc.config.toggle_battle_cooldown && q.run_script('cobblemon:cooldown_check') ? q.dialogue.set_page('on_cooldown');"
+    ],
     "speakers": {
         "npc": {
             "name": {
@@ -44,6 +47,19 @@
                     }
                 ]
             }
+        },
+        {
+            "id": "on_cooldown",
+            "speaker": "npc",
+            "lines": [
+                "§8§oBattle cooldown is active!\n",
+                "§8§oCurrent time remaining:",
+                {
+                    "type": "expression",
+                    "expression": "'§8§o' + q.run_script('cobblemon:cooldown_remaining_time');"
+                }
+            ],
+            "input": "q.dialogue.close();"
         }
     ]
 }

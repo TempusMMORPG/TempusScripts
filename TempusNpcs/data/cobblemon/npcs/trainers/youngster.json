@@ -7,13 +7,14 @@
       "cobblemon:base_npc",
       "cobblemon:battle_npc",
       "cobblemon:looks_in_one_direction",
-      "cobblemon:battle_reward_pokedollars"
+      "cobblemon:battle_reward_pokedollars",
+      "cobblemon:battle_cooldown"
     ],
     "interaction": {
       "type": "dialogue",
       "dialogue": "cobblemon:general_trainer_interaction"
     },
-    "skill": 3,
+    "skill": 5,
     "party": {
       "type": "pool",
       "minPokemon": 2,
