@@ -11,9 +11,9 @@
         {
           "variableName": "force_battle_radius",
           "displayName": "Force Battle Radius",
-          "description": "Your actual radius would be 1/2 this value",
+          "description": "Force Battle Radius",
           "type": "NUMBER",
-          "defaultValue": "8"
+          "defaultValue": "4"
         },
         {
           "variableName": "cooldown_ticks",

@@ -1,6 +1,6 @@
 q.entity.config.toggle_force_battle == false ? return 0;
 
-t.radius = q.entity.config.force_battle_radius;
+t.radius = q.entity.config.force_battle_radius * 2;
 
 t.entities = q.entity.get_nearby_entities(t.radius);
 
