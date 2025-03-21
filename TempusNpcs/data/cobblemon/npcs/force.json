@@ -1,0 +1,21 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",
+    "names": [
+        "§lForce NPC§r"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:chatter_npc",
+      "cobblemon:battle_force",
+      "cobblemon:battle_reward_pokedollars",
+      "cobblemon:battle_cooldown"
+    ],
+    "skill": 3,
+    "party": {
+        "type": "simple",
+        "pokemon": [
+          "mankey uncatchable=true level=11 nature=docile ability=vitalspirit hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10",
+          "machop uncatchable=true level=12 nature=docile ability=guts hp_iv=10 attack_iv=10 defence_iv=10 special_defence_iv=10 speed_iv=10"
+       ]
+    }
+}

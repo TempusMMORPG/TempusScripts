@@ -1,0 +1,16 @@
+q.entity.config.toggle_force_battle == false ? return 0;
+
+t.radius = q.entity.config.force_battle_radius;
+
+t.entities = q.entity.get_nearby_entities(t.radius);
+
+for_each(t.entity, t.entities, {
+    !t.entity.is_player ? return 0;
+
+    t.entity.world.game_time > t.entity.get_npc_variable(q.entity, 'cooldown') ? {
+        t.cooldown = t.entity.world.game_time + q.entity.config.cooldown_ticks;
+        t.entity.set_npc_variable(q.entity, 'cooldown', t.cooldown);
+        t.entity.save_data();
+        q.entity.run_dialogue(t.entity, 'cobblemon:force_general_trainer_interaction');
+    };
+});
