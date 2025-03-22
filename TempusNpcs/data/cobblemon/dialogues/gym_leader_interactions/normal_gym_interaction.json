@@ -23,7 +23,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Well, well. Another challenger, huh? I hope you didn’t come here expecting a warm welcome."
+                "Well, well. Another challenger, huh? I hope you didn't come here expecting a warm welcome."
             ],
             "input": [
                 "q.npc.play_animation('thinking', q.player.uuid);",
@@ -34,7 +34,7 @@
             "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "You think you have what it takes to outsmart me and my team? Don’t waste my time if you’re not serious."
+                "You think you have what it takes to outsmart me and my team? Don't waste my time if you're not serious."
             ],
             "input": {
                 "type": "option",
@@ -61,7 +61,7 @@
             "id": "battle_start",
             "speaker": "npc",
             "lines": [
-                "Interesting. Let’s see if you can back up your words with skill."
+                "Interesting. Let's see if you can back up your words with skill."
             ],
             "escapeAction": "0",
             "input": [

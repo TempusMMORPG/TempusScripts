@@ -72,7 +72,7 @@
             "id": "battle_start",
             "speaker": "npc",
             "lines": [
-                "I see, then let’s see if you can truly soar higher!"
+                "I see, then let's see if you can truly soar higher!"
             ],
             "escapeAction": "0",
             "input": [
@@ -84,7 +84,7 @@
             "id": "post_defeat",
             "speaker": "npc",
             "lines": [
-                "Back for another flight, huh? I’ll gladly chat about strategy, but remember, you’ve already bested me. I appreciate the thought nevertheless."
+                "Back for another flight, huh? I'll gladly chat about strategy, but remember, you've already bested me. I appreciate the thought nevertheless."
             ],
             "input": "q.dialogue.close();"
         }

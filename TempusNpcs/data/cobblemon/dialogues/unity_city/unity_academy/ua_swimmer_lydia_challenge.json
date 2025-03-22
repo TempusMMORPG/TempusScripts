@@ -23,7 +23,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Graceful, calm, and powerful—that’s my style."
+                "Graceful, calm, and powerful—that's my style."
             ],
             "input": "q.dialogue.set_page('battle_prompt');"
         },
