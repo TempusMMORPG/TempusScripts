@@ -4,13 +4,12 @@ t.radius = q.entity.config.force_battle_radius * 2;
 
 t.entities = q.entity.get_nearby_entities(t.radius);
 
-for_each(t.entity, t.entities, {
-    !t.entity.is_player ? return 0;
-
-    t.entity.world.game_time > t.entity.get_npc_variable(q.entity, 'cooldown') ? {
-        t.cooldown = t.entity.world.game_time + q.entity.config.cooldown_ticks;
-        t.entity.set_npc_variable(q.entity, 'cooldown', t.cooldown);
-        t.entity.save_data();
-        v.battle = q.entity.start_battle(t.entity);
+for_each(t.player, t.entities, {
+    t.player.is_player && t.player.world.game_time > t.player.get_npc_variable(q.entity, 'cooldown') ? {
+        t.cooldown = t.player.world.game_time + q.entity.config.cooldown_ticks;
+        t.player.set_npc_variable(q.entity, 'cooldown', t.cooldown);
+        t.player.save_data();
+        q.print('hi');
+        v.battle = q.entity.start_battle(t.player);
     };
 });
