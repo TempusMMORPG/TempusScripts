@@ -23,7 +23,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Speed, precision, and power—that’s my game."
+                "Speed, precision, and power—that's my game."
             ],
             "input": "q.dialogue.set_page('battle_prompt');"
         },
