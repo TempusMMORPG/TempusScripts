@@ -1,0 +1,81 @@
+{
+    "initializationAction": [
+        "q.player.data.fire_gym_defeated ? q.dialogue.set_page('post_defeat');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Oi! I hope you didn't come here expecting a happy little picnic..."
+            ],
+            "input": [
+                "q.npc.play_animation('shrug', q.player.uuid);",
+                "q.dialogue.set_page('battle_prompt');"
+            ]
+        },
+        {
+            "id": "battle_prompt",
+            "speaker": "npc",
+            "lines": [
+                "Listen, if you can't handle the heat, then get the hell out of my kitchen!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "isSelectable": "q.player.data.fire_gym_defeated == false",
+                        "action": [
+                            "q.npc.play_animation('laugh', q.player.uuid);",
+                            "q.dialogue.set_page('battle_start');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "battle_start",
+            "speaker": "npc",
+            "lines": [
+                "Please. I've diced up trainers stronger than you before breakfast. Show me what you got before I send you packing!"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "There are tougher challenges out there, and if you're not careful, you'll end up like a soggy plate of chips."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

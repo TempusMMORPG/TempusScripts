@@ -1,6 +1,6 @@
 t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 nature=hardy level=' + (q.player.party.highest_level);
 
-t.1 = 'charmeleon moves=flamethrower,aircutter,dragonpulse,ancientpower ability=blaze held_item=cobblemon:coal_stick' + t.constants;
+t.1 = 'charmeleon moves=flamethrower,aircutter,dragonpulse,ancientpower ability=blaze held_item=cobblemon:charcoal_stick' + t.constants;
 t.2 = 'ivysaur moves=energyball,sludgebomb,synthesis,toxic ability=overgrow held_item=cobblemon:miracle_seed' + t.constants;
 t.3 = 'wartortle moves=surf,icebeam,dragonpulse,aurasphere ability=torrent held_item=cobblemon:mystic_water' + t.constants;
 t.4 = 'bayleef moves=gigadrain,leechseed,lightscreen,reflect ability=overgrow held_item=cobblemon:coba_berry' + t.constants;

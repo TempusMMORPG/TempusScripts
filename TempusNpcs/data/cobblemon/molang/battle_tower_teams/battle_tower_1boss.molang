@@ -1,6 +1,6 @@
 t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=84 attack_ev=84 defence_ev=84 special_attack_ev=84 special_defence_ev=84 speed_ev=84 level=' + (q.player.party.highest_level);
 
-t.1 = 'flareon moves=flareblitz,superpower,trailblaze,bodyslam ability=flashfire held_item=cobblemon:coal_stick' + t.constants;
+t.1 = 'flareon moves=flareblitz,superpower,trailblaze,bodyslam ability=flashfire held_item=cobblemon:charcoal_stick' + t.constants;
 t.2 = 'jolteon moves=thunderbolt,voltswitch,shadowball,alluringvoice ability=voltabsorb held_item=cobblemon:magnet' + t.constants;
 t.3 = 'vaporeon moves=scald,icebeam,alluringvoice,protect ability=waterabsorb held_item=cobblemon:mystic_water' + t.constants;
 t.4 = 'leafeon moves=leafblade,knockoff,xscissor,synthesis ability=chlorophyll held_item=cobblemon:miracle_seed' + t.constants;

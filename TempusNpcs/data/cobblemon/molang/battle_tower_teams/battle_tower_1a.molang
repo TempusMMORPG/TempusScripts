@@ -1,6 +1,6 @@
 t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 nature=hardy level=' + (q.player.party.highest_level);
 
-t.1 = 'charmander moves=flameburst,dragonbreath,slash,metalclaw ability=blaze held_item=cobblemon:coal_stick' + t.constants;
+t.1 = 'charmander moves=flameburst,dragonbreath,slash,metalclaw ability=blaze held_item=cobblemon:charcoal_stick' + t.constants;
 t.2 = 'bulbasaur moves=venoshock,sleeppowder,seedbomb,grassyterrain ability=overgrow held_item=cobblemon:miracle_seed' + t.constants;
 t.3 = 'squirtle moves=waterpulse,bite,icywind,rapidspin ability=torrent held_item=cobblemon:mystic_water' + t.constants;
 t.4 = 'chikorita moves=magicalleaf,reflect,lightscreen,poisonpowder ability=overgrow held_item=cobblemon:sitrus_berry' + t.constants;
