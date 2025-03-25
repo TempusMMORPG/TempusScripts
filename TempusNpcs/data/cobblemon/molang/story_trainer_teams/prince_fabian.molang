@@ -1,7 +1,7 @@
 t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true';
 
-q.party.add_by_properties('greninja moves=icebeam,hydropump,gunkshot,uturn nature=naive held_item=cobblemon:choice_scarf ability=protean attack_ev=4 special_attack=252 speed_ev=252' + t.constants);
-q.party.add_by_properties('ceruledge moves=bitterblade,poltergeist,closecombat,shadowsneak nature=jolly held_item=cobblemon:focus_sash ability=weakarmor attack_ev=252 special_defence=4 speed_ev=252' + t.constants);
-q.party.add_by_properties('sneasler moves=direclaw,closecombat,acrobatics,throatchop nature=adamant held_item=cobblemon:white_herb ability=unburden attack_ev=252 special_defence=4 speed_ev=252' + t.constants);
-q.party.add_by_properties('dragapult moves=dragondarts,hex,uturn,thunderwave nature=naive held_item=cobblemon:life_orb ability=clearbody attack_ev=252 special_attack=4 speed_ev=252' + t.constants);
-q.party.add_by_properties('beedrill moves=uturn,drillrun,poisonjab,knockoff nature=jolly ability=adaptability attack_ev=252 special_defence=4 speed_ev=252 mega' + t.constants);
+q.party.add_by_properties('greninja moves=icebeam,hydropump,gunkshot,uturn nature=naive held_item=cobblemon:choice_scarf ability=protean attack_ev=4 special_attack_ev=252 speed_ev=252' + t.constants);
+q.party.add_by_properties('ceruledge moves=bitterblade,poltergeist,closecombat,shadowsneak nature=jolly held_item=cobblemon:focus_sash ability=weakarmor attack_ev=252 special_defence_ev=4 speed_ev=252' + t.constants);
+q.party.add_by_properties('sneasler moves=direclaw,closecombat,acrobatics,throatchop nature=adamant held_item=cobblemon:white_herb ability=unburden attack_ev=252 special_defence_ev=4 speed_ev=252' + t.constants);
+q.party.add_by_properties('dragapult moves=dragondarts,hex,uturn,thunderwave nature=naive held_item=cobblemon:life_orb ability=clearbody attack_ev=252 special_attack_ev=4 speed_ev=252' + t.constants);
+q.party.add_by_properties('beedrill moves=uturn,drillrun,poisonjab,knockoff nature=jolly ability=adaptability attack_ev=252 special_defence_ev=4 speed_ev=252 mega' + t.constants);
