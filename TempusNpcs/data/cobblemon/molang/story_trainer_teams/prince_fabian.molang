@@ -1,4 +1,4 @@
-t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true';
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true level=' + (q.player.party.highest_level);
 
 q.party.add_by_properties('greninja moves=icebeam,hydropump,gunkshot,uturn nature=naive held_item=cobblemon:choice_scarf ability=protean attack_ev=4 special_attack_ev=252 speed_ev=252' + t.constants);
 q.party.add_by_properties('ceruledge moves=bitterblade,poltergeist,closecombat,shadowsneak nature=jolly held_item=cobblemon:focus_sash ability=weakarmor attack_ev=252 special_defence_ev=4 speed_ev=252' + t.constants);
