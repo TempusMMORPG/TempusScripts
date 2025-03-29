@@ -1,0 +1,5 @@
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=67 uncatchable=true';
+
+q.party.add_by_properties('greninja moves=hydropump,icebeam,sludgewave,darkpulse nature=timid held_item=cobblemon:life_orb ability=protean special_attack_ev=160 speed_ev=160' + t.constants);
+q.party.add_by_properties('dondozo moves=liquidation,earthquake,heavyslam,outrage nature=adamant held_item=cobblemon:choice_band ability=unaware hp_ev=160 attack_ev=160' + t.constants);
+q.party.add_by_properties('cradily moves=toxic,recover,infestation,ingrain nature=sassy held_item=cobblemon:leftovers ability=stormdrain hp_ev=160 special_defence_ev=160' + t.constants);

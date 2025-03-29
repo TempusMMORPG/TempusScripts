@@ -1,0 +1,5 @@
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=63 uncatchable=true';
+
+q.party.add_by_properties('chandelure moves=shadowball,flamethrower,energyball,painsplit nature=modest held_item=cobblemon:spell_tag ability=flamebody special_attack_ev=160 speed_ev=160' + t.constants);
+q.party.add_by_properties('honchkrow moves=suckerpunch,nightslash,bravebird,roost nature=adamant held_item=cobblemon:black_glasses ability=superluck attack_ev=160 speed_ev=160' + t.constants);
+q.party.add_by_properties('garganacl moves=saltcure,stoneedge,earthquake,recover nature=adamant held_item=cobblemon:hard_stone ability=sturdy hp_ev=160 attack_ev=160' + t.constants);
