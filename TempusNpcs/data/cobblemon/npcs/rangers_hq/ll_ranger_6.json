@@ -1,0 +1,31 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",    
+    "names": [
+      "§lRanger Clay§r"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:battle_npc",
+      "cobblemon:battle_quest_npc",
+      "cobblemon:looks_in_one_direction"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:ll_ranger_6"
+    },
+    "config": [
+    {
+      "variableName": "on_player_wins",
+      "displayName": "npc.variable.on_player_wins.name",
+      "description": "npc.variable.on_player_wins.desc",
+      "type": "TEXT",
+      "defaultValue": "q.player.data.ranger_6_recommendation = 1;"
+    }
+  ],
+    "skill": 5,
+    "party": {
+      "type": "script",
+      "script": "cobblemon:ll_ranger_6",
+      "isStatic": false
+    }
+  }
