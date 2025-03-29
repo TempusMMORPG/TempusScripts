@@ -1,0 +1,146 @@
+{
+    "initializationAction": [
+        "q.player.data.ranger_10_recommendation ? q.dialogue.set_page('post_completed');",
+        "q.player.data.ranger_10_fail && q.player.data.ranger_10_recommendation == false ? q.dialogue.set_page('retry');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "You're almost at the end now! If you've been going in order I have your final recommendation!"
+            ],
+            "input": "q.dialogue.set_page('greeting2')"
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                    "Are you ready for your final quiz?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§bStart Quiz!§r",
+                        "value": "start_quiz",
+                        "isSelectable": "q.player.data.ranger_10_recommendation == false",
+                        "action": "q.dialogue.set_page('quiz_question');"
+                    },
+                    {
+                        "text": "Let me prepare first",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_question",
+            "speaker": "npc",
+            "lines": [
+                "Which of these Pokemon do not have a move completely signature to itself? Ignore Sketch."
+            ],
+            "escapeAction": "0",
+            "input": {
+                "type": "option",
+                "timeout": {
+                    "delay": 20,
+                    "action": "q.dialogue.set_page('too_slow');"
+                },   
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Regigigas", 
+                        "value": "answer1",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    },
+                    {
+                        "text": "Jirachi",
+                        "value": "answer2",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    },
+                    {
+                        "text": "Victini",
+                        "value": "answer3",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    },
+                    {
+                        "text": "Deoxys",
+                        "value": "answer4",
+                        "action": "q.dialogue.set_page('correct');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "correct",
+            "speaker": "npc",
+            "lines": [
+                "In the Orre region after the Shadow experiments by Cipher a purified Lugia has shown the ability to use the move Psycho Boost, which was previously thought to be exclusive to Deoxys. Good job and Good Luck."
+            ],
+            "input": [
+                "q.player.data.ranger_10_recommendation = true; q.player.save_data();",
+                "q.dialogue.close();"
+            ]
+        },
+        {
+            "id": "incorrect",
+            "speaker": "npc",
+            "lines": [
+                "Incorrect. In the Orre region a Lugia has been shown to be able to use the move Psycho Boost. Well it doesn't matter than you don't know something niche like this, you just need to prove your strength now!"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.player.data.ranger_10_fail = true; q.player.save_data();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "too_slow",
+            "speaker": "npc",
+            "lines": [
+                "You have run out of time. A reaction time that slow means you might die if you get caught off guard, but strength is the most important thing when dealing with a legendary. Let's see if you have that!"
+            ],
+            "escapeAction": "0",
+            "input": [
+            "v.battle = q.npc.start_battle(q.player);",
+            "q.player.data.ranger_10_fail = true; q.player.save_data();"
+        ]
+        },
+        {
+            "id": "retry",
+            "speaker": "npc",
+            "lines": [
+                "Let's fight again!"
+            ],
+            "escapeAction": "0",
+            "input": "v.battle = q.npc.start_battle(q.player);"
+        },
+        {
+            "id": "post_completed",
+            "speaker": "npc",
+            "lines": [
+                "Your final test is defeating the boss, one of the most powerful trainers in the region. Good luck."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

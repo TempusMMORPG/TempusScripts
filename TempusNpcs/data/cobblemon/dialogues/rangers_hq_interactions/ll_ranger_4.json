@@ -1,0 +1,146 @@
+{
+    "initializationAction": [
+        "q.player.data.ranger_4_recommendation ? q.dialogue.set_page('post_completed');",
+        "q.player.data.ranger_4_fail && q.player.data.ranger_4_recommendation == false ? q.dialogue.set_page('retry');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "It's not even close to the end of my shift. Oh are you here for the Legendary License?"
+            ],
+            "input": "q.dialogue.set_page('greeting2')"
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                "Alright let's kill some time"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§bStart Quiz!§r",
+                        "value": "start_quiz",
+                        "isSelectable": "q.player.data.ranger_4_recommendation == false",
+                        "action": "q.dialogue.set_page('quiz_question');"
+                    },
+                    {
+                        "text": "Let me prepare first",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_question",
+            "speaker": "npc",
+            "lines": [
+                "In an Inverse Battle which type cannot hit Shedinja?"
+            ],
+            "escapeAction": "0",
+            "input": {
+                "type": "option",
+                "timeout": {
+                    "delay": 20,
+                    "action": "q.dialogue.set_page('too_slow');"
+                },   
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Normal", 
+                        "value": "answer1",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    },
+                    {
+                        "text": "Psychic",
+                        "value": "answer2",
+                        "action": "q.dialogue.set_page('correct');"
+                    },
+                    {
+                        "text": "Poison",
+                        "value": "answer3",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    },
+                    {
+                        "text": "Bug",
+                        "value": "answer4",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "correct",
+            "speaker": "npc",
+            "lines": [
+                "Got it. Bug/Ghost is resistant to Bug and Poison as well as immune to Normal meaning it's weak to those 3 types in an Inverse Battle. Here you go."
+            ],
+            "input": [
+                "q.player.data.ranger_4_recommendation = true; q.player.save_data();",
+                "q.dialogue.close();"
+            ]
+        },
+        {
+            "id": "incorrect",
+            "speaker": "npc",
+            "lines": [
+                "Wrong. Psychic is neutral to Bug/Ghost types. That means it'd be neutral in an Inverse Battle and thus can't hit Shedinja. Time to battle."
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.player.data.ranger_4_fail = true; q.player.save_data();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "too_slow",
+            "speaker": "npc",
+            "lines": [
+                "At this rate my shift will be over by the time you answer me. Let's battle and get this over with."
+            ],
+            "escapeAction": "0",
+            "input": [
+            "v.battle = q.npc.start_battle(q.player);",
+            "q.player.data.ranger_4_fail = true; q.player.save_data();"
+        ]
+        },
+        {
+            "id": "retry",
+            "speaker": "npc",
+            "lines": [
+                "Still got time before I'm off. Hope you can beat me before I leave for the day."
+            ],
+            "escapeAction": "0",
+            "input": "v.battle = q.npc.start_battle(q.player);"
+        },
+        {
+            "id": "post_completed",
+            "speaker": "npc",
+            "lines": [
+                "I'm busy watching the clock. Go away"
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

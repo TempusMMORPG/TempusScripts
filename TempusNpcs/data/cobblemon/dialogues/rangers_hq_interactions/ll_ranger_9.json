@@ -1,0 +1,146 @@
+{
+    "initializationAction": [
+        "q.player.data.ranger_9_recommendation ? q.dialogue.set_page('post_completed');",
+        "q.player.data.ranger_9_fail && q.player.data.ranger_9_recommendation == false ? q.dialogue.set_page('retry');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Cataloguing all of these forms and variants will take forever... Oh you need my recommendation?"
+            ],
+            "input": "q.dialogue.set_page('greeting2')"
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                "I could stretch my legs a bit you ready?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§bStart Quiz!§r",
+                        "value": "start_quiz",
+                        "isSelectable": "q.player.data.ranger_9_recommendation == false",
+                        "action": "q.dialogue.set_page('quiz_question');"
+                    },
+                    {
+                        "text": "Let me prepare first",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_question",
+            "speaker": "npc",
+            "lines": [
+                "Excluding Spinda which Pokemon has the most amount of forms? (This includes forms exlcusive to Cobblemon)"
+            ],
+            "escapeAction": "0",
+            "input": {
+                "type": "option",
+                "timeout": {
+                    "delay": 20,
+                    "action": "q.dialogue.set_page('too_slow');"
+                },   
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Alcremie", 
+                        "value": "answer1",
+                        "action": "q.dialogue.set_page('correct');"
+                    },
+                    {
+                        "text": "Vivillon",
+                        "value": "answer2",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    },
+                    {
+                        "text": "Magikarp",
+                        "value": "answer3",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    },
+                    {
+                        "text": "Unown",
+                        "value": "answer4",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "correct",
+            "speaker": "npc",
+            "lines": [
+                "Alcremie has a massive 63 forms. Still nothing compared to Spinda's 4 billion or so."
+            ],
+            "input": [
+                "q.player.data.ranger_9_recommendation = true; q.player.save_data();",
+                "q.dialogue.close();"
+            ]
+        },
+        {
+            "id": "incorrect",
+            "speaker": "npc",
+            "lines": [
+                "Nope, Alcremie has 63 forms. The next highest would be Vivillon with 35 including the Pride Patterns. Guess it's time to battle."
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.player.data.ranger_9_fail = true; q.player.save_data();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "too_slow",
+            "speaker": "npc",
+            "lines": [
+                "I wanna get this done with so I don't have to do any overtime. We're battling now."
+            ],
+            "escapeAction": "0",
+            "input": [
+            "v.battle = q.npc.start_battle(q.player);",
+            "q.player.data.ranger_9_fail = true; q.player.save_data();"
+        ]
+        },
+        {
+            "id": "retry",
+            "speaker": "npc",
+            "lines": [
+                "You're back? Let's get this over with then."
+            ],
+            "escapeAction": "0",
+            "input": "v.battle = q.npc.start_battle(q.player);"
+        },
+        {
+            "id": "post_completed",
+            "speaker": "npc",
+            "lines": [
+                "Black Mask Shiny Magikarp has a white mask? That's kinda funny."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

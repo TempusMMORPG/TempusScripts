@@ -1,0 +1,108 @@
+{
+    "initializationAction": [
+        "q.player.data.legendary_license_complete ? q.dialogue.set_page('post_defeat');",
+        "q.player.data.ranger_1_recommendation == false ? q.dialogue.set_page('incomplete');",
+        "q.player.data.ranger_2_recommendation == false ? q.dialogue.set_page('incomplete');",
+        "q.player.data.ranger_3_recommendation == false ? q.dialogue.set_page('incomplete');",
+        "q.player.data.ranger_4_recommendation == false ? q.dialogue.set_page('incomplete');",
+        "q.player.data.ranger_5_recommendation == false ? q.dialogue.set_page('incomplete');",
+        "q.player.data.ranger_6_recommendation == false ? q.dialogue.set_page('incomplete');",
+        "q.player.data.ranger_7_recommendation == false ? q.dialogue.set_page('incomplete');",
+        "q.player.data.ranger_8_recommendation == false ? q.dialogue.set_page('incomplete');",
+        "q.player.data.ranger_9_recommendation == false ? q.dialogue.set_page('incomplete');",
+        "q.player.data.ranger_10_recommendation == false ? q.dialogue.set_page('incomplete');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "It's been a while since we've had somebody get all the recommendations. Hi there, I'm going to be your final obstacle before you can get your license."
+            ],
+            "input": [
+                "q.npc.play_animation('chatting', q.player.uuid);",
+                "q.dialogue.set_page('greeting2');"
+            ]
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                "Doesn't matter if you got here through brains or brawn, if you defeat me in battle, you will be issued a Legendary License."
+            ],
+            "input": [
+                "q.dialogue.set_page('battle_prompt');"
+            ]
+        },
+        {
+            "id": "battle_prompt",
+            "speaker": "npc",
+            "lines": [
+                "Make sure you are ready, I'm the strongest active ranger."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "action": 
+                            "q.dialogue.set_page('battle_start');"
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "battle_start",
+            "speaker": "npc",
+            "lines": [
+                "I'm not going to go easy on you!"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "incomplete",
+            "speaker": "npc",
+            "lines": [
+                "It looks like you don't have all of the recommendations needed. Come back when you're worth my time."
+            ],
+            "input": [
+                "q.dialogue.close();"
+            ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "You've been issued a Legendary License. Good luck and be sure to protect both your own life, and to protect all the Pokemon of Tempus."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

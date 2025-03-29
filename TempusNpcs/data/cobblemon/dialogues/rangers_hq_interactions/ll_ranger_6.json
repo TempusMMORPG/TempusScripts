@@ -1,0 +1,146 @@
+{
+    "initializationAction": [
+        "q.player.data.ranger_6_recommendation ? q.dialogue.set_page('post_completed');",
+        "q.player.data.ranger_6_fail && q.player.data.ranger_6_recommendation == false ? q.dialogue.set_page('retry');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Zzz... Wuh I wasn't sleeping... Oh you just want my recommendation."
+            ],
+            "input": "q.dialogue.set_page('greeting2')"
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                "I'd probably get in more trouble trying to bribe you to keep your mouth shut so let's do this."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§bStart Quiz!§r",
+                        "value": "start_quiz",
+                        "isSelectable": "q.player.data.ranger_6_recommendation == false",
+                        "action": "q.dialogue.set_page('quiz_question');"
+                    },
+                    {
+                        "text": "Let me prepare first",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_question",
+            "speaker": "npc",
+            "lines": [
+                "Which of these moves can put any Pokemon to sleep assuming it does not have an ability that negates sleep or other status ailments."
+            ],
+            "escapeAction": "0",
+            "input": {
+                "type": "option",
+                "timeout": {
+                    "delay": 20,
+                    "action": "q.dialogue.set_page('too_slow');"
+                },   
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Sleep Powder", 
+                        "value": "answer1",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    },
+                    {
+                        "text": "Grass Whistle",
+                        "value": "answer2",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    },
+                    {
+                        "text": "Lovely Kiss",
+                        "value": "answer3",
+                        "action": "q.dialogue.set_page('correct');"
+                    },
+                    {
+                        "text": "Dire Claw",
+                        "value": "answer4",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "correct",
+            "speaker": "npc",
+            "lines": [
+                "Lovely Kiss is the only move without some sort of immunity. Don't be a snitch and tell my superiors I was sleeping on the job"
+            ],
+            "input": [
+                "q.player.data.ranger_6_recommendation = true; q.player.save_data();",
+                "q.dialogue.close();"
+            ]
+        },
+        {
+            "id": "incorrect",
+            "speaker": "npc",
+            "lines": [
+                "Sleep Powder and Dire Claw both have type immunities, Grass and Steel respectively. Grass Whistle cannot affect Pokemon with Soundproof. Maybe this battle will wake me up."
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.player.data.ranger_6_fail = true; q.player.save_data();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "too_slow",
+            "speaker": "npc",
+            "lines": [
+                "I'm about to fall back asleep let's just battle instead."
+            ],
+            "escapeAction": "0",
+            "input": [
+            "v.battle = q.npc.start_battle(q.player);",
+            "q.player.data.ranger_6_fail = true; q.player.save_data();"
+        ]
+        },
+        {
+            "id": "retry",
+            "speaker": "npc",
+            "lines": [
+                "Zzz... Oh you're back let's get this over with."
+            ],
+            "escapeAction": "0",
+            "input": "v.battle = q.npc.start_battle(q.player);"
+        },
+        {
+            "id": "post_completed",
+            "speaker": "npc",
+            "lines": [
+                "Zzz..."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

@@ -1,0 +1,146 @@
+{
+    "initializationAction": [
+        "q.player.data.ranger_2_recommendation ? q.dialogue.set_page('post_completed');",
+        "q.player.data.ranger_2_fail && q.player.data.ranger_2_recommendation == false ? q.dialogue.set_page('retry');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                    "Another applicant. We shall see if you are worthy of my recommendation."
+            ],
+            "input": "q.dialogue.set_page('greeting2')"
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                    "Answer correctly and you may have my recommendation. Answer incorrectly and we must battle."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§bStart Quiz!§r",
+                        "value": "start_quiz",
+                        "isSelectable": "q.player.data.ranger_2_recommendation == false",
+                        "action": "q.dialogue.set_page('quiz_question');"
+                    },
+                    {
+                        "text": "Let me prepare first",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_question",
+            "speaker": "npc",
+            "lines": [
+                "Which of these moves have the lowest base power"
+            ],
+            "escapeAction": "0",
+            "input": {
+                "type": "option",
+                "timeout": {
+                    "delay": 20,
+                    "action": "q.dialogue.set_page('too_slow');"
+                },   
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Bind", 
+                        "value": "answer1",
+                        "action": "q.dialogue.set_page('correct');"
+                    },
+                    {
+                        "text": "Absorb",
+                        "value": "answer2",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    },
+                    {
+                        "text": "Nuzzle",
+                        "value": "answer3",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    },
+                    {
+                        "text": "Smog",
+                        "value": "answer4",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "correct",
+            "speaker": "npc",
+            "lines": [
+                "Correct. Bind has a base power of 15, the only move known to be lower is Constrict and the first hit of Triple Kick. Here is my recommendation"
+            ],
+            "input": [
+                "q.player.data.ranger_2_recommendation = true; q.player.save_data();",
+                "q.dialogue.close();"
+            ]
+        },
+        {
+            "id": "incorrect",
+            "speaker": "npc",
+            "lines": [
+                "Incorrect. Absorb and Nuzzle have a base power of 20, Smog 30, and Bind is 15. Let us battle."
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.player.data.ranger_2_fail = true; q.player.save_data();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "too_slow",
+            "speaker": "npc",
+            "lines": [
+                "You ran out of time. Time to battle."
+            ],
+            "escapeAction": "0",
+            "input": [
+            "v.battle = q.npc.start_battle(q.player);",
+            "q.player.data.ranger_2_fail = true; q.player.save_data();"
+        ]
+        },
+        {
+            "id": "retry",
+            "speaker": "npc",
+            "lines": [
+                "You have returned. Let us battle."
+            ],
+            "escapeAction": "0",
+            "input": "v.battle = q.npc.start_battle(q.player);"
+        },
+        {
+            "id": "post_completed",
+            "speaker": "npc",
+            "lines": [
+                "You already have my recommendation."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

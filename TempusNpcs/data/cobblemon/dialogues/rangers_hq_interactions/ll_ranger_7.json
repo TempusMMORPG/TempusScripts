@@ -1,0 +1,146 @@
+{
+    "initializationAction": [
+        "q.player.data.ranger_7_recommendation ? q.dialogue.set_page('post_completed');",
+        "q.player.data.ranger_7_fail && q.player.data.ranger_7_recommendation == false ? q.dialogue.set_page('retry');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+               "Hey there! I've been waiting for you! Always happy to see someone try to get their own legendary license!"
+            ],
+            "input": "q.dialogue.set_page('greeting2')"
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+               "Alright are you ready?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§bStart Quiz!§r",
+                        "value": "start_quiz",
+                        "isSelectable": "q.player.data.ranger_7_recommendation == false",
+                        "action": "q.dialogue.set_page('quiz_question');"
+                    },
+                    {
+                        "text": "Let me prepare first",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_question",
+            "speaker": "npc",
+            "lines": [
+                "How many Baby Pokemon are there?"
+            ],
+            "escapeAction": "0",
+            "input": {
+                "type": "option",
+                "timeout": {
+                    "delay": 20,
+                    "action": "q.dialogue.set_page('too_slow');"
+                },   
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "17", 
+                        "value": "answer1",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    },
+                    {
+                        "text": "18",
+                        "value": "answer2",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    },
+                    {
+                        "text": "19",
+                        "value": "answer3",
+                        "action": "q.dialogue.set_page('correct');"
+                    },
+                    {
+                        "text": "20",
+                        "value": "answer4",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "correct",
+            "speaker": "npc",
+            "lines": [
+                "Yep! 19 Baby Pokemon are currently known to exist! Here you go!"
+            ],
+            "input": [
+                "q.player.data.ranger_7_recommendation = true; q.player.save_data();",
+                "q.dialogue.close();"
+            ]
+        },
+        {
+            "id": "incorrect",
+            "speaker": "npc",
+            "lines": [
+                "Aw you got it wrong... Oh well as long as you beat me in a battle you can still have my recommendation!"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.player.data.ranger_7_fail = true; q.player.save_data();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "too_slow",
+            "speaker": "npc",
+            "lines": [
+                "Sorry times up. If you beat me you can still have my recommendation though!"
+            ],
+            "escapeAction": "0",
+            "input": [
+            "v.battle = q.npc.start_battle(q.player);",
+            "q.player.data.ranger_7_fail = true; q.player.save_data();"
+        ]
+        },
+        {
+            "id": "retry",
+            "speaker": "npc",
+            "lines": [
+                "Glad you bounced back and are ready to try again!"
+            ],
+            "escapeAction": "0",
+            "input": "v.battle = q.npc.start_battle(q.player);"
+        },
+        {
+            "id": "post_completed",
+            "speaker": "npc",
+            "lines": [
+                "You should hurry up and beat my co-workers already so you can get your license!"
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

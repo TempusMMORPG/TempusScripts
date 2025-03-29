@@ -1,0 +1,146 @@
+{
+    "initializationAction": [
+        "q.player.data.ranger_1_recommendation ? q.dialogue.set_page('post_completed');",
+        "q.player.data.ranger_1_fail && q.player.data.ranger_1_recommendation == false ? q.dialogue.set_page('retry');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                   "So you are the new applicant for the Legendary License? We have to make sure you are smart and strong enough to not get killed out there."
+            ],
+            "input": "q.dialogue.set_page('greeting2')"
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                    "If you answer my question correctly I'll give you my recommendation. If you get it wrong then you'll have to battle me for it."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§bStart Quiz!§r",
+                        "value": "start_quiz",
+                        "isSelectable": "q.player.data.ranger_1_recommendation == false",
+                        "action": "q.dialogue.set_page('quiz_question');"
+                    },
+                    {
+                        "text": "Let me prepare first",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz_question",
+            "speaker": "npc",
+            "lines": [
+                "Alright! Which Pokemon evolutionary line discovered in the Kanto Region still has a typing unique to that line?"
+            ],
+            "escapeAction": "0",
+            "input": {
+                "type": "option",
+                "timeout": {
+                    "delay": 20,
+                    "action": "q.dialogue.set_page('too_slow');"
+                },   
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Gastly",
+                        "value": "answer1",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    },
+                    {
+                        "text": "Zubat",
+                        "value": "answer2",
+                        "action": "q.dialogue.set_page('correct');"
+                    },
+                    {
+                        "text": "Jynx",
+                        "value": "answer3",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    },
+                    {
+                        "text": "Magnemite",
+                        "value": "answer4",
+                        "action": "q.dialogue.set_page('incorrect');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "correct",
+            "speaker": "npc",
+            "lines": [
+                "You got it! The only Pokemon with the Poison and Flying types are Zubat, Golbat, and Crobat. Here you can have my recommendation."
+            ],
+            "input": [
+                "q.player.data.ranger_1_recommendation = true; q.player.save_data();",
+                "q.dialogue.close();"
+            ]
+        },
+        {
+            "id": "incorrect",
+            "speaker": "npc",
+            "lines": [
+                "Got it wrong. Zubat's evolutionary line are the only Poison Flying types that are currently known. Let's battle then!"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.player.data.ranger_1_fail = true; q.player.save_data();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "too_slow",
+            "speaker": "npc",
+            "lines": [
+                "Times up! No worries as long as you beat me in a battle you can still get my recommendation. Now let's do this!"
+            ],
+            "escapeAction": "0",
+            "input": [
+            "v.battle = q.npc.start_battle(q.player);",
+            "q.player.data.ranger_1_fail = true; q.player.save_data();"
+        ]
+        },
+        {
+            "id": "retry",
+            "speaker": "npc",
+            "lines": [
+                "Come back for more? Let's see if you got what it takes to beat me now!"
+            ],
+            "escapeAction": "0",
+            "input": "v.battle = q.npc.start_battle(q.player);"
+        },
+        {
+            "id": "post_completed",
+            "speaker": "npc",
+            "lines": [
+                "You already got my recommendation. Good luck with getting the rest of the recommendations!"
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}
