@@ -1,7 +1,7 @@
 {
     "resourceIdentifier": "cobblemon:global_skins",    
     "names": [
-      "Regalis Grunt"
+      "Underground Regalis Grunt"
     ],
     "presets": [
       "cobblemon:base_npc",
@@ -19,7 +19,7 @@
           "displayName": "npc.variable.on_player_wins.name",
           "description": "npc.variable.on_player_wins.desc",
           "type": "TEXT",
-          "defaultValue": "q.run_script('cobblemon:regalis3_quest_reward');q.player.data.regalis_grunt_3_10_defeated = true;q.player.save_data();"
+          "defaultValue": "q.player.data.regalis_grunt_3_10_defeated = true;q.player.save_data();"
         }
     ],
     "skill": 3,
