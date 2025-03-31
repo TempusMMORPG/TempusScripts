@@ -1,3 +1,5 @@
+c.battle.is_pvn == false ? return 0;
+
 for_each(t.loser, c.npc_losers, {
   t.loser.npc.config.toggle_battle_cooldown && !q.is_blank(t.loser.npc.config.battle_cooldown_time) ? {
     for_each(t.player_winner, c.player_winners, {
