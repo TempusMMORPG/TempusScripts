@@ -1,0 +1,100 @@
+{
+    "initializationAction": [
+        "q.player.data.water_gym_defeated ? q.dialogue.set_page('post_defeat');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Whoah! You actually made it past the other gym trainers. Gnarly! I'm very impressed, challenger. I hope Pika Park has been giving you a world of fun so far."
+            ],
+            "input": [
+                "q.npc.play_animation('nod', q.player.uuid);",
+                "q.dialogue.set_page('greeting2');"
+            ]
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                "So you think you can take on my hydro powered water type team, huh?"
+            ],
+            "input": [
+                "q.npc.play_animation('thinking', q.player.uuid);",
+                "q.dialogue.set_page('battle_prompt');"
+            ]
+        },
+        {
+            "id": "battle_prompt",
+            "speaker": "npc",
+            "lines": [
+                "Most challengers barely get me down to my final pokemon. Still think you can take me on, little skrelp?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "isSelectable": "q.player.data.water_gym_defeated == false",
+                        "action": [
+                            "q.npc.play_animation('laugh', q.player.uuid);",
+                            "q.dialogue.set_page('battle_start');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "battle_start",
+            "speaker": "npc",
+            "lines": [
+                "That's the spirit, little skrelp! Very well then. Let's just see who surfs the bigger wave! Bring it!"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "You won fair and square, little skrelp. And earned the crowd's attention too!"
+            ],
+            "input": "q.dialogue.set_page('post_defeat2');"
+        },
+        {
+            "id": "post_defeat2",
+            "speaker": "npc",
+            "lines": [
+                "Hey before you go, feel free to explore more around Pika Park and have some fun! You only live once."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

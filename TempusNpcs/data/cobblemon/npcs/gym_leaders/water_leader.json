@@ -1,7 +1,7 @@
 {
   "resourceIdentifier": "cobblemon:global_skins",    
   "names": [
-    "§lWater Gym Leader§r"
+    "§lCrawford§r"
   ],
   "presets": [
     "cobblemon:base_npc",
@@ -11,7 +11,7 @@
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:flying_gym_interaction"
+    "dialogue": "cobblemon:water_gym_interaction"
   },
   "config": [
     {
