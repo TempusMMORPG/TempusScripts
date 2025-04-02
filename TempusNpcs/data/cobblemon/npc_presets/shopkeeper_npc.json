@@ -1,13 +1,13 @@
 {
     "interaction": {
       "type": "custom_script",
-      "script": "q.run_command(c.npc.config.shopcommand + ' ' + c.player.username);"
+      "script": "q.run_command('shop other ' + q.player.username + ' ' + q.npc.config.shop_name + ' false');"
     },
     "config": [
         {
-          "variableName": "shopcommand",
-          "displayName": "Shop Command",
-          "description": "The command for the shopkeeper NPC without player name or slash. E.g. shop shops pokeballislife (Required)",
+          "variableName": "shop_name",
+          "displayName": "Shop Name",
+          "description": "The of the shop to open",
           "type": "TEXT",
           "defaultValue": "Hello!"
         }
