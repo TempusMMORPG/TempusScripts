@@ -29,7 +29,7 @@
             "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "Would you like one?"
+                "We have a variety of plans to choose from! Are you interested?"
             ],
             "input": {
                 "type": "option",
