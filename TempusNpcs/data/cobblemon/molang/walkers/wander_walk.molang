@@ -19,5 +19,4 @@ q.entity.walk_to(t.targetposx, t.targetposy, t.targetposz, t.speed);
 
 t.current_time = q.entity.world.game_time;
 t.wait_time = math.random_integer(t.min_ticks, t.max_ticks);
-
 q.entity.data.next_move_time = t.current_time + t.wait_time;
