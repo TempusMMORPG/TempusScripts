@@ -1,12 +1,11 @@
-t.not_waiting = q.entity.data.next_move_time == 0 || q.system_time_millis >= q.entity.data.next_move_time;
-t.should_run = (q.entity.is_doing_activity('idle') && !q.entity.has_walk_target && q.entity.config.toggle_walk && t.not_waiting);
-!t.should_run ? return 0;
+!(q.entity.is_doing_activity('idle') && !q.entity.has_walk_target && q.entity.config.toggle_walk) ? return 0;
+!(q.entity.data.next_move_time == 0 || q.entity.world.game_time >= q.entity.data.next_move_time) ? return 0;
 
 t.pos_radius = q.entity.config.pos_radius;
 t.speed = q.entity.config.speed;
 
-t.min_milliseconds = (q.entity.config.min_wait_time * 1000);
-t.max_milliseconds = (q.entity.config.max_wait_time * 1000);
+t.min_ticks = (q.entity.config.min_wait_time * 20);
+t.max_ticks = (q.entity.config.max_wait_time * 20);
 
 t.homeposx = q.entity.config.homeposx;
 t.homeposy = q.entity.config.homeposy;
@@ -18,7 +17,7 @@ t.targetposz = math.random_integer(t.homeposz - t.pos_radius, t.homeposz + t.pos
 
 q.entity.walk_to(t.targetposx, t.targetposy, t.targetposz, t.speed);
 
-t.current_time = q.system_time_millis;
-t.wait_time = math.random_integer(t.max_milliseconds, t.min_milliseconds);
+t.current_time = q.entity.world.game_time;
+t.wait_time = math.random_integer(t.min_ticks, t.max_ticks);
 
 q.entity.data.next_move_time = t.current_time + t.wait_time;
