@@ -22,4 +22,3 @@ t.current_time = q.system_time_millis;
 t.wait_time = math.random_integer(t.max_milliseconds, t.min_milliseconds);
 
 q.entity.data.next_move_time = t.current_time + t.wait_time;
-q.entity.save_data();
