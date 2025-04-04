@@ -2,7 +2,6 @@
 !(q.entity.data.next_move_time == 0 || q.entity.world.game_time >= q.entity.data.next_move_time) ? return 0;
 
 t.pos_radius = q.entity.config.pos_radius;
-t.speed = q.entity.config.speed;
 
 t.min_ticks = (q.entity.config.min_wait_time * 20);
 t.max_ticks = (q.entity.config.max_wait_time * 20);
@@ -15,7 +14,7 @@ t.targetposx = math.random_integer(t.homeposx - t.pos_radius, t.homeposx + t.pos
 t.targetposy = t.homeposy;
 t.targetposz = math.random_integer(t.homeposz - t.pos_radius, t.homeposz + t.pos_radius);
 
-q.entity.walk_to(t.targetposx, t.targetposy, t.targetposz, t.speed);
+q.entity.walk_to(t.targetposx, t.targetposy, t.targetposz, q.entity.config.speed);
 
 t.current_time = q.entity.world.game_time;
 t.wait_time = math.random_integer(t.min_ticks, t.max_ticks);
