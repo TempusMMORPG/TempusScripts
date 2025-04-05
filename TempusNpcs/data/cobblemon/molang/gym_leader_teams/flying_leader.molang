@@ -14,7 +14,7 @@ t.data == 'MEDIUM' ? {
     q.party.add_by_properties('pelipper pokeball=ancient_jet_ball moves=scald,hurricane,uturn,roost nature=rash held_item=cobblemon:mystic_water ability=drizzle hp_ev=128 special_attack_ev=128 level=' + (q.player.party.highest_level) + t.constants); 
     q.party.add_by_properties('drifblim pokeball=ancient_jet_ball moves=acrobatics,willowisp,destinybond,knockoff nature=lonely held_item=cobblemon:flying_gem ability=unburden attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level) + t.constants); 
     q.party.add_by_properties('charizard pokeball=ancient_jet_ball moves=flamethrower,scorchingsands,weatherball,hurricane nature=hasty held_item=cobblemon:passho_berry ability=blaze special_attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level) + t.constants);  
-    q.party.add_by_properties('corviknight pokeball=ancient_jet_ball moves=drillpeck,bodypress,roost,uturn nature=impish held_item=cobblemon:leftovers ability=unnerve hp_ev=128 defence_ev=128 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('corviknight pokeball=ancient_jet_ball moves=drillpeck,bodypress,roost,uturn nature=impish held_item=cobblemon:wacan_berry ability=unnerve hp_ev=128 defence_ev=128 level=' + (q.player.party.highest_level) + t.constants); 
     q.party.add_by_properties('pidgeot pokeball=ancient_jet_ball moves=doubleedge,bravebird,roost,uturn nature=jolly held_item=cobblemon:life_orb ability=keeneye attack_ev=160 speed_ev=160 level=' + (q.player.party.highest_level + 1) + t.constants); 
     return 1;
 };
@@ -24,7 +24,7 @@ t.data == 'HARD' ? {
     q.party.add_by_properties('drifblim pokeball=ancient_jet_ball moves=acrobatics,willowisp,destinybond,knockoff nature=adamant held_item=cobblemon:flying_gem ability=unburden attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants); 
     q.party.add_by_properties('charizard pokeball=ancient_jet_ball moves=hurricane,weatherball,scorchingsands,fireblast nature=timid held_item=cobblemon:choice_specs ability=blaze special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants); 
     q.party.add_by_properties('corviknight pokeball=ancient_jet_ball moves=bravebird,bodypress,roost,uturn nature=impish held_item=cobblemon:leftovers ability=unnerve hp_ev=200 defence_ev=200 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('dragonite pokeball=ancient_jet_ball moves=extremespeed,outrage,icespinner,earthquake nature=adamant held_item=cobblemon:choice_band ability=multiscale attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('dragonite pokeball=ancient_jet_ball moves=extremespeed,outrage,icespinner,earthquake nature=adamant held_item=cobblemon:yache_berry ability=multiscale attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants); 
     q.party.add_by_properties('pidgeot mega pokeball=ancient_jet_ball moves=roost,hurricane,heatwave,uturn nature=timid ability=noguard special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level + 1) + t.constants); 
     return 1;
 };
