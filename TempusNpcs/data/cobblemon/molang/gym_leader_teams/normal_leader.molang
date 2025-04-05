@@ -20,11 +20,11 @@ t.data == 'MEDIUM' ? {
 };
 
 t.data == 'HARD' ? {
-    q.party.add_by_properties('maushold moves=tidyup,populationbomb,bite,lowkick nature=jolly held_item=cobblemon:wide_lens ability=technician attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('porygon2 moves=icebeam,recover,discharge,foulplay nature=modest held_item=cobblemon:eviolite ability=trace hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('ditto moves=transform nature=lonely held_item=cobblemon:choice_scarf ability=imposter hp_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('farigiraf moves=psyshock,shadowball,hypervoice,thunderbolt nature=modest held_item=cobblemon:assault_vest ability=armortail hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('kangaskhan moves=fakeout,bodyslam,poweruppunch,crunch nature=jolly ability=parentalbond attack_ev=252 speed_ev=252 mega level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('maushold moves=tidyup,populationbomb,bite,lowkick nature=jolly held_item=cobblemon:wide_lens ability=technician attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('porygon2 moves=icebeam,recover,discharge,foulplay nature=modest held_item=cobblemon:eviolite ability=trace hp_ev=200 special_attack_ev=200 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('ditto moves=transform nature=lonely held_item=cobblemon:choice_scarf ability=imposter hp_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('farigiraf moves=psyshock,shadowball,hypervoice,thunderbolt nature=modest held_item=cobblemon:assault_vest ability=armortail hp_ev=200 special_attack_ev=200 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('kangaskhan moves=fakeout,bodyslam,poweruppunch,crunch nature=jolly ability=parentalbond attack_ev=200 speed_ev=200 mega level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('ambipom moves=fakeout,tripleaxel,tailslap,knockoff nature=jolly held_item=cobblemon:loaded_dice ability=technician attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level + 1) + t.constants);
     return 1;
 };
