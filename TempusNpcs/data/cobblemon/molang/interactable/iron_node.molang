@@ -1,0 +1,16 @@
+c.player.main_held_item.is_in('minecraft:pickaxes') ? {
+    q.npc.data.node_health = q.npc.data.node_health - 1;
+    q.npc.play_animation('hit');
+    q.player.run_command('/playsound cobblemon:block.display_case.add_item master ' + q.player.username);
+    c.player.tell('§aMining:' + ' ' + q.npc.name + ' §6' + q.npc.data.node_health + ' §ahealth left!');
+}
+: {c.player.tell('§cYou need a §6Pickaxe §cto mine this');
+};
+
+q.npc.data.node_health <= 0 ? {
+    q.npc.data.node_health = 0;
+    c.player.tell('§aYou have mined the node! You found §d1x Iron Ingot§a!');
+    q.player.run_command('/playsound cobblemon:block.display_case.add_item master ') + q.player.username;
+    q.run_command('/give Jolihan minecraft:iron_ingot 1');
+    q.npc.data.node_health = 31;
+};
