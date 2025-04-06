@@ -19,7 +19,7 @@
           "displayName": "npc.variable.on_player_wins.name",
           "description": "npc.variable.on_player_wins.desc",
           "type": "TEXT",
-          "defaultValue": "q.run_script('cobblemon:regalis2a_quest_reward');q.player.data.regalis_grunt_2a_1_defeated = true;q.player.save_data();"
+          "defaultValue": "q.player.data.regalis_grunt_2a_1_defeated = true;q.player.save_data();"
         }
       ],
     "skill": 5,
