@@ -6,5 +6,9 @@
   ],
   "names": [
     "§d§lIron Node§r"
-  ]
+  ],
+  "interaction": {
+    "type": "custom_script",
+    "script": "q.run_script('cobblemon:iron_node');"
+  }
 }

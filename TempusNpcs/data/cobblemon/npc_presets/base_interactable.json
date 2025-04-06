@@ -17,31 +17,20 @@
         ]
       }  
     ],
-    "interaction": {
-      "type": "custom_script",
-      "script": "q.run_script('cobblemon:iron_node');"
-    },
     "config": [
       {
         "variableName": "node_health",
         "displayName": "Node Health",
-         "description": "The default health of the node",
+        "description": "The default health of the node",
         "type": "NUMBER",
         "defaultValue": "31"
       },
       {
-        "variableName": "interact_script",
-        "displayName": "Interact Script",
-        "description": "The script to be run when the player interacts with the NPC",
-        "type": "TEXT",
-        "defaultValue": "cobblemon:iron_node"
-      },
-      {
-        "variableName": "error_message",
-        "displayName": "Error Message",
-        "description": "The message to be displayed when the player does not have the required item",
-        "type": "TEXT",
-        "defaultValue": "§l§cYou need a pickaxe to mine this!"
+        "variableName": "node_cooldown",
+        "displayName": "Node Cooldown",
+        "description": "The cooldown of the node in seconds (0.1 or more)",
+        "type": "NUMBER",
+        "defaultValue": "1"
       }
     ],
     "hideNameTag": true

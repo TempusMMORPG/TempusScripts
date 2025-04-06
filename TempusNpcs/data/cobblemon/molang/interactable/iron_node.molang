@@ -1,16 +1,39 @@
-c.player.main_held_item.is_in('minecraft:pickaxes') ? {
-    q.npc.data.node_health = q.npc.data.node_health - 1;
-    q.npc.play_animation('hit');
-    q.player.run_command('/playsound cobblemon:block.display_case.add_item master ' + q.player.username);
-    c.player.tell('§aMining:' + ' ' + q.npc.name + ' §6' + q.npc.data.node_health + ' §ahealth left!');
-}
-: {c.player.tell('§cYou need a §6Pickaxe §cto mine this');
+!c.player.main_held_item.is_in('minecraft:pickaxes') ? {
+    c.player.tell('§cYou need a §6Pickaxe §cto mine this');
+    return 0;
 };
 
-q.npc.data.node_health <= 0 ? {
-    q.npc.data.node_health = 0;
-    c.player.tell('§aYou have mined the node! You found §d1x Iron Ingot§a!');
-    q.player.run_command('/playsound cobblemon:block.display_case.add_item master ') + q.player.username;
-    q.run_command('/give Jolihan minecraft:iron_ingot 1');
-    q.npc.data.node_health = 31;
+t.time = c.player.world.game_time;
+t.next_mine_time = c.player.get_npc_variable(q.npc.uuid, 'next_mine_time');
+
+t.time < t.next_mine_time ? {
+    return 0;
 };
+
+q.set_query('player', c.player);
+
+t.max_health = q.npc.config.node_health;
+t.health = q.player.get_npc_variable(q.npc.uuid, 'node_health');
+
+t.health == 0 ? {
+    t.health = t.max_health;
+};
+
+t.health = t.health - 1;
+q.npc.play_animation('hit');
+q.player.run_command('playsound minecraft:block.deepslate.place master ' + q.player.username);
+
+t.health <= 0 ? {
+    q.player.tell('§aYou have mined the node! You found §d1x Iron Ingot§a!');
+    q.player.run_command('playsound cobblemon:block.display_case.add_item master ' + q.player.username);
+    q.run_command('give ' + q.player.username + ' minecraft:iron_ingot 1');
+    t.health = t.max_health;
+};
+
+q.player.tell('§aMining: ' + q.npc.name + ' §6' + t.health + ' §ahealth left!');
+
+t.cooldown = t.time + (q.npc.config.node_cooldown * 20);
+
+q.player.set_npc_variable(q.npc.uuid, 'node_health', t.health);
+q.player.set_npc_variable(q.npc.uuid, 'next_mine_time', t.cooldown);
+q.player.save_data();
