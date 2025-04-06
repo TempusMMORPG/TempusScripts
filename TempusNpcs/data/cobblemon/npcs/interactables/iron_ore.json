@@ -1,5 +1,5 @@
 {
-  "resourceIdentifier": "cobblemon:iron_ore",
+  "resourceIdentifier": "cobblemon:interactable",
   "presets": [
     "cobblemon:base_interactable",
     "cobblemon:looks_in_one_direction"
