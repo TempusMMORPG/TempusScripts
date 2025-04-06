@@ -34,7 +34,7 @@
         "displayName": "Interact Script",
         "description": "The script to be run when the player interacts with the NPC",
         "type": "TEXT",
-        "defaultValue": "q.npc.config.interact_script"
+        "defaultValue": "cobblemon:sigma_boy_interact"
       }
     ]
 }
