@@ -28,7 +28,7 @@
       {
         "variableName": "node_cooldown",
         "displayName": "Node Cooldown",
-        "description": "The cooldown of the node in seconds (0.1 or more)",
+        "description": "The cooldown of the node in seconds between hits (0.1 or more)",
         "type": "NUMBER",
         "defaultValue": "1"
       }

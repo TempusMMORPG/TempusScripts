@@ -20,7 +20,7 @@ t.health == 0 ? {
 };
 
 t.health = t.health - 1;
-q.npc.play_animation('hit');
+q.npc.play_animation('hit', q.player.uuid);
 q.player.run_command('playsound minecraft:block.deepslate.place master ' + q.player.username);
 
 t.health <= 0 ? {
