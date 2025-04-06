@@ -1,0 +1,40 @@
+{
+    "hitbox": {
+      "width": 1.0,
+      "height": 1.0
+    },
+    "canDespawn": false,
+    "isMovable": false,
+    "isInvulnerable": true,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "ai": [
+      {
+        "type": "apply_presets",
+        "presets": [
+          "cobblemon:looks",
+          "cobblemon:chats"
+        ]
+      }  
+    ],
+    "interaction": {
+      "type": "script",
+      "dialogue": "q.player.main_held_item.is_of('q.npc.config.interact_item') ? q.run_script('q.npc.config.interact_script')"
+    },
+    "config": [
+      {
+        "variableName": "interact_item",
+        "displayName": "Interact Item",
+        "description": "The item to be used from the player",
+        "type": "TEXT",
+        "defaultValue": "minecraft:iron_pickaxe"
+      },
+      {
+        "variableName": "interact_script",
+        "displayName": "Interact Script",
+        "description": "The script to be run when the player interacts with the NPC",
+        "type": "TEXT",
+        "defaultValue": "q.npc.config.interact_script"
+      }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+  "resourceIdentifier": "cobblemon:iron_ore",
+  "presets": [
+    "cobblemon:base_interactable",
+    "cobblemon:looks_in_one_direction"
+  ],
+  "names": [
+    "§d§lIron Ore§r"
+  ]
+}
