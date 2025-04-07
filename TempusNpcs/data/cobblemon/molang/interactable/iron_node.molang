@@ -21,12 +21,11 @@ t.health == 0 ? {
 
 t.health = t.health - 1;
 q.npc.play_animation('hit', q.player.uuid);
-q.player.run_command('playsound minecraft:block.deepslate.place master ' + q.player.username);
+q.run_command('playsound minecraft:block.deepslate.place master ' + q.player.username + ' ' + q.npc.x + ' ' + q.npc.y + ' ' + q.npc.z);
 
 t.health <= 0 ? {
-    q.player.tell('§aYou have mined the node! You found §d1x Iron Ingot§a!');
-    q.player.run_command('playsound cobblemon:block.display_case.add_item master ' + q.player.username);
-    q.run_command('give ' + q.player.username + ' minecraft:iron_ingot 1');
+    q.run_script('cobblemon:iron_node_reward');
+    q.run_command('playsound cobblemon:block.display_case.add_item master ' + q.player.username + ' ' + q.npc.x + ' ' + q.npc.y + ' ' + q.npc.z);
     t.health = t.max_health;
 };
 
