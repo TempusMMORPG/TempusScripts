@@ -40,7 +40,7 @@ t.roll <= 95 && t.roll > 85 ? {
     return 1;
 };
 
-t.roll <= 99 && t.roll > 96 ? {
+t.roll <= 99 && t.roll > 95 ? {
     q.player.tell('§cYou found nothing!');
     return 1;
 };
