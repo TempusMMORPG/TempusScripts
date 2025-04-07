@@ -40,6 +40,11 @@ t.roll <= 95 && t.roll > 85 ? {
     return 1;
 };
 
+t.roll <= 99 && t.roll > 96 ? {
+    q.player.tell('§cYou found nothing!');
+    return 1;
+};
+
 t.roll == 100 ? {
     q.run_command('pokespawnat ' + q.player.x + ' ' + q.player.y + ' ' + q.player.z + ' beldum lvl=' + t.pokelevel3);
     q.player.tell('§aYou have mined the node! A wild §dBeldum§a appeared!');
