@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "cobblemon:base_interactable",
+    "cobblemon:looks_in_one_direction"
+  ],
+  "names": [
+    "§d§lIron Node§r"
+  ],
+  "interaction": {
+    "type": "custom_script",
+    "script": "q.run_script('cobblemon:iron_node');"
+  }
+}
