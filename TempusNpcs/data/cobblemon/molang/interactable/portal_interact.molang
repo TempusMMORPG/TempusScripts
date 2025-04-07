@@ -1,0 +1,4 @@
+q.set_query('player', c.player);
+
+q.npc.play_animation('activate', q.player.uuid);
+c.player.tell('§bActivating...');

@@ -3,11 +3,15 @@
     "cobblemon:base_interactable",
     "cobblemon:looks_in_one_direction"
   ],
+  "hitbox": {
+    "width": 1.0,
+    "height": 1.0
+  },
   "names": [
     "§d§lIron Node§r"
   ],
   "interaction": {
     "type": "custom_script",
-    "script": "q.run_script('cobblemon:iron_node');"
+    "script": "q.run_script(q.npc.config.interactable_script);"
   }
 }

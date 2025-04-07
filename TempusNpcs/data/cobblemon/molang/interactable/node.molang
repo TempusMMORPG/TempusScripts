@@ -21,10 +21,11 @@ t.health == 0 ? {
 
 t.health = t.health - 1;
 q.npc.play_animation('hit', q.player.uuid);
-q.run_command('playsound minecraft:block.deepslate.place master ' + q.player.username + ' ' + q.npc.x + ' ' + q.npc.y + ' ' + q.npc.z);
+q.run_command('playsound minecraft:block.deepslate.place master ' + q.player.username + ' ' + q.npc.pos);
+q.npc.world.spawn_bedrock_particles('cobblemon:copper_mining', q.npc.x, q.npc.y, q.npc.z);
 
 t.health <= 0 ? {
-    q.run_script('cobblemon:iron_node_reward');
+    q.run_script(q.npc.config.reward_pool);
     q.run_command('playsound cobblemon:block.display_case.add_item master ' + q.player.username + ' ' + q.npc.x + ' ' + q.npc.y + ' ' + q.npc.z);
     t.health = t.max_health;
 };
