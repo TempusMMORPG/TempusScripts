@@ -3,12 +3,10 @@
     return 0;
 };
 
-t.time =  q.system_time_millis;
+t.time = q.system_time_millis;
+t.cooldown_time = c.player.get_npc_variable(q.npc, 'cooldown_time');
+
 t.time <= t.cooldown_time ? {
-    t.cooldown_time = q.player.get_npc_variable(q.npc, 'cooldown_time');
-
-    t.cooldown_time < t.time ? return 'No cooldown';
-
     t.remaining_time = t.cooldown_time - t.time;
     t.hours = math.floor(t.remaining_time / 3600000);
     t.minutes = math.floor(math.mod(t.remaining_time, 3600000) / 60000);
@@ -29,7 +27,16 @@ t.node_health != 0 ? {
 
 t.health = t.health - 1;
 q.run_command('playsound minecraft:block.deepslate.place master ' + q.player.username + ' ' + q.npc.x + ' ' + q.npc.y + ' ' + q.npc.z);
-q.npc.world.spawn_bedrock_particles('cobblemon:copper_mining', q.npc.x, q.npc.y, q.npc.z);
+
+q.npc.has_aspect('iron_node') ? {
+    q.npc.world.spawn_bedrock_particles('cobblemon:iron_mining', q.npc.x, q.npc.y, q.npc.z);
+};
+
+q.npc.has_aspect('copper_node') ? {
+    q.npc.world.spawn_bedrock_particles('cobblemon:copper_mining', q.npc.x, q.npc.y, q.npc.z);
+};
+
+q.player.tell('§aMining: ' + q.npc.name + ' §6' + t.health + ' §ahealth left!');
 
 t.health <= 0 ? {
     q.run_script(q.npc.config.reward_pool);
@@ -42,5 +49,4 @@ t.health <= 0 ? {
     q.npc.play_animation('hit', q.player.uuid);
 };
 
-q.player.tell('§aMining: ' + q.npc.name + ' §6' + t.health + ' §ahealth left!');
 q.player.set_npc_variable(q.npc.uuid, 'node_health', t.health);

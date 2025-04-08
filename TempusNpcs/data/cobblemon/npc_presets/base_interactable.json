@@ -25,9 +25,9 @@
       {
         "variableName": "node_cooldown",
         "displayName": "Node Cooldown",
-        "description": "The cooldown of the node in seconds between hits (0.1 or more)",
+        "description": "The cooldown of the node in hours",
         "type": "NUMBER",
-        "defaultValue": "1"
+        "defaultValue": "0.5"
       },
       {
         "variableName": "reward_pool",
