@@ -6,12 +6,12 @@
 t.time = q.system_time_millis;
 t.cooldown_time = c.player.get_npc_variable(q.npc, 'cooldown_time');
 
-t.time <= t.cooldown_time ? {
+t.time < t.cooldown_time ? {
     t.remaining_time = t.cooldown_time - t.time;
     t.hours = math.floor(t.remaining_time / 3600000);
     t.minutes = math.floor(math.mod(t.remaining_time, 3600000) / 60000);
     t.seconds = math.floor(math.mod(t.remaining_time, 60000) / 1000);
-    c.player.tell('§cYou mined this node come back in: ' + t.hours + 'h ' + t.minutes + 'm ' + t.seconds + 's');
+    c.player.tell('§cYou mined this node already! Come back in: ' + t.hours + 'h ' + t.minutes + 'm ' + t.seconds + 's');
     return 0;
 };
 
