@@ -36,8 +36,6 @@ q.npc.has_aspect('copper_node') ? {
     q.npc.world.spawn_bedrock_particles('cobblemon:copper_mining', q.npc.x, q.npc.y, q.npc.z);
 };
 
-q.player.tell('§aMining: ' + q.npc.name + ' §6' + t.health + ' §ahealth left!');
-
 t.health <= 0 ? {
     q.run_script(q.npc.config.reward_pool);
     q.npc.play_animation('mined', q.player.uuid);
@@ -47,6 +45,7 @@ t.health <= 0 ? {
     t.cooldown_time = q.player.set_npc_variable(q.npc.uuid, 'cooldown_time', t.cooldown, true);
 } : {
     q.npc.play_animation('hit', q.player.uuid);
+    q.player.tell('§aMining: ' + q.npc.name + ' §6' + t.health + ' §ahealth left!');
 };
 
 q.player.set_npc_variable(q.npc.uuid, 'node_health', t.health);
