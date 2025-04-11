@@ -11,7 +11,7 @@ This repo contains a **giga-chad** datapack filled with Cobblemon NPC and Molang
 - 💀 **Zero NPC behavior left unmogged** – They **witowy** do what you tell them.
 
 ## ❗Disclaimer
-This rizzpack utilizes some custom Molang functions that are **NOT** available (or yet available) to Cobblemon. As such, the following are available commands utilized in the pack that you may come across:
+This rizzpack utilizes some custom Molang functions that are **NOT** available (or yet available) to Cobblemon. As such, the following are unavailable functions utilized in the pack:
 - `play_sound`
 
 ## 📥 Installation (So easy even an NPC could do it)  
