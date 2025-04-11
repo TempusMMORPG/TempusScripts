@@ -1,7 +1,7 @@
 {
     "initializationAction": [
         "q.player.data.dialogue.professor_laurel ? q.dialogue.set_page('goodbye');",
-        "q.player.data.dialogue.professor_conifer_archives_stage == 2 ? q.dialogue.set_page('warn_laurel');"
+        "q.player.data.dialogue.professor_conifer_archives_post_craft && q.player.data.dialogue.laurel_inform == false ? q.dialogue.set_page('warn_laurel');"
     ],
     "speakers": {
         "npc": {
@@ -90,6 +90,7 @@
         },
         {
             "id": "warn_laurel",
+            "escapeAction": "0",
             "speaker": "player",
             "lines": [
                 "Professor Conifer and I found something in the archives, it's important! You need to know!"
@@ -98,7 +99,8 @@
         },
         {
             "id": "inform_laurel",
-            "speaker": "npc",
+            "escapeAction": "0",
+            "speaker": "player",
             "lines": [
                 "§o§7**You tell Professor Laurel about the archives**§r"
             ],
@@ -118,22 +120,32 @@
         },
         {
             "id": "laurel_shocked",
+            "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Oh my! This is very concerning! You'll need some help with this.", 
-                "Take these items and go and go back Professor Conifer.",
-                "I'll let you know if I find anything. In the meantime, keep up the good work!"
+                "Oh my! This is very concerning! You'll need some help with this..."
+            ],
+            "input": [
+                "q.player.data.dialogue.laurel_inform = true; q.player.save_data();",
+                "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 6CC2EE32C134F1CC');",
+                "q.dialogue.set_page('laurel_shocked_2');"
+            ]
+        },
+        {
+            "id": "laurel_shocked_2",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Take these items and go and go back Professor Conifer. I'll let you know if I find anything. In the meantime, keep up the good work!"
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Goodbye",
+                        "text": "Thank you!",
                         "value": "goodbye",
                         "action": [
-                            "q.player.data.dialogue.laurel_inform = true; q.player.save_data();",
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 6CC2EE32C134F1CC');",
                             "q.dialogue.close();"
                         ]
                     }
@@ -144,21 +156,9 @@
             "id": "goodbye",
             "speaker": "npc",
             "lines": [
-                "Bye!"
+                "..."
             ],
-            "input": {
-                "type": "option",
-                "vertical": true,
-                "options": [
-                    {
-                        "text": "Goodbye",
-                        "value": "goodbye",
-                        "action": [
-                            "q.dialogue.close();"
-                        ]
-                    }
-                        ]
-                    }
+            "input": "q.dialogue.close();"
         }
     ]
 }

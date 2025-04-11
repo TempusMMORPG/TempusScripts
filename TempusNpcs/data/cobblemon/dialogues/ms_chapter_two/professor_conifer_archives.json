@@ -1,11 +1,11 @@
 {
     "initializationAction": [
-        "q.player.data.dialogue.professor_conifer_archives_stage == 3 && q.player.data.dialogue.dan == false ? q.dialogue.set_page('go_to_dan');",
-        "q.player.data.dialogue.laurel_inform && q.player.data.dialogue.professor_conifer_archives_stage == 2 ? q.dialogue.set_page('return_to_conifer');",
-        "q.player.data.dialogue.professor_conifer_archives_stage == 2 && q.player.data.dialogue.laurel_inform == false ? q.dialogue.set_page('hurry');",
-        "q.player.data.regalis_grunt_2a_1_defeated && q.player.data.regalis_grunt_2a_2_defeated && q.player.data.regalis_grunt_2a_3_defeated && q.player.data.regalis_grunt_2a_4_defeated && q.player.data.regalis_grunt_2a_5_defeated && q.player.data.dialogue.professor_conifer_archives_stage == 1 ? q.dialogue.set_page('after_regalis_grunts');",
-        "(q.player.data.regalis_grunt_2a_1_defeated == false || q.player.data.regalis_grunt_2a_2_defeated == false || q.player.data.regalis_grunt_2a_3_defeated == false || q.player.data.regalis_grunt_2a_4_defeated == false || q.player.data.regalis_grunt_2a_5_defeated == false) && q.player.data.dialogue.professor_conifer_archives_stage == 1 ? q.dialogue.set_page('stop_them');",
-        "q.player.data.ch1_completed && q.player.data.dialogue.professor_conifer_archives_stage == 0 ? q.dialogue.set_page('greeting');"
+        "q.player.data.dialogue.professor_conifer_archives_key_inform && q.player.data.dialogue.dan == false ? q.dialogue.set_page('go_to_dan');",
+        "q.player.data.dialogue.laurel_inform && q.player.data.dialogue.professor_conifer_archives_post_craft && q.player.data.dialogue.professor_conifer_archives_key_inform == false ? q.dialogue.set_page('return_to_conifer');",
+        "q.player.data.dialogue.professor_conifer_archives_post_craft && q.player.data.dialogue.laurel_inform == false ? q.dialogue.set_page('hurry');",
+        "q.player.data.regalis_grunt_2a_1_defeated && q.player.data.regalis_grunt_2a_2_defeated && q.player.data.regalis_grunt_2a_3_defeated && q.player.data.regalis_grunt_2a_4_defeated && q.player.data.regalis_grunt_2a_5_defeated && q.player.data.dialogue.professor_conifer_archives_pre_craft && q.player.data.dialogue.professor_conifer_archives_post_craft == false ? q.dialogue.set_page('after_regalis_grunts');",
+        "(q.player.data.regalis_grunt_2a_1_defeated == false || q.player.data.regalis_grunt_2a_2_defeated == false || q.player.data.regalis_grunt_2a_3_defeated == false || q.player.data.regalis_grunt_2a_4_defeated == false || q.player.data.regalis_grunt_2a_5_defeated == false) && q.player.data.dialogue.professor_conifer_archives_pre_craft ? q.dialogue.set_page('stop_them');",
+        "q.player.data.ch1_completed && q.player.data.dialogue.professor_conifer_archives_pre_craft == false ? q.dialogue.set_page('greeting');"
     ],
     "speakers": {
         "npc": {
@@ -69,7 +69,7 @@
                         "value": "okay",
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 4859F624CD9E4298');",
-                            "q.player.data.dialogue.professor_conifer_archives_stage = 1; q.player.save_data();",
+                            "q.player.data.dialogue.professor_conifer_archives_pre_craft = 1; q.player.save_data();",
                             "q.dialogue.close();"
                         ]
                     }
@@ -110,7 +110,7 @@
                         "value": "distortion_world",
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 388F89F300513468');",
-                            "q.player.data.dialogue.professor_conifer_archives_stage = 2; q.player.save_data();",
+                            "q.player.data.dialogue.professor_conifer_archives_post_craft = 1; q.player.save_data();",
                             "q.dialogue.set_page('inform_laurel');"
                         ]
                     }
@@ -128,7 +128,7 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Goodbye",
+                        "text": "O-okay!",
                         "value": "goodbye",
                         "action": [
                             "q.dialogue.close();"
@@ -142,7 +142,15 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "All done? Good, so it says in the book there are four keys needed to access the Distortion World.", 
+                "Ah! You're back! Good, so it says in the book there are four keys needed to access the Distortion World."
+            ],
+            "input": "q.dialogue.set_page('return_to_conifer_2');"
+        },
+        {
+            "id": "return_to_conifer_2",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
                 "The Regalis already have the Arceus Key which only leaves three somewhere out there."
             ],
             "input": {
@@ -154,7 +162,7 @@
                         "value": "what_should_i_do",
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 388F89F300513468');",
-                            "q.player.data.dialogue.professor_conifer_archives_stage = 3; q.player.save_data();",
+                            "q.player.data.dialogue.professor_conifer_archives_key_inform = 1; q.player.save_data();",
                             "q.dialogue.set_page('go_to_dan');"
                         ]
                     }
@@ -166,7 +174,14 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Well.... I have a friend who might know where the Giratina Key is.", 
+                "Well.... I have a friend who might know where the Giratina Key is."
+            ],
+            "input": "q.dialogue.set_page('dan');"
+        },
+        {
+            "id": "dan",
+            "speaker": "npc",
+            "lines": [
                 "His name is Daniel, he's the museum curator in La Relance and he really knows his stuff."
             ],
             "input": {
@@ -194,7 +209,7 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Goodbye",
+                        "text": "O-okay!",
                         "value": "goodbye",
                         "action": [
                             "q.dialogue.close();"
