@@ -6,7 +6,7 @@ Welcome to **TempusScripts**, the **sigma grindset** of Cobblemon NPC & Molang s
 This repo contains a **giga-chad** datapack filled with Cobblemon NPC and Molang script examples that will have you outcoding the **NPCs IRL**. You wanna add **schmovin'** NPCs with the **most giga AI?** This is your chance, my friend.
 
 ## ❗Disclaimer
-This rizzpack utilizes some custom Molang functions that are **NOT** available (or yet available) to Cobblemon. As such, the following are unavailable functions utilized in the pack:
+This rizzpack utilizes some custom Molang functions that are **NOT** available (or yet available) to Cobblemon. If there is demand or the feasibility is high, we will gladly submit a merge request for any of the functions. As such, the following are unavailable functions utilized in the pack:
 - `play_sound`
 
 ## 📜 Features (Mogging Edition)  
