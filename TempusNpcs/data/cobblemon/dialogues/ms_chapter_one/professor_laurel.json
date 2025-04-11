@@ -22,10 +22,39 @@
     "pages": [
         {
             "id": "greeting",
+            "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "I'm a little busy at the moment, can you… Oh you must be a new trainer. Well I'm §dProfessor Laurel§r! I'm one of two professors in Tempus,",
-                "the other is my friend §6Professor Conifer§r.",
+                "I'm a little busy at the moment, can you… Oh! You must be a new trainer!"
+            ],
+            "input": "q.dialogue.set_page('greeting2');"
+        },
+        {
+            "id": "greeting2",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Well, I'm Professor Laurel! I'm one of two professors in Tempus, the other is my friend Professor Conifer."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Nice to meet you!",
+                        "value": "nice_to_meet_you",
+                        "action": [
+                            "q.dialogue.set_page('greeting3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "greeting3",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
                 "Let me just get a few things ready... Now before we start, what is your name?"
             ],
             "input": {
@@ -45,12 +74,13 @@
                 ]
             }
         },
+
         {
             "id": "claim_pokedex",
+            "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Alright, now here is your very own §6Pokedex§r! It's a high-tech device that records data on Pokemon you've seen or caught.",
-                "It's a very important tool for any trainer, so make sure to use it often."
+                "Great to meet you! Alright, now here is your very own Pokedex! It's a high-tech device that records data on Pokemon you've seen or caught."
             ],
             "input": {
                 "type": "option",
@@ -61,24 +91,46 @@
                         "value": "pokedex",
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 1B731C3E9885A0D4');",
-                            "q.dialogue.set_page('talk_to_elon');"
+                            "q.dialogue.set_page('pokedex');"
                         ]
                     }
                         ]
                     }
-            },
+        },
         {
-            "id": "talk_to_elon",
+            "id": "pokedex",
+            "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Now that you have your Pokemon, you're ready to start your journey. Go and talk to Elon when you're ready. Good luck!"
+                "It's a very important tool for any trainer, so make sure to use it often."
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Ok thanks!",
+                        "text": "Ok!",
+                        "value": "okay",
+                        "action": [
+                            "q.dialogue.set_page('talk_to_elon');"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "talk_to_elon",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Now that you have your Pokedex, you're ready to start your journey. Go and talk to Elon when you're ready. Good luck!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Thanks!",
                         "value": "okay",
                         "action": [
                             "q.dialogue.close();",
