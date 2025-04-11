@@ -4,6 +4,7 @@
         "q.player.data.dialogue.laurel_inform && q.player.data.dialogue.professor_conifer_archives_stage == 2 ? q.dialogue.set_page('return_to_conifer');",
         "q.player.data.dialogue.professor_conifer_archives_stage == 2 && q.player.data.dialogue.laurel_inform == false ? q.dialogue.set_page('hurry');",
         "q.player.data.regalis_grunt_2a_1_defeated && q.player.data.regalis_grunt_2a_2_defeated && q.player.data.regalis_grunt_2a_3_defeated && q.player.data.regalis_grunt_2a_4_defeated && q.player.data.regalis_grunt_2a_5_defeated && q.player.data.dialogue.professor_conifer_archives_stage == 1 ? q.dialogue.set_page('after_regalis_grunts');",
+        "(q.player.data.regalis_grunt_2a_1_defeated == false || q.player.data.regalis_grunt_2a_2_defeated == false || q.player.data.regalis_grunt_2a_3_defeated == false || q.player.data.regalis_grunt_2a_4_defeated == false || q.player.data.regalis_grunt_2a_5_defeated == false) && q.player.data.dialogue.professor_conifer_archives_stage == 1 ? q.dialogue.set_page('stop_them');",
         "q.player.data.ch1_completed && q.player.data.dialogue.professor_conifer_archives_stage == 0 ? q.dialogue.set_page('greeting');"
     ],
     "speakers": {
