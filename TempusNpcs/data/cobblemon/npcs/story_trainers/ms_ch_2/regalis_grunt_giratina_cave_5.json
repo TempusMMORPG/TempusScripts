@@ -1,7 +1,7 @@
 {
     "resourceIdentifier": "cobblemon:global_skins",    
     "names": [
-      "Archive Regalis Grunt"
+      "Giratina Cave Regalis Grunt"
     ],
     "presets": [
       "cobblemon:base_npc",
@@ -11,7 +11,7 @@
     ],
     "interaction": {
       "type": "dialogue",
-      "dialogue": "cobblemon:regalis_grunt_2b_1"
+      "dialogue": "cobblemon:regalis_grunt_2b_5"
     },
     "config": [
         {
@@ -19,7 +19,7 @@
           "displayName": "npc.variable.on_player_wins.name",
           "description": "npc.variable.on_player_wins.desc",
           "type": "TEXT",
-          "defaultValue": "q.player.data.regalis_grunt_2b_1_defeated = true;q.player.save_data();"
+          "defaultValue": "q.player.data.regalis_grunt_2b_5_defeated = true;q.player.save_data();"
         }
       ],
       "skill": 5,

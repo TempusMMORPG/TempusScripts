@@ -1,7 +1,7 @@
 {
     "resourceIdentifier": "cobblemon:global_skins",    
     "names": [
-      "Archive Regalis Grunt"
+      "Regalis Bloodhound Rhys"
     ],
     "presets": [
       "cobblemon:base_npc",
@@ -11,7 +11,7 @@
     ],
     "interaction": {
       "type": "dialogue",
-      "dialogue": "cobblemon:regalis_grunt_2b_4"
+      "dialogue": "cobblemon:regalis_bloodhound_ruins"
     },
     "config": [
         {
@@ -19,13 +19,13 @@
           "displayName": "npc.variable.on_player_wins.name",
           "description": "npc.variable.on_player_wins.desc",
           "type": "TEXT",
-          "defaultValue": "q.player.data.regalis_grunt_2b_4_defeated = true;q.player.save_data();"
+          "defaultValue": "q.player.data.regalis_bloodhound_ruins_defeated = true;q.player.save_data();q.run_command('openguiscreen fabian_note ' + q.player.username);q.run_command('lp user ' + q.player.username + ' permission set tempus.quest_fabian_note true');"
         }
       ],
       "skill": 5,
       "party": {
           "type": "script",
-          "script": "cobblemon:regalis_grunt_2b",
+          "script": "cobblemon:regalis_bloodhound",
           "isStatic": false
       }
   }

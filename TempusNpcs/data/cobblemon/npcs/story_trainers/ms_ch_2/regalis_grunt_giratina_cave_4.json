@@ -1,7 +1,7 @@
 {
     "resourceIdentifier": "cobblemon:global_skins",    
     "names": [
-      "La Relance Regalis Executioner"
+      "Giratina Cave Regalis Grunt"
     ],
     "presets": [
       "cobblemon:base_npc",
@@ -11,7 +11,7 @@
     ],
     "interaction": {
       "type": "dialogue",
-      "dialogue": "cobblemon:regalis_executioner_cave"
+      "dialogue": "cobblemon:regalis_grunt_2b_4"
     },
     "config": [
         {
@@ -19,13 +19,13 @@
           "displayName": "npc.variable.on_player_wins.name",
           "description": "npc.variable.on_player_wins.desc",
           "type": "TEXT",
-          "defaultValue": "q.player.data.regalis_executioner_cave_defeated = true;q.player.save_data();"
+          "defaultValue": "q.player.data.regalis_grunt_2b_4_defeated = true;q.player.save_data();"
         }
       ],
       "skill": 5,
       "party": {
           "type": "script",
-          "script": "cobblemon:regalis_grunt_2c",
+          "script": "cobblemon:regalis_grunt_2b",
           "isStatic": false
       }
   }
