@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.regalis_grunt_2c_5_defeated || q.player.data.dialogue.dan == false ? q.dialogue.set_page('post_defeat');"
+        "q.player.data.regalis_grunt_2c_5_defeated || q.player.data.worried_archeologist == false ? q.dialogue.set_page('post_defeat');"
     ],
     "speakers": {
         "npc": {
