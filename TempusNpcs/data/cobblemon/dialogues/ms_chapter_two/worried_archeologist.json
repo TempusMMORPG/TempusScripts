@@ -24,14 +24,14 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Oh thank you for coming! I was just about to give up hope!"
+                "Oh, thank you for coming! I was just about to give up hope!"
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Are you okay?",
+                        "text": "Are you okay???",
                         "value": "1",
                         "action": [
                             "q.dialogue.set_page('1');"

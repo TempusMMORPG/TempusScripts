@@ -53,7 +53,7 @@
             "id": "battle_start",
             "speaker": "npc",
             "lines": [
-                "Alright, let's do this!"
+                "Very pitiful! You think you can win?"
             ],
             "escapeAction": "0",
             "input": [
