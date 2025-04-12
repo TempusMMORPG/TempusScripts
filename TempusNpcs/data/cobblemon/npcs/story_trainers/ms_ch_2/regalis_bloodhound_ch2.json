@@ -19,7 +19,7 @@
           "displayName": "npc.variable.on_player_wins.name",
           "description": "npc.variable.on_player_wins.desc",
           "type": "TEXT",
-          "defaultValue": "q.player.data.regalis_bloodhound_ruins_defeated = true;q.player.save_data();q.run_command('openguiscreen fabian_note ' + q.player.username);q.run_command('lp user ' + q.player.username + ' permission set tempus.quest_fabian_note true');"
+          "defaultValue": "q.run_script('cobblemon:regalis_bloodhound_ruins_defeated');"
         }
       ],
       "skill": 5,
