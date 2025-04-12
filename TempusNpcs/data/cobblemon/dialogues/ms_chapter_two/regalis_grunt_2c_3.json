@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.regalis_grunt_2b_1_defeated || q.player.data.dialogue.dan == false ? q.dialogue.set_page('post_defeat');"
+        "q.player.data.regalis_grunt_2c_3_defeated || q.player.data.dialogue.dan == false ? q.dialogue.set_page('post_defeat');"
     ],
     "speakers": {
         "npc": {
@@ -22,14 +22,14 @@
         {
             "id": "greeting",
             "speaker": "npc",
-            "lines": ["You... Are you the one who defeated my comrades?"],
+            "lines": ["You might be strong, but you're not getting past me!"],
             "input": "q.dialogue.set_page('battle_prompt');"
         },
         {
             "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "You're gonna pay for that!"
+                "Time to show you why the Regalis are feared!"
             ],
             "input": {
                 "type": "option",
@@ -38,7 +38,7 @@
                     {
                         "text": "§c⚔ Battle ⚔§r",
                         "value": "battle",
-                        "isSelectable": "q.player.data.regalis_grunt_2b_1_defeated == false",
+                        "isSelectable": "q.player.data.regalis_grunt_2c_3_defeated == false",
                         "action": "q.dialogue.set_page('battle_start');"
                     },
                     {
@@ -53,7 +53,7 @@
             "id": "battle_start",
             "speaker": "npc",
             "lines": [
-                "Alright, let's do this!"
+                "I'll crush you!"
             ],
             "escapeAction": "0",
             "input": [
