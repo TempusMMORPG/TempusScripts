@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.regalis_bloodhound_defeated || q.player.data.dialogue.dan == false ? q.dialogue.set_page('post_defeat');"
+        "q.player.data.regalis_bloodhound_ruins_defeated || q.player.data.dialogue.dan == false ? q.dialogue.set_page('post_defeat');"
     ],
     "speakers": {
         "npc": {
