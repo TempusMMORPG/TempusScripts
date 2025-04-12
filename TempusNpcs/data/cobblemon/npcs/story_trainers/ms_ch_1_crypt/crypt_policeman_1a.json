@@ -1,0 +1,71 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:looks_in_one_direction",
+      "cobblemon:battle_npc",
+      "cobblemon:base_defeat_count",
+      "cobblemon:battle_reward_pokedollars"
+    ],
+    "names": [
+      "§lOfficer Bob§r"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:police_crypt_1a"
+    },
+    "config": [
+        {
+            "variableName": "on_player_wins",
+            "displayName": "npc.variable.on_player_wins.name",
+            "description": "npc.variable.on_player_wins.desc",
+            "type": "TEXT",
+            "defaultValue": "q.player.data.crypt_police_1a = 1;q.player.save_data();"
+          }
+    ],
+    "skill": 3,
+    "party": {
+      "type": "pool",
+      "minPokemon": 2,
+      "maxPokemon": 3,
+      "isStatic": false,
+      "pool": [
+        {
+          "pokemon": "lillipup level=10 hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+          "weight": 25,
+          "selectableTimes": 1,
+          "levelVariation": "1"
+        },
+        {
+            "pokemon": "poochyena level=10 hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 25,
+            "selectableTimes": 1,
+            "levelVariation": "1"
+        },
+        {
+            "pokemon": "growlithe level=10 hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 25,
+            "selectableTimes": 1,
+            "levelVariation": "1"
+        },
+        {
+            "pokemon": "yamper level=10 hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 25,
+            "selectableTimes": 1,
+            "levelVariation": "1"
+        },
+        {
+            "pokemon": "maschiff level=10 hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 25,
+            "selectableTimes": 1,
+            "levelVariation": "1"
+        },
+        {
+            "pokemon": "houndour level=10 hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 25,
+            "selectableTimes": 1,
+            "levelVariation": "1"
+        }
+      ]
+    }
+  }

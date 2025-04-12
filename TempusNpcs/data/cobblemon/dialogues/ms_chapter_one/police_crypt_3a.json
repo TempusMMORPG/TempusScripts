@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.crypt_police_defeat_count == 4 ? q.dialogue.set_page('idle');"
+        "q.player.data.crypt_police_defeat_3a || q.player.data.dialogue.grace == false ? q.dialogue.set_page('idle');"
     ],
     "speakers": {
         "npc": {
@@ -23,7 +23,7 @@
             "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "Hey you! Stop right there!"
+                "You just became a suspect!"
             ],
             "input": {
                 "type": "option",
@@ -46,7 +46,7 @@
             "id": "battle_start",
             "speaker": "npc",
             "lines": [
-                "Behold the power of justice!"
+                "You're under arrest!"
             ],
             "escapeAction": "0",
             "input": [
