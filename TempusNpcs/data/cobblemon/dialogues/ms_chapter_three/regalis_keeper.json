@@ -90,7 +90,7 @@
             "id": "4",
             "escapeAction": "0",
             "speaker": "npc",
-            "lines": ["You know what...? If this makes you leave faster, then here you go. You never got them from me."],
+            "lines": ["You know what...? If this makes you leave any faster, then here you go. You never got them from me."],
             "input": {
                 "type": "option",
                 "vertical": true,
