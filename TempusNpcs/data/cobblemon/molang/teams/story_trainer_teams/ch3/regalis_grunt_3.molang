@@ -1,0 +1,35 @@
+t.constants = ' level=45 hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true';
+
+t.1 = 'nidoking held_item=cobblemon:poison_barb' + t.constants;
+t.2 = 'nidoqueen held_item=cobblemon:poison_barb' + t.constants;
+t.3 = 'corviknight held_item=cobblemon:metal_coat' + t.constants;
+t.4 = 'tinkaton held_item=cobblemon:metal_coat' + t.constants;
+t.5 = 'doublade held_item=cobblemon:metal_coat' + t.constants;
+t.6 = 'arbok held_item=cobblemon:poison_barb' + t.constants;
+t.7 = 'golbat held_item=cobblemon:poison_barb' + t.constants;
+t.8 = 'persian alolan held_item=cobblemon:black_glasses' + t.constants;
+t.9 = 'perrserker held_item=cobblemon:metal_coat' + t.constants;
+t.10 = 'liepard held_item=cobblemon:black_glasses' + t.constants;
+t.11 = 'krookodile held_item=cobblemon:black_glasses' + t.constants;
+t.12 = 'scrafty held_item=cobblemon:black_glasses' + t.constants;
+t.13 = 'thievul held_item=cobblemon:black_glasses' + t.constants;
+t.14 = 'morgrem held_item=cobblemon:black_glasses' + t.constants;
+t.15 = 'mabosstiff held_item=cobblemon:black_glasses' + t.constants;
+t.16 = 'haunter held_item=cobblemon:poison_barb' + t.constants;
+t.17 = 'ariados held_item=cobblemon:poison_barb' + t.constants;
+t.18 = 'lairon held_item=cobblemon:metal_coat' + t.constants;
+t.19 = 'salazzle held_item=cobblemon:poison_barb' + t.constants;
+t.20 = 'ferrothorn held_item=cobblemon:metal_coat' + t.constants;
+t.21 = 'overqwil held_item=cobblemon:poison_barb' + t.constants;
+t.22 = 'weavile held_item=cobblemon:black_glasses' + t.constants;
+t.23 = 'sneasler held_item=cobblemon:poison_barb' + t.constants;
+t.24 = 'durant held_item=cobblemon:metal_coat' + t.constants;
+t.25 = 'sableye held_item=cobblemon:black_glasses' + t.constants;
+t.26 = 'sableye held_item=cobblemon:black_glasses' + t.constants; // Note: Sableye appears twice with black_glasses
+
+t.party_size = math.random_integer(3, 4);
+
+loop(t.party_size, {
+  t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7, t.8, t.9, t.10, t.11, t.12, t.13, t.14, t.15, t.16, t.17, t.18, t.19, t.20, t.21, t.22, t.23, t.24, t.25, t.26);
+  q.party.add_by_properties(t.result);
+});
