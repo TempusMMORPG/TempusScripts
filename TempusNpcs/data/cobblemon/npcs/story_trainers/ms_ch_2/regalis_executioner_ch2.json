@@ -25,7 +25,7 @@
       "skill": 5,
       "party": {
           "type": "script",
-          "script": "cobblemon:regalis_grunt_2c",
+          "script": "cobblemon:regalis_executioner_ch2",
           "isStatic": false
       }
   }

@@ -1,5 +1,6 @@
 {
     "initializationAction": [
+        "q.player.data.regalis_bloodhound_ruins_defeated && q.player.data.ch2_completed == false ? q.dialogue.set_page('ch2end');",
         "q.player.data.dialogue.professor_conifer_archives_key_inform && q.player.data.dialogue.dan == false ? q.dialogue.set_page('go_to_dan');",
         "q.player.data.dialogue.laurel_inform && q.player.data.dialogue.professor_conifer_archives_post_craft && q.player.data.dialogue.professor_conifer_archives_key_inform == false ? q.dialogue.set_page('return_to_conifer');",
         "q.player.data.dialogue.professor_conifer_archives_post_craft && q.player.data.dialogue.laurel_inform == false ? q.dialogue.set_page('hurry');",
@@ -230,6 +231,26 @@
                 "options": [
                     {
                         "text": "Goodbye",
+                        "value": "goodbye",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "ch2end",
+            "speaker": "npc",
+            "lines": [
+                "Quickly! Go and tell Professor Laurel!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "O-okay!",
                         "value": "goodbye",
                         "action": [
                             "q.dialogue.close();"

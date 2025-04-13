@@ -1,0 +1,6 @@
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true level=' + (q.player.party.highest_level);
+
+q.party.add_by_properties('houndour moves=incinerate,lashout,trailblaze nature=mild held_item=cobblemon:charcoal_stick ability=flashfire attack_ev=60 special_attack_ev=60' + t.constants);
+q.party.add_by_properties('haunter moves=hex,hypnosis,venoshock nature=modest held_item=cobblemon:spell_tag ability=levitate special_attack_ev=60 speed_ev=60' + t.constants);
+q.party.add_by_properties('sneasel moves=iceshard,lashout,lowsweep nature=lonely held_item=cobblemon:black_glasses ability=innerfocus attack_ev=60 speed_ev=60' + t.constants);
+q.party.add_by_properties('skarmory moves=wingattack,steelwing,payback nature=adamant held_item=cobblemon:metal_coat ability=sturdy attack_ev=80 speed_ev=80' + t.constants);

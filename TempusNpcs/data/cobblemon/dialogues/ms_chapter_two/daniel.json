@@ -1,7 +1,7 @@
 {
     "initializationAction": [
         "q.player.data.dialogue.dan || q.player.data.dialogue.professor_conifer_archives_key_inform == false ? q.dialogue.set_page('farewell');",
-        "q.player.data.dialogue.dan && q.player.data.regalis_executioner_defeated == false ? q.dialogue.set_page('4');"
+        "q.player.data.dialogue.dan && q.player.data.regalis_executioner_cave_defeated == false ? q.dialogue.set_page('4');"
     ],
     "speakers": {
         "npc": {

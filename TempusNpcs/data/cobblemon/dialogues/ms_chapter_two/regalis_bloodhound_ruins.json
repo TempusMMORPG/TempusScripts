@@ -46,7 +46,7 @@
                     {
                         "text": "§c⚔ Battle ⚔§r",
                         "value": "battle",
-                        "isSelectable": "q.player.data.regalis_bloodhound_defeated == false",
+                        "isSelectable": "q.player.data.regalis_bloodhound_ruins_defeated == false",
                         "action": "q.dialogue.set_page('battle_start');"
                     },
                     {
