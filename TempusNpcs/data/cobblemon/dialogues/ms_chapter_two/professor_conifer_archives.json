@@ -242,17 +242,119 @@
         {
             "id": "ch2end",
             "speaker": "npc",
+            "escapeAction": "0",
             "lines": [
-                "Quickly! Go and tell Professor Laurel!"
+                "Hey! You're back! Any luck?"
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "O-okay!",
-                        "value": "goodbye",
+                        "text": "So uh...",
+                        "value": "1",
                         "action": [
+                            "q.dialogue.set_page('ch2end2');"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "ch2end2",
+            "speaker": "npc",
+            "escapeAction": "0",
+            "lines": [
+                "Ah, damn it! They now have two of the four keys!"
+            ],
+            "input": "q.dialogue.set_page('ch2end3');"
+        },
+        {
+            "id": "ch2end3",
+            "speaker": "npc",
+            "escapeAction": "0",
+            "lines": [
+                "Did you get ANYTHING on them? Hints? Clues?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "This message...",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('ch2end4');"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "ch2end4",
+            "speaker": "npc",
+            "escapeAction": "0",
+            "lines": [
+                "Hmm... I see. So they know we're onto them. This doesn't make our lives any easier..."
+            ],
+            "input": "q.dialogue.set_page('ch2end5');"
+        },
+        {
+            "id": "ch2end5",
+            "speaker": "npc",
+            "escapeAction": "0",
+            "lines": [
+                "Well, this shouldn't matter seeing as I now have a lead on another key."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Where?",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('ch2end6');"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "ch2end6",
+            "speaker": "npc",
+            "escapeAction": "0",
+            "lines": [
+                "The key I found is called the Lunala Key. It's currently in the possession of a collector."
+            ],
+            "input": "q.dialogue.set_page('ch2end7');"
+        },
+        {
+            "id": "ch2end7",
+            "speaker": "npc",
+            "escapeAction": "0",
+            "lines": [
+                "His name is Lachlan, he lives on the outskirts of Fumia Town."
+            ],
+            "input": "q.dialogue.set_page('ch2end8');"
+        },
+        {
+            "id": "ch2end8",
+            "speaker": "npc",
+            "escapeAction": "0",
+            "lines": [
+                "You have to be quick, we can't let the Regalis get their hands on it!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Understood!",
+                        "value": "1",
+                        "action": [
+                            "q.player.data.ch2_completed = 1;q.player.save_data();",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 49F63BA3027DA553');",
                             "q.dialogue.close();"
                         ]
                     }
