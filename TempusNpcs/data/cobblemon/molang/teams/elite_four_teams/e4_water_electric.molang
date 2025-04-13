@@ -1,0 +1,8 @@
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true';
+
+q.party.add_by_properties('pelipper moves=knockoff,scald,roost,hurricane nature=relaxed held_item=cobblemon:damp_rock ability=drizzle hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=0 hp_ev=248 defence_ev=252 special_defence_ev=8 level=100' + t.constants);
+q.party.add_by_properties('barraskewda moves=liquidation,flipturn,closecombat,psychicfangs nature=adamant held_item=cobblemon:choice_band ability=swiftswim attack_ev=252 defence_ev=4 speed_ev=252 level=100' + t.constants);
+q.party.add_by_properties('kilowattrel moves=thunder,hurricane,weatherball,voltswitch nature=timid held_item=cobblemon:choice_specs ability=voltabsorb special_attack_ev=252 speed_ev=252 special_defence_ev=4 level=100' + t.constants);
+q.party.add_by_properties('magnezone moves=thunder,thunderbolt,flashcannon,hiddenpower nature=timid held_item=cobblemon:weakness_policy ability=sturdy hp_iv=31 attack_iv=2 defence_iv=31 special_attack_iv=30 special_defence_iv=31 speed_iv=31 special_attack_ev=252 speed_ev=252 special_defence_ev=4 level=100' + t.constants);
+q.party.add_by_properties('dracozolt moves=boltbeak,dragonclaw,earthquake,lowkick nature=jolly held_item=cobblemon:choice_scarf ability=voltabsorb attack_ev=252 speed_ev=252 special_defence_ev=4 level=100' + t.constants);
+q.party.add_by_properties('swampert moves=earthquake,flipturn,liquidation,icepunch nature=adamant ability=swiftswim attack_ev=252 speed_ev=252 special_defence_ev=4 mega level=100' + t.constants);
