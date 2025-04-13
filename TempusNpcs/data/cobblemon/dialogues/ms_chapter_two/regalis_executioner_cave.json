@@ -1,7 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.regalis_executioner_cave_defeated || q.player.data.dialogue.dan == false ? q.dialogue.set_page('post_defeat');",
-        "q.player.data.regalis_grunt_2b_1_defeated == false || q.player.data.regalis_grunt_2b_2_defeated == false || q.player.data.regalis_grunt_2b_3_defeated == false || q.player.data.regalis_grunt_2b_4_defeated == false || q.player.data.regalis_grunt_2b_5_defeated == false ? q.dialogue.set_page('post_defeat');"
+        "q.player.data.regalis_grunt_2b_1_defeated && q.player.data.regalis_grunt_2b_2_defeated && q.player.data.regalis_grunt_2b_3_defeated && q.player.data.regalis_grunt_2b_4_defeated && q.player.data.regalis_grunt_2b_5_defeated && q.player.data.regalis_executioner_cave_defeated == false ? q.dialogue.set_page('greeting');"
     ],
     "speakers": {
         "npc": {
@@ -20,6 +19,14 @@
         }
     },
     "pages": [
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": "q.dialogue.close();"
+        },
         {
             "id": "greeting",
             "speaker": "npc",
@@ -61,14 +68,6 @@
                 "q.dialogue.close();",
                 "v.battle = q.npc.start_battle(q.player);"
             ]
-        },
-        {
-            "id": "post_defeat",
-            "speaker": "npc",
-            "lines": [
-                "..."
-            ],
-            "input": "q.dialogue.close();"
         }
     ]
 }

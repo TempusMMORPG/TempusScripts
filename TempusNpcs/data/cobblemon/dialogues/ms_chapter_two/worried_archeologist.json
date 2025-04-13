@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.worried_archeologist || q.player.data.dialogue.dan == false ? q.dialogue.set_page('post_defeat');"
+        "q.player.data.dialogue.worried_archeologist || q.player.data.regalis_executioner_cave_defeated == false ? q.dialogue.set_page('post_defeat');"
     ],
     "speakers": {
         "npc": {
@@ -134,6 +134,14 @@
                     }
                         ]
                     }
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": "q.dialogue.close();"
         }
     ]
 }

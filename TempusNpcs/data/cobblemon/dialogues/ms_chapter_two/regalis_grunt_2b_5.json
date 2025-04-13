@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.regalis_grunt_2b_1_defeated || q.player.data.dialogue.dan == false ? q.dialogue.set_page('post_defeat');"
+        "q.player.data.regalis_grunt_2b_5_defeated || q.player.data.dialogue.dan == false ? q.dialogue.set_page('post_defeat');"
     ],
     "speakers": {
         "npc": {
@@ -38,7 +38,7 @@
                     {
                         "text": "§c⚔ Battle ⚔§r",
                         "value": "battle",
-                        "isSelectable": "q.player.data.regalis_grunt_2b_1_defeated == false",
+                        "isSelectable": "q.player.data.regalis_grunt_2b_5_defeated == false",
                         "action": "q.dialogue.set_page('battle_start');"
                     },
                     {
