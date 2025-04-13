@@ -25,7 +25,7 @@ t.22 = 'weavile held_item=cobblemon:black_glasses' + t.constants;
 t.23 = 'sneasler held_item=cobblemon:poison_barb' + t.constants;
 t.24 = 'durant held_item=cobblemon:metal_coat' + t.constants;
 t.25 = 'sableye held_item=cobblemon:black_glasses' + t.constants;
-t.26 = 'sableye held_item=cobblemon:black_glasses' + t.constants; // Note: Sableye appears twice with black_glasses
+t.26 = 'sableye held_item=cobblemon:black_glasses' + t.constants;
 
 t.party_size = math.random_integer(3, 4);
 
