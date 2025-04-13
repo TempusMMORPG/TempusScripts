@@ -1,8 +1,0 @@
-t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true';
-
-q.party.add_by_properties('samurott hisuian moves=ceaselessedge,razorshell,sacredsword,flipturn nature=jolly held_item=cobblemon:focus_sash ability=sharpness attack_ev=252 speed_ev=252 special_defence_ev=4 level=100' + t.constants);
-q.party.add_by_properties('zoroark hisuian moves=shadowball,hypervoice,flamethrower,focusblast nature=timid held_item=cobblemon:choice_scarf ability=illusion special_attack_ev=252 speed_ev=252 special_defence_ev=4 level=100' + t.constants);
-q.party.add_by_properties('overqwil moves=swordsdance,gunkshot,crunch,scaleshot nature=jolly held_item=cobblemon:loaded_dice ability=intimidate attack_ev=252 speed_ev=252 defence_ev=4 level=100' + t.constants);
-q.party.add_by_properties('meowscarada moves=flowergift,knockoff,tripleaxel,uturn nature=jolly held_item=cobblemon:life_orb ability=protean attack_ev=252 speed_ev=252 special_defence_ev=4 level=100' + t.constants);
-q.party.add_by_properties('dragapult moves=dracometeor,shadowball,flamethrower,uturn nature=timid held_item=cobblemon:choice_specs ability=infiltrator special_attack_ev=252 speed_ev=252 special_defence_ev=4 level=100' + t.constants);
-q.party.add_by_properties('gengar moves=shadowball,sludgewave,focusblast,thunderbolt nature=timid ability=shadowtag mega level=100' + t.constants);

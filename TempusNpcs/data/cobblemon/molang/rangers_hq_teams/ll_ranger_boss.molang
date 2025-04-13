@@ -1,8 +1,0 @@
-t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=75 uncatchable=true';
-
-q.party.add_by_properties('chesnaught moves=spikes,spikyshield,bulletseed,bodypress nature=impish held_item=cobblemon:rocky_helmet ability=bulletproof hp_ev=200 defence_ev=200' + t.constants);
-q.party.add_by_properties('claydol moves=psychic,earthpower,toxic,stealthrock nature=modest held_item=cobblemon:leftovers ability=levitate hp_ev=200 special_attack_ev=200' + t.constants);
-q.party.add_by_properties('cinderace moves=pyroball,highjumpkick,uturn,willowisp nature=jolly held_item=cobblemon:life_orb ability=libero attack_ev=200 speed_ev=200' + t.constants);
-q.party.add_by_properties('shedinja moves=poltergeist,shadowsneak,willowisp,xscissor nature=jolly held_item=cobblemon:focus_sash ability=wonderguard attack_ev=200 speed_ev=200' + t.constants);
-q.party.add_by_properties('grafaiai moves=gunkshot,doubleedge,knockoff,swordsdance nature=adamant held_item=cobblemon:poison_gem ability=unburden hp_ev=200 attack_ev=200' + t.constants);
-q.party.add_by_properties('blastoise mega moves=hydropump,icebeam,aurasphere,shellsmash nature=modest ability=megalauncher special_attack_ev=200 speed_ev=200' + t.constants);
