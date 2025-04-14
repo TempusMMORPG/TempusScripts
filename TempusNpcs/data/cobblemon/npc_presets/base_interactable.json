@@ -5,15 +5,6 @@
     "isInvulnerable": true,
     "isLeashable": false,
     "allowProjectileHits": false,
-    "ai": [
-      {
-        "type": "apply_presets",
-        "presets": [
-          "cobblemon:looks",
-          "cobblemon:chats"
-        ]
-      }  
-    ],
     "config": [
       {
         "variableName": "node_health",
