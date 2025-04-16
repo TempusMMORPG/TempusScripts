@@ -1,12 +1,12 @@
 {
     "initializationAction": [
-        "q.player.data.regalis_bloodhound_ruins_defeated && q.player.data.ch2_completed == false ? q.dialogue.set_page('ch2end');",
+        "q.player.data.regalis_bloodhound_ruins_defeated && q.player.data.a_ch2_completed == false ? q.dialogue.set_page('ch2end');",
         "q.player.data.dialogue.professor_conifer_archives_key_inform && q.player.data.dialogue.dan == false ? q.dialogue.set_page('go_to_dan');",
         "q.player.data.dialogue.laurel_inform && q.player.data.dialogue.professor_conifer_archives_post_craft && q.player.data.dialogue.professor_conifer_archives_key_inform == false ? q.dialogue.set_page('return_to_conifer');",
         "q.player.data.dialogue.professor_conifer_archives_post_craft && q.player.data.dialogue.laurel_inform == false ? q.dialogue.set_page('hurry');",
         "q.player.data.regalis_grunt_2a_1_defeated && q.player.data.regalis_grunt_2a_2_defeated && q.player.data.regalis_grunt_2a_3_defeated && q.player.data.regalis_grunt_2a_4_defeated && q.player.data.regalis_grunt_2a_5_defeated && q.player.data.dialogue.professor_conifer_archives_pre_craft && q.player.data.dialogue.professor_conifer_archives_post_craft == false ? q.dialogue.set_page('after_regalis_grunts');",
         "(q.player.data.regalis_grunt_2a_1_defeated == false || q.player.data.regalis_grunt_2a_2_defeated == false || q.player.data.regalis_grunt_2a_3_defeated == false || q.player.data.regalis_grunt_2a_4_defeated == false || q.player.data.regalis_grunt_2a_5_defeated == false) && q.player.data.dialogue.professor_conifer_archives_pre_craft ? q.dialogue.set_page('stop_them');",
-        "q.player.data.ch1_completed && q.player.data.dialogue.professor_conifer_archives_pre_craft == false ? q.dialogue.set_page('greeting');"
+        "q.player.data.a_ch1_completed && q.player.data.dialogue.professor_conifer_archives_pre_craft == false ? q.dialogue.set_page('greeting');"
     ],
     "speakers": {
         "npc": {
@@ -353,7 +353,7 @@
                         "text": "Understood!",
                         "value": "1",
                         "action": [
-                            "q.player.data.ch2_completed = 1;q.player.save_data();",
+                            "q.player.data.a_ch2_completed = 1;q.player.save_data();",
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 49F63BA3027DA553');",
                             "q.dialogue.close();"
                         ]

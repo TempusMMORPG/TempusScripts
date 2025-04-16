@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.dialogue.lachlan || q.player.data.ch2_completed == false ? q.dialogue.set_page('farewell');"
+        "q.player.data.dialogue.lachlan || q.player.data.a_ch2_completed == false ? q.dialogue.set_page('farewell');"
     ],
     "speakers": {
         "npc": {
