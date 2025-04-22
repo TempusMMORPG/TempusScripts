@@ -89,7 +89,7 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "They've told me I'm a descendant of a Duke promised me my rightful place once they finish their goal. So I will assist them in their endeavour however I can."
+                "They've told me I'm a descendant of a Duke and promised me my rightful place once they finish their goal. So I will assist them in their endeavour however I can."
             ],
             "input": {
                 "type": "option",
@@ -208,7 +208,7 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Oh, oh, OH! Oh my days! You were telling the truth. My ancestor wasn't a royal.... He was executed by the royals."
+                "Oh, oh, OH! Oh my days! You were telling the truth. My ancestor wasn't a royal.... He was EXECUTED by the royals."
             ],
             "input": "q.dialogue.set_page('9');"
         },
