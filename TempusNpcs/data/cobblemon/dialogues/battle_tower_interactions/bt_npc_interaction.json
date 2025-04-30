@@ -1,0 +1,58 @@
+{
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to challenge me?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Battle",
+                        "value": "battle",
+                        "isSelectable": "q.player.party.count == 3.0",
+                        "action": [
+                          "q.dialogue.close();",
+                          "v.battle = q.npc.start_battle(q.player);",
+                          "v.npc = q.npc;",
+                          "v.reward = 'A new reward!!! POGGERS';",
+                          "q.run_script('set_npc_battle_reward');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.set_page('okbye');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "okbye",
+            "speaker": "npc",
+            "lines": [
+                "Alright, see you later!"
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}
