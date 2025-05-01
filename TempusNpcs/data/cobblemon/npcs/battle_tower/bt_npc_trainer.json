@@ -11,6 +11,15 @@
     "type": "dialogue",
     "dialogue": "cobblemon:bt_npc_interaction"
   },
+  "config": [
+      {
+        "variableName": "on_player_loses",
+        "displayName": "npc.variable.on_player_loses.name",
+        "description": "npc.variable.on_player_loses.desc",
+        "type": "TEXT",
+        "defaultValue": "q.run_script('cobblemon:battle_tower_failure');"
+      }
+  ],
   "skill": 5,
   "party": {
     "type": "script",
