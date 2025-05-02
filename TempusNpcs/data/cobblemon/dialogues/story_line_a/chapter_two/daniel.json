@@ -1,0 +1,139 @@
+{
+    "initializationAction": [
+        "q.player.data.dialogue.dan || q.player.data.dialogue.professor_conifer_archives_key_inform == false ? q.dialogue.set_page('farewell');",
+        "q.player.data.dialogue.dan && q.player.data.regalis_executioner_cave_defeated == false ? q.dialogue.set_page('4');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Good day, are you interested in a tour of the museum? Or perhaps something particular?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "The Giratina Key",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "1",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Oh? That's the funniest thing! Someone came earlier today and asked about the exact same thing!"
+            ],
+            "input": "q.dialogue.set_page('2');"
+        },
+        {
+            "id": "2",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "It was a peculiar man in golden armour and a strange voice. What an odd day!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Where did he go?",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "3",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "He went to the old Giratina Ruins. It is not too far from here. I can give you the way if you like."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "PLEASE!",
+                        "value": "okay",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2E92ADC94CB8EF2A');",
+                            "q.player.data.dialogue.dan = true; q.player.save_data();",
+                            "q.dialogue.set_page('4');"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "4",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "The Giratina Ruins are located just northwest of the museum across the river. Once across, just follow the boardwalk and you will find it."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Thank you!",
+                        "value": "okay",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                        ]
+                    }
+        },
+        {
+            "id": "farewell",
+            "speaker": "npc",
+            "lines": [
+                "Welcome to the museum! I hope you enjoy your visit!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Goodbye",
+                        "value": "goodbye",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                        ]
+                    }
+        }
+    ]
+}

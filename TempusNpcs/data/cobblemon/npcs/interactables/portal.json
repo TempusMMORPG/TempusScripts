@@ -1,0 +1,26 @@
+{
+    "presets": [
+      "cobblemon:base_interactable",
+      "cobblemon:looks_in_one_direction"
+    ],
+    "hitbox": {
+      "width": 3.0,
+      "height": 6.0
+    },
+    "names": [
+      "§d§lUltraspace Portal§r"
+    ],
+    "interaction": {
+      "type": "custom_script",
+      "script": "q.run_script(q.npc.config.interactable_script);"
+    },
+    "config" : [
+      {
+        "variableName": "teleport_location",
+        "displayName": "Teleport Location Cordination",
+        "description": "Teleport location (X Y Z Rotation(X) Rotation(Y))",
+        "type": "TEXT",
+        "defaultValue": "0 10 0 ~ ~"
+      }
+    ]
+  }

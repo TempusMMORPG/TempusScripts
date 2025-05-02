@@ -1,0 +1,90 @@
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true level=' + (q.player.party.highest_level - 2);
+
+t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
+
+t.data == 'EASY' ? {
+ t.1 = 'gastly held_item=cobblemon:oran_berry moves=hex,hypnosis' + t.constants;
+ t.2 = 'misdreavus held_item=cobblemon:oran_berry moves=hex,psybeam' + t.constants;
+ t.3 = 'duskull held_item=cobblemon:oran_berry moves=nightshade,shadowsneak' + t.constants;
+ t.4 = 'drifloon held_item=cobblemon:oran_berry moves=hex,payback' + t.constants;
+ t.5 = 'yamask held_item=cobblemon:oran_berry moves=nightshade,willowisp' + t.constants;
+ t.6 = 'zorua hisuian held_item=cobblemon:oran_berry moves=shadowsneak,scratch' + t.constants;
+ t.7 = 'frillish held_item=cobblemon:oran_berry moves=waterpulse,hex' + t.constants;
+ t.8 = 'litwick held_item=cobblemon:oran_berry moves=firespin,hex' + t.constants;
+ t.9 = 'golett held_item=cobblemon:oran_berry moves=stompingtantrum,shadowpunch' + t.constants;
+ t.10 = 'honedge held_item=cobblemon:oran_berry moves=shadowsneak,slash' + t.constants;
+ t.11 = 'phantump held_item=cobblemon:oran_berry moves=hex,branchpoke' + t.constants;
+ t.12 = 'pumpkaboo held_item=cobblemon:oran_berry moves=bulletseed,shadowsneak' + t.constants;
+ t.13 = 'sandygast held_item=cobblemon:oran_berry moves=bulldoze,astonish' + t.constants;
+ t.14 = 'dreepy held_item=cobblemon:oran_berry moves=astonish,infestation' + t.constants;
+ loop(2, { t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7, t.8, t.9, t.10, t.11, t.12, t.13, t.14);
+ q.party.add_by_properties(t.result)});
+ return 1;
+};
+
+t.data == 'MEDIUM' ? {
+ t.1 = 'haunter held_item=cobblemon:sitrus_berry moves=shadowball,sludgebomb' + t.constants;
+ t.2 = 'marowak alolan held_item=cobblemon:sitrus_berry moves=shadowbone,firepunch' + t.constants;
+ t.3 = 'typhlosion hisuian held_item=cobblemon:sitrus_berry moves=flamethrower,shadowball' + t.constants;
+ t.4 = 'mismagius held_item=cobblemon:sitrus_berry moves=shadowball,mysticalfire' + t.constants;
+ t.5 = 'shedinja held_item=cobblemon:sitrus_berry moves=shadowclaw,xscissor' + t.constants;
+ t.6 = 'sableye held_item=cobblemon:sitrus_berry moves=foulplay,shadowclaw' + t.constants;
+ t.7 = 'dusclops held_item=cobblemon:sitrus_berry moves=firepunch,nightshade' + t.constants;
+ t.8 = 'drifblim held_item=cobblemon:sitrus_berry moves=shadowball,acrobatics' + t.constants;
+ t.9 = 'spiritomb held_item=cobblemon:sitrus_berry moves=shadowball,darkpulse' + t.constants;
+ t.10 = 'rotom held_item=cobblemon:sitrus_berry moves=shadowball,discharge' + t.constants;
+ t.11 = 'cofagrigus held_item=cobblemon:sitrus_berry moves=shadowball,bodypress' + t.constants;
+ t.12 = 'zoroark hisuian held_item=cobblemon:sitrus_berry moves=shadowball,hypervoice' + t.constants;
+ t.13 = 'jellicent held_item=cobblemon:sitrus_berry moves=shadowball,surf' + t.constants;
+ t.14 = 'chandelure held_item=cobblemon:sitrus_berry moves=shadowball,flamethrower' + t.constants;
+ t.15 = 'golurk held_item=cobblemon:sitrus_berry moves=earthquake,icepunch' + t.constants;
+ t.16 = 'aegislash held_item=cobblemon:sitrus_berry moves=shadowball,ironhead' + t.constants;
+ t.17 = 'trevenant held_item=cobblemon:sitrus_berry moves=hornleech,shadowclaw' + t.constants;
+ t.18 = 'gourgeist held_item=cobblemon:sitrus_berry moves=seedbomb,shadowsneak' + t.constants;
+ t.19 = 'decidueye held_item=cobblemon:sitrus_berry moves=spiritshackle,leafblade' + t.constants;
+ t.20 = 'palossand held_item=cobblemon:sitrus_berry moves=earthpower,shadowball' + t.constants;
+ t.21 = 'mimikyu held_item=cobblemon:sitrus_berry moves=shadowclaw,playrough' + t.constants;
+ t.22 = 'dhelmise held_item=cobblemon:sitrus_berry moves=heavyslam,shadowball' + t.constants;
+ t.23 = 'drakloak held_item=cobblemon:sitrus_berry moves=dragonpulse,shadowball' + t.constants;
+ t.24 = 'basculegion held_item=cobblemon:sitrus_berry moves=phantomforce,waterfall' + t.constants;
+ t.25 = 'skeledirge held_item=cobblemon:sitrus_berry moves=torchsong,shadowball' + t.constants;
+ t.26 = 'ceruledge held_item=cobblemon:sitrus_berry moves=shadowclaw,flamecharge' + t.constants;
+loop(3, { t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7, t.8, t.9, t.10, t.11, t.12, t.13, t.14, t.15, t.16, t.17, t.18, t.19, t.20, t.21, t.22, t.23, t.24, t.25, t.26);
+ q.party.add_by_properties(t.result)});
+ return 1;
+};
+
+t.data == 'HARD' ? {
+ t.1 = 'gengar held_item=cobblemon:sitrus_berry moves=shadowball,sludgewave' + t.constants;
+ t.2 = 'marowak alolan held_item=cobblemon:sitrus_berry moves=shadowbone,flareblitz' + t.constants;
+ t.3 = 'typhlosion hisuian held_item=cobblemon:sitrus_berry moves=fireblast,shadowball' + t.constants;
+ t.4 = 'mismagius held_item=cobblemon:sitrus_berry moves=shadowball,dazzlinggleam' + t.constants;
+ t.5 = 'shedinja held_item=cobblemon:sitrus_berry moves=shadowclaw,xscissor' + t.constants;
+ t.6 = 'sableye held_item=cobblemon:sitrus_berry moves=foulplay,shadowsneak' + t.constants;
+ t.7 = 'dusknoir held_item=cobblemon:sitrus_berry moves=firepunch,icepunch' + t.constants;
+ t.8 = 'drifblim held_item=cobblemon:sitrus_berry moves=shadowball,hurricane' + t.constants;
+ t.9 = 'spiritomb held_item=cobblemon:sitrus_berry moves=shadowball,darkpulse' + t.constants;
+ t.10 = 'rotom held_item=cobblemon:sitrus_berry moves=thunderbolt,shadowball' + t.constants;
+ t.11 = 'cofagrigus held_item=cobblemon:sitrus_berry moves=bodypress,shadowball' + t.constants;
+ t.12 = 'zoroark hisuian held_item=cobblemon:sitrus_berry moves=shadowball,hypervoice' + t.constants;
+ t.13 = 'jellicent held_item=cobblemon:sitrus_berry moves=surf,shadowball' + t.constants;
+ t.14 = 'chandelure held_item=cobblemon:sitrus_berry moves=flamethrower,shadowball' + t.constants;
+ t.15 = 'golurk held_item=cobblemon:sitrus_berry moves=earthquake,drainpunch' + t.constants;
+ t.16 = 'aegislash held_item=cobblemon:sitrus_berry moves=shadowball,flashcannon' + t.constants;
+ t.17 = 'trevenant held_item=cobblemon:sitrus_berry moves=hornleech,shadowclaw' + t.constants;
+ t.18 = 'gourgeist held_item=cobblemon:sitrus_berry moves=seedbomb,shadowsneak' + t.constants;
+ t.19 = 'decidueye held_item=cobblemon:sitrus_berry moves=spiritshackle,leafblade' + t.constants;
+ t.20 = 'palossand held_item=cobblemon:sitrus_berry moves=earthpower,shadowball' + t.constants;
+ t.21 = 'mimikyu held_item=cobblemon:sitrus_berry moves=playrough,shadowclaw' + t.constants;
+ t.22 = 'dhelmise held_item=cobblemon:sitrus_berry moves=powerwhip,anchorshot' + t.constants;
+ t.23 = 'dragapult held_item=cobblemon:sitrus_berry moves=phantomforce,dragondarts' + t.constants;
+ t.24 = 'basculegion held_item=cobblemon:sitrus_berry moves=wavecrash,phantomforce' + t.constants;
+ t.25 = 'skeledirge held_item=cobblemon:sitrus_berry moves=torchsong,shadowball' + t.constants;
+ t.26 = 'ceruledge held_item=cobblemon:sitrus_berry moves=bitterblade,shadowclaw' + t.constants;
+ t.27 = 'annihilape held_item=cobblemon:sitrus_berry moves=ragefist,drainpunch' + t.constants;
+loop(4, { t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7, t.8, t.9, t.10, t.11, t.12, t.13, t.14, t.15, t.16, t.17, t.18, t.19, t.20, t.21, t.22, t.23, t.24, t.25, t.26, t.27);
+ q.party.add_by_properties(t.result)});
+ return 1;
+};
+
+return 0;

@@ -1,0 +1,51 @@
+{
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "teleport",
+            "speaker": "npc",
+            "lines": [
+                "Hello there, you must be a new Trainer. Welcome to the Tempus Region! The Professor at the Lab in Unity City has asked for you. Would you like me to send you there now?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "q.npc.config.teleport_display_1"
+                        },
+                        "value": "location1",
+                        "action": [
+                            "q.run_command('tp ' + q.player.username + ' ' + q.npc.config.teleport_location_1);",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 441BEE9936A918D2');",
+                            "q.dialogue.close();",
+                            "q.player.tell('§a§l[✔] Travelled to ' + q.npc.config.teleport_display_1 + '[✔]§r');"
+                        ]
+                    },
+                    {
+                        "text": "Exit",
+                        "value": "exit",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        }
+    ]
+}

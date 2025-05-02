@@ -1,8 +1,0 @@
-t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true level=' + (q.player.party.highest_level);
-
-q.party.add_by_properties('roserade moves=toxicspikes,sludgebomb,leafstorm,synthesis nature=timid held_item=cobblemon:black_sludge ability=poisonpoint hp_ev=252 special_attack_ev=4 speed_ev=252' + t.constants);
-q.party.add_by_properties('salazzle moves=sludgebomb,fireblast,toxic,protect nature=timid held_item=cobblemon:black_sludge ability=corrosion hp_ev=252 special_attack_ev=4 speed_ev=252' + t.constants);
-q.party.add_by_properties('lilligant hisuian moves=victorydance,icespinner,closecombat,leafblade nature=jolly held_item=cobblemon:wide_lens ability=hustle attack_ev=252 special_defence_ev=4 speed_ev=252' + t.constants);
-q.party.add_by_properties('milotic moves=scald,recover,icebeam,flipturn nature=bold held_item=cobblemon:leftovers ability=marvelscale hp_ev=252 defence_ev=252 special_defence_ev=4' + t.constants);
-q.party.add_by_properties('nidoqueen moves=toxic,flamethrower,sludgewave,icebeam nature=modest held_item=cobblemon:life_orb ability=sheerforce hp_ev=252 defence_ev=4 special_attack_ev=252' + t.constants);
-q.party.add_by_properties('mawile moves=playrough,suckerpunch,thunderpunch,icepunch nature=adamant ability=hugepower hp_ev=248 attack_ev=252 special_defence_ev=8 mega' + t.constants);

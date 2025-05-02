@@ -1,0 +1,27 @@
+t.constants = ' level=15 hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true';
+
+t.1 = 'nidoranm held_item=cobblemon:poison_barb' + t.constants;
+t.2 = 'nidoranf held_item=cobblemon:poison_barb' + t.constants;
+t.3 = 'rookidee held_item=cobblemon:metal_coat' + t.constants;
+t.4 = 'tinkatink held_item=cobblemon:metal_coat' + t.constants;
+t.5 = 'honedge held_item=cobblemon:metal_coat' + t.constants;
+t.6 = 'ekans held_item=cobblemon:poison_barb' + t.constants;
+t.7 = 'zubat held_item=cobblemon:poison_barb' + t.constants;
+t.8 = 'meowth alolan held_item=cobblemon:black_glasses' + t.constants;
+t.9 = 'meowth galarian held_item=cobblemon:metal_coat' + t.constants;
+t.10 = 'purrloin held_item=cobblemon:black_glasses' + t.constants;
+t.11 = 'sandile held_item=cobblemon:black_glasses' + t.constants;
+t.12 = 'scraggy held_item=cobblemon:black_glasses' + t.constants;
+t.13 = 'nickit held_item=cobblemon:black_glasses' + t.constants;
+t.14 = 'impidimp held_item=cobblemon:black_glasses' + t.constants;
+t.15 = 'maschiff held_item=cobblemon:black_glasses' + t.constants;
+t.16 = 'gastly held_item=cobblemon:poison_barb' + t.constants;
+t.17 = 'spinarak held_item=cobblemon:poison_barb' + t.constants;
+t.18 = 'aron held_item=cobblemon:metal_coat' + t.constants;
+t.19 = 'salandit held_item=cobblemon:poison_barb' + t.constants;
+t.20 = 'ferroseed held_item=cobblemon:metal_coat' + t.constants;
+
+loop(3, {
+  t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7, t.8, t.9, t.10, t.11, t.12, t.13, t.14, t.15, t.16, t.17, t.18, t.19, t.20);
+  q.party.add_by_properties(t.result);
+});

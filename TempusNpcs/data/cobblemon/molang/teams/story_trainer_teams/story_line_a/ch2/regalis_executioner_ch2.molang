@@ -1,0 +1,6 @@
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true level=' + (q.player.party.highest_level);
+
+q.party.add_by_properties('meowth galarian moves=fakeout,metalclaw,payday nature=lonely held_item=cobblemon:metal_coat ability=toughclaws attack_ev=40 speed_ev=40' + t.constants);
+q.party.add_by_properties('honedge moves=shadowsneak,aerialace,slash nature=brave held_item=cobblemon:spell_tag ability=noguard hp_ev=40 attack_ev=40' + t.constants);
+q.party.add_by_properties('sandile moves=bite,dig,firefang nature=hardy held_item=cobblemon:black_glasses ability=intimidate attack_ev=40 speed_ev=40' + t.constants);
+q.party.add_by_properties('golbat moves=poisonfang,wingattack,leechlife nature=adamant held_item=cobblemon:poison_barb ability=innerfocus attack_ev=60 speed_ev=60' + t.constants);

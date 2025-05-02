@@ -1,0 +1,8 @@
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true';
+
+q.party.add_by_properties('ninetales alolan moves=blizzard,moonblast,freezedry,auroraveil nature=timid held_item=cobblemon:light_clay ability=snowwarning special_attack_ev=252 speed_ev=252 special_defence_ev=4 level=100' + t.constants);
+q.party.add_by_properties('tinkaton moves=stealthrock,gigatonhammer,playrough,thunderwave nature=impish held_item=cobblemon:air_balloon ability=pickpocket hp_ev=252 defence_ev=252 special_defence_ev=4 level=100' + t.constants);
+q.party.add_by_properties('gholdengo moves=makeitrain,shadowball,focusblast,trick nature=timid held_item=cobblemon:choice_scarf ability=goodasgold special_attack_ev=252 speed_ev=252 special_defence_ev=4 level=100' + t.constants);
+q.party.add_by_properties('primarina moves=scald,moonblast,flipturn,psychicnoise nature=modest held_item=cobblemon:assault_vest ability=torrent hp_ev=252 special_attack_ev=252 special_defence_ev=4 level=100' + t.constants);
+q.party.add_by_properties('mimikyu moves=drainpunch,playrough,shadowsneak,shadowclaw nature=jolly held_item=cobblemon:red_card ability=disguise attack_ev=252 speed_ev=252 special_defence_ev=4 level=100' + t.constants);
+q.party.add_by_properties('lucario moves=closecombat,meteormash,bulletpunch,crunch nature=jolly ability=adaptability attack_ev=252 speed_ev=252 special_defence_ev=4 mega level=100' + t.constants);
