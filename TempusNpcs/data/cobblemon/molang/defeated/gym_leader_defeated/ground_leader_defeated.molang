@@ -1,4 +1,4 @@
 q.run_script('cobblemon:gs_gym_leader_progression');
 q.player.data.ground_gym_defeated = true;
 q.player.save_data();
-q.player.tell(q.npc.name + ': Haha, it\'s not as easy as it used to be...');
+q.player.tell(q.npc.name + ': Well, that proved my theory wrong. You have earned this badge. Keep up the good work.');

@@ -1,0 +1,176 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",    
+    "names": [
+      "Regalis Grunt"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:base_quest_npc",
+      "cobblemon:base_defeat_count",
+      "cobblemon:battle_npc",
+      "cobblemon:looks_in_one_direction",
+      "cobblemon:battle_reward_pokedollars"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:regalis_grunt_2b"
+    },
+    "skill": 3,
+    "party": {
+      "type": "pool",
+      "minPokemon": 2,
+      "maxPokemon": 3,
+      "isStatic": false,
+      "pool": [
+        {
+          "pokemon": "nidorino level=30 held_item=cobblemon:poison_barb hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+          "weight": 25,
+          "selectableTimes": 1,
+          "levelVariation": "2"
+        },
+        {
+            "pokemon": "nidorina level=30 held_item=cobblemon:poison_barb hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 25,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "corvisquire level=30 held_item=cobblemon:metal_coat hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 25,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "tinkatuff level=30 held_item=cobblemon:metal_coat hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 25,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "honedge level=30 held_item=cobblemon:metal_coat hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 25,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "arbok level=30 held_item=cobblemon:poison_barb hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "golbat level=30 held_item=cobblemon:poison_barb hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "meowth alolan held_item=cobblemon:black_glasses level=30 hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "meowth galarian held_item=cobblemon:metal_coat level=30 hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "liepard held_item=cobblemon:black_glasses level=30 hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "sandile level=30 held_item=cobblemon:black_glasses hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "scraggy level=30 held_item=cobblemon:black_glasses hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "thievul level=30 held_item=cobblemon:black_glasses hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "impidimp level=30 held_item=cobblemon:black_glasses hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "maschiff level=30 held_item=cobblemon:black_glasses hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "haunter level=30 held_item=cobblemon:poison_barb hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1
+        },
+        {
+            "pokemon": "ariados level=30 held_item=cobblemon:poison_barb hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "aron level=30 held_item=cobblemon:metal_coat hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "salandit level=30 held_item=cobblemon:poison_barb hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "ferroseed held_item=cobblemon:metal_coat level=30 hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "qwilfish hisuian held_item=cobblemon:poison_barb level=30 hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "sneasel held_item=cobblemon:black_glasses level=30 hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "sneasel hisuian held_item=cobblemon:poison_barb level=30 hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "durant held_item=cobblemon:metal_coat level=30 hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "sableye held_item=cobblemon:black_glasses level=30 hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 10,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        }
+      ]
+    }
+  }

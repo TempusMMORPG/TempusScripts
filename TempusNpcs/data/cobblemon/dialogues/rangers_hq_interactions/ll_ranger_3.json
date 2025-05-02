@@ -56,7 +56,7 @@
             "id": "quiz_question",
             "speaker": "npc",
             "lines": [
-                "What is the rarest pure typing? This includes forms."
+                "What is the rarest mono typing? This includes forms."
             ],
             "escapeAction": "0",
             "input": {
@@ -78,7 +78,7 @@
                         "action": "q.dialogue.set_page('incorrect');"
                     },
                     {
-                        "text": "Flying",
+                        "text": "Steel",
                         "value": "answer3",
                         "action": "q.dialogue.set_page('correct');"
                     },
@@ -94,7 +94,7 @@
             "id": "correct",
             "speaker": "npc",
             "lines": [
-                "Yea that's an easy one. Flying is the lowest with 4 including forms and it's not even close. Glad you have proper reading comprehension."
+                "Steel is the least common mono typing at just 14 Pokemon including Megas, Regional Forms, and Gigantamax. Glad you read the question correctly."
             ],
             "input": [
                 "q.player.data.ranger_3_recommendation = true; q.player.save_data();",
@@ -105,7 +105,7 @@
             "id": "incorrect",
             "speaker": "npc",
             "lines": [
-                "Flying is the least common pure or mono typing by a mile. You might've just read the question wrong but anyway it's time to battle."
+                "Steel is the least common mono typing with Dragon in a close second. You might've just read the question wrong but anyway it's time to battle."
             ],
             "escapeAction": "0",
             "input": [

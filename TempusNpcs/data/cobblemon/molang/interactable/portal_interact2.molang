@@ -1,5 +1,0 @@
-q.npc.play_animation('activate', c.player.uuid);
-c.player.tell('§bActivating...');
-"q.run_command('title ' + c.player.username + ' times 0 10 20');
-"q.run_command('title ' + c.player.username + ' title {\"text\":\"a\",\"font\":\"filter:fill\",\"color\":\"#000000\"}');
-q.run_command('tp ' + c.player.username + ' ' + q.npc.config.teleport_location);

@@ -1,10 +1,8 @@
 t.cooldown_time = q.player.get_npc_variable(q.npc, 'cooldown_time');
 
-t.time = q.system_time_millis;
+t.cooldown_time < q.system_time_millis ? return 'No cooldown';
 
-t.cooldown_time < t.time ? return 'No cooldown';
-
-t.remaining_time = t.cooldown_time - t.time;
+t.remaining_time = t.cooldown_time - q.system_time_millis;
 t.hours = math.floor(t.remaining_time / 3600000);
 t.minutes = math.floor(math.mod(t.remaining_time, 3600000) / 60000);
 t.seconds = math.floor(math.mod(t.remaining_time, 60000) / 1000);

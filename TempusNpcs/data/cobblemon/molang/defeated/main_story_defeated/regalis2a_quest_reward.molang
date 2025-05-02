@@ -1,0 +1,1 @@
+q.run_command('give ' + q.player.username + ' minecraft:paper[custom_name=\'{"text":"Book Page","italic":false,"color":"aqua"}\',lore=[\'{"text":"--<Quest Item>--","italic":false,"color":"gold"}\',\'{"text":"A missing page of an Ancient Tome, stolen by the Regalis","italic":false}\']]');

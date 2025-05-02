@@ -1,2 +1,0 @@
-q.npc.play_animation('activate', c.player.uuid);
-c.player.tell('§bActivating...');

@@ -1,11 +1,12 @@
 {
     "resourceIdentifier": "cobblemon:global_skins",    
     "names": [
-      "§lRanger Rouf§r"
+      "§lRanger Clay§r"
     ],
     "presets": [
       "cobblemon:base_npc",
       "cobblemon:battle_npc",
+      "cobblemon:battle_quest_npc",
       "cobblemon:looks_in_one_direction"
     ],
     "interaction": {

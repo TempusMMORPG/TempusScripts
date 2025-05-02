@@ -1,3 +1,0 @@
-q.player.data.regalis_executioner_cave_defeated = true;
-q.player.save_data();
-q.player.tell(q.npc.name + ': I can\'t believe it... I was defeated by a mere ant...');

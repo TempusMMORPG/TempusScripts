@@ -1,6 +1,14 @@
-c.battle.is_pvn == false ? return 0;
-
 for_each(t.loser, c.npc_losers, {
+  !q.is_blank(t.loser.npc.config.quest_update_on_player_wins) ? {
+    for_each(t.player_winner, c.player_winners, {
+      v.player = t.player_winner.player;
+      v.npc = t.loser.npc;
+      q.set_query('player', t.player_winner.player);
+      q.set_query('npc', t.loser.npc);
+      q.run_molang(t.loser.npc.config.quest_update_on_player_wins);
+    });
+  };
+
   t.loser.npc.config.toggle_battle_cooldown && !q.is_blank(t.loser.npc.config.battle_cooldown_time) ? {
     for_each(t.player_winner, c.player_winners, {
       v.player = t.player_winner.player;
@@ -22,8 +30,7 @@ for_each(t.loser, c.npc_losers, {
       v.npc = t.loser.npc;
       q.set_query('player', t.player_winner.player);
       q.set_query('npc', t.loser.npc);
-      t.modifier = q.player.data.ng.modifier;
-      q.run_command('deposit ' + (q.npc.config.battle_reward_amount_p * (t.modifier != 0 ? t.modifier : 1)) + ' impactor:pokedollars ' + q.player.username);
+      q.run_command('deposit ' + (q.npc.config.battle_reward_amount_p * (q.player.data.ng.modifier ?? 1)) + ' impactor:pokedollars ' + q.player.username);
       q.player.tell('§a§lYou have received ₽' + t.loser.npc.config.battle_reward_amount_p + ' for winning!§r');
     });
   };

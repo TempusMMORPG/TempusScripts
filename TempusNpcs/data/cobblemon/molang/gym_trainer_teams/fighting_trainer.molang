@@ -1,0 +1,91 @@
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true level=' + (q.player.party.highest_level - 2);
+
+t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
+
+t.data == 'EASY' ? {
+ t.1 = 'mankey held_item=cobblemon:oran_berry' + t.constants;
+ t.2 = 'machop held_item=cobblemon:oran_berry' + t.constants;
+ t.3 = 'farfetchd galarian held_item=cobblemon:oran_berry' + t.constants;
+ t.4 = 'sneasel hisuian held_item=cobblemon:oran_berry' + t.constants;
+ t.5 = 'tyrogue held_item=cobblemon:oran_berry' + t.constants;
+ t.6 = 'combusken held_item=cobblemon:oran_berry' + t.constants;
+ t.7 = 'makuhita held_item=cobblemon:oran_berry' + t.constants;
+ t.8 = 'timburr held_item=cobblemon:oran_berry' + t.constants;
+ t.9 = 'riolu held_item=cobblemon:oran_berry' + t.constants;
+ t.10 = 'pignite held_item=cobblemon:oran_berry' + t.constants;
+ t.11 = 'scraggy held_item=cobblemon:oran_berry' + t.constants;
+ t.12 = 'crabrawler held_item=cobblemon:oran_berry' + t.constants;
+ t.13 = 'stufful held_item=cobblemon:oran_berry' + t.constants;
+ t.14 = 'monferno held_item=cobblemon:oran_berry' + t.constants;
+ loop(2, { t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7, t.8, t.9, t.10, t.11, t.12, t.13, t.14);
+ q.party.add_by_properties(t.result)});
+ return 1;
+};
+
+t.data == 'MEDIUM' ? {
+ t.1 = 'primeape held_item=cobblemon:sitrus_berry' + t.constants;
+ t.2 = 'poliwrath held_item=cobblemon:sitrus_berry' + t.constants;
+ t.3 = 'machoke held_item=cobblemon:sitrus_berry' + t.constants;
+ t.4 = 'hitmonlee held_item=cobblemon:sitrus_berry' + t.constants;
+ t.5 = 'hitmonchan held_item=cobblemon:sitrus_berry' + t.constants;
+ t.6 = 'hitmontop held_item=cobblemon:sitrus_berry' + t.constants;
+ t.7 = 'heracross held_item=cobblemon:sitrus_berry' + t.constants;
+ t.8 = 'blaziken held_item=cobblemon:sitrus_berry' + t.constants;
+ t.9 = 'breloom held_item=cobblemon:sitrus_berry' + t.constants;
+ t.10 = 'hariyama held_item=cobblemon:sitrus_berry' + t.constants;
+ t.11 = 'infernape held_item=cobblemon:sitrus_berry' + t.constants;
+ t.12 = 'lucario held_item=cobblemon:sitrus_berry' + t.constants;
+ t.13 = 'gallade held_item=cobblemon:sitrus_berry' + t.constants;
+ t.14 = 'emboar held_item=cobblemon:sitrus_berry' + t.constants;
+ t.15 = 'gurdurr held_item=cobblemon:sitrus_berry' + t.constants;
+ t.16 = 'lilligant hisuian held_item=cobblemon:sitrus_berry' + t.constants;
+ t.17 = 'scrafty held_item=cobblemon:sitrus_berry' + t.constants;
+ t.18 = 'chesnaught held_item=cobblemon:sitrus_berry' + t.constants;
+ t.19 = 'decidueye hisuian held_item=cobblemon:sitrus_berry' + t.constants;
+ t.20 = 'crabominable held_item=cobblemon:sitrus_berry' + t.constants;
+ t.21 = 'bewear held_item=cobblemon:sitrus_berry' + t.constants;
+ t.22 = 'hakamoo held_item=cobblemon:sitrus_berry' + t.constants;
+ t.23 = 'sirfetchd held_item=cobblemon:sitrus_berry' + t.constants;
+ t.24 = 'falinks held_item=cobblemon:sitrus_berry' + t.constants;
+ t.25 = 'sneasler held_item=cobblemon:sitrus_berry' + t.constants;
+ t.26 = 'quaquaval held_item=cobblemon:sitrus_berry' + t.constants;
+ t.27 = 'flamigo held_item=cobblemon:sitrus_berry' + t.constants;
+loop(3, { t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7, t.8, t.9, t.10, t.11, t.12, t.13, t.14, t.15, t.16, t.17, t.18, t.19, t.20, t.21, t.22, t.23, t.24, t.25, t.26, t.27);
+ q.party.add_by_properties(t.result)});
+ return 1;
+};
+
+t.data == 'HARD' ? {
+ t.1 = 'annihilape held_item=cobblemon:sitrus_berry' + t.constants;
+ t.2 = 'poliwrath held_item=cobblemon:sitrus_berry' + t.constants;
+ t.3 = 'machamp held_item=cobblemon:sitrus_berry' + t.constants;
+ t.4 = 'hitmonlee held_item=cobblemon:sitrus_berry' + t.constants;
+ t.5 = 'hitmonchan held_item=cobblemon:sitrus_berry' + t.constants;
+ t.6 = 'hitmontop held_item=cobblemon:sitrus_berry' + t.constants;
+ t.7 = 'heracross held_item=cobblemon:sitrus_berry' + t.constants;
+ t.8 = 'blaziken held_item=cobblemon:sitrus_berry' + t.constants;
+ t.9 = 'breloom held_item=cobblemon:sitrus_berry' + t.constants;
+ t.10 = 'hariyama held_item=cobblemon:sitrus_berry' + t.constants;
+ t.11 = 'infernape held_item=cobblemon:sitrus_berry' + t.constants;
+ t.12 = 'lucario held_item=cobblemon:sitrus_berry' + t.constants;
+ t.13 = 'gallade held_item=cobblemon:sitrus_berry' + t.constants;
+ t.14 = 'emboar held_item=cobblemon:sitrus_berry' + t.constants;
+ t.15 = 'conkeldurr held_item=cobblemon:sitrus_berry' + t.constants;
+ t.16 = 'lilligant hisuian held_item=cobblemon:sitrus_berry' + t.constants;
+ t.17 = 'scrafty held_item=cobblemon:sitrus_berry' + t.constants;
+ t.18 = 'chesnaught held_item=cobblemon:sitrus_berry' + t.constants;
+ t.19 = 'decidueye hisuian held_item=cobblemon:sitrus_berry' + t.constants;
+ t.20 = 'crabominable held_item=cobblemon:sitrus_berry' + t.constants;
+ t.21 = 'bewear held_item=cobblemon:sitrus_berry' + t.constants;
+ t.22 = 'kommoo held_item=cobblemon:sitrus_berry' + t.constants;
+ t.23 = 'sirfetchd held_item=cobblemon:sitrus_berry' + t.constants;
+ t.24 = 'falinks held_item=cobblemon:sitrus_berry' + t.constants;
+ t.25 = 'sneasler held_item=cobblemon:sitrus_berry' + t.constants;
+ t.26 = 'quaquaval held_item=cobblemon:sitrus_berry' + t.constants;
+ t.27 = 'flamigo held_item=cobblemon:sitrus_berry' + t.constants;
+loop(4, { t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7, t.8, t.9, t.10, t.11, t.12, t.13, t.14, t.15, t.16, t.17, t.18, t.19, t.20, t.21, t.22, t.23, t.24, t.25, t.26, t.27);
+ q.party.add_by_properties(t.result)});
+ return 1;
+};
+
+return 0;

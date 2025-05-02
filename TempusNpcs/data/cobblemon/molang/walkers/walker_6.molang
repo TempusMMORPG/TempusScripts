@@ -30,6 +30,7 @@ t.z1 = q.entity.config.z1;
 
 q.entity.data.prev_target_pos == 0 ? { 
     q.entity.data.prev_target_pos = 1; 
+    q.entity.save_data();
 };
 
 t.is_too_far_from_pos1 = q.entity.distance_to_pos(t.x1, t.y1, t.z1) > t.pos_radius;
@@ -53,35 +54,41 @@ t.should_move_to_pos6 && !t.is_too_far_from_pos6 ? {
 t.should_move_to_pos6 ? {
     q.entity.walk_to(t.x6, t.y6, t.z6, t.speed);
     q.entity.data.prev_target_pos = 6;
+    q.entity.save_data();
     return 1;
 };
 
 t.should_move_to_pos5 ? {
     q.entity.walk_to(t.x5, t.y5, t.z5, t.speed);
     q.entity.data.prev_target_pos = 5;
+    q.entity.save_data();
     return 1;
 };
 
 t.should_move_to_pos4 ? {
     q.entity.walk_to(t.x4, t.y4, t.z4, t.speed);
     q.entity.data.prev_target_pos = 4;
+    q.entity.save_data();
     return 1;
 };
 
 t.should_move_to_pos3 ? {
     q.entity.walk_to(t.x3, t.y3, t.z3, t.speed);
     q.entity.data.prev_target_pos = 3;
+    q.entity.save_data();
     return 1;
 };
 
 t.should_move_to_pos2 ? {
     q.entity.walk_to(t.x2, t.y2, t.z2, t.speed);
     q.entity.data.prev_target_pos = 2;
+    q.entity.save_data();
     return 1;
 };
 
 t.should_move_to_pos1 ? {
     q.entity.walk_to(t.x1, t.y1, t.z1, t.speed);
     q.entity.data.prev_target_pos = 1;
+    q.entity.save_data();
     return 1;
 };

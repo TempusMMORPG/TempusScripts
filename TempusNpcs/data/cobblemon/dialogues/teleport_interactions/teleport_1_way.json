@@ -53,7 +53,7 @@
                         "value": "buy",
                         "action": [
                             "q.dialogue.close();",
-                            "q.run_command('shop other ' + q.player.username + ' ' + q.npc.config.shop_command + ' false');"
+                            "q.run_command(q.npc.config.shop_command + ' ' + q.player.username);"
                         ]
                     },
                     {

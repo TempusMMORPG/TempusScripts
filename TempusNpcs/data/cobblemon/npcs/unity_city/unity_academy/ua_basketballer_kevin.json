@@ -4,10 +4,11 @@
       "cobblemon:base_npc",
       "cobblemon:looks_in_one_direction",
       "cobblemon:battle_npc",
+      "cobblemon:battle_quest_npc",
       "cobblemon:battle_reward_pokedollars"
     ],
     "names": [
-      "§lUA Basketballer§r"
+      "§lBasketballer Kevin§r"
     ],
     "interaction": {
       "type": "dialogue",

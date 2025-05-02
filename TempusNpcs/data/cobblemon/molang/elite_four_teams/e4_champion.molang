@@ -1,0 +1,8 @@
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true';
+
+q.party.add_by_properties('rillaboom moves=grassyglide,lowkick,knockoff,uturn nature=adamant held_item=cobblemon:choice_band ability=grassysurge hp_ev=252 attack_ev=252 speed_ev=4 level=100' + t.constants);
+q.party.add_by_properties('ursaluna moves=headlongrush,firepunch,facade,swordsdance nature=adamant held_item=cobblemon:flame_orb ability=guts hp_ev=252 attack_ev=252 special_defence_ev=4 level=100' + t.constants);
+q.party.add_by_properties('aegislash moves=shadowball,flashcannon,shadowsneak,steelbeam nature=quiet held_item=cobblemon:choice_specs ability=stancechange hp_ev=252 special_attack_ev=252 attack_ev=4 level=100' + t.constants);
+q.party.add_by_properties('kommoo moves=clangoroussoul,clangingscales,vacuumwave,flamethrower nature=modest held_item=cobblemon:throatspray ability=bulletproof special_attack_ev=252 speed_ev=252 defence_ev=4 level=100' + t.constants);
+q.party.add_by_properties('metagross moves=heavyslam,psychicfangs,earthquake,bulletpunch nature=adamant held_item=cobblemon:leftovers ability=clearbody hp_ev=252 attack_ev=252 defence_ev=4 level=100' + t.constants);
+q.party.add_by_properties('heracross moves=trailblaze,rockblast,closecombat,pinmissile nature=adamant ability=skilllink hp_ev=252 attack_ev=252 special_defence_ev=4 mega level=100' + t.constants);

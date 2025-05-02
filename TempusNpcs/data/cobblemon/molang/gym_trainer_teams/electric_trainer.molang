@@ -1,0 +1,78 @@
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true level=' + (q.player.party.highest_level - 2);
+
+t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
+
+t.data == 'EASY' ? {
+ t.1 = 'wattrel held_item=cobblemon:oran_berry' + t.constants;
+ t.2 = 'magnemite held_item=cobblemon:oran_berry' + t.constants;
+ t.3 = 'voltorb held_item=cobblemon:oran_berry' + t.constants;
+ t.4 = 'voltorb hisuian held_item=cobblemon:oran_berry' + t.constants;
+ t.5 = 'elekid held_item=cobblemon:oran_berry' + t.constants;
+ t.6 = 'chinchou held_item=cobblemon:oran_berry' + t.constants;
+ t.7 = 'flaaffy held_item=cobblemon:oran_berry' + t.constants;
+ t.8 = 'plusle held_item=cobblemon:oran_berry' + t.constants;
+ t.9 = 'minun held_item=cobblemon:oran_berry' + t.constants;
+ t.10 = 'luxio held_item=cobblemon:oran_berry' + t.constants;
+ t.11 = 'pachirisu held_item=cobblemon:oran_berry' + t.constants;
+ t.12 = 'emolga held_item=cobblemon:oran_berry' + t.constants;
+ t.13 = 'joltik held_item=cobblemon:oran_berry' + t.constants;
+ t.14 = 'yamper held_item=cobblemon:oran_berry' + t.constants;
+ t.15 = 'pincurchin held_item=cobblemon:oran_berry' + t.constants;
+ loop(2, { t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7, t.8, t.9, t.10, t.11, t.12, t.13, t.14, t.15);
+ q.party.add_by_properties(t.result)});
+ return 1;
+};
+
+t.data == 'MEDIUM' ? {
+ t.1 = 'raichu held_item=cobblemon:sitrus_berry' + t.constants;
+ t.2 = 'emolga held_item=cobblemon:sitrus_berry' + t.constants;
+ t.3 = 'magnezone held_item=cobblemon:sitrus_berry' + t.constants;
+ t.4 = 'electrode held_item=cobblemon:sitrus_berry' + t.constants;
+ t.5 = 'electrode hisuian held_item=cobblemon:sitrus_berry' + t.constants;
+ t.6 = 'electivire held_item=cobblemon:sitrus_berry' + t.constants;
+ t.7 = 'jolteon held_item=cobblemon:sitrus_berry' + t.constants;
+ t.8 = 'lanturn held_item=cobblemon:sitrus_berry' + t.constants;
+ t.9 = 'ampharos held_item=cobblemon:sitrus_berry' + t.constants;
+ t.10 = 'plusle held_item=cobblemon:sitrus_berry' + t.constants;
+ t.11 = 'minun held_item=cobblemon:sitrus_berry' + t.constants;
+ t.12 = 'luxray held_item=cobblemon:sitrus_berry' + t.constants;
+ t.13 = 'pachirisu held_item=cobblemon:sitrus_berry' + t.constants;
+ t.14 = 'rotom held_item=cobblemon:sitrus_berry' + t.constants;
+ t.15 = 'galvantula held_item=cobblemon:sitrus_berry' + t.constants;
+ t.16 = 'boltund held_item=cobblemon:sitrus_berry' + t.constants;
+ t.17 = 'pincurchin held_item=cobblemon:sitrus_berry' + t.constants;
+ t.18 = 'dracozolt held_item=cobblemon:sitrus_berry' + t.constants;
+ t.19 = 'dracovish held_item=cobblemon:sitrus_berry' + t.constants;
+ t.20 = 'kilowattrel held_item=cobblemon:sitrus_berry' + t.constants;
+loop(3, { t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7, t.8, t.9, t.10, t.11, t.12, t.13, t.14, t.15, t.16, t.17, t.18, t.19, t.20);
+ q.party.add_by_properties(t.result)});
+ return 1;
+};
+
+t.data == 'HARD' ? {
+ t.1 = 'raichu held_item=cobblemon:sitrus_berry' + t.constants;
+ t.2 = 'emolga held_item=cobblemon:sitrus_berry' + t.constants;
+ t.3 = 'magnezone held_item=cobblemon:sitrus_berry' + t.constants;
+ t.4 = 'electrode held_item=cobblemon:sitrus_berry' + t.constants;
+ t.5 = 'electrode hisuian held_item=cobblemon:sitrus_berry' + t.constants;
+ t.6 = 'electivire held_item=cobblemon:sitrus_berry' + t.constants;
+ t.7 = 'jolteon held_item=cobblemon:sitrus_berry' + t.constants;
+ t.8 = 'lanturn held_item=cobblemon:sitrus_berry' + t.constants;
+ t.9 = 'ampharos held_item=cobblemon:sitrus_berry' + t.constants;
+ t.10 = 'plusle held_item=cobblemon:sitrus_berry' + t.constants;
+ t.11 = 'minun held_item=cobblemon:sitrus_berry' + t.constants;
+ t.12 = 'luxray held_item=cobblemon:sitrus_berry' + t.constants;
+ t.13 = 'pachirisu held_item=cobblemon:sitrus_berry' + t.constants;
+ t.14 = 'rotom held_item=cobblemon:sitrus_berry' + t.constants;
+ t.15 = 'galvantula held_item=cobblemon:sitrus_berry' + t.constants;
+ t.16 = 'boltund held_item=cobblemon:sitrus_berry' + t.constants;
+ t.17 = 'pincurchin held_item=cobblemon:sitrus_berry' + t.constants;
+ t.18 = 'dracozolt held_item=cobblemon:sitrus_berry' + t.constants;
+ t.19 = 'dracovish held_item=cobblemon:sitrus_berry' + t.constants;
+ t.20 = 'kilowattrel held_item=cobblemon:sitrus_berry' + t.constants;
+loop(4, { t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7, t.8, t.9, t.10, t.11, t.12, t.13, t.14, t.15, t.16, t.17, t.18, t.19, t.20);
+ q.party.add_by_properties(t.result)});
+ return 1;
+};
+
+return 0;

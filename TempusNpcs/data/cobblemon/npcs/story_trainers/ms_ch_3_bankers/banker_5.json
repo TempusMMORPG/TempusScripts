@@ -1,0 +1,82 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",    
+    "names": [
+      "UBank Banker"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:battle_npc",
+      "cobblemon:looks_in_one_direction",
+      "cobblemon:battle_reward_pokedollars"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:banker_5"
+    },
+    "config": [
+        {
+          "variableName": "on_player_wins",
+          "displayName": "npc.variable.on_player_wins.name",
+          "description": "npc.variable.on_player_wins.desc",
+          "type": "TEXT",
+          "defaultValue": "q.player.data.banker_5_defeated = true;q.player.save_data();"
+        }
+      ],
+    "skill": 5,
+    "party": {
+      "type": "pool",
+      "minPokemon": 3,
+      "maxPokemon": 4,
+      "isStatic": false,
+      "pool": [
+        {
+            "pokemon": "meowth level=40 held_item=cobblemon:silk_scarf hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 20,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "persian level=40 held_item=cobblemon:silk_scarf hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 20,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "meowth alolan level=40 held_item=cobblemon:black_glasses hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 20,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "persian alolan level=40 held_item=cobblemon:black_glasses hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 20,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "gimmighoul level=40 held_item=cobblemon:spell_tag hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 15,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "gholdengo level=40 held_item=cobblemon:spell_tag hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 5,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "sableye level=40 held_item=cobblemon:spell_tag hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 15,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        },
+        {
+            "pokemon": "carbink level=40 held_item=cobblemon:hard_stone hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true",
+            "weight": 15,
+            "selectableTimes": 1,
+            "levelVariation": "2"
+        }
+      ]
+    }
+}

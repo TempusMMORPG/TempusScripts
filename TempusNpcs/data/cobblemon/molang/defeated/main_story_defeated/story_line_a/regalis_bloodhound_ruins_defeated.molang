@@ -1,5 +1,0 @@
-q.player.data.regalis_bloodhound_ruins_defeated = true;
-q.player.save_data();
-q.run_command('openguiscreen fabian_note ' + q.player.username);
-q.run_command('lp user ' + q.player.username + ' permission set tempus.quest_fabian_note true');
-q.player.tell(q.npc.name + ': How could this be?! Prince Fabian... I\'m sorry...');

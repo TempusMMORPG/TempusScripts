@@ -1,8 +1,0 @@
-t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true level=' + (q.player.party.highest_level);
-
-q.party.add_by_properties('tyranitar mega moves=stealthrock,knockoff,stoneedge,icepunch nature=adamant held_item=mega_showdown:tyranitarite ability=sandstream attack_ev=252 special_defence_ev=4 speed_ev=252' + t.constants);
-q.party.add_by_properties('sirfetchd moves=closecombat,bravebird,knockoff,poisonjab nature=jolly held_item=cobblemon:choice_band ability=scrappy attack_ev=252 defence_ev=4 speed_ev=252' + t.constants);
-q.party.add_by_properties('corviknight moves=roost,uturn,bodypress,bravebird nature=impish held_item=cobblemon:rocky_helmet ability=mirrorarmor hp_ev=248 attack_ev=8 defence_ev=252' + t.constants);
-q.party.add_by_properties('aegislash moves=shadowball,closecombat,flashcannon,shadowsneak nature=quiet held_item=cobblemon:spell_tag ability=stancechange hp_ev=248 attack_ev=8 special_attack_ev=252' + t.constants);
-q.party.add_by_properties('scizor moves=bulletpunch,swordsdance,roost,closecombat nature=adamant held_item=cobblemon:life_orb ability=technician hp_ev=248 attack_ev=252 special_defence_ev=8' + t.constants);
-q.party.add_by_properties('nidoking moves=icebeam,earthpower,sludgewave,flamethrower nature=timid held_item=cobblemon:life_orb ability=sheerforce special_attack_ev=252 special_defence_ev=4 speed_ev=252' + t.constants);

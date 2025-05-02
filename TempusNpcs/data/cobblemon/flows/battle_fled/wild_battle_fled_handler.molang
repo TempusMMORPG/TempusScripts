@@ -1,6 +1,0 @@
-c.battle.is_pvw == false ? return 0;
-
-for_each(t.player, c.players, {
-    v.player = t.player.player;
-    q.set_query('player', t.player.player);
-});

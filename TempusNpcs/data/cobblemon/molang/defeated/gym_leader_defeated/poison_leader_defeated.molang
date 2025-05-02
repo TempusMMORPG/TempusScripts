@@ -1,4 +1,4 @@
 q.run_script('cobblemon:gs_gym_leader_progression');
 q.player.data.poison_gym_defeated = true;
 q.player.save_data();
-q.player.tell(q.npc.name + ': Hah... Well, at least that\'s another thing I don\'t need to worry about. Good fight, though.');
+q.player.tell(q.npc.name + ': Hah...well, at least that\'s another thing I don\'t need to worry about. Good fight, though.');
