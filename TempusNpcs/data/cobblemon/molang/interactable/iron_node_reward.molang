@@ -1,0 +1,54 @@
+t.roll = math.random_integer(1, 100);
+
+t.roll <= 15 && t.roll >= 1 ? {
+    q.run_command('give ' + q.player.username + ' minecraft:iron_nugget 3');
+    q.player.tell('§aYou have mined the node! You found §d3x Iron Nuggets§a!');
+    return 1;
+};
+
+t.roll <= 45 && t.roll > 15 ? {
+    q.run_command('give ' + q.player.username + ' minecraft:iron_ingot 1');
+    q.player.tell('§aYou have mined the node! You found §d1x Iron Ingot§a!');
+    return 1;
+};
+
+t.roll <= 60 && t.roll > 45 ? {
+    q.run_command('give ' + q.player.username + ' minecraft:iron_ingot 2');
+    q.player.tell('§aYou have mined the node! You found §d2x Iron Ingots§a!');
+    return 1;
+};
+
+t.roll <= 65 && t.roll > 60 ? {
+    q.run_command('give ' + q.player.username + ' minecraft:iron_ingot 3');
+    q.player.tell('§aYou have mined the node! You found §d3x Iron Ingots§a!');
+    return 1;
+};
+
+t.pokelevel1 = math.random_integer(5, 10);
+t.pokelevel2 = math.random_integer(5, 10);
+t.pokelevel3 = math.random_integer(5, 10);
+
+t.roll <= 85 && t.roll > 65 ? {
+    q.run_command('pokespawnat ' + q.player.x + ' ' + q.player.y + ' ' + q.player.z + ' geodude lvl=' + t.pokelevel1);
+    q.player.tell('§aYou have mined the node! A wild §dGeodude§a appeared!');
+    return 1;
+};
+
+t.roll <= 95 && t.roll > 85 ? {
+    q.run_command('pokespawnat ' + q.player.x + ' ' + q.player.y + ' ' + q.player.z + ' aron lvl=' + t.pokelevel2);
+    q.player.tell('§aYou have mined the node! A wild §dAron§a appeared!');
+    return 1;
+};
+
+t.roll <= 99 && t.roll > 95 ? {
+    q.player.tell('§cYou found nothing!');
+    return 1;
+};
+
+t.roll == 100 ? {
+    q.run_command('pokespawnat ' + q.player.x + ' ' + q.player.y + ' ' + q.player.z + ' beldum lvl=' + t.pokelevel3);
+    q.player.tell('§aYou have mined the node! A wild §dBeldum§a appeared!');
+    return 1;
+};
+
+return 0;

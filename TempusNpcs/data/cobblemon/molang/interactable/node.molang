@@ -1,0 +1,51 @@
+!c.player.main_held_item.is_in('minecraft:pickaxes') ? {
+    c.player.tell('§cYou need a §6Pickaxe §cto mine this');
+    return 0;
+};
+
+t.time = q.system_time_millis;
+t.cooldown_time = c.player.get_npc_variable(q.npc, 'cooldown_time');
+
+t.time < t.cooldown_time ? {
+    t.remaining_time = t.cooldown_time - t.time;
+    t.hours = math.floor(t.remaining_time / 3600000);
+    t.minutes = math.floor(math.mod(t.remaining_time, 3600000) / 60000);
+    t.seconds = math.floor(math.mod(t.remaining_time, 60000) / 1000);
+    c.player.tell('§cYou mined this node already! Come back in: ' + t.hours + 'h ' + t.minutes + 'm ' + t.seconds + 's');
+    return 0;
+};
+
+q.set_query('player', c.player);
+
+t.max_health = q.npc.config.node_health;
+t.node_health = q.player.get_npc_variable(q.npc.uuid, 'node_health');
+t.health = t.max_health;
+
+t.node_health != 0 ? {
+    t.health = t.node_health;
+};
+
+t.health = t.health - 1;
+q.run_command('playsound minecraft:block.deepslate.place master ' + q.player.username + ' ' + q.npc.x + ' ' + q.npc.y + ' ' + q.npc.z);
+
+q.npc.has_aspect('iron_node') ? {
+    q.npc.world.spawn_bedrock_particles('cobblemon:iron_mining', q.npc.x, q.npc.y, q.npc.z);
+};
+
+q.npc.has_aspect('copper_node') ? {
+    q.npc.world.spawn_bedrock_particles('cobblemon:copper_mining', q.npc.x, q.npc.y, q.npc.z);
+};
+
+t.health <= 0 ? {
+    q.run_script(q.npc.config.reward_pool);
+    q.npc.play_animation('mined', q.player.uuid);
+    q.run_command('playsound cobblemon:block.display_case.add_item master ' + q.player.username + ' ' + q.npc.x + ' ' + q.npc.y + ' ' + q.npc.z);
+    t.health = t.max_health;
+    t.cooldown = t.time + math.floor(q.npc.config.node_cooldown * 3600000);
+    t.cooldown_time = q.player.set_npc_variable(q.npc.uuid, 'cooldown_time', t.cooldown, true);
+} : {
+    q.npc.play_animation('hit', q.player.uuid);
+    q.player.tell('§aMining: ' + q.npc.name + ' §6' + t.health + ' §ahealth left!');
+};
+
+q.player.set_npc_variable(q.npc.uuid, 'node_health', t.health);

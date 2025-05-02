@@ -1,0 +1,31 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",    
+    "names": [
+      "Regalis Bloodhound Rhys"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:battle_npc",
+      "cobblemon:looks_in_one_direction",
+      "cobblemon:battle_reward_pokedollars"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:regalis_bloodhound_ruins"
+    },
+    "config": [
+        {
+          "variableName": "on_player_wins",
+          "displayName": "npc.variable.on_player_wins.name",
+          "description": "npc.variable.on_player_wins.desc",
+          "type": "TEXT",
+          "defaultValue": "q.run_script('cobblemon:regalis_bloodhound_ruins_defeated');"
+        }
+      ],
+      "skill": 5,
+      "party": {
+          "type": "script",
+          "script": "cobblemon:regalis_bloodhound_ch2",
+          "isStatic": false
+      }
+  }

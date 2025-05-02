@@ -1,1 +1,0 @@
-q.run_command('give ' + q.player.username + ' minecraft:trial_key[custom_name=\'{"text":"Regalis Key","italic":false,"color":"aqua"}\',lore=[\'{"text":"--<Quest Item>--","italic":false,"color":"gold"}\',\'{"text":"Key used to unlock the secret vault of the Regalis (Which one is real?)","italic":false}\']]');

@@ -1,0 +1,17 @@
+t.constants = ' level=40 hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 uncatchable=true';
+
+t.1 = 'meowth held_item=cobblemon:silk_scarf' + t.constants;
+t.2 = 'persian held_item=cobblemon:silk_scarf' + t.constants;
+t.3 = 'meowth alolan held_item=cobblemon:black_glasses' + t.constants;
+t.4 = 'persian alolan held_item=cobblemon:black_glasses' + t.constants;
+t.5 = 'gimmighoul held_item=cobblemon:spell_tag' + t.constants;
+t.6 = 'gholdengo held_item=cobblemon:spell_tag' + t.constants;
+t.7 = 'sableye held_item=cobblemon:spell_tag' + t.constants;
+t.8 = 'carbink held_item=cobblemon:hard_stone' + t.constants;
+
+t.party_size = math.random_integer(3, 4);
+
+loop(t.party_size, {
+  t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7, t.8);
+  q.party.add_by_properties(t.result);
+});

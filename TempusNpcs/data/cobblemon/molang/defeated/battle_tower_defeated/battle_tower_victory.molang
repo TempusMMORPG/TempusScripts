@@ -1,0 +1,9 @@
+'Executes when the battle tower boss is defeated';
+
+q.player.data.battle_tower_stage >= 4 ? {
+    q.player.data.battle_tower_stage = 4;
+} : {
+    q.player.data.battle_tower_stage = q.player.data.battle_tower_stage + 1;
+};
+
+q.player.save_data();

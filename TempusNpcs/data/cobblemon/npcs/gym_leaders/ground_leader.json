@@ -1,18 +1,17 @@
 {
   "resourceIdentifier": "cobblemon:global_skins",    
   "names": [
-    "§lGround Gym Leader§r"
+    "§lDr. Jones§r"
   ],
   "presets": [
     "cobblemon:base_npc",
     "cobblemon:battle_npc",
-    "cobblemon:battle_quest_npc",
     "cobblemon:looks_in_one_direction",
     "cobblemon:battle_reward_pokedollars"
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:flying_gym_interaction"
+    "dialogue": "cobblemon:ground_gym_interaction"
   },
   "config": [
     {
