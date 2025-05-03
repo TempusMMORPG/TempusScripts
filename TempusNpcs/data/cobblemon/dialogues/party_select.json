@@ -1,0 +1,107 @@
+{
+    "initializationAction": [
+        "v.slot1 = q.player.party.get_pokemon(0);",
+        "v.slot2 = q.player.party.get_pokemon(1);",
+        "v.slot3 = q.player.party.get_pokemon(2);",
+        "v.slot4 = q.player.party.get_pokemon(3);",
+        "v.slot5 = q.player.party.get_pokemon(4);",
+        "v.slot6 = q.player.party.get_pokemon(5);"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "select",
+            "speaker": "player",
+            "lines": [
+                "Hmm, which Pokemon should I sacrifice?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot1.species.name;"
+                        },
+                        "isVisible": "v.slot1 != 0",
+                        "value": "s1",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot2.species.name;"
+                        },
+                        "isVisible": "v.slot2 != 0",
+                        "value": "s1",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot3.species.name;"
+                        },
+                        "isVisible": "v.slot3 != 0",
+                        "value": "s1",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot4.species.name;"
+                        },
+                        "isVisible": "v.slot4 != 0",
+                        "value": "s1",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot5.species.name;"
+                        },
+                        "isVisible": "v.slot5 != 0",
+                        "value": "s1",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot6.species.name;"
+                        },
+                        "isVisible": "v.slot6 != 0",
+                        "value": "s1",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
