@@ -29,11 +29,11 @@ t.health = t.health - 1;
 q.run_command('playsound minecraft:block.deepslate.place master ' + q.player.username + ' ' + q.npc.x + ' ' + q.npc.y + ' ' + q.npc.z);
 
 q.npc.has_aspect('iron_node') ? {
-    q.npc.world.spawn_bedrock_particles('cobblemon:iron_mining', q.npc.x, q.npc.y, q.npc.z);
+    q.npc.world.spawn_bedrock_particles('cobblemon:iron_mining', q.npc.x, q.npc.y, q.npc.z, q.player.uuid);
 };
 
 q.npc.has_aspect('copper_node') ? {
-    q.npc.world.spawn_bedrock_particles('cobblemon:copper_mining', q.npc.x, q.npc.y, q.npc.z);
+    q.npc.world.spawn_bedrock_particles('cobblemon:copper_mining', q.npc.x, q.npc.y, q.npc.z, q.player.uuid);
 };
 
 t.health <= 0 ? {
