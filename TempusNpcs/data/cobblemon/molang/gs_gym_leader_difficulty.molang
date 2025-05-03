@@ -1,14 +1,16 @@
 'Checks gym progression';
 
-q.player.data.gym_stage < 6 ? {
+t.stage = q.player.data.gym_stage;
+
+t.stage < 6 ? {
     return 'EASY';
 };
 
-q.player.data.gym_stage < 12 && q.player.data.gym_stage > 5 ? {
+t.stage < 12 && t.stage > 5 ? {
     return 'MEDIUM';
 };
 
-q.player.data.gym_stage < 18 && q.player.data.gym_stage > 11 ? {
+t.stage < 18 && t.stage > 11 ? {
     return 'HARD';
 };
 

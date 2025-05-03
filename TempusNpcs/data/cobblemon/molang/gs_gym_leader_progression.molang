@@ -1,9 +1,12 @@
 'Executes when a gym leader is defeated';
 
-q.player.data.gym_stage >= 18 ? {
-    q.player.data.gym_stage = 18;
+t.stage = q.player.data.gym_stage;
+
+t.stage >= 18 ? {
+    t.stage = 18;
 } : {
-    q.player.data.gym_stage = q.player.data.gym_stage + 1;
+    t.stage = t.stage + 1;
 };
 
+q.player.data.gym_stage = t.stage;
 q.player.save_data();
