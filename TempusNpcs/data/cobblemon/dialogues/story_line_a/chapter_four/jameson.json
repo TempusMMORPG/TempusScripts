@@ -1,0 +1,132 @@
+{
+    "initializationAction": [
+        "q.player.data.dialogue.dennis_request_1 && q.player.data.dialogue.jameson == false ? q.dialogue.set_page('1');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "farewell",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "1",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "You have five minutes to get the hell out of here before I sic my Pokemon on you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "WAIT!",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "2",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "HUH? Talkin' back to me, SHITHEAD?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Dennis sent me!",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "3",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Oh? Well, why didn't you start with that? You have the Machoke Belt, right?"
+            ],
+            "input": "q.dialogue.set_page('4');"
+        },
+        {
+            "id": "4",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Ah, good. Well, I'll gladly take that off your hands."
+            ],
+            "input": "q.dialogue.set_page('5');"
+        },
+        {
+            "id": "5",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": "q.dialogue.set_page('6');"
+        },
+        {
+            "id": "6",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Alright, give Dennis my regards."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Thanks for not killing me",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('7');",
+                            "q.player.data.dialogue.jameson = true; q.player.save_data();",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 7E9AEAA7FFEEFA8B');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "7",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I have my moments."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

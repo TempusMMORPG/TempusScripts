@@ -1,0 +1,112 @@
+{
+    "initializationAction": [
+        "q.player.data.dialogue.jack ? q.dialogue.set_page('5');",
+        "q.player.data.dialogue.dennis_request_2 && q.player.data.dialogue.jack == false ? q.dialogue.set_page('1');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "farewell",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "1",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Ah, you must be the person Dennis was talking about. Glad to meet your acquaintance."
+            ],
+            "input": "q.dialogue.set_page('2');"
+        },
+        {
+            "id": "2",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Well, I'm glad this is not a stealth mission, because we would be DEAD by now. Especially with how you're dressed and all."
+            ],
+            "input": "q.dialogue.set_page('3');"
+        }, 
+        {
+            "id": "3",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Anyway, this place is crawling with government agents. I will secure the exit for you, but you will need to find the material."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Alright",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "4",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Be prepared to fight. I wouldn't be surprised if they have a few tricks up their sleeves either."
+            ],
+            "input": [
+                "q.dialogue.set_page('5');",
+                "q.player.data.dialogue.jack = true; q.player.save_data();"
+            ]
+        },
+        {
+            "id": "5",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Once you're ready to head into the vault, let me know."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Ready",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.close();",
+                            "q.run_command('tp ' + q.player.username + ' -1294.5 64 1537.5 90 0');"
+                        ]
+                    },
+                    {
+                        "text": "Actually...",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

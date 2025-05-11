@@ -5,10 +5,10 @@
         "cobblemon:looks_in_one_direction"
     ],
     "names": [
-        "§lDan the Museum Man§r"
+        "§lJameson§r"
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:daniel"
+        "dialogue": "cobblemon:jameson"
     }
 }

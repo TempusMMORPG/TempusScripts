@@ -1,0 +1,276 @@
+{
+    "initializationAction": [
+        "q.player.data.dialogue.dennis_request_2 ? q.dialogue.set_page('14');",
+        "q.player.data.dialogue.jameson && q.player.data.dialogue.dennis_request_2 == false ? q.dialogue.set_page('7');",
+        "q.player.data.dialogue.dennis_request_1 && q.player.data.dialogue.jameson == false ? q.dialogue.set_page('6');",
+        "q.player.data.a_ch4_completed && q.player.data.dialogue.dennis_request_1 == false ? q.dialogue.set_page('1');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "farewell",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "1",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "What are you doing here? Do you need something?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "The Dialga Key",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "2",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Why do you need to know? Are you a cop?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "No, why?",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "3",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I don't talk to cops, so I'll need you do a few things for me to prove yourself."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Okaaay...",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "4",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I need you to do two jobs for me..."
+            ],
+            "input": "q.dialogue.set_page('5');"
+        },
+        {
+            "id": "5",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I need you to take this Machoke Belt to the underground fighting ring in Fumia and give it to someone named Jameson."
+            ],
+            "input": [
+                "q.dialogue.set_page('6');",
+                "q.player.data.dialogue.dennis_request_1 = true; q.player.save_data();",
+                "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 3A3F3EA51425EC36');"
+            ]
+        },
+        {
+            "id": "6",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Once you are able to give this to Jameson, we will step up your game."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "I'll be back",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "7",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Oh, you're back? Jameson just messaged me, thanks for delivering the Machoke Belt."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "What's next?",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('8');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "8",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "There is no easy way to say this, but I need you to steal something."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "WHAT",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('9');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "9",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Calm down, it's just a simple job of breaking into a government vault, nothing too crazy."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "HUH",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('10');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "10",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Listen, do you want the key or not?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "FINE",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('11');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "11",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Good. Anyway, I need some genetic material from a Pokemon that is being held near Lone Tree."
+            ],
+            "input": "q.dialogue.set_page('12');"
+        },
+        {
+            "id": "12",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I got a guy who will assist you in breaking into their vault, his name is Jack. He'll be waiting for you there."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Okay...",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('13');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "13",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Be careful around the vault. The place is most likely crawling with personnel. Good luck."
+            ],
+            "input": [
+                "q.dialogue.close();",
+                "q.player.data.dialogue.dennis_request_2 = true; q.player.save_data();",
+                "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 11191DBFA1310037');"
+            ]
+        },
+        {
+            "id": "14",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Go to the vault northeast of Lone Tree and get that genetic material. Try not to get killed, alright?"
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

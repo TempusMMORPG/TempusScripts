@@ -1,0 +1,60 @@
+{
+    "initializationAction": [
+        "q.player.data.dialogue.jack ? q.dialogue.set_page('1');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "farewell",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "1",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "You need to leave? I can help you with that."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Let me out!",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.close();",
+                            "q.run_command('tp ' + q.player.username + ' -1277.5 64 1537.5 90 0');"
+                        ]
+                    },
+                    {
+                        "text": "Just checking in.",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

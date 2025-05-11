@@ -1,0 +1,15 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",
+    "presets": [
+        "cobblemon:base_npc",
+        "cobblemon:looks_in_one_direction"
+    ],
+    "names": [
+        "§lJack§r"
+    ],
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:jack_entry"
+    },
+    "hideNameTag": true
+}
