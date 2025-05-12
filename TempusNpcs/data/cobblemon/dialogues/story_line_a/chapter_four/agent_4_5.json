@@ -1,0 +1,75 @@
+{
+    "initializationAction": [
+        "q.player.data.agent_4_5_defeated == false && q.player.data.dialogue.jack ? q.dialogue.set_page('greeting');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Well, well, what have we here? This isn't a game, little rat!"
+            ],
+            "input": "q.dialogue.set_page('battle_prompt');"
+        },
+        {
+            "id": "battle_prompt",
+            "speaker": "npc",
+            "lines": [
+                "I don't want to hurt you... Surrender now, and we will work this out. Okay?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "isSelectable": "q.player.data.agent_4_5_defeated == false",
+                        "action": "q.dialogue.set_page('battle_start');"
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "battle_start",
+            "speaker": "npc",
+            "lines": [
+                "You leave me no choice!"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "initializationAction": [
+        "q.player.data.agent_4_4_defeated == false && q.player.data.dialogue.jack ? q.dialogue.set_page('greeting');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Did you really think you could just walk right in here?!"
+            ],
+            "input": "q.dialogue.set_page('battle_prompt');"
+        },
+        {
+            "id": "battle_prompt",
+            "speaker": "npc",
+            "lines": [
+                "This is your final warning! Surrender immediately!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "isSelectable": "q.player.data.agent_4_4_defeated == false",
+                        "action": "q.dialogue.set_page('battle_start');"
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "battle_start",
+            "speaker": "npc",
+            "lines": [
+                "You're clearly not one for wise choices!"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        }
+    ]
+}
