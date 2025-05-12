@@ -51,14 +51,14 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Anyway, this place is crawling with government agents. I will secure the exit for you, but you will need to find the material."
+                "Anyway, this place is crawling with government agents. I will secure the exit and disrupt their communications for you, but you will need to find the genetic material."
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Alright",
+                        "text": "Yes sir!",
                         "value": "1",
                         "action": [
                             "q.dialogue.set_page('4');"
@@ -92,7 +92,7 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Ready",
+                        "text": "Ready!",
                         "value": "1",
                         "action": [
                             "q.dialogue.close();",
