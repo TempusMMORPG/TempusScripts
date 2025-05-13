@@ -1,0 +1,6 @@
+q.player.data.commander_nukem_defeated = true;
+q.player.save_data();
+q.player.tell(q.npc.name + ': Mewtwo!? Why are you not responding!?');
+q.player.tell(q.npc.name + ': NO! NO! NOOOO! MY WORK! My beautiful work! How could you do this to me right when we were at a breakthrough!?');
+q.player.tell(q.npc.name + ': How do I even report this!? SHOULD I even report this!? I...');
+q.player.tell('§8§oYou take Mewtwo\'s DNA in his distress!§r');

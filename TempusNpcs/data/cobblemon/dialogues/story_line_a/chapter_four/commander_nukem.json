@@ -1,0 +1,141 @@
+{
+    "initializationAction": [
+        "q.player.data.agent_4_1_defeated && q.player.data.agent_4_2_defeated && q.player.data.agent_4_3_defeated && q.player.data.agent_4_4_defeated && q.player.data.agent_4_5_defeated && q.player.data.commander_nukem_defeated == false ? q.dialogue.set_page('1');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "1",
+            "speaker": "npc",
+            "lines": [
+                "So, the intruder has finally arrived. I was wondering when you would show up."
+            ],
+            "escapeAction": "0",
+            "input": "q.dialogue.set_page('2');"
+        },
+        {
+            "id": "2",
+            "speaker": "npc",
+            "lines": [
+                "If our communications weren't jammed, I would have had reinforcements here by now. But it seems its too late."
+            ],
+            "escapeAction": "0",
+            "input": "q.dialogue.set_page('3');"
+        },
+        {
+            "id": "3",
+            "speaker": "npc",
+            "lines": [
+                "No matter. I don't know what you are trying to accomplish here, but I will not let you succeed."
+            ],
+            "escapeAction": "0",
+            "input": "q.dialogue.set_page('4');"
+        },
+        {
+            "id": "4",
+            "speaker": "npc",
+            "lines": [
+                "We are on the verge of something grand... Do you even understand its magnitude?"
+            ],
+            "escapeAction": "0",
+            "input": "q.dialogue.set_page('5');"
+        },
+        {
+            "id": "5",
+            "speaker": "npc",
+            "lines": [
+                "For you see, this region has many scars of its past, and our future is always uncertain."
+            ],
+            "escapeAction": "0",
+            "input": "q.dialogue.set_page('6');"
+        },
+        {
+            "id": "6",
+            "speaker": "npc",
+            "lines": [
+                "As such, we need security to protect ourselves and guarantee our prosperity against internal and external threats."
+            ],
+            "escapeAction": "0",
+            "input": "q.dialogue.set_page('7');"
+        },
+        {
+            "id": "7",
+            "speaker": "npc",
+            "lines": [
+                "What we need the most is a new breed of soldiers. Soldiers that can take on and address any threat..."
+            ],
+            "escapeAction": "0",
+            "input": "q.dialogue.set_page('8');"
+        },
+        {
+            "id": "8",
+            "speaker": "npc",
+            "lines": [
+                "Through the miracle of our work, we have been able to genetically modify Pokemon to permanently remain in their Mega Evolution state."
+            ],
+            "escapeAction": "0",
+            "input": "q.dialogue.set_page('9');"
+        },
+        {
+            "id": "9",
+            "speaker": "npc",
+            "lines": [
+                "If we can perfect this, we can create the ultimate army... The NEW army of Tempus."
+            ],
+            "escapeAction": "0",
+            "input": "q.dialogue.set_page('10');"
+        },
+        {
+            "id": "10",
+            "speaker": "npc",
+            "lines": [
+                "Now, you are here, and you are threatening our work that we have tried so hard to accomplish..."
+            ],
+            "escapeAction": "0",
+            "input": "q.dialogue.set_page('11');"
+        },
+        {
+            "id": "11",
+            "speaker": "npc",
+            "lines": [
+                "I will NOT let you destroy our future! Mewtwo, don't let them escape!"
+            ],
+            "escapeAction": "0",
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "isSelectable": "q.player.data.commander_nukem_defeated == false",
+                        "action": "q.dialogue.set_page('battle_start');"
+                    }
+                ]
+            }
+        }
+    ]
+}
