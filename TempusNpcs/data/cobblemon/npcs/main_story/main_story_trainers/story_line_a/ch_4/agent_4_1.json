@@ -25,7 +25,7 @@
     "skill": 5,
     "party": {
         "type": "script",
-        "script": "cobblemon:agent_4_1",
+        "script": "cobblemon:agent_4",
         "isStatic": false
     }
 }
