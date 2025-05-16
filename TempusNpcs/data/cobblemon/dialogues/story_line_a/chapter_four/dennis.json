@@ -1,9 +1,11 @@
 {
     "initializationAction": [
-        "q.player.data.dialogue.dennis_request_2 ? q.dialogue.set_page('14');",
+        "q.player.data.a_ch4_completed ? q.dialogue.set_page();",
+        "q.player.data.commander_nukem_defeated && q.player.data.a_ch4_completed == false ? q.dialogue.set_page();",
+        "q.player.data.dialogue.dennis_request_2 && q.player.data.commander_nukem_defeated == false ? q.dialogue.set_page('14');",
         "q.player.data.dialogue.jameson && q.player.data.dialogue.dennis_request_2 == false ? q.dialogue.set_page('7');",
         "q.player.data.dialogue.dennis_request_1 && q.player.data.dialogue.jameson == false ? q.dialogue.set_page('6');",
-        "q.player.data.a_ch4_completed && q.player.data.dialogue.dennis_request_1 == false ? q.dialogue.set_page('1');"
+        "q.player.data.a_ch3_completed && q.player.data.dialogue.dennis_request_1 == false ? q.dialogue.set_page('1');"
     ],
     "speakers": {
         "npc": {
@@ -271,6 +273,194 @@
                 "Go to the vault northeast of Lone Tree and get that genetic material. Try not to get killed, alright?"
             ],
             "input": "q.dialogue.close();"
+        },
+        {
+            "id": "15",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I just got a message from Jack, he said you were able to get the genetic material. I'm impressed."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "You better be",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('16');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "16",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I guess I can trust you now. Sorry, what did you want to ask me about again?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "The Dialga Key",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('17');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "17",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "...O-oh, umm..."
+            ],
+            "input": "q.dialogue.set_page('18');"
+        },
+        {
+            "id": "18",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I kinda... sold it a while ago..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "TO WHO???",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('19');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "19",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "To a... Hold on, let me check my notes..."
+            ],
+            "input": "q.dialogue.set_page('20');"
+        },
+        {
+            "id": "20",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": "q.dialogue.set_page('21');"
+        },
+        {
+            "id": "21",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Oh! Bastien Regalis! He was the one who bought it from me."
+            ],
+            "input": "q.dialogue.set_page('22');"
+        },
+        {
+            "id": "22",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "He claimed to be the King of the Regalis and future past rule of Tempus... or something like that."
+            ],
+            "input": "q.dialogue.set_page('23');"
+        },
+        {
+            "id": "23",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "What a weird guy... Well, he paid handsomely for it, so I didn't ask many questions."
+            ],
+            "input": "q.dialogue.set_page('24');"
+        },
+        {
+            "id": "24",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Business is business at the end of the day, right?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "WHERE IS HE",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('25');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "25",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "He mentioned something about going back to his castle, Regis Arce, to end this timeline..."
+            ],
+            "input": "q.dialogue.set_page('26');"
+        },
+        {
+            "id": "26",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I swear, we need to bring back bullying..."
+            ],
+            "input": "q.dialogue.set_page('27');"
+        },
+        {
+            "id": "27",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "These people are running rampant and think it's normal..."
+            ],
+            "input": "q.dialogue.set_page('28');"
+        },
+        {
+            "id": "28",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Well, I hope I was able to be of assistance to you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "GOTTA GO!",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.close();",
+                            "q.player.data.a_ch4_completed = true; q.player.save_data();",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 21ADDB9837A4A721');"
+                        ]
+                    }
+                ]
+            }
         }
     ]
 }
