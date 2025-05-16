@@ -1,5 +1,6 @@
 {
     "initializationAction": [
+        "q.player.data.commander_nukem_defeated ? q.dialogue.set_page('12');",
         "q.player.data.agent_4_1_defeated && q.player.data.agent_4_2_defeated && q.player.data.agent_4_3_defeated && q.player.data.agent_4_4_defeated && q.player.data.agent_4_5_defeated && q.player.data.commander_nukem_defeated == false ? q.dialogue.set_page('1');"
     ],
     "speakers": {
@@ -132,10 +133,22 @@
                         "text": "§c⚔ Battle ⚔§r",
                         "value": "battle",
                         "isSelectable": "q.player.data.commander_nukem_defeated == false",
-                        "action": "q.dialogue.set_page('battle_start');"
+                        "action": [
+                            "q.dialogue.close();",
+                            "v.battle = q.npc.start_battle(q.player);"
+                        ]
                     }
                 ]
             }
+        },
+        {
+            "id": "12",
+            "speaker": "npc",
+            "lines": [
+                "...Why?"
+            ],
+            "escapeAction": "0",
+            "input": "q.dialogue.close();"
         }
     ]
 }

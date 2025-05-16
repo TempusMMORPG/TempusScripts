@@ -1,5 +1,6 @@
 {
     "initializationAction": [
+        "q.player.data.dialogue.jameson ? q.dialogue.set_page('8');",
         "q.player.data.dialogue.dennis_request_1 && q.player.data.dialogue.jameson == false ? q.dialogue.set_page('1');"
     ],
     "speakers": {
@@ -125,6 +126,15 @@
             "speaker": "npc",
             "lines": [
                 "I have my moments."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "8",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Quit staring at me. You're lucky you are getting off easy."
             ],
             "input": "q.dialogue.close();"
         }

@@ -29,7 +29,6 @@
         },
         {
             "id": "1",
-            "escapeAction": "0",
             "speaker": "npc",
             "lines": [
                 "You need to leave? I can help you with that."
@@ -48,7 +47,7 @@
                     },
                     {
                         "text": "Just checking in.",
-                        "value": "1",
+                        "value": "2",
                         "action": [
                             "q.dialogue.close();"
                         ]

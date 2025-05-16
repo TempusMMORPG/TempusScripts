@@ -1,7 +1,7 @@
 {
     "initializationAction": [
-        "q.player.data.a_ch4_completed ? q.dialogue.set_page();",
-        "q.player.data.commander_nukem_defeated && q.player.data.a_ch4_completed == false ? q.dialogue.set_page();",
+        "q.player.data.a_ch4_completed ? q.dialogue.set_page('29');",
+        "q.player.data.commander_nukem_defeated && q.player.data.a_ch4_completed == false ? q.dialogue.set_page('15');",
         "q.player.data.dialogue.dennis_request_2 && q.player.data.commander_nukem_defeated == false ? q.dialogue.set_page('14');",
         "q.player.data.dialogue.jameson && q.player.data.dialogue.dennis_request_2 == false ? q.dialogue.set_page('7');",
         "q.player.data.dialogue.dennis_request_1 && q.player.data.dialogue.jameson == false ? q.dialogue.set_page('6');",
@@ -461,6 +461,15 @@
                     }
                 ]
             }
-        }
+        },
+        {
+            "id": "29",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I don't know what the Regalis Arc is, but it sounds pretty stupid."
+            ],
+            "input": "q.dialogue.close();"
+        },
     ]
 }
