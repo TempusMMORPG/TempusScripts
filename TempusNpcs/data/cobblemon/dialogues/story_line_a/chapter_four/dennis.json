@@ -470,6 +470,6 @@
                 "I don't know what the Regalis Arc is, but it sounds pretty stupid."
             ],
             "input": "q.dialogue.close();"
-        },
+        }
     ]
 }
