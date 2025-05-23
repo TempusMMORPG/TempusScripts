@@ -1,0 +1,91 @@
+{
+    "initializationAction": [
+        "q.player.data.grass_gym_defeated ? q.dialogue.set_page('post_defeat');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Ah? Another real state developer here to make an offer, huh?"
+            ],
+            "input": [
+                "q.npc.play_animation('shake_head', q.player.uuid);",
+                "q.dialogue.set_page('1');"
+            ]
+        },
+        {
+            "id": "1",
+            "speaker": "npc",
+            "lines": [
+                "Oh! My apologies, you must be a new challenger! Sorry, we have been getting a lot of offers as of late."
+            ],
+            "input": [
+                "q.dialogue.set_page('battle_prompt');"
+            ]
+        },
+        {
+            "id": "battle_prompt",
+            "speaker": "npc",
+            "lines": [
+                "Anyway, I believe progress shouldn't erase nature. Do you believe that too?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "isSelectable": "q.player.data.grass_gym_defeated == false",
+                        "action": [
+                            "q.npc.play_animation('nod', q.player.uuid);",
+                            "q.dialogue.set_page('battle_start');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "battle_start",
+            "speaker": "npc",
+            "lines": [
+                "Well, I expect you to show me that progress through battle!"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "Come back to the park sometime. I hope you see this place's true value; despite what others may believe."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

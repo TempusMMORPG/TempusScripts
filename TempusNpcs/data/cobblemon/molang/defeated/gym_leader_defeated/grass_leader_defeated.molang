@@ -1,4 +1,4 @@
 q.run_script('cobblemon:gs_gym_leader_progression');
 q.player.data.grass_gym_defeated = true;
 q.player.save_data();
-q.player.tell(q.npc.name + ': You did it! You really earned this badge. Come back sometime, will you?');
+q.player.tell(q.npc.name + ': Even in victory... I hope you find what\'s truly valuable and worth protecting.');
