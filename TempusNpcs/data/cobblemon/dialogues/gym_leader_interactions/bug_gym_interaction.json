@@ -1,0 +1,102 @@
+{
+    "initializationAction": [
+        "q.player.data.bug_gym_defeated ? q.dialogue.set_page('post_defeat');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Hello trainer, are you here to learn more about bug-type Pokemon?"
+            ],
+            "input": [
+                "q.npc.play_animation('nod', q.player.uuid);",
+                "q.dialogue.set_page('1');"
+            ]
+        },
+        {
+            "id": "1",
+            "speaker": "npc",
+            "lines": [
+                "If so, you've come to the right place!"
+            ],
+            "input": [
+                "q.npc.play_animation('thinking', q.player.uuid);",
+                "q.dialogue.set_page('2');"
+            ]
+        },
+        {
+            "id": "2",
+            "speaker": "npc",
+            "lines": [
+                "Did you know that female Scyther and Scizor have larger abdomen than the males? Truely fascinating, don't you think?"
+            ],
+            "input": [
+                "q.dialogue.set_page('battle_prompt');"
+            ]
+        },
+        {
+            "id": "battle_prompt",
+            "speaker": "npc",
+            "lines": [
+                "Anyway, while sharing knowledge is important, learning is even more important. Ready to get a private lesson?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "isSelectable": "q.player.data.bug_gym_defeated == false",
+                        "action": [
+                            "q.npc.play_animation('nod', q.player.uuid);",
+                            "q.dialogue.set_page('battle_start');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "battle_start",
+            "speaker": "npc",
+            "lines": [
+                "Ha, excellent! Try not to get swarmed, ok?"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "I hope you continue on your path of improvement and learning. That's what life is all about, no?"
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}
