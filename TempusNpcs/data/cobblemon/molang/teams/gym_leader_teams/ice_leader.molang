@@ -1,26 +1,31 @@
+ t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 friendship=255 uncatchable=true';
+
 t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
 
 t.data == 'EASY' ? {
-    q.party.add_by_properties('vulpix alolan uncatchable=true moves=disable,aurorabeam,confuseray,icywind nature=gentle held_item=cobblemon:sitrus_berry ability=snowcloak hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('spheal uncatchable=true moves=defensecurl,brine,rollout,powdersnow nature=naive held_item=cobblemon:sitrus_berry ability=thickfat hp_iv=15 attack_iv=15 defence_iv=15 special_attack_iv=15 special_defence_iv=15 speed_iv=15 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('cryogonal uncatchable=true moves=iceshard,confuseray,ancientpower,icespinner nature=lonely held_item=cobblemon:never_melt_ice ability=levitate hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=' + (q.player.party.highest_level + 1));
+    q.party.add_by_properties('amaura moves=round,ancientpower,thunderwave,encore nature=relaxed held_item=cobblemon:sitrus_berry ability=refrigerate hp_ev=52 special_attack_ev=52 level=' + (q.player.party.highest_level) + t.constants);  
+    q.party.add_by_properties('snorunt moves=iceshard,protect,headbutt,doubleteam nature=lonely held_item=cobblemon:sitrus_berry ability=innerfocus attack_ev=52 speed_ev=52 level=' + (q.player.party.highest_level) + t.constants);  
+    q.party.add_by_properties('swinub moves=iceshard,iceshard,endure,mudslap nature=quirky held_item=cobblemon:sitrus_berry ability=oblivious hp_ev=52 attack_ev=52 level=' + (q.player.party.highest_level) + t.constants);  
+    q.party.add_by_properties('bergmite moves=avalanche,bite,curse,protect nature=naughty held_item=cobblemon:never_melt_ice ability=owntempo hp_ev=80 attack_ev=80 level=' + (q.player.party.highest_level) + t.constants);  
     return 1;
 };
 
 t.data == 'MEDIUM' ? {
-    q.party.add_by_properties('ninetales alolan uncatchable=true moves=freezedry,dazzlinggleam,icebeam,nastyplot nature=hasty held_item=cobblemon:never_melt_ice ability=snowcloak hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=100 speed_ev=100 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('sealeo uncatchable=true moves=iciclespear,waterfall,bodyslam,earthquake nature=naughty held_item=cobblemon:loaded_dice ability=thickfat hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 attack_ev=100 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('cryogonal uncatchable=true moves=recover,hail,freezedry,knockoff nature=gentle held_item=cobblemon:leftovers ability=levitate hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=100 special_defence_ev=100 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('beartic uncatchable=true moves=iciclecrash,closecombat,earthquake,stoneedge nature=adamant held_item=cobblemon:life_orb ability=slushrush hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level + 1));
+    q.party.add_by_properties('aurorus moves=meteorbeam,hypervoice,earthpower,rockpolish nature=mild held_item=cobblemon:power_herb ability=refrigerate hp_ev=128 special_attack_ev=128 level=' + (q.player.party.highest_level) + t.constants);  
+    q.party.add_by_properties('glalie moves=freezedry,earthquake,crunch,ironhead nature=naughty held_item=cobblemon:expert_belt ability=innerfocus attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level) + t.constants);  
+    q.party.add_by_properties('piloswine moves=earthquake,iciclecrash,iceshard,superpower nature=brave held_item=cobblemon:eviolite ability=thickfat hp_ev=128 attack_ev=128 level=' + (q.player.party.highest_level) + t.constants);  
+    q.party.add_by_properties('crabominable moves=icehammer,drainpunch,earthquake,knockoff nature=naughty held_item=cobblemon:never_melt_ice ability=ironfist hp_ev=128 attack_ev=128 level=' + (q.player.party.highest_level) + t.constants);  
+    q.party.add_by_properties('avalugg moves=recover,bodypress,avalanche,earthquake nature=impish held_item=cobblemon:leftovers ability=sturdy hp_ev=252 defence_ev=128 level=' + (q.player.party.highest_level) + t.constants);  
     return 1;
 };
 
 t.data == 'HARD' ? {
-    q.party.add_by_properties('ninetales alolan uncatchable=true moves=blizzard,moonblast,hypnosis,auroraveil nature=timid held_item=cobblemon:icy_rock ability=snowwarning hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('walrein uncatchable=true moves=swordsdance,iciclespear,waterfall,earthquake nature=adamant held_item=cobblemon:leftovers ability=icebody hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 attack_ev=200 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('cryogonal uncatchable=true moves=recover,knockoff,blizzard,freezedry nature=calm held_item=cobblemon:leftovers ability=levitate hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 hp_ev=200 special_defence_ev=200 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('beartic uncatchable=true moves=iciclecrash,closecombat,earthquake,stoneedge nature=jolly held_item=cobblemon:life_orb ability=slushrush hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level));
-    q.party.add_by_properties('arctozolt uncatchable=true moves=blizzard,boltbeak,lowkick,stompingtantrum nature=naive held_item=cobblemon:life_orb ability=slushrush hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level + 1));
+    q.party.add_by_properties('aurorus moves=blizzard,stealthrock,auroraveil,thunderwave nature=modest held_item=cobblemon:icy_rock ability=snowwarning hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);  
+    q.party.add_by_properties('glalie mega moves=doubleedge,earthquake,crunch,explosion nature=adamant held_item=mega_showdown:glalitite ability=refrigerate hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);  
+    q.party.add_by_properties('piloswine moves=earthquake,iciclecrash,iceshard,stoneedge nature=adamant held_item=cobblemon:eviolite ability=thickfat hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);  
+    q.party.add_by_properties('lapras moves=freezedry,hydropump,sheercold,toxic nature=calm held_item=cobblemon:leftovers ability=waterabsorb hp_ev=252 special_defence_ev=252 level=' + (q.player.party.highest_level) + t.constants);  
+    q.party.add_by_properties('crabominable moves=icehammer,closecombat,earthquake,knockoff nature=adamant held_item=cobblemon:choice_band ability=ironfist attack_ev=252 attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);  
+    q.party.add_by_properties('avalugg moves=recover,bodypress,avalanche,earthquake nature=impish held_item=cobblemon:leftovers ability=sturdy hp_ev=252 defence_ev=252 level=' + (q.player.party.highest_level) + t.constants);  
     return 1;
 };
 
