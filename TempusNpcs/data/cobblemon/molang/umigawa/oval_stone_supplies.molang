@@ -1,0 +1,2 @@
+q.player.data.oval_stone_supplies = 1;
+q.player.save_data();
