@@ -1,0 +1,170 @@
+{
+    "initializationAction": [
+        "q.player.data.dialogue.oval_stone_completed ? q.dialogue.set_page('thanks');",
+        "q.player.data.dialogue.oval_stone_completed == false ? q.dialogue.set_page('completion');",
+        "q.player.data.oval_stone_supplies == false ? q.dialogue.set_page('not_complete');",
+        "q.player.data.dialogue.oval_stone_accepted == false ? q.dialogue.set_page('greeting');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Why is there a hold up now... Oh hello, sorry we are a bit busy so please check in with the receptionist if you have an emergency."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Do you need help?",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "1",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Our supply truck is running late, and we need some supplies urgently, but there's nobody on shift who can leave. Could you pick up some items from the Poké Mart?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Sure",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('2');"
+                        ]
+                    },
+                    {
+                        "text": "No I'm busy",
+                        "value": "2",
+                        "action": [
+                            "q.dialogue.set_page('rejection');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "2",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Okay we'll need the following items: 5 Super Potions, 3 Antidotes, a Revive, and a Full Restore. "
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Ok I'll be back soon",
+                        "value": "1",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 68BF6EAA5FC2F175');",
+                            "q.player.data.dialogue.oval_stone_accepted = true; q.player.save_data();",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "rejection",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Oh, I see. Well, if you change your mind, please let us know. We really need those supplies."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Bye",
+                        "value": "bye",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "not_complete",
+            "speaker": "npc",
+            "lines": [
+                "We need 5 Super Potions, 3 Full Heals, a Revive, and a Full Restore. Please bring them back as soon as you can. (Submit the items in the Questbook)"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Goodbye",
+                        "value": "goodbye",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "completion",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Thank you so much for your help! One of our Happiny isn't suited for hospital work, and seems to really like you. Here please take it with you on your journey."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Thanks, I'll take good care of it!",
+                        "value": "1",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 28E90335E1A1853E');",
+                            "q.player.data.dialogue.oval_stone_completed = true; q.player.save_data();",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "thanks",
+            "speaker": "npc",
+            "lines": [
+                "Thank you, the Supply Truck has finally arrived, but the supplies you brought saved lives."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}
