@@ -20,12 +20,12 @@ t.data == 'MEDIUM' ? {
 };
 
 t.data == 'HARD' ? {
-    q.party.add_by_properties('torkoal moves=stealthrock,explosion nature=sassy held_item=cobblemon:heat_rock ability=drought hp_ev=200 special_defence_ev=200 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('tauros paldean bull_breed=blaze moves=closecombat,flareblitz,trailblaze,stoneedge nature=jolly held_item=cobblemon:sitrus_berry ability=cudchew attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('magcargo moves=shellsmash,flamethrower,powergem,scorchingsands nature=timid held_item=cobblemon:focus_sash ability=weakarmor special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('emboar moves=flareblitz,wildcharge,closecombat,headsmash nature=jolly held_item=cobblemon:choice_band ability=reckless attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('scovillain moves=growth,flamethrower,solarbeam,stompingtantrum nature=naive held_item=cobblemon:life_orb ability=chlorophyll special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('houndoom mega moves=flamethrower,darkpulse,solarbeam,sludgebomb nature=timid ability=solarpower special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level + 1) + t.constants); 
+    q.party.add_by_properties('torkoal moves=stealthrock,overheat,overheat,explosion nature=sassy held_item=cobblemon:eject_pack ability=drought hp_ev=252 special_defence_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('rotom appliance=heat moves=overheat,voltswitch,painsplit,sunnyday nature=modest held_item=cobblemon:white_herb ability=levitate special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('magcargo moves=shellsmash,flamethrower,powergem,scorchingsands nature=timid held_item=cobblemon:focus_sash ability=weakarmor special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('emboar moves=flareblitz,wildcharge,closecombat,headsmash nature=jolly held_item=cobblemon:choice_band ability=reckless attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('scovillain moves=growth,flamethrower,solarbeam,stompingtantrum nature=naive held_item=cobblemon:life_orb ability=chlorophyll special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('houndoom mega_evolution=mega moves=flamethrower,darkpulse,solarbeam,sludgebomb nature=timid held_item=mega_showdown:houndoominite ability=solarpower special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level + 1) + t.constants); 
     return 1;
 };
 
