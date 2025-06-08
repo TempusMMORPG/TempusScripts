@@ -1,3 +1,5 @@
+> **⚠️⚠️**  THIS IS A TEST BUILD WITH MANY NPCs NOT PORTED OR WORKING CORRECTLY, DO NOT USE ON LIVE SERVERS
+
 # 💯 TempusScripts - The Ultimate Skibidi NPC & Molang Rizzpack 💯  
 
 Welcome to **TempusScripts**, the **sigma grindset** of Cobblemon NPC & Molang scripting examples. If you're trying to mog other devs with your scripting skills, this is the **W Rizzpack** for you. **FR FR, NO CAP.**
