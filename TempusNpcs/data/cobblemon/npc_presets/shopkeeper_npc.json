@@ -1,7 +1,7 @@
 {
     "interaction": {
       "type": "custom_script",
-      "script": "q.run_command('shop other ' + q.player.username + ' ' + q.npc.config.shop_name + ' false');"
+      "script": "q.run_command('shop other ' + c.player.username + ' ' + q.npc.config.shop_name + ' false');"
     },
     "config": [
         {
