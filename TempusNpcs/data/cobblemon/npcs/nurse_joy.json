@@ -1,14 +1,21 @@
 {
-  "resourceIdentifier": "cobblemon:nurse_joy",
-  "presets": [
-    "cobblemon:base_npc",
-    "cobblemon:looks_in_one_direction"
-  ],
-  "names": [
-    "§d§lNurse Joy§r"
-  ],
-  "interaction": {
-    "type": "dialogue",
-    "dialogue": "cobblemon:nursejoy_interaction"
-  }
+    "resourceIdentifier": "cobblemon:nurse_joy",
+    "presets": [
+    ],
+    "canDespawn": false,
+    "ai": [
+        {
+            "type": "apply_behaviours",
+            "presets": [
+                "cobblemon:core"
+            ]
+        }
+    ],
+    "names": [
+        "§d§lNurse Joy§r"
+    ],
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:nursejoy_interaction"
+    }
 }

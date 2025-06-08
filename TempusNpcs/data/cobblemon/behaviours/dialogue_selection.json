@@ -1,0 +1,26 @@
+{
+  "name": "Dialogue Selection",
+  "description": "Testing dialogue selection",
+  "entityType": "cobblemon:npc",
+  "undo": [
+    "q.entity.unset_interaction();"
+  ],
+  "configurations": [
+    {
+      "type": "custom_script",
+      "variables": [
+        {
+          "variableName": "dialogue_name",
+          "category": "cobblemon.entity.variable.category.appearance",
+          "displayName": "Dialogue Name",
+          "description": "The dialogue to be ran on interaction",
+          "type": "TEXT",
+          "defaultValue": "test_dialogue"
+        }
+      ],
+      "script": [
+        "q.entity.set_dialogue_interaction(q.entity.config.dialogue_name);"
+      ]
+    }
+  ]
+}
