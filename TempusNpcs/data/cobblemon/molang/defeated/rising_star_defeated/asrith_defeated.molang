@@ -1,0 +1,36 @@
+t.defeat1 = q.player.data.arith_defeated_1;
+t.defeat2 = q.player.data.arith_defeated_2;
+t.defeat3 = q.player.data.arith_defeated_3;
+t.defeat4 = q.player.data.arith_defeated_4;
+
+t.defeat4 ? {
+    q.player.tell(q.npc.name + ': Good battle, visit me again if you want to have another match! I warn you, I will win!');
+};
+
+t.defeat3 || t.defeat4 ? {
+    t.cooldown_time = q.system_time_millis + 604800000;
+    q.player.set_npc_variable(q.npc, 'cooldown_time', t.cooldown_time);
+};
+
+t.defeat3 && !t.defeat4 ? {
+    q.player.data.arith_defeated_4 = true;
+    q.player.tell(q.npc.name + ': I hope our paths cross again someday. I will train harder, and next time, I will win!');
+};
+
+t.defeat2 && !t.defeat3 ? {
+    q.player.data.arith_defeated_3 = true;
+    q.player.tell(q.npc.name + ': It... it happened again? Even with everything... I still lost...?');
+    q.player.tell(q.npc.name + ': I... need some time to think about this...');
+};
+
+t.defeat1 && !t.defeat2 ? {
+    q.player.data.arith_defeated_2 = true;
+    q.player.tell(q.npc.name + ': No! Not again! How do you keep... Is my training not enough?');
+};
+
+!t.defeat1 ? {
+    q.player.data.arith_defeated_1 = true;
+    q.player.tell(q.npc.name + ': What?! Me, lose to an outsider?? This can\'t be!');
+};
+
+q.player.save_data();
