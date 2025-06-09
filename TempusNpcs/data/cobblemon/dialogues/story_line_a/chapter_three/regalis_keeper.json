@@ -99,7 +99,7 @@
                         "text": "...Thanks",
                         "value": "1",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2D7E9483C649E231');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 1A7975FED8A7BC19');",
                             "q.player.data.dialogue.regalis_keeper = true; q.player.save_data();",
                             "q.dialogue.close();"
                         ]

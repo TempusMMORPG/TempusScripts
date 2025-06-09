@@ -76,7 +76,7 @@
                         "text": "Oh I see...",
                         "value": "okay",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2BB5F23B276D745D');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 31706CE5228C4B35');",
                             "q.player.data.dialogue.sewer_worker = true; q.player.save_data();",
                             "q.dialogue.set_page('farewell');"
                         ]

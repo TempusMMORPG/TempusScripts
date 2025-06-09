@@ -128,7 +128,7 @@
                         "text": "I'll check it out.",
                         "value": "check",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 18D4996D81ABC3F5');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 3E357CF572E28FBD');",
                             "q.player.data.dialogue.elon = true; q.player.save_data();",
                             "q.dialogue.set_page('farewell');"
                         ]

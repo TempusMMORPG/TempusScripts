@@ -43,7 +43,7 @@
                         "text": "Ok no problem",
                         "value": "okay",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 340D8AF86AB3FBF0');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2CD9813CAF7D174F');",
                             "q.player.data.dialogue.grace = true; q.player.save_data();",
                             "q.dialogue.set_page('farewell');"
                         ]

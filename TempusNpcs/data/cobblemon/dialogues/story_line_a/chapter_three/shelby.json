@@ -118,7 +118,7 @@
                         "text": "Ok, thank you!",
                         "value": "4",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 761AE451B6F25782');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 27117840E01DAC02');",
                             "q.player.data.dialogue.shelby = true; q.player.save_data();",
                             "q.dialogue.close();"
                         ]

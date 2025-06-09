@@ -85,7 +85,7 @@
                         "text": "Ok thanks!",
                         "value": "okay",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 178A276A1AC535FC');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 164F1406665193E8');",
                             "q.player.data.dialogue.professor_conifer_crypt = true; q.player.save_data();",
                             "q.dialogue.set_page('farewell');"
                         ]

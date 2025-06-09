@@ -114,7 +114,7 @@
             "input": [
                 "q.dialogue.set_page('6');",
                 "q.player.data.dialogue.dennis_request_1 = true; q.player.save_data();",
-                "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 3A3F3EA51425EC36');"
+                "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 7B2D924E79C53CE6');"
             ]
         },
         {
@@ -262,7 +262,7 @@
             "input": [
                 "q.dialogue.close();",
                 "q.player.data.dialogue.dennis_request_2 = true; q.player.save_data();",
-                "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 11191DBFA1310037');"
+                "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 28EF28DF0EFFD7B2');"
             ]
         },
         {
@@ -456,7 +456,7 @@
                         "action": [
                             "q.dialogue.close();",
                             "q.player.data.a_ch4_completed = true; q.player.save_data();",
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 21ADDB9837A4A721');"
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 5602707ABB06381E');"
                         ]
                     }
                 ]

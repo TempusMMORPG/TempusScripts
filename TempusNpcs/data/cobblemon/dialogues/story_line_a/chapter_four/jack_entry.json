@@ -77,7 +77,7 @@
             "input": [
                 "q.dialogue.set_page('5');",
                 "q.player.data.dialogue.jack = true; q.player.save_data();",
-                "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 3A786CA13E56D320');"
+                "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 4D23F950B68EFE0F');"
             ]
         },
         {

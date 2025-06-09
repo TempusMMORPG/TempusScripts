@@ -34,7 +34,7 @@
                         "value": "location1",
                         "action": [
                             "q.run_command('tp ' + q.player.username + ' ' + q.npc.config.teleport_location_1);",
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 441BEE9936A918D2');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 0B6A97171EA4BC42');",
                             "q.dialogue.close();",
                             "q.player.tell('§a§l[✔] Travelled to ' + q.npc.config.teleport_display_1 + '[✔]§r');"
                         ]

@@ -162,7 +162,7 @@
                         "text": "I'll be back",
                         "value": "5",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 0645C0AD6908A490');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 688F3FA107A60EE4');",
                             "q.player.data.dialogue.bernard_confront = true; q.player.save_data();",
                             "q.dialogue.close();"
                         ]
@@ -279,7 +279,7 @@
                 "But if you're looking for rare and or stolen goods, I'd check out the Black Market outside of Lone Tree."
             ],
             "input": [
-                "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 00C6C52681CB368E');",
+                "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 71BE29907F01ECB4');",
                 "q.player.data.dialogue.bernard_proof = true; q.player.data.a_ch3_completed = true; q.player.save_data();",
                 "q.dialogue.close();"
             ]

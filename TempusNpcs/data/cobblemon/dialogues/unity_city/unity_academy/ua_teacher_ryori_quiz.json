@@ -281,7 +281,7 @@
             "escapeAction": "0",
             "input": [
                 "q.player.data.ua_ryori_completed = true; q.player.save_data();",
-                "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 149187207DD45947');",
+                "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 22FD8723816172A7');",
                 "q.npc.play_animation('clap', q.player.uuid);",
                 "q.dialogue.set_page('post_completed');"
             ]

@@ -69,7 +69,7 @@
                         "text": "Okay!",
                         "value": "okay",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 4859F624CD9E4298');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 100BB7B6076805B4');",
                             "q.player.data.dialogue.professor_conifer_archives_pre_craft = 1; q.player.save_data();",
                             "q.dialogue.close();"
                         ]
@@ -110,7 +110,7 @@
                         "text": "Distortion World?!",
                         "value": "distortion_world",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 388F89F300513468');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 56026C14860EF3AC');",
                             "q.player.data.dialogue.professor_conifer_archives_post_craft = 1; q.player.save_data();",
                             "q.dialogue.set_page('inform_laurel');"
                         ]
@@ -162,7 +162,7 @@
                         "text": "What should I do?",
                         "value": "what_should_i_do",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 388F89F300513468');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 73B5255674ED593A');",
                             "q.player.data.dialogue.professor_conifer_archives_key_inform = 1; q.player.save_data();",
                             "q.dialogue.set_page('go_to_dan');"
                         ]
@@ -354,7 +354,7 @@
                         "value": "1",
                         "action": [
                             "q.player.data.a_ch2_completed = 1;q.player.save_data();",
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 49F63BA3027DA553');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 31084AC291C97BED');",
                             "q.dialogue.close();"
                         ]
                     }
