@@ -1,0 +1,30 @@
+'WIP';
+
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true';
+
+t.defeat4 ? {
+    q.party.add_by_properties('cobblemon:arcanine moves=flareblitz,extremespeed,closecombat,crunch nature=jolly held_item=cobblemon:shuca_berry ability=intimidate attack_ev=160 speed_ev=160 level=' + (q.player.party.highest_level) + t.constants);
+    return 1;
+};
+
+t.defeat3 && !t.defeat4 ? {
+    q.party.add_by_properties('cobblemon:arcanine moves=flareblitz,extremespeed,closecombat,crunch nature=jolly held_item=cobblemon:shuca_berry ability=intimidate attack_ev=160 speed_ev=160 level=' + (q.player.party.highest_level) + t.constants);
+    return 1;
+};
+
+t.defeat2 && !t.defeat3 ? {
+    q.party.add_by_properties('cobblemon:arcanine moves=flareblitz,extremespeed,closecombat,crunch nature=jolly held_item=cobblemon:shuca_berry ability=intimidate attack_ev=160 speed_ev=160 level=' + (q.player.party.highest_level) + t.constants);
+    return 1;
+};
+
+t.defeat1 && !t.defeat2 ? {
+    q.party.add_by_properties('cobblemon:arcanine moves=flareblitz,extremespeed,closecombat,crunch nature=jolly held_item=cobblemon:shuca_berry ability=intimidate attack_ev=160 speed_ev=160 level=' + (q.player.party.highest_level) + t.constants);
+    return 1;
+};
+
+!t.defeat1 ? {
+    q.party.add_by_properties('cobblemon:arcanine moves=flareblitz,extremespeed,closecombat,crunch nature=jolly held_item=cobblemon:shuca_berry ability=intimidate attack_ev=160 speed_ev=160 level=' + (q.player.party.highest_level) + t.constants);
+    return 1;
+};
+
+return 0;
