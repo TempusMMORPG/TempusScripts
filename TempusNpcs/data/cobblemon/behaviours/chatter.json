@@ -1,0 +1,39 @@
+{
+  "name": "Chatter NPC",
+  "description": "A simple NPC that can chat with players.",
+  "entityType": "cobblemon:npc",
+  "undo": [
+    "q.entity.unset_interaction();"
+  ],
+  "configurations": [
+    {
+      "type": "custom_script",
+      "variables": [
+        {
+          "variableName": "dialogue",
+          "displayName": "Dialogue",
+          "description": "The dialogue for the NPC (Required)",
+          "type": "TEXT",
+          "defaultValue": "Hello!"
+        },
+        {
+          "variableName": "animation_name",
+          "displayName": "Name of the animation",
+          "description": "Enter the name of the animation at the end of the namespace.E.g.'wave' for 'animation.trainer.generic.wave'",
+          "type": "TEXT",
+          "defaultValue": "wave"
+        },
+        {
+          "variableName": "toggle_animation",
+          "displayName": "Toggle Animation",
+          "description": "Toggle the animation true or false",
+          "type": "BOOLEAN",
+          "defaultValue": "false"
+        }
+      ],
+      "script": [
+        "c.player.tell(q.npc.name + ': ' + c.npc.config.dialogue);q.npc.config.toggle_animation ? q.npc.play_animation(q.npc.config.animation_name, c.player.uuid);"
+      ]
+    }
+  ]
+}
