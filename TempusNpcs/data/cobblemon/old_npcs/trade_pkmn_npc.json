@@ -1,0 +1,47 @@
+{
+  "names": [
+    "§lTrader Joe§r"
+  ],
+  "presets": [
+    "cobblemon:base_npc",
+    "cobblemon:trader_npc",
+    "cobblemon:looks_in_one_direction"
+  ],
+  "config": [
+    {
+      "variableName": "trade_offered_display",
+      "displayName": "Trade Offer Pokemon for GUI",
+      "description": "Trade Offer Pokemon (What is shown to user)",
+      "type": "TEXT",
+      "defaultValue": "Pikachu"
+    },
+    {
+      "variableName": "trade_offered",
+      "displayName": "Trade Offer Pokemon for MoLang",
+      "description": "Trade Offer Pokemon along with any properties (All lowercase)",
+      "type": "TEXT",
+      "defaultValue": "pikachu level=10"
+    },
+    {
+      "variableName": "trade_requested_display",
+      "displayName": "Trade Requested Pokemon for GUI",
+      "description": "Trade Requested Pokemon (What is shown to user)",
+      "type": "TEXT",
+      "defaultValue": "Bidoof"
+    },
+    {
+      "variableName": "trade_requested",
+      "displayName": "Trade Request Pokemon for MoLang",
+      "description": "Trade Request Pokemon along with any properties (All lowercase)",
+      "type": "TEXT",
+      "defaultValue": "bidoof"
+    },
+    {
+      "variableName": "trade_requested_min_level",
+      "displayName": "Minimum Level for Trade",
+      "description": "Minimum Level for Trade",
+      "type": "NUMBER",
+      "defaultValue": 10
+    }
+  ]
+}

@@ -1,7 +1,0 @@
-{
-    "resourceIdentifier": "cobblemon:traveller",
-    "interaction": {
-      "type": "dialogue",
-      "dialogue": "cobblemon:pt_trader_interaction"
-    }
-}

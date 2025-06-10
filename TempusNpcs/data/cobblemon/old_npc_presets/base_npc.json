@@ -1,0 +1,17 @@
+{
+    "hitbox": "player",
+    "canDespawn": false,
+    "isMovable": false,
+    "isInvulnerable": true,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "ai": [
+      {
+        "type": "apply_presets",
+        "presets": [
+          "cobblemon:looks",
+          "cobblemon:chats"
+        ]
+      }  
+    ]
+}

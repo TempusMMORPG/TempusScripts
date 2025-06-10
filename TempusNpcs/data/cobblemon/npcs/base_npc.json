@@ -1,0 +1,18 @@
+{
+  "resourceIdentifier": "cobblemon:global_skins",
+  "hitbox": "player",
+  "names": [
+    "Tempus Tester"
+  ],
+  "presets": [
+  ],
+  "canDespawn": false,
+  "ai": [
+    {
+      "type": "apply_behaviours",
+      "presets": [
+        "cobblemon:core"
+      ]
+    }
+  ]
+}

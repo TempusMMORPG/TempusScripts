@@ -32,7 +32,7 @@
         }
       ],
       "script": [
-        "c.player.tell(q.npc.name + ': ' + c.npc.config.dialogue);q.npc.config.toggle_animation ? q.npc.play_animation(q.npc.config.animation_name, c.player.uuid);"
+        "q.entity.set_script_interaction('cobblemon:chat_npc_interaction')"
       ]
     }
   ]

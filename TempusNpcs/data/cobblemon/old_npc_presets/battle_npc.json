@@ -1,0 +1,14 @@
+{
+    "battleConfiguration": {
+        "canChallenge": true
+    },
+    "autoHealParty": true,
+    "ai": [
+        {
+          "type": "apply_presets",
+          "presets": [
+            "cobblemon:pauses_in_battle"
+          ]
+        }
+    ]
+}
