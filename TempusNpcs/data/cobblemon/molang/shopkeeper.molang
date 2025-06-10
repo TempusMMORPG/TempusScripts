@@ -1,0 +1,1 @@
+q.run_command('shop other ' + c.player.username + ' ' + q.npc.config.shop_name + ' false')

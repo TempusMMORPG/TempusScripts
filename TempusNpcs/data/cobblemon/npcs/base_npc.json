@@ -1,6 +1,11 @@
 {
   "resourceIdentifier": "cobblemon:global_skins",
   "hitbox": "player",
+  "canDespawn": false,
+  "isMovable": false,
+  "isInvulnerable": true,
+  "isLeashable": false,
+  "allowProjectileHits": false,
   "names": [
     "Tempus Tester"
   ],

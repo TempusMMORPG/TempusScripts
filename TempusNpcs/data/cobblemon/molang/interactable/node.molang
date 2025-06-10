@@ -45,7 +45,6 @@ t.health <= 0 ? {
     t.cooldown_time = q.player.set_npc_variable(q.npc.uuid, 'cooldown_time', t.cooldown, true);
 } : {
     q.npc.play_animation('hit', q.player.uuid);
-    q.player.tell('§aMining: ' + q.npc.name + ' §6' + t.health + ' §ahealth left!');
 };
 
 q.player.set_npc_variable(q.npc.uuid, 'node_health', t.health);

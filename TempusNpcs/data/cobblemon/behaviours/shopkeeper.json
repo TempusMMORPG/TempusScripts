@@ -1,0 +1,25 @@
+{
+  "name": "Shopkeeper",
+  "description": "A behaviour that opens a shop when interacted with - currently only works with Zonary's CobbleShop Plugin.",
+  "entityType": "cobblemon:npc",
+  "undo": [
+    "q.entity.unset_interaction();"
+  ],
+  "configurations": [
+    {
+      "type": "custom_script",
+      "variables": [
+        {
+          "variableName": "shop_name",
+          "displayName": "Shop Name",
+          "description": "The of the shop to open",
+          "type": "TEXT",
+          "defaultValue": "Hello!"
+        }
+      ],
+      "script": [
+        "q.entity.set_script_interaction('cobblemon:shopkeeper')"
+      ]
+    }
+  ]
+}

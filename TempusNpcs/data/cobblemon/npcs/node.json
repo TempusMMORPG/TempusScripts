@@ -1,0 +1,28 @@
+{
+  "resourceIdentifier": "cobblemon:interactable",
+  "canDespawn": false,
+  "isMovable": false,
+  "isInvulnerable": true,
+  "isLeashable": false,
+  "allowProjectileHits": false,
+  "hideNameTag": true,
+  "hitbox": {
+    "width": 1.0,
+    "height": 1.0
+  },
+  "names": [
+    "§d§lIron Node§r"
+  ],
+  "interaction": {
+    "type": "custom_script",
+    "script": "q.run_script(q.npc.config.interactable_script);"
+  },
+    "ai": [
+    {
+      "type": "apply_behaviours",
+      "presets": [
+        "cobblemon:base_interactable"
+      ]
+    }
+  ]
+}

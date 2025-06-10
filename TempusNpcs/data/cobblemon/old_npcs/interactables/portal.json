@@ -10,10 +10,6 @@
     "names": [
       "§d§lUltraspace Portal§r"
     ],
-    "interaction": {
-      "type": "custom_script",
-      "script": "q.run_script(q.npc.config.interactable_script);"
-    },
     "config" : [
       {
         "variableName": "teleport_location",
