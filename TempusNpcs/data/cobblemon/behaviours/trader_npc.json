@@ -44,6 +44,9 @@
           "type": "NUMBER",
           "defaultValue": 10
         }
+      ],
+          "script": [
+        "q.entity.set_dialogue_interaction('cobblemon:pt_trader_interaction')"
       ]
     }
   ]
