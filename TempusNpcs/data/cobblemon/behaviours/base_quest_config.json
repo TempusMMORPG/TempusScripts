@@ -1,5 +1,14 @@
 {
-    "config": [
+  "name": "Quest NPC Config",
+  "description": "To set up a quest NPC that can complete quests for players.",
+  "entityType": "cobblemon:npc",
+  "undo": [
+    "q.entity.unset_interaction();"
+  ],
+  "configurations": [
+    {
+      "type": "custom_script",
+      "variables": [
         {
           "variableName": "quest_id",
           "displayName": "Quest ID",
@@ -14,5 +23,9 @@
           "type": "TEXT",
           "defaultValue": "q.run_command('ftbquests change_progress ' + q.player.username + ' complete ' + q.npc.config.quest_id);"
         }
-    ]
+      ],
+      "script": [
+      ]
+    }
+  ]
 }

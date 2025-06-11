@@ -1,9 +1,17 @@
 {
-
-    "config": [
+  "name": "Force Battle NPC",
+  "description": "To set up an NPC that forces battles with players.",
+  "entityType": "cobblemon:npc",
+  "undo": [
+    "q.entity.unset_interaction();"
+  ],
+  "configurations": [
+    {
+      "type": "custom_script",
+      "variables": [
         {
           "variableName": "toggle_force_battle",
-          "displayName": "Toggle Force Battle",  
+          "displayName": "Toggle Force Battle",
           "description": "Toggles a force battle",
           "type": "BOOLEAN",
           "defaultValue": "0"
@@ -22,25 +30,21 @@
           "type": "NUMBER",
           "defaultValue": "1200"
         }
-    ],
-    "ai": [
-        {
-          "type": "apply_presets",
-          "presets": [
-              "cobblemon:looks"
-          ]
-        },
-        {
-          "type": "add_tasks_to_activity",
-          "activity": "minecraft:idle",
-          "tasksByPriority": {
-              "0": [
-                {
-                  "type": "run_script",
-                  "script": "cobblemon:force_battle"
-                }
-              ]
+      ],
+      "script": [
+      ]
+    },
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "minecraft:idle",
+      "tasksByPriority": {
+        "0": [
+          {
+            "type": "run_script",
+            "script": "cobblemon:force_battle"
           }
-        }
-    ]
+        ]
+      }
+    }
+  ]
 }

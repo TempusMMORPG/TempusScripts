@@ -1,8 +1,17 @@
 {
-    "config": [
+  "name": "Defeat Count",
+  "description": "To set the defeat count for an NPC.",
+  "entityType": "cobblemon:npc",
+  "undo": [
+    "q.entity.unset_interaction();"
+  ],
+  "configurations": [
+    {
+      "type": "custom_script",
+      "variables": [
         {
           "variableName": "toggle_battle_cooldown",
-          "displayName": "Toggle Battle Cooldown",  
+          "displayName": "Toggle Battle Cooldown",
           "description": "Toggles the battle cooldown",
           "type": "BOOLEAN",
           "defaultValue": "0"
@@ -14,5 +23,9 @@
           "type": "NUMBER",
           "defaultValue": "0.333"
         }
-    ]
+      ],
+      "script": [
+      ]
+    }
+  ]
 }
