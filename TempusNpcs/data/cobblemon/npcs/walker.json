@@ -1,0 +1,22 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",
+    "hitbox": "player",
+    "canDespawn": false,
+    "isMovable": false,
+    "isInvulnerable": true,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "names": [
+        "Tempus Walker"
+    ],
+    "presets": [],
+    "ai": [
+        {
+            "type": "apply_behaviours",
+            "presets": [
+                "cobblemon:core",
+                "cobblemon:walker_npc"
+            ]
+        }
+    ]
+}

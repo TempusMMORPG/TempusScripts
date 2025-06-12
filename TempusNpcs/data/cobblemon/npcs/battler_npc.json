@@ -15,7 +15,6 @@
   ],
   "presets": [
   ],
-  "canDespawn": false,
   "ai": [
     {
       "type": "apply_behaviours",

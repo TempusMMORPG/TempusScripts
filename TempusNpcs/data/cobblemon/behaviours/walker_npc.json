@@ -1,0 +1,132 @@
+{
+    "name": "Walker NPC",
+    "description": "Walker NPC Configuration",
+    "entityType": "cobblemon:npc",
+    "configurations": [
+        {
+            "type": "add_variables",
+            "variables": [
+                {
+                    "variableName": "toggle_walk",
+                    "displayName": "Toggle Walk",
+                    "description": "Toggle Walk",
+                    "type": "BOOLEAN",
+                    "defaultValue": "false"
+                },
+                {
+                    "variableName": "x1",
+                    "displayName": "X Location 1",
+                    "description": "X Location 1 (Can't be 0)",
+                    "type": "NUMBER",
+                    "defaultValue": "0"
+                },
+                {
+                    "variableName": "y1",
+                    "displayName": "Y Location 1",
+                    "description": "Y Location 1 (Can't be 0)",
+                    "type": "NUMBER",
+                    "defaultValue": "0"
+                },
+                {
+                    "variableName": "z1",
+                    "displayName": "Z Location 1",
+                    "description": "Z Location 1 (Can't be 0)",
+                    "type": "NUMBER",
+                    "defaultValue": "0"
+                },
+                {
+                    "variableName": "x2",
+                    "displayName": "X Location 2",
+                    "description": "X Location 2 (Can't be 0)",
+                    "type": "NUMBER",
+                    "defaultValue": "0"
+                },
+                {
+                    "variableName": "y2",
+                    "displayName": "Y Location 2",
+                    "description": "Y Location 2 (Can't be 0)",
+                    "type": "NUMBER",
+                    "defaultValue": "0"
+                },
+                {
+                    "variableName": "z2",
+                    "displayName": "Z Location 2",
+                    "description": "Z Location 2 (Can't be 0)",
+                    "type": "NUMBER",
+                    "defaultValue": "0"
+                },
+                {
+                    "variableName": "x3",
+                    "displayName": "X Location 3",
+                    "description": "X Location 3 (Can't be 0)",
+                    "type": "NUMBER",
+                    "defaultValue": "0"
+                },
+                {
+                    "variableName": "y3",
+                    "displayName": "Y Location 3",
+                    "description": "Y Location 3 (Can't be 0)",
+                    "type": "NUMBER",
+                    "defaultValue": "0"
+                },
+                {
+                    "variableName": "z3",
+                    "displayName": "Z Location 3",
+                    "description": "Z Location 3 (Can't be 0)",
+                    "type": "NUMBER",
+                    "defaultValue": "0"
+                },
+                {
+                    "variableName": "x4",
+                    "displayName": "X Location 4",
+                    "description": "X Location 4 (Can't be 0)",
+                    "type": "NUMBER",
+                    "defaultValue": "0"
+                },
+                {
+                    "variableName": "y4",
+                    "displayName": "Y Location 4",
+                    "description": "Y Location 4 (Can't be 0)",
+                    "type": "NUMBER",
+                    "defaultValue": "0"
+                },
+                {
+                    "variableName": "z4",
+                    "displayName": "Z Location 4",
+                    "description": "Z Location 4 (Can't be 0)",
+                    "type": "NUMBER",
+                    "defaultValue": "0"
+                },
+                {
+                    "variableName": "pos_radius",
+                    "displayName": "Position Radius (3 or higher)",
+                    "description": "Position Radius before the NPC starts to go to a new location",
+                    "type": "NUMBER",
+                    "defaultValue": "3"
+                },
+                {
+                    "variableName": "speed",
+                    "displayName": "Speed (1.0 or less)",
+                    "description": "Speed of the NPC",
+                    "type": "NUMBER",
+                    "defaultValue": "0.25"
+                }
+            ]
+        },
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "minecraft:idle",
+            "tasksByPriority": {
+                "0": [
+                    {
+                        "type": "run_script",
+                        "script": "cobblemon:walker_4"
+                    }
+                ],
+                "1": [
+                    "follow_walk_target"
+                ]
+            }
+        }
+    ]
+}
