@@ -38,10 +38,10 @@
                         ]
                     },
                     {
-                        "text": "Why is she so busy?",
+                        "text": "Why is he so busy?",
                         "value": "busy",
                         "action": [
-                            "q.dialogue.set_page('elon_why_is_she_so_busy');"
+                            "q.dialogue.set_page('elon_why_is_he_so_busy');"
                         ]
                     }
                 ]
@@ -60,17 +60,17 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Why is she so busy?",
+                        "text": "Why is he so busy?",
                         "value": "busy",
                         "action": [
-                            "q.dialogue.set_page('elon_why_is_she_so_busy');"
+                            "q.dialogue.set_page('elon_why_is_he_so_busy');"
                         ]
                     }
                 ]
             }
         },
         {
-            "id": "elon_why_is_she_so_busy",
+            "id": "elon_why_is_he_so_busy",
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
