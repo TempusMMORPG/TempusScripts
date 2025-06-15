@@ -1,0 +1,19 @@
+{
+  "resourceIdentifier": "cobblemon:rotom_phone",
+  "hitbox":  {
+    "width": 1.0,
+    "height": 2.5
+  },
+  "canDespawn": false,
+  "isMovable": false,
+  "isInvulnerable": true,
+  "isLeashable": false,
+  "allowProjectileHits": false,
+  "names": [
+    "§bRotom Phone"
+  ],
+  "presets": [
+  ],
+  "ai": [
+  ]
+}
