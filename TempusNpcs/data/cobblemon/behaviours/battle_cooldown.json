@@ -3,7 +3,6 @@
   "description": "To set the battle cooldown for an NPC.",
   "entityType": "cobblemon:npc",
   "undo": [
-    "q.entity.unset_interaction();"
   ],
   "configurations": [
     {

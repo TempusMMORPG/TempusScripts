@@ -3,7 +3,6 @@
   "description": "To set the defeat count for an NPC.",
   "entityType": "cobblemon:npc",
   "undo": [
-    "q.entity.unset_interaction();"
   ],
   "configurations": [
     {

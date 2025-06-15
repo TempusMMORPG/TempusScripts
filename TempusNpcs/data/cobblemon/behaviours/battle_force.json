@@ -3,7 +3,6 @@
   "description": "To set up an NPC that forces battles with players.",
   "entityType": "cobblemon:npc",
   "undo": [
-    "q.entity.unset_interaction();"
   ],
   "configurations": [
     {

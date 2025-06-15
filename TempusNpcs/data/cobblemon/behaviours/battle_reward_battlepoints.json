@@ -3,7 +3,6 @@
   "description": "Configured the amount of battle points a player receives after defeating this NPC in battle.",
   "entityType": "cobblemon:npc",
   "undo": [
-    "q.entity.unset_interaction();"
   ],
   "configurations": [
     {

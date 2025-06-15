@@ -3,7 +3,6 @@
   "description": "To set up a quest NPC that can complete quests for players.",
   "entityType": "cobblemon:npc",
   "undo": [
-    "q.entity.unset_interaction();"
   ],
   "configurations": [
     {
