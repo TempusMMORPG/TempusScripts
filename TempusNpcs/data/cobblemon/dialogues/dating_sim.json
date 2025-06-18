@@ -15,6 +15,7 @@
     },
     "player": {
       "face": "q.player.face();",
+      "isLeftSide": false,
       "gibber": {
         "interval": 0.1
       },

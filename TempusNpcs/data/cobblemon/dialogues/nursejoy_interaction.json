@@ -68,6 +68,8 @@
             "action": [
               "v.callback_dialogue = 'nursejoy_healed';",
               "c.npc.run_action_effect('npc_heal_player_pokemon');",
+              "q.run_command('spawnpoint '+ q.player.username + ' ' + math.round(q.npc.x) + ' ' + math.round(q.npc.y) + ' ' + math.round(q.npc.z));",
+              "q.player.tell('§aSpawn point has been set to this Pokémon Center!');",
               "q.dialogue.close();"
             ]
           },

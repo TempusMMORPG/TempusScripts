@@ -9,13 +9,12 @@
   "names": [
     "Tempus Tester"
   ],
-  "presets": [
-  ],
   "ai": [
     {
       "type": "apply_behaviours",
-      "presets": [
-        "cobblemon:core"
+      "behaviours": [
+        "cobblemon:core",
+        "cobblemon:dialogue_selection"
       ]
     }
   ]
