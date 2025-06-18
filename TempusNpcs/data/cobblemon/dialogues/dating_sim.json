@@ -1,0 +1,281 @@
+{
+  "initializationAction": [
+    "c.npc.set_chatting();"
+  ],
+  "speakers": {
+    "npc": {
+      "name": {
+        "type": "expression",
+        "expression": "q.npc.name"
+      },
+      "face": "q.npc.face();",
+      "gibber": {
+        "interval": 0.1
+      }
+    },
+    "player": {
+      "face": "q.player.face();",
+      "gibber": {
+        "interval": 0.1
+      },
+      "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": ["Oh, hello there. I haven't seen you around here before. Are you new to Unity City Academy?"],
+      "input": {
+        "type": "option",
+        "vertical": true,
+        "options": [
+          {
+            "text": "Yes.",
+            "value": "new_student",
+            "action": "q.dialogue.set_page('player_new');"
+          },
+          {
+            "text": "No",
+            "value": "not_new",
+            "action": "q.dialogue.set_page('player_not_new');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "player_new",
+      "speaker": "player",
+      "lines": ["Yes, I just transferred here. It's a bit overwhelming."],
+      "input": "q.dialogue.set_page('npc_welcome');"
+    },
+    {
+      "id": "player_not_new",
+      "speaker": "player",
+      "lines": ["No, I've been here for a while. Just haven't spent much time in the library, I guess."],
+      "input": "q.dialogue.set_page('npc_apology');"
+    },
+    {
+      "id": "npc_welcome",
+      "speaker": "npc",
+      "lines": [
+      {
+          "type": "expression",
+          "expression": "'Welcome to Unity City Academy then! The library is a good place to start if you want some peace and quiet. I am ' + q.npc.name + ' by the way. Nice to meet you.';"
+        }
+        ],
+      "input": "q.dialogue.set_page('player_introduce');"
+    },
+    {
+      "id": "npc_apology",
+      "speaker": "npc",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'Oh, I see! My apologies then. I am  ' + q.npc.name + '. Nice to meet you.';"
+        }
+        ],
+      "input": "q.dialogue.set_page('player_introduce');"
+    },
+    {
+      "id": "player_introduce",
+      "speaker": "player",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'I am ' + q.player.username + '. Nice to meet you too, ' + q.npc.name + '. So, what brings you to the library today?';"
+        }
+        ],
+      "input": {
+        "type": "option",
+        "vertical": true,
+        "options": [
+          {
+            "text": "Ask about her studies.",
+            "value": "studies",
+            "action": "q.dialogue.set_page('npc_studies');"
+          },
+          {
+            "text": "Comment on the library's quietness.",
+            "value": "quietness",
+            "action": "q.dialogue.set_page('npc_quietness');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_studies",
+      "speaker": "npc",
+      "lines": ["Just catching up on some extra reading for my literature class. What about you? Are you here to study too?"],
+      "input": {
+        "type": "option",
+        "vertical": true,
+        "options": [
+          {
+            "text": "Yes, trying to get ahead.",
+            "value": "player_study_ahead",
+            "action": "q.dialogue.set_page('npc_admire_study');"
+          },
+          {
+            "text": "No, just exploring the school.",
+            "value": "player_explore",
+            "action": "q.dialogue.set_page('npc_curious_explore');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_quietness",
+      "speaker": "npc",
+      "lines": ["It really is peaceful, isn't it? It's one of my favorite spots in the school to just relax and read. Do you have a favorite spot yet?"],
+      "input": {
+        "type": "option",
+        "vertical": true,
+        "options": [
+          {
+            "text": "This might be it now.",
+            "value": "player_fav_library",
+            "action": "q.dialogue.set_page('npc_pleased');"
+          },
+          {
+            "text": "Not yet, still looking.",
+            "value": "player_still_looking",
+            "action": "q.dialogue.set_page('npc_suggest_spots');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_admire_study",
+      "speaker": "npc",
+      "lines": ["That's really admirable! It's good to be proactive, especially with how demanding some of the classes can be here."],
+      "input": "q.dialogue.set_page('player_school_life');"
+    },
+    {
+      "id": "npc_curious_explore",
+      "speaker": "npc",
+      "lines": ["Exploring? That's fun! Unity City Academy has a lot of interesting nooks and crannies if you know where to look. Have you found anything interesting?"],
+      "input": "q.dialogue.set_page('player_school_life');"
+    },
+    {
+      "id": "npc_pleased",
+      "speaker": "npc",
+      "lines": ["Oh, really? I'm glad to hear that! Maybe we'll see each other here more often then."],
+      "input": "q.dialogue.set_page('player_school_life');"
+    },
+    {
+      "id": "npc_suggest_spots",
+      "speaker": "npc",
+      "lines": ["Well, if you're still looking, the rooftop garden is quite lovely, and the art room is usually pretty lively. What kind of places do you usually like?"],
+      "input": "q.dialogue.set_page('player_school_life');"
+    },
+    {
+      "id": "player_school_life",
+      "speaker": "player",
+      "lines": ["So, aside from studying/exploring, what do you think about life here at Unity City Academy?", "Any clubs or activities you're involved in?"],
+      "input": {
+        "type": "option",
+        "vertical": true,
+        "options": [
+          {
+            "text": "Ask about school events.",
+            "value": "school_events",
+            "action": "q.dialogue.set_page('npc_events');"
+          },
+          {
+            "text": "Talk about general school atmosphere.",
+            "value": "atmosphere",
+            "action": "q.dialogue.set_page('npc_atmosphere');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_events",
+      "speaker": "npc",
+      "lines": ["Oh, absolutely! The culture festival is always a huge highlight, and the sports festivals are incredibly competitive but fun.", "I'm actually part of the Student Council, so I help organize some of those events."],
+      "input": "q.dialogue.set_page('player_praise_council');"
+    },
+    {
+      "id": "npc_atmosphere",
+      "speaker": "npc",
+      "lines": ["It's a really vibrant place. Everyone is so dedicated, whether it's to their studies or their clubs. It can be a little intense at times, but there's always something happening.", "I'm also in the school's gardening club, which is a nice way to unwind."],
+      "input": "q.dialogue.set_page('player_admire_hobbies');"
+    },
+    {
+      "id": "player_praise_council",
+      "speaker": "player",
+      "lines": ["Wow, Student Council! That sounds like a lot of responsibility, but also really cool.", "You must be really organized."],
+      "input": "q.dialogue.set_page('npc_modesty');"
+    },
+    {
+      "id": "player_admire_hobbies",
+      "speaker": "player",
+      "lines": ["Gardening club? That sounds really peaceful. It's nice to have something like that to balance out the busy school life.", "You seem to have a good handle on everything."],
+      "input": "q.dialogue.set_page('npc_modesty');"
+    },
+    {
+      "id": "npc_modesty",
+      "speaker": "npc",
+      "lines": ["I try my best! It can get a bit hectic, but I enjoy it. It's important to find things you're passionate about, don't you think?"],
+      "input": {
+        "type": "option",
+        "vertical": true,
+        "options": [
+          {
+            "text": "Definitely.",
+            "value": "agree_passion",
+            "action": "q.dialogue.set_page('player_ask_out');"
+          },
+          {
+            "text": "I'm still figuring out my passions.",
+            "value": "still_figuring",
+            "action": "q.dialogue.set_page('npc_encourage');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_encourage",
+      "speaker": "npc",
+      "lines": ["That's perfectly fine! There's no rush. Unity City Academy has so many different clubs and activities, I'm sure you'll find something that sparks your interest."],
+      "input": "q.dialogue.set_page('player_ask_out');"
+    },
+    {
+      "id": "player_ask_out",
+      "speaker": "player",
+      "lines": ["Hey, this might be a bit sudden, but... would you be open to hanging out sometime outside of school? Maybe get some ice cream after classes, or something?"],
+      "input": {
+        "type": "option",
+        "vertical": true,
+        "options": [
+          {
+            "text": "[DEBUG] NPC Accept",
+            "value": "npc_accept",
+            "action": "q.dialogue.set_page('npc_accept_date');"
+          },
+          {
+            "text": "[DEBUG] NPC Decline",
+            "value": "npc_decline",
+            "action": "q.dialogue.set_page('npc_decline_date');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_accept_date",
+      "speaker": "npc",
+      "lines": ["Oh! Really? I'd love to! Ice cream sound wonderful. How about this Saturday?"],
+      "input": "q.dialogue.close();"
+    },
+    {
+      "id": "npc_decline_date",
+      "speaker": "npc",
+      "lines": ["Ah, I'm flattered, but I'm quite busy with Student Council and gardening club commitments right now. Maybe another time?"],
+      "input": "q.dialogue.close();"
+    }
+  ]
+}

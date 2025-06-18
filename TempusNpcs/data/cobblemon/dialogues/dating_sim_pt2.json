@@ -1,0 +1,228 @@
+{
+  "initializationAction": [
+    "c.npc.set_chatting();"
+  ],
+  "speakers": {
+    "npc": {
+      "name": {
+        "type": "expression",
+        "expression": "q.npc.name"
+      },
+      "face": "q.npc.face();",
+      "gibber": {
+        "interval": 0.1
+      }
+    },
+    "player": {
+      "face": "q.player.face();",
+      "gibber": {
+        "interval": 0.1
+      },
+      "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "date_start",
+      "speaker": "npc",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'Thanks for meeting me here, ' + q.player.username + '! These crepes are delicious.'"
+        }
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "They really are! Best crepes in Unity City.",
+            "value": "player_crepes_agree",
+            "action": "q.dialogue.set_page('npc_crepes_reply');"
+          },
+          {
+            "text": "I'm just glad you could make it.",
+            "value": "player_glad_she_came",
+            "action": "q.dialogue.set_page('npc_happy_to_be_here');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_crepes_reply",
+      "speaker": "npc",
+      "lines": ["I know, right? I always come here when I need a little pick-me-up. It's a nice change from the library, too."],
+      "input": "q.dialogue.set_page('player_date_topic');"
+    },
+    {
+      "id": "npc_happy_to_be_here",
+      "speaker": "npc",
+      "lines": ["Me too! It's nice to take a break from all the school work and just relax.", "So, what did you have planned for today after this?"],
+      "input": "q.dialogue.set_page('player_date_topic');"
+    },
+    {
+      "id": "player_date_topic",
+      "speaker": "player",
+      "lines": ["I was hoping we could just chat more, get to know each other better. What do you usually do on your free Saturdays, when you're not busy with school?"],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Ask about her interests outside of school.",
+            "value": "interests",
+            "action": "q.dialogue.set_page('npc_interests');"
+          },
+          {
+            "text": "Tell her about your own hobbies.",
+            "value": "my_hobbies",
+            "action": "q.dialogue.set_page('player_my_hobbies');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_interests",
+      "speaker": "npc",
+      "lines": ["Well, besides the Student Council and gardening, I really enjoy sketching in my free time. Nothing professional, just little doodles in my notebook.", "It helps me clear my head. Do you have any creative hobbies?"],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "I like to draw/write/play music too.",
+            "value": "player_creative_hobby",
+            "action": "q.dialogue.set_page('npc_shared_interest');"
+          },
+          {
+            "text": "Not really, but that sounds cool.",
+            "value": "player_no_creative_hobby",
+            "action": "q.dialogue.set_page('npc_explain_creativity');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "player_my_hobbies",
+      "speaker": "player",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'On my free Saturdays, I usually [Player\\'s Hobby]. It\\'s a good way to unwind from the week. What about you, ' + q.npc.name + '?'"
+        }
+      ],
+      "input": "q.dialogue.set_page('npc_interests');"
+    },
+    {
+      "id": "npc_shared_interest",
+      "speaker": "npc",
+      "lines": ["Oh, really? That's amazing! Maybe we could share our work sometime, if you're comfortable. I'd love to see what you create."],
+      "input": "q.dialogue.set_page('player_compliment');"
+    },
+    {
+      "id": "npc_explain_creativity",
+      "speaker": "npc",
+      "lines": ["It can be really rewarding! Even if you don't think you're 'creative', finding something that lets you express yourself can be really good for you."],
+      "input": "q.dialogue.set_page('player_compliment');"
+    },
+    {
+      "id": "player_compliment",
+      "speaker": "player",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'You know, it\\'s really nice talking to you, ' + q.npc.name + '. You\\'re always so thoughtful and insightful.'"
+        }
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Suggest another date.",
+            "value": "suggest_next_date",
+            "action": "q.dialogue.set_page('npc_react_next_date');"
+          },
+          {
+            "text": "Ask how she manages everything.",
+            "value": "ask_how_she_manages",
+            "action": "q.dialogue.set_page('npc_manage_reply');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_react_next_date",
+      "speaker": "npc",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'Oh, thank you, ' + q.player.username + '. That\\'s sweet of you to say. I\\'ve really enjoyed our time today too. I\\'d love to do this again, if you\\'re free next weekend?'"
+        }
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Yes, definitely!",
+            "value": "player_confirm_next_date",
+            "action": "q.dialogue.set_page('npc_date_confirmed');"
+          },
+          {
+            "text": "I'll check my schedule.",
+            "value": "player_check_schedule",
+            "action": "q.dialogue.set_page('npc_understand');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_manage_reply",
+      "speaker": "npc",
+      "lines": ["It's all about balancing my time, I guess! And having supportive friends makes a big difference. But it's moments like these, just chatting, that really help me recharge."],
+      "input": "q.dialogue.set_page('player_suggest_another_date_after_chat');"
+    },
+    {
+      "id": "player_suggest_another_date_after_chat",
+      "speaker": "player",
+      "lines": ["I'm glad I could help with that, then. I really enjoyed our conversation today.", "Would you want to do something like this again sometime soon?"],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Yes, definitely!",
+            "value": "player_confirm_next_date",
+            "action": "q.dialogue.set_page('npc_date_confirmed');"
+          },
+          {
+            "text": "I'll check my schedule.",
+            "value": "player_check_schedule",
+            "action": "q.dialogue.set_page('npc_understand');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_date_confirmed",
+      "speaker": "npc",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'Great! I\\'m already looking forward to it. It\\'s been a really lovely afternoon, ' + q.player.username + '.'"
+        }
+      ],
+      "input": "q.dialogue.close();"
+    },
+    {
+      "id": "npc_understand",
+      "speaker": "npc",
+      "lines": ["Of course, no pressure! Just let me know. I had a really nice time today."],
+      "input": "q.dialogue.close();"
+    }
+  ]
+}
