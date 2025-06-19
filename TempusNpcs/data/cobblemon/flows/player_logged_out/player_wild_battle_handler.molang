@@ -8,8 +8,8 @@ for_each(t.actor, t.battle.actors, {
         v.player = c.player;
         q.set_query('player', c.player);
         v.pokemon_name = q.to_snake(t.actor.pokemon.species.name);
-        q.run_script('cobblemon:spawner_var_set');
-
         t.actor.pokemon.remove();
+        
+        q.run_script('cobblemon:spawner_var_set');
     };
 });
