@@ -1,0 +1,10 @@
+!c.player.in_battle ? return 0;
+
+t.battle = c.player.battle;
+t.battle.is_pvw == false ? return 0;
+
+for_each(t.actor, t.battle.actors, {
+    t.actor.pokemon != 0 && t.actor.pokemon.is_wild && (t.actor.pokemon.species.has_label('legendary') || t.actor.pokemon.species.has_label('mythical')) ? {
+        t.actor.pokemon.remove();
+    };
+});

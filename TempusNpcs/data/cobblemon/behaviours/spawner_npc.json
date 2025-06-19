@@ -1,0 +1,46 @@
+{
+    "name": "Spawner NPC",
+    "description": "Spawner NPC Configuration",
+    "entityType": "cobblemon:npc",
+    "undo": [
+        "q.entity.unset_interaction();"
+    ],
+    "configurations": [
+        {
+            "type": "custom_script",
+            "variables": [
+                {
+                    "variableName": "interaction_text",
+                    "displayName": "Interaction Text",
+                    "description": "Text displayed when the NPC is interacted with",
+                    "type": "TEXT",
+                    "defaultValue": "BRUHHHHHHHHHHHH"
+                },
+                {
+                    "variableName": "spawn_pokemon_props",
+                    "displayName": "Spawn Pokemon Properties",
+                    "description": "Properties of the Pokemon to spawn",
+                    "type": "TEXT",
+                    "defaultValue": "pikachu"
+                },
+                {
+                    "variableName": "spawn_pokemon_level",
+                    "displayName": "Spawn Pokemon Level",
+                    "description": "Level of the Pokemon to spawn",
+                    "type": "TEXT",
+                    "defaultValue": "50"
+                },
+                {
+                    "variableName": "spawn_pokemon_cooldown_data",
+                    "displayName": "Spawn Cooldown Data",
+                    "description": "Cooldown data for spawning the Pokemon (must have _cooldown suffix)",
+                    "type": "TEXT",
+                    "defaultValue": "pikachu_cooldown"
+                }
+            ],
+            "script": [
+                "q.entity.set_dialogue_interaction('cobblemon:general_spawner_interaction')"
+            ]
+        }
+    ]
+}

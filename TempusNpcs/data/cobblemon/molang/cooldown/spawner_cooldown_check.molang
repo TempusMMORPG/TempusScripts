@@ -1,0 +1,2 @@
+t.cooldown_time = q.run_molang('q.player.data.' + q.npc.config.spawn_pokemon_cooldown_data + ';');
+return q.system_time_millis < t.cooldown_time;

@@ -1,0 +1,10 @@
+t.cooldown_time = q.run_molang('q.player.data.' + q.npc.config.spawn_pokemon_cooldown_data + ';');
+t.time = q.system_time_millis;
+
+t.remaining_time = t.cooldown_time - t.time;
+t.days = math.floor(t.remaining_time / 86400000);
+t.hours = math.floor(math.mod(t.remaining_time, 86400000) / 3600000);
+t.minutes = math.floor(math.mod(t.remaining_time, 3600000) / 60000);
+t.seconds = math.floor(math.mod(t.remaining_time, 60000) / 1000);
+
+return t.days + 'd ' + t.hours + 'h ' + t.minutes + 'm ' + t.seconds + 's';

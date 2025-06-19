@@ -1,0 +1,66 @@
+{
+    "initializationAction": [
+        "q.run_script('cobblemon:spawner_cooldown_check') ? q.dialogue.set_page('on_cooldown');",
+        "q.player.in_battle ? q.dialogue.close();"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "battle_prompt",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "q.npc.config.interaction_text;"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "action": [
+                            "q.dialogue.close();",
+                            "q.run_script('cobblemon:spawn_wild_pokemon');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "on_cooldown",
+            "speaker": "npc",
+            "lines": [
+                "§8§oSpawn cooldown is active!\n",
+                "§8§oCurrent time remaining:",
+                {
+                    "type": "expression",
+                    "expression": "'§8§o' + q.run_script('cobblemon:spawner_cooldown_remaining_time');"
+                }
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

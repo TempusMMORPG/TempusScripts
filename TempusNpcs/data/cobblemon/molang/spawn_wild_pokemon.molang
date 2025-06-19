@@ -1,0 +1,8 @@
+q.player.in_battle ? return 0;
+
+t.props = q.npc.config.spawn_pokemon_name + ' lvl=' + q.npc.config.spawn_pokemon_level;
+t.pokemon = q.player.world.spawn_pokemon(q.player.x, q.player.y, q.player.z, t.props);
+t.was_attempted = 0;
+t.pokemon != 0 ? {
+    t.was_attempted = t.pokemon.attempt_wild_battle(q.player);
+};
