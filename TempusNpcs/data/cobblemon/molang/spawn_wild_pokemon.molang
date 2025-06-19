@@ -1,6 +1,6 @@
 q.player.in_battle ? return 0;
 
-t.props = q.npc.config.spawn_pokemon_name + ' lvl=' + q.npc.config.spawn_pokemon_level;
+t.props = q.npc.config.spawn_pokemon_props + ' lvl=' + q.npc.config.spawn_pokemon_level;
 t.pokemon = q.player.world.spawn_pokemon(q.player.x, q.player.y, q.player.z, t.props);
 t.was_attempted = 0;
 t.pokemon != 0 ? {
