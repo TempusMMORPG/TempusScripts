@@ -1,0 +1,3 @@
+t.cooldown_time = q.system_time_millis + 604800000;
+q.run_molang('q.player.data.' + v.pokemon_name + '_cooldown = ' + t.cooldown_time + ';');
+q.player.save_data();

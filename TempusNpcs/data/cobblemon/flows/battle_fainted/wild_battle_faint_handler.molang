@@ -4,11 +4,8 @@ c.pokemon.is_wild && (c.pokemon.species.has_label('legendary') || c.pokemon.spec
     for_each(t.player, c.players, {
         v.player = t.player.player;
         q.set_query('player', t.player.player);
-
-        t.cooldown_time = q.system_time_millis + 604800000;
-        t.name = q.to_snake(c.pokemon.species.name);
-        q.run_molang('q.player.data.' + t.name + '_cooldown = ' + t.cooldown_time + ';');
-        q.player.save_data();
+        v.pokemon_name = q.to_snake(c.pokemon.species.name);
+        q.run_script('cobblemon:spawner_var_set');
     });
 
     return 0;
@@ -19,11 +16,8 @@ for_each(t.wild_pokemon, c.wild_pokemon, {
         for_each(t.player, c.players, {
             v.player = t.player.player;
             q.set_query('player', t.player.player);
-
-            t.cooldown_time = q.system_time_millis + 604800000;
-            t.name = q.to_snake(t.wild_pokemon.pokemon.species.name);
-            q.run_molang('q.player.data.' + t.name + '_cooldown = ' + t.cooldown_time + ';');
-            q.player.save_data();
+            v.pokemon_name = q.to_snake(t.wild_pokemon.pokemon.species.name);
+            q.run_script('cobblemon:spawner_var_set');
         });
 
         t.wild_pokemon.pokemon.remove();
