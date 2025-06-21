@@ -90,7 +90,7 @@
                         "text": "Obtain the Pokedex",
                         "value": "pokedex",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 1B731C3E9885A0D4');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 0F1DFC22FEB78723');",
                             "q.dialogue.set_page('pokedex');"
                         ]
                     }
@@ -179,7 +179,7 @@
             ],
             "input": [
                 "q.player.data.dialogue.laurel_inform = true; q.player.save_data();",
-                "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 6CC2EE32C134F1CC');",
+                "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 707492869CC4B785');",
                 "q.dialogue.set_page('laurel_shocked_2');"
             ]
         },

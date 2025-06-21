@@ -38,10 +38,10 @@
                         ]
                     },
                     {
-                        "text": "Why is she so busy?",
+                        "text": "Why is he so busy?",
                         "value": "busy",
                         "action": [
-                            "q.dialogue.set_page('elon_why_is_she_so_busy');"
+                            "q.dialogue.set_page('elon_why_is_he_so_busy');"
                         ]
                     }
                 ]
@@ -60,17 +60,17 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Why is she so busy?",
+                        "text": "Why is he so busy?",
                         "value": "busy",
                         "action": [
-                            "q.dialogue.set_page('elon_why_is_she_so_busy');"
+                            "q.dialogue.set_page('elon_why_is_he_so_busy');"
                         ]
                     }
                 ]
             }
         },
         {
-            "id": "elon_why_is_she_so_busy",
+            "id": "elon_why_is_he_so_busy",
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
@@ -128,7 +128,7 @@
                         "text": "I'll check it out.",
                         "value": "check",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 18D4996D81ABC3F5');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 3E357CF572E28FBD');",
                             "q.player.data.dialogue.elon = true; q.player.save_data();",
                             "q.dialogue.set_page('farewell');"
                         ]

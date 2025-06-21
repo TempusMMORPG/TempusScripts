@@ -114,7 +114,7 @@
                         "action": [
                             "q.dialogue.set_page('7');",
                             "q.player.data.dialogue.jameson = true; q.player.save_data();",
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 7E9AEAA7FFEEFA8B');"
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 036109B15F7CAB85');"
                         ]
                     }
                 ]

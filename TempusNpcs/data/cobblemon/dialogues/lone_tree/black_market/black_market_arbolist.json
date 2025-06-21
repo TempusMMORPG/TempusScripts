@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.dialogue.sewer_worker == false || q.player.data.dialogue.grace ? q.dialogue.set_page('farewell');"
+        "q.player.data.dialogue.galarica_tree_3 == false && q.player.data.dialogue.galarica_tree_1 && q.player.data.dialogue.galarica_tree_2 && q.player.data.dialogue.galarica_tree_started ? q.dialogue.set_page('galarica_tree_lone_tree');"
     ],
     "speakers": {
         "npc": {
@@ -20,56 +20,57 @@
     },
     "pages": [
         {
-            "id": "greeting",
+            "id": "shop",
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "You're the trainer that Elon sent, right? I'm Grace, an associate of the Professor."
+                "Hey whattya want?"
             ],
-            "input": "q.dialogue.set_page('grace_one');"
+            "input": "q.dialogue.close();"
         },
         {
-            "id": "grace_one",
+            "id": "galarica_tree_lone_tree",
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                 "Head down into the Crypt. Professor Conifer is waiting for you there. He said he's found something."
+                "Hey lookin to buy somethin?"
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Ok no problem",
-                        "value": "okay",
+                        "text": "Do you have a Galarica Tree Sapling?",
+                        "value": "2",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2CD9813CAF7D174F');",
-                            "q.player.data.dialogue.grace = true; q.player.save_data();",
-                            "q.dialogue.set_page('farewell');"
+                            "q.dialogue.set_page('2');"
                         ]
                     }
-                        ]
-                    }
-            },
+                ]
+            }
+        },
         {
-            "id": "farewell",
+            "id": "2",
+            "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "See ya later!"
+                "Nah don't carry em. I got a contact at the Barry's Berries in Unity who's got one though"
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Goodbye",
-                        "value": "goodbye",
+                        "text": "Thanks",
+                        "value": "1",
                         "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete AAAAAAAAAA');",
+                            "q.player.data.dialogue.galarica_tree_3 = true; q.player.save_data();",
                             "q.dialogue.close();"
                         ]
                     }
-                        ]
-                    }
+                ]
+            }
         }
     ]
 }

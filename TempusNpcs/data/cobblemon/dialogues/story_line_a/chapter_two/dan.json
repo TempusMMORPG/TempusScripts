@@ -86,7 +86,7 @@
                         "text": "PLEASE!",
                         "value": "okay",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2E92ADC94CB8EF2A');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2DFB4F67B29B9C5D');",
                             "q.player.data.dialogue.dan = true; q.player.save_data();",
                             "q.dialogue.set_page('4');"
                         ]

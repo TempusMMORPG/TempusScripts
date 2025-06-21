@@ -1,6 +1,9 @@
 {
     "initializationAction": [
-        "q.player.data.dialogue.shelby || q.player.data.dialogue.bernard_confront == false ? q.dialogue.set_page('farewell');"
+        "q.player.data.dialogue.hisui_artifacts_complete ? q.dialogue.set_page('thanks');",
+        "q.player.data.dialogue.hisui_artifacts_complete == false ? q.dialogue.set_page('completion');",
+        "q.player.data.dialogue.hisui_artifacts_retrieved == false ? q.dialogue.set_page('not_complete');",
+        "q.player.data.dialogue.hisui_artifacts_accepted == false ? q.dialogue.set_page('greeting');"
     ],
     "speakers": {
         "npc": {
@@ -24,14 +27,14 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Hi, can I help you?"
+                "I need to fix this soon..."
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Where are family records kept?",
+                        "text": "Do you need help?",
                         "value": "1",
                         "action": [
                             "q.dialogue.set_page('1');"
@@ -45,17 +48,24 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Are you looking for anything in particular?"
+                "Oh sorry I didn't realize I said that out loud. I'm transporting some artifacts from Hisui for a conference. However, I got mugged in the desert."
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Well, I need...",
-                        "value": "2",
+                        "text": "Need help tracking down those artifacts?",
+                        "value": "1",
                         "action": [
                             "q.dialogue.set_page('2');"
+                        ]
+                    },
+                    {
+                        "text": "That sucks... Good Luck",
+                        "value": "2",
+                        "action": [
+                            "q.dialogue.set_page('rejection');"
                         ]
                     }
                 ]
@@ -66,16 +76,16 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Oh? Well our archives here only go back 200 years. So you're not in luck."
+                "Maybe... I know that the thief is going to the black market since he mentioned that after hitting me in the head. I don't know where that would be though."
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Do you know where I could?",
-                        "value": "3",
-                        "action": [
+                        "text": "Leave it to me.",
+                        "value": "1",
+                        "action": [   
                             "q.dialogue.set_page('3');"
                         ]
                     }
@@ -87,39 +97,18 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Well the only town that's been around for more than 400 years is Caligo."
+                "Thank you! I'll arrange a reward for you if you come back with the supplies."
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Oh?",
-                        "value": "4",
+                        "text": "Bye",
+                        "value": "bye",
                         "action": [
-                            "q.dialogue.set_page('4');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "4",
-            "escapeAction": "0",
-            "speaker": "npc",
-            "lines": [
-                "It's known as the \"town that survived\" and has been pretty much untouched since. I'd try talking to the historian, Petra, regarding that."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": true,
-                "options": [
-                    {
-                        "text": "Ok, thank you!",
-                        "value": "4",
-                        "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 27117840E01DAC02');",
-                            "q.player.data.dialogue.shelby = true; q.player.save_data();",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 6029541078D897B7');",
+                            "q.player.data.dialogue.hisui_artifacts_accepted = true; q.player.save_data();",
                             "q.dialogue.close();"
                         ]
                     }
@@ -127,10 +116,10 @@
             }
         },
         {
-            "id": "farewell",
+            "id": "not_complete",
             "speaker": "npc",
             "lines": [
-                "Family trees are such a fascinating thing, don't you think?"
+                "Please I think I'll be fired if I don't get these back."
             ],
             "input": {
                 "type": "option",
@@ -145,6 +134,45 @@
                     }
                 ]
             }
+        },
+        {
+            "id": "completion",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Thank you so much! I got some old items from Hisui. They aren't that valuable, but apparently certain Pokemon can evolve with them."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "No Problem",
+                        "value": "1",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 1C17291DFFC3DD14');",
+                            "q.player.data.dialogue.hisui_artifacts_complete = true; q.player.save_data();",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "rejection",
+            "speaker": "npc",
+            "lines": [
+                "Yeah..."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "thanks",
+            "speaker": "npc",
+            "lines": [
+                "Thank you! You probably saved my job."
+            ],
+            "input": "q.dialogue.close();"
         }
     ]
 }

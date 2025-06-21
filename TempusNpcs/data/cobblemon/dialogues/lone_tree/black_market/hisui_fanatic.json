@@ -1,0 +1,121 @@
+{
+    "initializationAction": [
+        "q.player.data.dialogue.hisui_artifacts_retrieved ? q.dialogue.set_page('shop');",
+        "q.player.data.dialogue.hisui_artifacts_retrieved == false ? q.dialogue.set_page('post_defeat');",
+        "q.player.data.hisui_fanatic_defeated == false && q.player.data.dialogue.hisui_artifacts_accepted ? q.dialogue.set_page('greeting');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "Error",
+            "speaker": "npc",
+            "lines": [
+                "Straight up jorkin it rn"
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Huh? What are you looking at?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Those Hisuian artifacts...",
+                        "value": "battle",
+                        "isSelectable": "q.player.data.normal_gym_defeated == false",
+                        "action": [
+                            "q.dialogue.set_page('battle_1');"
+                        ]
+                    },
+                    {
+                        "text": "Nothing",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "battle_1",
+            "speaker": "npc",
+            "lines": [
+                "These cost a fortune and you're not getting them!"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "Damn it... Please don't tell the cops about this. Here, have them I don't need them anymore."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Why did you buy these?",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('post_defeat_2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "post_defeat_2",
+            "speaker": "npc",
+            "lines": [
+                "I needed them to study so I could make counterfeit Ancient Poké Balls. I think I studied them enough to make convincing fakes. Hey these are functionally identical I'll sell you some."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Sure...",
+                        "value": "bye",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 3EAB3D839EFA7DCD');",
+                            "q.player.data.dialogue.hisui_artifacts_retrieved = true; q.player.save_data();",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "shop",
+            "speaker": "npc",
+            "lines": [
+                "Here are the fakes. Don't tell anyone I sold you these, okay?"
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

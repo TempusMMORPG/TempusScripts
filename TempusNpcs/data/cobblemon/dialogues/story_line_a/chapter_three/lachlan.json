@@ -97,7 +97,7 @@
                         "text": "See you later",
                         "value": "okay",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 5E71528E150E9FF4');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 1A634AC2F160424F');",
                             "q.player.data.dialogue.lachlan = true; q.player.save_data();",
                             "q.dialogue.close();"
                         ]

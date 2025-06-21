@@ -1,0 +1,201 @@
+{
+    "initializationAction": [
+        "q.player.data.dialogue.sweets_complete ? q.dialogue.set_page('shop');",
+        "q.player.data.dialogue.sweets_complete == false ? q.dialogue.set_page('completion');",
+        "q.player.data.berries_acquired == false ? q.dialogue.set_page('not_complete');",
+        "q.player.data.dialogue.sweets_start == false ? q.dialogue.set_page('greeting');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "error",
+            "speaker": "npc",
+            "lines": [
+                "Error"
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "greeting",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Hey, you're a traveler right?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Yeah?",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "1",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Hi I'm Lizzy, I work as a confectioner for the same company that the Gelina Gym exports to. I have a deadline to meet for a new product to mix into our Ice Cream. Can you help me?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Sure",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('2');"
+                        ]
+                    },
+                    {
+                        "text": "Sorry but I'm busy",
+                        "value": "2",
+                        "action": [
+                            "q.dialogue.set_page('rejection');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "2",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "This is slightly confidential so don't tell anyone. The new mix-ins are soft candy. I have all the equipment here, but I need some ingredients. Listen up, I need 5 of each of these berries."
+            ],
+            "input": "q.dialogue.set_page('3');"
+        },
+        {
+            "id": "3",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Oran, Pecha, Sitrus, Leppa, Wiki, Salac, and Custap Berries. Get me 5 of each and I'll give you a sample."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Okay, got it.",
+                        "value": "1",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 66AE8B40672316FC');",
+                            "q.player.data.dialogue.sweets_start = true; q.player.save_data();",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "not_complete",
+            "speaker": "npc",
+            "lines": [
+                "I need 5 Oran, Pecha, Sitrus, Leppa, Wiki, Salac, and Custap Berries. Try Unity City I think they have a big berry shop. (Submit the items in the Questbook)"
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "completion",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Okay, wait a moment while I make these into candy."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "...",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('completion_2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "completion_2",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": "q.dialogue.set_page('completion_3');"
+        },
+        {
+            "id": "completion_3",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Here you can have one for free, and I'll sell you more for a heavily discounted price."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Thanks",
+                        "value": "thanks",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 00F976620795304C');",
+                            "q.player.data.dialogue.sweets_complete = true; q.player.save_data();",
+                            "q.dialogue.set_page('completion_4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "completion_4",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "These are almost identical to the sweets used in Galar to evolve Milcery. Who knows maybe they'll work the same way. I'll sell you more anytime you want."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "shop",
+            "speaker": "npc",
+            "lines": [
+                "Here's the selection."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "rejection",
+            "speaker": "npc",
+            "lines": [
+                "Damn... I need to find out a way to get these..."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

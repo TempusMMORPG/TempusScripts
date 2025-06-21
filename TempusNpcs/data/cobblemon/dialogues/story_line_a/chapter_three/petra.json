@@ -85,7 +85,7 @@
                         "text": "Thank you!",
                         "value": "okay",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2E92ADC94CB8EF2A');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 046D664B94849D34');",
                             "q.player.data.dialogue.petra = true; q.player.save_data();",
                             "q.dialogue.close();"
                         ]
