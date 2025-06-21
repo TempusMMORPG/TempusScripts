@@ -20,7 +20,7 @@
     "ai": [
     {
       "type": "apply_behaviours",
-      "presets": [
+      "behaviours": [
         "cobblemon:base_interactable"
       ]
     }

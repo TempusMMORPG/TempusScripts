@@ -11,7 +11,7 @@
     "ai": [
         {
             "type": "apply_behaviours",
-            "presets": [
+            "behaviours": [
                 "cobblemon:core"
             ]
         }

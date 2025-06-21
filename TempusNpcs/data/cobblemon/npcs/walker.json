@@ -13,7 +13,7 @@
     "ai": [
         {
             "type": "apply_behaviours",
-            "presets": [
+            "behaviours": [
                 "cobblemon:core",
                 "cobblemon:walker_npc"
             ]
