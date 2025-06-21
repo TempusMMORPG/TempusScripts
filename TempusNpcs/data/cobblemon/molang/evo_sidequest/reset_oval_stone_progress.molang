@@ -1,0 +1,5 @@
+q.player.tell('§a§l[✔] It worked [✔]§r');
+q.player.data.oval_stone_supplies = false;
+q.player.data.dialogue.oval_stone_accepted = false;
+q.player.data.dialogue.oval_stone_completed = false;
+q.player.save_data();

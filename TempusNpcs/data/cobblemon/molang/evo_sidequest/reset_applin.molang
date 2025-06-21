@@ -1,0 +1,9 @@
+q.player.data.dialogue.sweet_apple_complete = 0;
+q.player.data.dialogue.tart_apple_complete = 0;
+q.player.data.dialogue.apple_accepted = 0;
+q.player.data.dialogue.apple_complete = 0;
+q.player.save_data();
+
+q.player.tell('§a§l[✔] Player data was successfully wiped! [✔]§r');
+
+

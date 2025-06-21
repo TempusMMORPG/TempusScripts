@@ -1,0 +1,5 @@
+q.player.tell('§a§l[✔] It worked [✔]§r');
+q.player.data.berries_acquired = false;
+q.player.data.dialogue.sweets_start = false;
+q.player.data.dialogue.sweets_complete = false;
+q.player.save_data();

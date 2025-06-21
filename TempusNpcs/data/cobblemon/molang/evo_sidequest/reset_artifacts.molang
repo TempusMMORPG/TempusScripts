@@ -1,0 +1,6 @@
+q.player.tell('§a§l[✔] It worked [✔]§r');
+q.player.data.dialogue.hisui_artifacts_accepted = false;
+q.player.data.dialogue.hisui_artifacts_retrieved = false;
+q.player.data.hisui_fanatic_defeated = false;
+q.player.data.dialogue.hisui_artifacts_complete = false;
+q.player.save_data();
