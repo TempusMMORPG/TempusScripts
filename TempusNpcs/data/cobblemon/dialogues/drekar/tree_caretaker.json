@@ -1,0 +1,76 @@
+{
+    "initializationAction": [
+        "q.player.data.dialogue.galarica_tree_2 == false && q.player.data.dialogue.galarica_tree_1 && q.player.data.dialogue.galarica_tree_started ? q.dialogue.set_page('galarica_tree_drekar');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Hello, welcome to Drekar"
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "galarica_tree_drekar",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Hello, welcome to Drekar. You seem to have an interest in our sacred tree?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Do you have a Galarica Tree Sapling?",
+                        "value": "2",
+                        "action": [
+                            "q.dialogue.set_page('2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "2",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I do not. I buy special fertilizer from the black market though. He specializes in rare trees he'd probably have one."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Thank you",
+                        "value": "1",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete AAAAAAAAAA');",
+                            "q.player.data.dialogue.galarica_tree_2 = true; q.player.save_data();",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

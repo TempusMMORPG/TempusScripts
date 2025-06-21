@@ -1,0 +1,346 @@
+{
+    "initializationAction": [
+        "q.player.data.dialogue.apple_complete ? q.dialogue.set_page('thanks');",
+        "q.player.data.dialogue.apple_complete == false && q.player.data.dialogue.apple_accepted && q.player.data.dialogue.sweet_apple_complete && q.player.data.dialogue.tart_apple_complete && q.player.party.count_by_properties('combee') ? q.dialogue.set_page('syrupy_submit');",
+        "q.player.data.dialogue.tart_apple_complete == false && q.player.data.dialogue.apple_accepted && q.player.party.count_by_properties('shuckle') ? q.dialogue.set_page('tart_submit');",
+        "q.player.data.dialogue.sweet_apple_complete == false && q.player.data.dialogue.apple_accepted && q.player.party.count_by_properties('milcery') ? q.dialogue.set_page('sweet_submit');",
+        "q.player.data.dialogue.apple_accepted == false ? q.dialogue.set_page('greeting');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "in_progress",
+            "speaker": "npc",
+            "lines": [
+                "I require the Pokémon I requested!"
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "greeting",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "AGH I CANNOT GET THIS RIGHT"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Whats wrong?",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "1",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "There are many new dishes that are waiting to be created, but I need special kinds of Apples."
+            ],
+            "input": "q.dialogue.set_page('2');"
+        },
+        {
+            "id": "2",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I need to find a way to recreate their flavor..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Can I help?",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('3');"
+                        ]
+                    },
+                    {
+                        "text": "Good Luck",
+                        "value": "2",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "3",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "There are three flavors I must recreate... Each one used to evolve Applin. They interact with a Pokémon in a unique way. Then I must use a Pokémon to recreate the flavor!"
+            ],
+            "input": "q.dialogue.set_page('4');"
+        },
+        {
+            "id": "4",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "First get me a Milcery so I can recreate the Sweet Apple!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Okay",
+                        "value": "accept",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 6278379B57A4CC51');",
+                            "q.player.data.dialogue.apple_accepted = true; q.player.save_data();",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "sweet_apple",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I need a Milcery to recreate the Sweet Apple flavor!"
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "sweet_submit",
+            "speaker": "npc",
+            "lines": [
+                "Ah thank you! Please wait as I test the flavor!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Okay",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('sweet_waiting');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "sweet_waiting",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": "q.dialogue.set_page('tart_apple_start');"
+        },
+        {
+            "id": "tart_apple_start",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "It works! It tastes exactly like the Sweet Apple! Now for the Tart Apple, I think a Shuckle's juices can help me recreate that flavor! I need a Shuckle at once!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Got it",
+                        "value": "1",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 6C160C08CC228F0A');",
+                            "q.player.data.dialogue.sweet_apple_complete = true; q.player.save_data();",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "tart_apple",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I need a Shuckle to recreate the Tart Apple flavor!"
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "tart_submit",
+            "speaker": "npc",
+            "lines": [
+                "Thank you! Wait as I test the flavor."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Okay",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('tart_waiting');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "tart_waiting",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": "q.dialogue.set_page('syrupy_apple_start');"
+        },
+        {
+            "id": "syrupy_apple_start",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "It works! Indistinguishable from the Tart Apple! Now for the Syrupy Apple, Surely a Combee will do the trick! Get me a Combee! At Once!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Sure",
+                        "value": "1",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 3FD1D89D9F649A2E');",
+                            "q.player.data.dialogue.tart_apple_complete = true; q.player.save_data();",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "syrupy_apple",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I need a Combee to recreate the Syrupy Apple flavor!"
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "syrupy_submit",
+            "speaker": "npc",
+            "lines": [
+                "Finally! Wait for me to test the flavor!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Okay",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('syrupy_waiting');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "syrupy_waiting",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": "q.dialogue.set_page('apple_completion');"
+        },
+        {
+            "id": "apple_completion",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "All of them taste exactly like the Apples I need! So many ideas waiting to be crafted! Here, take one of the Apples I created as a reward!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Sweet Apple",
+                        "value": "sweet_apple",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 25EEE70BE36B004A');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:sweet_apple');",
+                            "q.player.data.dialogue.apple_complete = true; q.player.save_data();",
+                            "q.dialogue.set_page('apple_completion_2');"
+                        ]
+                    },
+                    {
+                        "text": "Tart Apple",
+                        "value": "tart_apple",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 25EEE70BE36B004A');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:tart_apple');",
+                            "q.player.data.dialogue.apple_complete = true; q.player.save_data();",
+                            "q.dialogue.set_page('apple_completion_2');"
+                        ]
+                    },
+                    {
+                        "text": "Syrupy Apple",
+                        "value": "syrupy_apple",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 25EEE70BE36B004A');",
+                            "q.run_command('give ' + q.player.username + ' minecraft:apple');",
+                            "q.player.data.dialogue.apple_complete = true; q.player.save_data();",
+                            "q.dialogue.set_page('apple_completion_2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "apple_completion_2",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I will sell you more of these Apples. Their taste is so irresistible I have no doubts you will come back!"
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "thanks",
+            "speaker": "npc",
+            "lines": [
+                "Hello again friend! Here have some Apples!"
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

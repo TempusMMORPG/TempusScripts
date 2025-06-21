@@ -1,0 +1,76 @@
+{
+    "initializationAction": [
+        "q.player.data.dialogue.galarica_tree_1 == false && q.player.data.dialogue.galarica_tree_started ? q.dialogue.set_page('galarica_tree_newtown');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Damn the work never ends..."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "galarica_tree_newtown",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Hm? Do you want something?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Do you have a Galarica Tree Sapling?",
+                        "value": "2",
+                        "action": [
+                            "q.dialogue.set_page('2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "2",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "No I don't... Uh maybe check out the guy who looks after the big tree in Drekar? He looks after the biggest tree that I know of so I'd ask him."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Thank you",
+                        "value": "1",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete AAAAAAAAAA');",
+                            "q.player.data.dialogue.galarica_tree_1 = true; q.player.save_data();",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

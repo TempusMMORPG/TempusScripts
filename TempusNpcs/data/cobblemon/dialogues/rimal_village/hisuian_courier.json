@@ -1,0 +1,178 @@
+{
+    "initializationAction": [
+        "q.player.data.dialogue.hisui_artifacts_complete ? q.dialogue.set_page('thanks');",
+        "q.player.data.dialogue.hisui_artifacts_complete == false ? q.dialogue.set_page('completion');",
+        "q.player.data.dialogue.hisui_artifacts_retrieved == false ? q.dialogue.set_page('not_complete');",
+        "q.player.data.dialogue.hisui_artifacts_accepted == false ? q.dialogue.set_page('greeting');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "I need to fix this soon..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Do you need help?",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "1",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Oh sorry I didn't realize I said that out loud. I'm transporting some artifacts from Hisui for a conference. However, I got mugged in the desert."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Need help tracking down those artifacts?",
+                        "value": "1",
+                        "action": [
+                            "q.dialogue.set_page('2');"
+                        ]
+                    },
+                    {
+                        "text": "That sucks... Good Luck",
+                        "value": "2",
+                        "action": [
+                            "q.dialogue.set_page('rejection');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "2",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Maybe... I know that the thief is going to the black market since he mentioned that after hitting me in the head. I don't know where that would be though."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Leave it to me.",
+                        "value": "1",
+                        "action": [   
+                            "q.dialogue.set_page('3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "3",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Thank you! I'll arrange a reward for you if you come back with the supplies."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Bye",
+                        "value": "bye",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 6029541078D897B7');",
+                            "q.player.data.dialogue.hisui_artifacts_accepted = true; q.player.save_data();",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "not_complete",
+            "speaker": "npc",
+            "lines": [
+                "Please I think I'll be fired if I don't get these back."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Goodbye",
+                        "value": "goodbye",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "completion",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Thank you so much! I got some old items from Hisui. They aren't that valuable, but apparently certain Pokemon can evolve with them."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "No Problem",
+                        "value": "1",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 1C17291DFFC3DD14');",
+                            "q.player.data.dialogue.hisui_artifacts_complete = true; q.player.save_data();",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "rejection",
+            "speaker": "npc",
+            "lines": [
+                "Yeah..."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "thanks",
+            "speaker": "npc",
+            "lines": [
+                "Thank you! You probably saved my job."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

@@ -1,0 +1,2 @@
+q.player.data.berries_acquired = 1;
+q.player.save_data();

@@ -1,0 +1,76 @@
+{
+    "initializationAction": [
+        "q.player.data.dialogue.galarica_tree_3 == false && q.player.data.dialogue.galarica_tree_1 && q.player.data.dialogue.galarica_tree_2 && q.player.data.dialogue.galarica_tree_started ? q.dialogue.set_page('galarica_tree_lone_tree');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "shop",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Hey whattya want?"
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "galarica_tree_lone_tree",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Hey lookin to buy somethin?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Do you have a Galarica Tree Sapling?",
+                        "value": "2",
+                        "action": [
+                            "q.dialogue.set_page('2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "2",
+            "escapeAction": "0",
+            "speaker": "npc",
+            "lines": [
+                "Nah don't carry em. I got a contact at the Barry's Berries in Unity who's got one though"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Thanks",
+                        "value": "1",
+                        "action": [
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete AAAAAAAAAA');",
+                            "q.player.data.dialogue.galarica_tree_3 = true; q.player.save_data();",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
