@@ -1,0 +1,26 @@
+{
+    "name": "Resource Texture",
+    "description": "Resource Texture Configuration",
+    "entityType": "cobblemon:npc",
+    "undo": [
+        "q.entity.unset_resource_identifier();"
+    ],
+    "configurations": [
+        {
+            "type": "custom_script",
+            "variables": [
+                {
+                    "variableName": "resource_identifier",
+                    "displayName": "Resource Identifier",
+                    "description": "I.e cobblemon:global_skins or cobblemon:mudkip",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:global_skins"
+                }
+            ],
+            "script": [
+                "!q.is_blank(q.entity.config.resource_identifier) ? q.entity.set_resource_identifier(q.entity.config.resource_identifier);",
+                "q.is_blank(q.entity.config.resource_identifier) ? q.entity.unset_resource_identifier();"
+            ]
+        }
+    ]
+}

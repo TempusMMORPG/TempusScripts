@@ -1,5 +1,5 @@
 {
-    "hitbox": "player",
+    "scale": 0.01,
     "canDespawn": false,
     "isMovable": false,
     "isInvulnerable": true,
@@ -14,7 +14,8 @@
             "type": "apply_behaviours",
             "behaviours": [
                 "cobblemon:core",
-                "cobblemon:spawner_npc"
+                "cobblemon:spawner_npc",
+                "cobblemon:resource_texture"
             ]
         }
     ]
