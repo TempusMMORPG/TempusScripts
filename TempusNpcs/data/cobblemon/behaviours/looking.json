@@ -1,0 +1,22 @@
+{
+    "name": "Looking",
+    "description": "Looking AI",
+    "configurations": [
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "idle",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target",
+                    "look_at_battling_pokemon",
+                    "switch_npc_from_battle",
+                    "switch_from_fight",
+                    "switch_to_fight",
+                    "switch_to_chatting",
+                    "switch_from_chatting",
+                    "look_at_speaker"
+                ]
+            }
+        }
+    ]
+}
