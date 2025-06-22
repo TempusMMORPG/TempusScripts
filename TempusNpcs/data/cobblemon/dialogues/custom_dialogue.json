@@ -5,10 +5,16 @@
                 "type": "expression",
                 "expression": "q.npc.name"
             },
+            "gibber": {
+                "interval": 0.1
+            },
             "face": "q.npc.face();"
         },
         "player": {
             "face": "q.player.face();",
+            "gibber": {
+                "interval": 0.1
+            },
             "name": {
                 "type": "expression",
                 "expression": "q.player.username"

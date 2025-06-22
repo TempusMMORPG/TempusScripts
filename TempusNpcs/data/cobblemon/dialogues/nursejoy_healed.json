@@ -6,7 +6,10 @@
         "type": "expression",
         "expression": "q.npc.name"
       },
-      "face": "q.npc.face();"
+      "face": "q.npc.face();",
+      "gibber": {
+        "interval": 0.1
+      }
     }
   },
   "pages": [
