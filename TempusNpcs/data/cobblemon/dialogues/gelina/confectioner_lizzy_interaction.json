@@ -14,7 +14,7 @@
             "face": "q.npc.face();",
             "gibber": {
                 "interval": 0.1
-            },
+            }
         },
         "player": {
             "face": "q.player.face();",
