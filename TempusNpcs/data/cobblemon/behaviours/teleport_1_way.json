@@ -5,6 +5,9 @@
   "undo": [
   ],
   "configurations": [
+      {
+  "type": "custom_script",
+  "variables": [
     {
       "variableName": "shop_command",
       "displayName": "Shop Command",
@@ -39,6 +42,11 @@
       "description": "The item to be consumed from the player",
       "type": "TEXT",
       "defaultValue": "minecraft:paper"
+    }
+  ],
+      "script": [
+
+      ]
     }
   ]
 }

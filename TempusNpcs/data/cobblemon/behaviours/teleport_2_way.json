@@ -6,6 +6,9 @@
   ],
   "configurations": [
     {
+      "type": "custom_script",
+      "variables": [
+    {
       "variableName": "shop_command",
       "displayName": "Shop Command",
       "description": "The command to open the shop",
@@ -54,5 +57,10 @@
       "type": "TEXT",
       "defaultValue": "minecraft:paper"
     }
+  ],
+  "script": [
+
   ]
+}
+]
 }
