@@ -1,0 +1,58 @@
+{
+  "name": "Teleport 2 Way",
+  "description": "Sets the variables for 2-way teleportation.",
+  "entityType": "cobblemon:npc",
+  "undo": [
+  ],
+  "configurations": [
+    {
+      "variableName": "shop_command",
+      "displayName": "Shop Command",
+      "description": "The command to open the shop",
+      "type": "TEXT",
+      "defaultValue": "transport"
+    },
+    {
+      "variableName": "teleport_display_1",
+      "displayName": "Teleport Display Text 1",
+      "description": "Teleport Display (What is shown to user)",
+      "type": "TEXT",
+      "defaultValue": "Unity City"
+    },
+    {
+      "variableName": "teleport_display_2",
+      "displayName": "Teleport Display Text 2",
+      "description": "Teleport Display (What is shown to user)",
+      "type": "TEXT",
+      "defaultValue": "Hwa Village"
+    },
+    {
+      "variableName": "teleport_location_1",
+      "displayName": "Teleport Location Cordination 1",
+      "description": "Teleport location (X Y Z Rotation(X) Rotation(Y))",
+      "type": "TEXT",
+      "defaultValue": "0 10 0 ~ ~"
+    },
+    {
+      "variableName": "teleport_location_2",
+      "displayName": "Teleport Location Cordination 2",
+      "description": "Teleport location (X Y Z Rotation(X) Rotation(Y))",
+      "type": "TEXT",
+      "defaultValue": "0 10 0 ~ ~"
+    },
+    {
+      "variableName": "consume_item_display",
+      "displayName": "Consume Item Display",
+      "description": "The item to be consumed from the player",
+      "type": "TEXT",
+      "defaultValue": "Paper"
+    },
+    {
+      "variableName": "consume_item",
+      "displayName": "Consume Item",
+      "description": "The item to be consumed from the player",
+      "type": "TEXT",
+      "defaultValue": "minecraft:paper"
+    }
+  ]
+}
