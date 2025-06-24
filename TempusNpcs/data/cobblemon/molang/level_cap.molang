@@ -1,0 +1,81 @@
+t.gym_stage = q.player.data.gym_stage;
+t.highest_level = q.player.party.highest_level;
+
+t.is_capped = 0;
+
+t.gym_stage == 0 && (t.highest_level > 28) ? {
+    t.is_capped = 28;
+};
+
+t.gym_stage == 1 && (t.highest_level > 32) ? {
+    t.is_capped = 32;
+};
+
+t.gym_stage == 2 && (t.highest_level > 36) ? {
+    t.is_capped = 36;
+};
+
+t.gym_stage == 3 && (t.highest_level > 40) ? {
+    t.is_capped = 40;
+};
+
+t.gym_stage == 4 && (t.highest_level > 44) ? {
+    t.is_capped = 44;
+};
+
+t.gym_stage == 5 && (t.highest_level > 48) ? {
+    t.is_capped = 48;
+};
+
+t.gym_stage == 6 && (t.highest_level > 52) ? {
+    t.is_capped = 52;
+};
+
+t.gym_stage == 7 && (t.highest_level > 56) ? {
+    t.is_capped = 56;
+};
+
+t.gym_stage == 8 && (t.highest_level > 60) ? {
+    t.is_capped = 60;
+};
+
+t.gym_stage == 9 && (t.highest_level > 64) ? {
+    t.is_capped = 64;
+};
+
+t.gym_stage == 10 && (t.highest_level > 68) ? {
+    t.is_capped = 68;
+};
+
+t.gym_stage == 11 && (t.highest_level > 72) ? {
+    t.is_capped = 72;
+};
+
+t.gym_stage == 12 && (t.highest_level > 76) ? {
+    t.is_capped = 76;
+};
+
+t.gym_stage == 13 && (t.highest_level > 80) ? {
+    t.is_capped = 80;
+};
+
+t.gym_stage == 14 && (t.highest_level > 84) ? {
+    t.is_capped = 84;
+};
+
+t.gym_stage == 15 && (t.highest_level > 88) ? {
+    t.is_capped = 88;
+};
+
+t.gym_stage == 16 && (t.highest_level > 92) ? {
+    t.is_capped = 92;
+};
+
+t.gym_stage == 17 && (t.highest_level > 96) ? {
+    t.is_capped = 96;
+};
+
+t.is_capped != 0 ? {
+    q.cancel();
+    q.player.tell('§cConsider getting more gym badges! §lCurrent level cap: ' + t.is_capped);
+};
