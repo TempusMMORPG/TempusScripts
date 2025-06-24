@@ -3,7 +3,6 @@
   "description": "Toggles the display of the name tag for the NPC.",
   "entityType": "cobblemon:npc",
   "undo": [
-    "q.entity.unset_interaction();"
   ],
   "configurations": [
     {
@@ -18,7 +17,7 @@
         }
       ],
       "script": [
-         "q.entity.set_name_tag_visible == q.entity.config.display_name_tag"
+         "q.entity.set_name_tag_visible(q.entity.config.display_name_tag)"
       ]
     }
   ]
