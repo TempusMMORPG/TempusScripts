@@ -1,0 +1,25 @@
+{
+  "name": "Diaplay Name Tag",
+  "description": "Toggles the display of the name tag for the NPC.",
+  "entityType": "cobblemon:npc",
+  "undo": [
+    "q.entity.unset_interaction();"
+  ],
+  "configurations": [
+    {
+      "type": "custom_script",
+      "variables": [
+        {
+          "variableName": "display_name_tag",
+          "displayName": "Diaplay Name Tag",
+          "description": "Toggle the name tag display true or false",
+          "type": "BOOLEAN",
+          "defaultValue": "false"
+        }
+      ],
+      "script": [
+         "q.entity.set_name_tag_visible == q.entity.config.display_name_tag"
+      ]
+    }
+  ]
+}

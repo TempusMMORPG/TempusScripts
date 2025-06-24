@@ -14,7 +14,9 @@
       "type": "apply_behaviours",
       "behaviours": [
         "cobblemon:core",
-        "cobblemon:dialogue_selection"
+        "cobblemon:chatter",
+        "cobblemon:looking",
+        "cobblemon:looks_in_one_direction"
       ]
     }
   ]
