@@ -20,23 +20,21 @@
       "behaviours": [
         "cobblemon:looking",
         "cobblemon:looks_in_one_direction",
-        "cobblemon:battle_reward_pokedollars"
+        "cobblemon:battle_reward_pokedollars",
+        "cobblemon:battle_scripts"
       ]
+    },
+    {
+      "type": "set_variables",
+      "variableValues": {
+        "on_player_wins": "'q.run_script(\\'cobblemon:bug_leader_defeated\\');'"
+      }
     }
   ],
   "interaction": {
     "type": "dialogue",
     "dialogue": "cobblemon:bug_gym_interaction"
   },
-  "config": [
-    {
-      "variableName": "on_player_wins",
-      "displayName": "npc.variable.on_player_wins.name",
-      "description": "npc.variable.on_player_wins.desc",
-      "type": "TEXT",
-      "defaultValue": "q.run_script('cobblemon:bug_leader_defeated');"
-    }
-  ],
   "skill": 5,
   "party": {
     "type": "script",
