@@ -1,0 +1,5 @@
+for_each(t.player, c.players, {
+    v.player = t.player.player;
+    q.set_query('player', t.player.player);
+    q.run_script('cobblemon:level_cap');
+});
