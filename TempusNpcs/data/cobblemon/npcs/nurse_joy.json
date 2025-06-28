@@ -14,12 +14,12 @@
             "behaviours": [
                 "cobblemon:core",
                 "cobblemon:looks_in_one_direction",
-                "cobblemon:spawnpoint_config",
+                "cobblemon:spawnpoint_config"
             ]
         }
     ],
     "names": [
-        "§d§lNurse Joy§r"
+        " §d§lNurse Joy§r"
     ],
     "interaction": {
         "type": "dialogue",
