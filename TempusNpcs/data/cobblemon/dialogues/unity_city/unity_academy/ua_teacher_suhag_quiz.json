@@ -25,7 +25,7 @@
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'Hello there, trainer! My name is ' + q.npc.name + ' and I am the math instructor here at Unity Academy. Would you like to take a quiz to test your knowledge?'"
+                    "expression": "'Hello there, trainer! My name is Ms. Ryori and I am the math instructor here at Unity Academy. Would you like to take a quiz to test your knowledge?'"
                 }
             ],
             "input": {
