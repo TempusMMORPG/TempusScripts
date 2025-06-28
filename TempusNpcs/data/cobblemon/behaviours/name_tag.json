@@ -1,5 +1,5 @@
 {
-  "name": "Diaplay Name Tag",
+  "name": "Display Name Tag",
   "description": "Toggles the display of the name tag for the NPC.",
   "entityType": "cobblemon:npc",
   "undo": [
@@ -10,7 +10,7 @@
       "variables": [
         {
           "variableName": "display_name_tag",
-          "displayName": "Diaplay Name Tag",
+          "displayName": "Display Name Tag",
           "description": "Toggle the name tag display true or false",
           "type": "BOOLEAN",
           "defaultValue": "false"

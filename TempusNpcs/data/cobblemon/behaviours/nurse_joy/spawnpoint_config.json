@@ -1,0 +1,23 @@
+{
+  "name": "Spawn Point Configuration",
+  "description": "Sets the player's spawn point when interacting with the NPC - Dependent on Nurse Joy Dialogue",
+  "entityType": "cobblemon:npc",
+  "undo": [
+  ],
+  "configurations": [
+    {
+      "type": "custom_script",
+      "variables": [
+        {
+          "variableName": "spawn_point_location",
+          "displayName": "Spawn Point Configuration",
+          "description": "Location to set the player's spawn point when interacting with the NPC",
+          "type": "TEXT",
+          "defaultValue": "0 0 0 ~ ~"
+        }
+      ],
+      "script": [
+      ]
+    }
+  ]
+}

@@ -12,7 +12,9 @@
         {
             "type": "apply_behaviours",
             "behaviours": [
-                "cobblemon:core"
+                "cobblemon:core",
+                "cobblemon:looks_in_one_direction",
+                "cobblemon:spawnpoint_config",
             ]
         }
     ],
