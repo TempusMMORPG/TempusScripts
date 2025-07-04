@@ -15,7 +15,8 @@
             "behaviours": [
                 "cobblemon:core",
                 "cobblemon:spawner_npc",
-                "cobblemon:resource_texture"
+                "cobblemon:resource_texture",
+                "cobblemon:name_tag"
             ]
         }
     ]
