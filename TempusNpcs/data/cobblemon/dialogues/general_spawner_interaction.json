@@ -22,7 +22,6 @@
     "pages": [
         {
             "id": "battle_prompt",
-            "speaker": "npc",
             "lines": [
                 {
                     "type": "expression",
@@ -51,7 +50,6 @@
         },
         {
             "id": "on_cooldown",
-            "speaker": "npc",
             "lines": [
                 "§8§oSpawn cooldown is active!\n",
                 "§8§oCurrent time remaining:",
