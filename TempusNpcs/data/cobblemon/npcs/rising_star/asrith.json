@@ -1,7 +1,7 @@
 {
     "resourceIdentifier": "cobblemon:global_skins",
     "names": [
-        "§lBattle Tower Boss§r"
+        "§lAsrith§r"
     ],
     "hitbox": "player",
     "canDespawn": false,
@@ -19,18 +19,25 @@
             "behaviours": [
                 "cobblemon:looking",
                 "cobblemon:looks_in_one_direction",
+                "cobblemon:battle_reward_pokedollars",
                 "cobblemon:battle_scripts"
             ]
+        },
+        {
+            "type": "set_variables",
+            "variableValues": {
+                "on_player_wins": "'q.run_script(\\'cobblemon:asrith_defeated\\');'"
+            }
         }
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:bt_npc_interaction"
+        "dialogue": "cobblemon:asrith_interaction"
     },
     "skill": 5,
     "party": {
         "type": "script",
-        "script": "cobblemon:battle_tower_1boss",
+        "script": "cobblemon:asrith",
         "isStatic": false
     }
 }

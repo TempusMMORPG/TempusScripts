@@ -13,7 +13,6 @@
     "canChallenge": true
   },
   "autoHealParty": true,
-  "presets": [],
   "ai": [
     {
       "type": "apply_behaviours",
