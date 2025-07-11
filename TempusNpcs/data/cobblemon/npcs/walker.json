@@ -9,7 +9,6 @@
     "names": [
         "Tempus Walker"
     ],
-    "presets": [],
     "ai": [
         {
             "type": "apply_behaviours",

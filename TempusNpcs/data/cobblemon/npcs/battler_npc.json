@@ -13,8 +13,6 @@
   "names": [
     "Battler NPC"
   ],
-  "presets": [
-  ],
   "ai": [
     {
       "type": "apply_behaviours",

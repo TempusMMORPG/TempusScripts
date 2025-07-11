@@ -6,8 +6,6 @@
     "isInvulnerable": true,
     "isLeashable": false,
     "allowProjectileHits": false,
-    "presets": [
-    ],
     "ai": [
         {
             "type": "apply_behaviours",
