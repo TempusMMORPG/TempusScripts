@@ -1,0 +1,43 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",
+    "names": [
+        "§lRanger Ixs§r"
+    ],
+    "hitbox": "player",
+    "canDespawn": false,
+    "isMovable": false,
+    "isInvulnerable": true,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "battleConfiguration": {
+        "canChallenge": true
+    },
+    "autoHealParty": true,
+    "ai": [
+        {
+            "type": "apply_behaviours",
+            "behaviours": [
+                "cobblemon:looking",
+                "cobblemon:looks_in_one_direction",
+                "cobblemon:battle_reward_pokedollars",
+                "cobblemon:battle_scripts"
+            ]
+        },
+        {
+            "type": "set_variables",
+            "variableValues": {
+                "on_player_wins": "'q.player.data.ranger_6_recommendation = 1;'"
+            }
+        }
+    ],
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:ll_ranger_6"
+    },
+    "skill": 5,
+    "party": {
+        "type": "script",
+        "script": "cobblemon:ll_ranger_6",
+        "isStatic": false
+    }
+}
