@@ -1,0 +1,44 @@
+{
+    "resourceIdentifier": "cobblemon:global_skins",
+    "names": [
+        "§lBattle Tower Boss§r"
+    ],
+    "hitbox": "player",
+    "canDespawn": false,
+    "isMovable": false,
+    "isInvulnerable": true,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "battleConfiguration": {
+        "canChallenge": true
+    },
+    "autoHealParty": true,
+    "presets": [],
+    "ai": [
+        {
+            "type": "apply_behaviours",
+            "behaviours": [
+                "cobblemon:looking",
+                "cobblemon:looks_in_one_direction",
+                "cobblemon:battle_scripts"
+            ]
+        },
+        {
+            "type": "set_variables",
+            "variableValues": {
+                "on_player_wins": "'q.run_script(\\'cobblemon:battle_tower_victory\\');'",
+                "on_player_loses": "'q.run_script(\\'cobblemon:battle_tower_failure\\');'"
+            }
+        }
+    ],
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:bt_npc_interaction"
+    },
+    "skill": 5,
+    "party": {
+        "type": "script",
+        "script": "cobblemon:battle_tower_boss",
+        "isStatic": false
+    }
+}
