@@ -1,0 +1,43 @@
+{
+  "resourceIdentifier": "cobblemon:global_skins",
+  "names": [
+    "§lArcheologist§r"
+  ],
+  "hitbox": "player",
+  "canDespawn": false,
+  "isMovable": false,
+  "isInvulnerable": true,
+  "isLeashable": false,
+  "allowProjectileHits": false,
+  "battleConfiguration": {
+    "canChallenge": true
+  },
+  "autoHealParty": true,
+  "ai": [
+    {
+      "type": "apply_behaviours",
+      "behaviours": [
+        "cobblemon:looking",
+        "cobblemon:looks_in_one_direction",
+        "cobblemon:battle_reward_pokedollars",
+        "cobblemon:battle_scripts"
+      ]
+    },
+    {
+      "type": "set_variables",
+      "variableValues": {
+        "on_player_wins": "'q.player.data.ground_trainer_defeat_count = q.player.data.ground_trainer_defeat_count + 1;q.player.save_data();'"
+      }
+    }
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:ground_trainer_interaction"
+  },
+  "skill": 5,
+  "party": {
+    "type": "script",
+    "script": "cobblemon:ground_trainer",
+    "isStatic": false
+  }
+}
