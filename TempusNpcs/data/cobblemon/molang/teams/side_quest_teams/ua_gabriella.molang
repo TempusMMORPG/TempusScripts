@@ -1,0 +1,3 @@
+t.constants = ' hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true';
+q.party.add_by_properties('arrokuda level=10 nature=docile ability=swiftswim' + t.constants);
+q.party.add_by_properties('wooper level=13 nature=docile ability=waterabsorb' + t.constants);

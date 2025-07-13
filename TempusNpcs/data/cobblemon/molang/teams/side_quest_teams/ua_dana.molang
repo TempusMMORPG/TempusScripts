@@ -1,0 +1,4 @@
+t.constants = ' hp_iv=10 attack_iv=10 defence_iv=10 special_attack_iv=10 special_defence_iv=10 speed_iv=10 uncatchable=true';
+q.party.add_by_properties('horsea level=14 nature=docile ability=guts' + t.constants);
+q.party.add_by_properties('buizel level=15 nature=docile ability=guts' + t.constants);
+q.party.add_by_properties('prinplup level=17 nature=docile ability=guts' + t.constants);
