@@ -1,7 +1,7 @@
 {
   "resourceIdentifier": "cobblemon:global_skins",
   "names": [
-    "§lOfficer Simon§r"
+    "§lPrince Hadrian§r"
   ],
   "hitbox": "player",
   "canDespawn": false,
@@ -26,18 +26,18 @@
     {
       "type": "set_variables",
       "variableValues": {
-        "on_player_wins": "'q.player.data.crypt_police_4a = 1;q.player.save_data();'"
+        "on_player_wins": "'q.run_script(\\'cobblemon:prince_hadrian_defeated\\');'"
       }
     }
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:police_crypt_4a"
+    "dialogue": "cobblemon:prince_hadrian_interaction"
   },
   "skill": 5,
   "party": {
     "type": "script",
-    "script": "cobblemon:crypt_policeman",
+    "script": "cobblemon:prince_hadrian",
     "isStatic": false
   }
 }

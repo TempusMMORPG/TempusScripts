@@ -32,7 +32,7 @@
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:cobblemon:police_crypt_1a"
+    "dialogue": "cobblemon:police_crypt_1a"
   },
   "skill": 5,
   "party": {

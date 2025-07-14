@@ -1,7 +1,7 @@
 {
   "resourceIdentifier": "cobblemon:global_skins",
   "names": [
-    "§lOfficer Simon§r"
+    "§lLa Relance Ruins Regalis Grunt§r"
   ],
   "hitbox": "player",
   "canDespawn": false,
@@ -26,18 +26,18 @@
     {
       "type": "set_variables",
       "variableValues": {
-        "on_player_wins": "'q.player.data.crypt_police_4a = 1;q.player.save_data();'"
+        "on_player_wins": "'q.player.data.regalis_grunt_2c_2_defeated = true;q.player.save_data();'"
       }
     }
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:police_crypt_4a"
+    "dialogue": "cobblemon:regalis_grunt_2c_2"
   },
   "skill": 5,
   "party": {
     "type": "script",
-    "script": "cobblemon:crypt_policeman",
+    "script": "cobblemon:regalis_grunt_2c",
     "isStatic": false
   }
 }
