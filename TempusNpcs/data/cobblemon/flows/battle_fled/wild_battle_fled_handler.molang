@@ -2,6 +2,7 @@ c.battle.is_pvw == false ? return 0;
 
 for_each(t.wild_pokemon, c.wild_pokemon, {
     t.wild_pokemon.pokemon.species.has_label('legendary') || t.wild_pokemon.pokemon.species.has_label('mythical') ? {
-        t.wild_pokemon.pokemon.remove();
+        v.pokemon_entity = t.wild_pokemon.pokemon;
+        q.run_script('cobblemon:kill_pokemon_entity');
     };
 });

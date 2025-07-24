@@ -1,6 +1,7 @@
 c.battle.is_pvw == false ? return 0;
 
-for_each(t.wild_pokemon, c.wild_pokemon, {
+for_each(t.wild_pokemon, c.wild_pokemon_winners, {
+    t.wild_pokemon.pokemon.owner != 0 ? return 0;
     t.wild_pokemon.pokemon.species.has_label('legendary') || t.wild_pokemon.pokemon.species.has_label('mythical') ? {
         for_each(t.player, c.players, {
             v.player = t.player.player;
@@ -9,6 +10,7 @@ for_each(t.wild_pokemon, c.wild_pokemon, {
             q.run_script('cobblemon:spawner_var_set');
         });
 
-        t.wild_pokemon.pokemon.remove();
+        v.pokemon_entity = t.wild_pokemon.pokemon;
+        q.run_script('cobblemon:kill_pokemon_entity');
     };
 });

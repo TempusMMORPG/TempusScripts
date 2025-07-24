@@ -9,5 +9,5 @@ t.pokemon != 0 ? {
 
 t.was_attempted ? {
     v.pokemon = t.pokemon;
-    q.run_molang('q.player.in_battle == false ? v.pokemon.remove();', 0.2);
+    q.run_molang('q.player.in_battle == false ? v.pokemon.damage(1000);', 0.2);
 };
