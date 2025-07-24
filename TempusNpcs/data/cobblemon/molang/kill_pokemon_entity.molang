@@ -1,8 +1,2 @@
-v.pokemon_entity.world.spawn_bedrock_particles('minecraft:large_smoke', v.pokemon_entity.x, v.pokemon_entity.y, v.pokemon_entity.z, v.pokemon_entity.uuid);
-v.pokemon_entity.world.spawn_bedrock_particles('minecraft:large_smoke', v.pokemon_entity.x, v.pokemon_entity.y, v.pokemon_entity.z, v.pokemon_entity.uuid);
-v.pokemon_entity.world.spawn_bedrock_particles('minecraft:large_smoke', v.pokemon_entity.x, v.pokemon_entity.y, v.pokemon_entity.z, v.pokemon_entity.uuid);
-v.pokemon_entity.world.spawn_bedrock_particles('minecraft:large_smoke', v.pokemon_entity.x, v.pokemon_entity.y, v.pokemon_entity.z, v.pokemon_entity.uuid);
-v.pokemon_entity.world.spawn_bedrock_particles('minecraft:large_smoke', v.pokemon_entity.x, v.pokemon_entity.y, v.pokemon_entity.z, v.pokemon_entity.uuid);
-v.pokemon_entity.world.spawn_bedrock_particles('minecraft:large_smoke', v.pokemon_entity.x, v.pokemon_entity.y, v.pokemon_entity.z, v.pokemon_entity.uuid);
 q.run_command('tp ' + v.pokemon_entity.uuid + ' ' + v.pokemon_entity.x + ' ' + (v.pokemon_entity.y - 360) + ' ' + v.pokemon_entity.z);
 q.run_molang('v.pokemon_entity.damage(1000);', 0.5);
