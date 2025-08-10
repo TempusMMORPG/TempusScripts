@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.crypt_police_defeat_4a || q.player.data.dialogue.grace == false ? q.dialogue.set_page('idle');"
+        "q.player.data.crypt_police_4a || q.player.data.dialogue.grace == false ? q.dialogue.set_page('idle');"
     ],
     "speakers": {
         "npc": {
