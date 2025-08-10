@@ -1,6 +1,6 @@
 c.pokemon.species.has_label('legendary') || c.pokemon.species.has_label('mythical') ? {
     v.player = c.player;
     q.set_query('player', c.player);
-    v.pokemon_name = q.to_snake(c.pokemon.species.name);
+    v.pokemon_name = q.to_lower(c.pokemon.species.name);
     q.run_script('cobblemon:spawner_var_set');
 };
