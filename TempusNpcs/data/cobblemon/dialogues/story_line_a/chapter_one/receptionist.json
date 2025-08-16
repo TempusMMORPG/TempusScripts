@@ -5,10 +5,16 @@
                 "type": "expression",
                 "expression": "q.npc.name"
             },
-            "face": "q.npc.face();"
+            "face": "q.npc.face();",
+            "gibber": {
+                "interval": 0.1
+            }
         },
         "player": {
             "face": "q.player.face();",
+            "gibber": {
+                "interval": 0.1
+            },
             "name": {
                 "type": "expression",
                 "expression": "q.player.username"
@@ -27,13 +33,10 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": {
-                            "type": "expression",
-                            "expression": "q.npc.config.teleport_display_1"
-                        },
+                        "text": "Go to Unity City Lab",
                         "value": "location1",
                         "action": [
-                            "q.run_command('tp ' + q.player.username + ' ' + q.npc.config.teleport_location_1);",
+                            "q.run_command('tp ' + q.player.username + ' 345 65 -707 -89 5.4');",
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 0B6A97171EA4BC42');",
                             "q.dialogue.close();",
                             "q.player.tell('§a§l[✔] Travelled to ' + q.npc.config.teleport_display_1 + '[✔]§r');"

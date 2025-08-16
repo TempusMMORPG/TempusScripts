@@ -11,10 +11,16 @@
                 "type": "expression",
                 "expression": "q.npc.name"
             },
-            "face": "q.npc.face();"
+            "face": "q.npc.face();",
+            "gibber": {
+                "interval": 0.1
+            }
         },
         "player": {
             "face": "q.player.face();",
+            "gibber": {
+                "interval": 0.1
+            },
             "name": {
                 "type": "expression",
                 "expression": "q.player.username"
