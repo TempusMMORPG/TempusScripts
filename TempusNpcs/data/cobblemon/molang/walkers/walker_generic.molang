@@ -1,0 +1,33 @@
+t.should_run = q.entity.is_doing_activity('idle') && !q.entity.has_walk_target && q.entity.config.toggle_walk;
+!t.should_run ? return 0;
+
+t.pos_radius = q.entity.config.pos_radius;
+v.speed = q.entity.config.speed;
+t.positions = q.array('-432.5, 67, 4.5', '-419.5, 67, 4.5', '-419.5, 67, 13.5', '-432.5, 67, 13.5');
+t.num_points = q.length(t.positions);
+
+v.target = 0;
+t.current_index = 0;
+for_each(t.position, t.positions, {
+    v.target = t.current_index == q.entity.data.current_target_index ? t.position : v.target;
+    v.target != 0 ? break;
+    t.current_index = t.current_index + 1;
+});
+
+q.run_molang('v.distance_to_target = q.entity.distance_to_pos(' + v.target + ');');
+v.is_too_far = v.distance_to_target > t.pos_radius;
+
+!v.is_too_far ? {
+    t.value = q.entity.data.current_target_index + 1;
+    q.entity.data.current_target_index = math.mod(t.value, t.num_points);
+
+    v.target = 0;
+    t.current_index = 0;
+    for_each(t.position, t.positions, {
+        v.target = t.current_index == q.entity.data.current_target_index ? t.position : v.target;
+        v.target != 0 ? break;
+        t.current_index = t.current_index + 1;
+    });
+};
+
+q.run_molang('q.entity.walk_to(' + v.target + ', v.speed);');
