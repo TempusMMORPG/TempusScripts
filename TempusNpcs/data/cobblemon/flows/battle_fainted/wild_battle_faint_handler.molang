@@ -1,0 +1,12 @@
+c.battle.is_pvw == false ? return 0;
+t.pokemon = c.pokemon.pokemon;
+t.pokemon.is_wild == false ? return 0;
+
+t.pokemon.species.has_label('legendary') || t.pokemon.species.has_label('mythical') ? {
+    for_each(t.player, c.players, {
+        v.player = t.player.player;
+        q.set_query('player', t.player.player);
+        v.pokemon_name = q.to_lower(t.pokemon.species.name);
+        q.run_script('cobblemon:spawner_var_set');
+    });
+};
