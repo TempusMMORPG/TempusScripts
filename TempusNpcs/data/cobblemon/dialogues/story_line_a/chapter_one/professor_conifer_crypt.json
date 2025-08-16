@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.dialogue.professor_conifer_crypt || q.player.data.crypt_police_1a && q.player.data.crypt_police_2a && q.player.data.crypt_police_3a && q.player.data.crypt_police_4a ? q.dialogue.set_page('idle');"
+        "q.player.data.dialogue.professor_conifer_crypt || q.player.data.crypt_police_1a == false || q.player.data.crypt_police_2a == false || q.player.data.crypt_police_3a == false || q.player.data.crypt_police_4a == false ? q.dialogue.set_page('idle');"
     ],
     "speakers": {
         "npc": {
