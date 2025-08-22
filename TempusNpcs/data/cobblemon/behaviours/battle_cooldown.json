@@ -6,7 +6,7 @@
   ],
   "configurations": [
     {
-      "type": "custom_script",
+      "type": "add_variables",
       "variables": [
         {
           "variableName": "base_defeat_count",
@@ -15,8 +15,6 @@
           "type": "NUMBER",
           "defaultValue": "4.0"
         }
-      ],
-      "script": [
       ]
     }
   ]

@@ -6,7 +6,7 @@
   ],
   "configurations": [
     {
-      "type": "custom_script",
+      "type": "add_variables",
       "variables": [
         {
           "variableName": "node_health",
@@ -36,8 +36,6 @@
           "type": "TEXT",
           "defaultValue": "cobblemon:node"
         }
-      ],
-      "script": [
       ]
     }
   ]

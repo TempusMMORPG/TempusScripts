@@ -6,7 +6,7 @@
   ],
   "configurations": [
     {
-      "type": "custom_script",
+      "type": "add_variables",
       "variables": [
         {
           "variableName": "toggle_battle_cooldown",
@@ -22,8 +22,6 @@
           "type": "NUMBER",
           "defaultValue": "0.333"
         }
-      ],
-      "script": [
       ]
     }
   ]

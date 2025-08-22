@@ -6,7 +6,7 @@
   ],
   "configurations": [
     {
-      "type": "custom_script",
+      "type": "add_variables",
       "variables": [
         {
           "variableName": "quest_id",
@@ -22,8 +22,6 @@
           "type": "TEXT",
           "defaultValue": "q.run_command('ftbquests change_progress ' + q.player.username + ' complete ' + q.npc.config.quest_id);"
         }
-      ],
-      "script": [
       ]
     }
   ]

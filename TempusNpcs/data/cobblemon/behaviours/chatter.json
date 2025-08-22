@@ -7,7 +7,7 @@
   ],
   "configurations": [
     {
-      "type": "custom_script",
+      "type": "script",
       "variables": [
         {
           "variableName": "dialogue",

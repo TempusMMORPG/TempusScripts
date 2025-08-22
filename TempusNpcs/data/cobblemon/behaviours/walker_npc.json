@@ -4,39 +4,43 @@
     "entityType": "cobblemon:npc",
     "configurations": [
         {
-            "type": "add_variables",
-            "variables": [
-                {
-                    "variableName": "toggle_walk",
-                    "displayName": "Toggle Walk",
-                    "description": "Toggle Walk",
-                    "type": "BOOLEAN",
-                    "defaultValue": "false"
-                },
-                {
-                    "variableName": "pos_radius",
-                    "displayName": "Position Radius (3 or higher)",
-                    "description": "Position Radius before the NPC starts to go to a new location",
-                    "type": "NUMBER",
-                    "defaultValue": "3"
-                },
-                {
-                    "variableName": "speed",
-                    "displayName": "Speed (1.0 or less)",
-                    "description": "Speed of the NPC",
-                    "type": "NUMBER",
-                    "defaultValue": "0.25"
-                }
-            ]
-        },
-        {
-            "type": "add_tasks_to_activity",
+            "type": "cobblemon:add_tasks_to_activity",
             "activity": "minecraft:idle",
             "tasksByPriority": {
                 "0": [
                     {
-                        "type": "run_script",
-                        "script": "cobblemon:walker_generic"
+                        "type": "cobblemon:run_script",
+                        "script": "cobblemon:walker_generic",
+                        "variables": [
+                            {
+                                "variableName": "toggle_walk",
+                                "displayName": "Toggle Walk",
+                                "description": "Toggle Walk",
+                                "type": "BOOLEAN",
+                                "defaultValue": "false"
+                            },
+                            {
+                                "variableName": "walker_coords_molang_location",
+                                "displayName": "Walker Coordinates Molang Location",
+                                "description": "Molang location for walker coordinates",
+                                "type": "TEXT",
+                                "defaultValue": "walker_coords_test"
+                            },
+                            {
+                                "variableName": "pos_radius",
+                                "displayName": "Position Radius (3 or higher)",
+                                "description": "Position Radius before the NPC starts to go to a new location",
+                                "type": "NUMBER",
+                                "defaultValue": "3"
+                            },
+                            {
+                                "variableName": "speed",
+                                "displayName": "Speed (1.0 or less)",
+                                "description": "Speed of the NPC",
+                                "type": "NUMBER",
+                                "defaultValue": "0.25"
+                            }
+                        ]
                     }
                 ],
                 "1": [

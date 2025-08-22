@@ -6,7 +6,7 @@
   ],
   "configurations": [
     {
-      "type": "custom_script",
+      "type": "add_variables",
       "variables": [
         {
           "variableName": "toggle_force_battle",
@@ -29,8 +29,6 @@
           "type": "NUMBER",
           "defaultValue": "1200"
         }
-      ],
-      "script": [
       ]
     },
     {

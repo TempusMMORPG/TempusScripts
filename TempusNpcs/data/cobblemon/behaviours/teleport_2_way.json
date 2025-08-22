@@ -6,7 +6,7 @@
   ],
   "configurations": [
     {
-      "type": "custom_script",
+      "type": "add_variables",
       "variables": [
     {
       "variableName": "shop_command",
@@ -57,9 +57,6 @@
       "type": "TEXT",
       "defaultValue": "minecraft:paper"
     }
-  ],
-  "script": [
-
   ]
 }
 ]

@@ -6,7 +6,7 @@
   ],
   "configurations": [
     {
-      "type": "custom_script",
+      "type": "script",
       "variables": [
         {
           "variableName": "spawn_point_location",
