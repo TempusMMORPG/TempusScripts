@@ -1,0 +1,28 @@
+t.defeat1 = q.player.data.hikari_defeated_1;
+t.defeat2 = q.player.data.hikari_defeated_2;
+t.defeat3 = q.player.data.hikari_defeated_3;
+t.defeat4 = q.player.data.hikari_defeated_4;
+
+t.defeat3 || t.defeat4 ? {
+    t.cooldown_time = q.system_time_millis + 604800000;
+    q.player.set_npc_variable(q.npc, 'cooldown_time', t.cooldown_time);
+};
+
+t.defeat4 ? {
+    q.player.tell(q.npc.name + ': Awesome battle, see me again if you want to have another match!');
+} : (t.defeat3 && !t.defeat4 ? {
+    q.player.data.hikari_defeated_4 = true;
+    q.player.tell(q.npc.name + ': I hope we meet again someday. Thanks for everything.');
+} : (t.defeat2 && !t.defeat3 ? {
+    q.player.data.hikari_defeated_3 = true;
+    q.player.tell(q.npc.name + ': I still lost... even when I gave it everything I had...');
+    q.player.tell(q.npc.name + ': Am I... not strong enough...?');
+} : (t.defeat1 && !t.defeat2 ? {
+    q.player.data.hikari_defeated_2 = true;
+    q.player.tell(q.npc.name + ': Awww, not again! How do you always know what I\'m going to do?');
+} : (!t.defeat1 ? {
+    q.player.data.hikari_defeated_1 = true;
+    q.player.tell(q.npc.name + ': Whoa! You\'re way stronger than you look!');
+}))));
+
+q.player.save_data();

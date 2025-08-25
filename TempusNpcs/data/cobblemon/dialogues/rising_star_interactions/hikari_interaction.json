@@ -1,10 +1,10 @@
 {
     "initializationAction": [
-        "!q.player.data.arith_defeated_1 ? q.dialogue.set_page('interact1');",
-        "q.player.data.arith_defeated_1 && !q.player.data.arith_defeated_2 ? q.dialogue.set_page('interact2');",
-        "q.player.data.arith_defeated_2 && !q.player.data.arith_defeated_3 ? q.dialogue.set_page('interact3');",
-        "q.player.data.arith_defeated_3 && !q.player.data.arith_defeated_4 ? q.dialogue.set_page('interact4');",
-        "q.player.data.arith_defeated_4 && q.player.data.e4_champion_defeated ? q.dialogue.set_page('interact5');"
+        "!q.player.data.hikari_defeated_1 ? q.dialogue.set_page('interact1');",
+        "q.player.data.hikari_defeated_1 && !q.player.data.hikari_defeated_2 ? q.dialogue.set_page('interact2');",
+        "q.player.data.hikari_defeated_2 && !q.player.data.hikari_defeated_3 ? q.dialogue.set_page('interact3');",
+        "q.player.data.hikari_defeated_3 && !q.player.data.hikari_defeated_4 ? q.dialogue.set_page('interact4');",
+        "q.player.data.hikari_defeated_4 && q.player.data.e4_champion_defeated ? q.dialogue.set_page('interact5');"
     ],
     "speakers": {
         "npc": {
@@ -33,7 +33,7 @@
             "id": "post_defeat",
             "speaker": "npc",
             "lines": [
-                "It looks like I still need to further develop my techniques... for Hana Village's sake."
+                "It's good to see you again, trainer. You've grown stronger since we last battled."
             ],
             "input": "q.dialogue.close();"
         },
@@ -41,7 +41,7 @@
             "id": "interact1",
             "speaker": "npc",
             "lines": [
-                "Hmph. Another new face... You're not from around here, are you? I can tell."
+                "Whao there! Who are you!? You're one of those Yakuzas, aren't you?"
             ],
             "input": [
                 "q.dialogue.set_page('a1');"
@@ -51,7 +51,7 @@
             "id": "a1",
             "speaker": "npc",
             "lines": [
-                "Outsiders rarely impress me, but something about you seems different..."
+                "Hehe, just messing with you. Don't worry, I'm not here to cause trouble."
             ],
             "input": [
                 "q.dialogue.set_page('a2');",
@@ -62,7 +62,7 @@
             "id": "a2",
             "speaker": "npc",
             "lines": [
-                "The name is Asrith. You may have heard of me around Hana Village. However, I am not gonna stand here to chit-chat."
+                "The name is Hikari! I'm on the hunt for the most exciting battles in the region."
             ],
             "input": [
                 "q.dialogue.set_page('a3');"
@@ -72,7 +72,7 @@
             "id": "a3",
             "speaker": "npc",
             "lines": [
-                "If I want to solidify Hana Village's reputation, I need to keep honing my strategies for the Tempus League."
+                "Say, you look like you have some spark in you, and a team to match."
             ],
             "input": [
                 "q.dialogue.set_page('battle_prompt_a');",
@@ -83,7 +83,7 @@
             "id": "battle_prompt_a",
             "speaker": "npc",
             "lines": [
-                "Care for a little battle? It looks like you need some training more than I do."
+                "How about a quick battle? Come on! I don't bite... much."
             ],
             "input": {
                 "type": "option",
@@ -109,7 +109,7 @@
             "id": "battle_start_a",
             "speaker": "npc",
             "lines": [
-                "Ha, I knew you would accept! Don't worry, I won't go easy on you."
+                "Hehe, this is gonna be exhilarating!"
             ],
             "escapeAction": "0",
             "input": [
@@ -121,7 +121,7 @@
             "id": "interact2",
             "speaker": "npc",
             "lines": [
-                "You again? Still stumbling around the region, I see."
+                "Oh, well if it isn't my favorite trainer!"
             ],
             "input": [
                 "q.dialogue.set_page('b1');"
@@ -131,7 +131,7 @@
             "id": "b1",
             "speaker": "npc",
             "lines": [
-                "I see you have been training hard, but you still have a long way to go!"
+                "I see you've improved since our last battle. Not bad at all."
             ],
             "input": [
                 "q.dialogue.set_page('b2');",
@@ -142,7 +142,7 @@
             "id": "b2",
             "speaker": "npc",
             "lines": [
-                "Don't let the win fool you. I have changed my tactics since our last battle."
+                "I've been cooking up some new strategies since we last met too."
             ],
             "input": [
                 "q.dialogue.set_page('b3');"
@@ -152,7 +152,7 @@
             "id": "b3",
             "speaker": "npc",
             "lines": [
-                "After all, true strength comes from hard effort and dedication. As a Hana resident, I could never be otherwise."
+                "I call it 'chaos'. It's all about keeping my opponent guessing (Crap, I knew I needed a better name...)."
             ],
             "input": [
                 "q.dialogue.set_page('battle_prompt_b');"
@@ -162,7 +162,7 @@
             "id": "battle_prompt_b",
             "speaker": "npc",
             "lines": [
-                "Here, let me give you a demonstration!"
+                "Anyway, I bet your itching for a rematch, right?"
             ],
             "input": {
                 "type": "option",
@@ -188,7 +188,7 @@
             "id": "battle_start_b",
             "speaker": "npc",
             "lines": [
-                "Haha! I hope you are ready for this one!"
+                "Haha! Awesome! Let's see what you've got!"
             ],
             "escapeAction": "0",
             "input": [
@@ -200,7 +200,7 @@
             "id": "interact3",
             "speaker": "npc",
             "lines": [
-                "We meet again. I knew our paths would cross here eventually."
+                "...Oh, it's you again, trainer."
             ],
             "input": [
                 "q.dialogue.set_page('c1');"
@@ -210,7 +210,7 @@
             "id": "c1",
             "speaker": "npc",
             "lines": [
-                "Losing to you last time was... an insult. An error I will not repeat."
+                "I've just been... battling for so long now. But our last mach... feels different."
             ],
             "input": [
                 "q.dialogue.set_page('c2');"
@@ -220,7 +220,7 @@
             "id": "c2",
             "speaker": "npc",
             "lines": [
-                "Today, Hana Village's honor will be restored. I will not let you tarnish it again."
+                "Ever time we battle, I lose. No matter how I train, or what I do, I just can't seem to beat you."
             ],
             "input": [
                 "q.dialogue.set_page('c3');"
@@ -230,7 +230,37 @@
             "id": "c3",
             "speaker": "npc",
             "lines": [
-                "I have been training hard since our last battle. I hope you have too, because I will not hold back this time."
+                "Am I doing something wrong...? Why do I feel so helpless...? Why can't I understand...?"
+            ],
+            "input": [
+                "q.dialogue.set_page('c4');"
+            ]
+        },
+        {
+            "id": "c4",
+            "speaker": "npc",
+            "lines": [
+                "...Sorry, I'm just... a bit frustrated, I guess."
+            ],
+            "input": [
+                "q.dialogue.set_page('c5');"
+            ]
+        },
+        {
+            "id": "c5",
+            "speaker": "npc",
+            "lines": [
+                "I know I'm missing something, but I know this isn't the way to go about it."
+            ],
+            "input": [
+                "q.dialogue.set_page('c6');"
+            ]
+        },
+        {
+            "id": "c6",
+            "speaker": "npc",
+            "lines": [
+                "Yeah! I can't quit now! This is my path, and I must see it through!"
             ],
             "input": [
                 "q.dialogue.set_page('battle_prompt_c');"
@@ -240,7 +270,7 @@
             "id": "battle_prompt_c",
             "speaker": "npc",
             "lines": [
-                "I want to show my strength and prove that Hana Village is not to be underestimated!"
+                "Trainer, please... battle me once more!"
             ],
             "input": {
                 "type": "option",
@@ -265,7 +295,7 @@
             "id": "battle_start_c",
             "speaker": "npc",
             "lines": [
-                "Defeat is not an option today. Prepare yourself!"
+                "I'll show you our passion can get through this!"
             ],
             "escapeAction": "0",
             "input": [
@@ -277,7 +307,7 @@
             "id": "interact4",
             "speaker": "npc",
             "lines": [
-                "Oh hey... it's you again. I've done a lot of thinking since our last battle..."
+                "Hey trainer, I... I've been doing a lot of thinking since our last battle."
             ],
             "input": [
                 "q.dialogue.set_page('d1');"
@@ -287,7 +317,7 @@
             "id": "d1",
             "speaker": "npc",
             "lines": [
-                "It... really shook me to my core and I am not proud of how I was acting before."
+                "I realized that I... Didn't really understand the basics of being a trainer."
             ],
             "input": [
                 "q.dialogue.set_page('d2');"
@@ -297,7 +327,7 @@
             "id": "d2",
             "speaker": "npc",
             "lines": [
-                "I'm sorry for my previous behavior. I was too focused on proving myself that I forgot what it means to be a true trainer."
+                "Just brute forcing my way to the top isn't the right way to go about things."
             ],
             "input": [
                 "q.dialogue.set_page('d3');"
@@ -307,7 +337,7 @@
             "id": "d3",
             "speaker": "npc",
             "lines": [
-                "I was just so convinced that Hana's way was the only true way to grow stronger."
+                "I've started studying, planning, and strategizing more. I think I'm finally starting to get it."
             ],
             "input": [
                 "q.dialogue.set_page('d4');"
@@ -317,7 +347,7 @@
             "id": "d4",
             "speaker": "npc",
             "lines": [
-                "My strength, while real, is only a part of a much larger world."
+                "Also, I think I have come to accept that failure is just a part of learning. It's just something we all have to go through, you know?"
             ],
             "input": [
                 "q.dialogue.set_page('d5');"
@@ -327,7 +357,7 @@
             "id": "d5",
             "speaker": "npc",
             "lines": [
-                "It's a bit shameful that an outsider had to show me that, but I am grateful for it."
+                "You can't just try something a few times and expect to be perfect at it. You have to keep trying, keep failing, and keep learning."
             ],
             "input": [
                 "q.dialogue.set_page('d6');"
@@ -337,17 +367,17 @@
             "id": "d6",
             "speaker": "npc",
             "lines": [
-                "With that being said, thank you. I have learned a lot and I hope to continue growing as a trainer for the Tempus League."
+                "I guess, thanks for being a friend. You've really helped me grow as a trainer."
             ],
             "input": [
-                "q.dialogue.set_page('battle_prompt_d');"
+                "q.dialogue.set_page('d7');"
             ]
         },
         {
             "id": "d7",
             "speaker": "npc",
             "lines": [
-                "Not only for me, but for my Pokemon and Hana Village as well."
+                "I want to keep learning, and I want to keep getting better."
             ],
             "input": [
                 "q.dialogue.set_page('d8');"
@@ -357,7 +387,17 @@
             "id": "d8",
             "speaker": "npc",
             "lines": [
-                "Not only for me, but for my Pokemon and Hana Village as well."
+                "When I challenge the league, I want to be ready. Not just for the thrill, but for my team as well."
+            ],
+            "input": [
+                "q.dialogue.set_page('d9');"
+            ]
+        },
+        {
+            "id": "d9",
+            "speaker": "npc",
+            "lines": [
+                "Anyway, sorry for the rambling. It's just... nice to have someone to talk to about this stuff."
             ],
             "input": [
                 "q.dialogue.set_page('battle_prompt_d');"
@@ -367,7 +407,7 @@
             "id": "battle_prompt_d",
             "speaker": "npc",
             "lines": [
-                "So, how about it? Care for a battle? Let's see how much we have both improved."
+                "Anyway, what do you say? Up for another battle?"
             ],
             "input": {
                 "type": "option",
@@ -392,7 +432,7 @@
             "id": "battle_start_d",
             "speaker": "npc",
             "lines": [
-                "Haha! I look forward to this!"
+                "Hehe, let's see what you've got!"
             ],
             "escapeAction": "0",
             "input": [
@@ -404,7 +444,7 @@
             "id": "interact5",
             "speaker": "npc",
             "lines": [
-                "Welcome back, my friend. I hope you have been keeping up with your training."
+                "Hey there! Seems like ages since we last battled!"
             ],
             "input": [
                 "q.run_script('cobblemon:cooldown_check') ? q.dialogue.set_page('on_cooldown') : q.dialogue.set_page('battle_prompt_e');"
@@ -414,7 +454,7 @@
             "id": "battle_prompt_e",
             "speaker": "npc",
             "lines": [
-                "Oh? You want a rematch?"
+                "Oh? You want to rematch little ol' me?"
             ],
             "input": {
                 "type": "option",
@@ -439,7 +479,7 @@
             "id": "battle_start_e",
             "speaker": "npc",
             "lines": [
-                "Haha! Perfect! I have been waiting for this!"
+                "Hehe, no problem! Let's see what you've got!"
             ],
             "escapeAction": "0",
             "input": [
