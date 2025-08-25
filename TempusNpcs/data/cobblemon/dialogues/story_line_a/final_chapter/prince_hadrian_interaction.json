@@ -29,7 +29,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I am not one to converse with others, espeically enemies. Let us battle."
+                "I am not one to converse with others, especially enemies. Let us battle."
             ],
             "escapeAction": "0",
             "input": {
