@@ -152,6 +152,6 @@ t.battle_prompts = q.array(
 );
 
 t.array_length = q.length(t.battle_prompts);
-t.random_int = math.random(0, (t.array_length - 1));
+t.random_int = math.random_integer(0, (t.array_length - 1));
 
 return t.battle_prompts[t.random_int];
