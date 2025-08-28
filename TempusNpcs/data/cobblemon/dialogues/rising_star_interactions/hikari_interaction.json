@@ -33,7 +33,7 @@
             "id": "post_defeat",
             "speaker": "npc",
             "lines": [
-                "It's good to see you again, trainer. You've grown stronger since we last battled."
+                "Nothing beats the thrill of a long journey and a good battle, right?"
             ],
             "input": "q.dialogue.close();"
         },
@@ -41,7 +41,7 @@
             "id": "interact1",
             "speaker": "npc",
             "lines": [
-                "Whao there! Who are you!? You're one of those Yakuzas, aren't you?"
+                "Whoa there! Who are you!? You're one of those Yakuzas, aren't you?"
             ],
             "input": [
                 "q.dialogue.set_page('a1');"
@@ -51,7 +51,7 @@
             "id": "a1",
             "speaker": "npc",
             "lines": [
-                "Hehe, just messing with you. Don't worry, I'm not here to cause trouble."
+                "Hehe, just messing with you. Don't worry, I'm not here to cause trouble!"
             ],
             "input": [
                 "q.dialogue.set_page('a2');",
@@ -72,7 +72,7 @@
             "id": "a3",
             "speaker": "npc",
             "lines": [
-                "Say, you look like you have some spark in you, and a team to match."
+                "Say, you look like you have some spark in you, and a team to match..."
             ],
             "input": [
                 "q.dialogue.set_page('battle_prompt_a');",
@@ -83,7 +83,7 @@
             "id": "battle_prompt_a",
             "speaker": "npc",
             "lines": [
-                "How about a quick battle? Come on! I don't bite... much."
+                "Say, how about a quick battle? Come on! I don't bite... much."
             ],
             "input": {
                 "type": "option",
@@ -121,7 +121,7 @@
             "id": "interact2",
             "speaker": "npc",
             "lines": [
-                "Oh, well if it isn't my favorite trainer!"
+                "Oh, well if it isn't my favorite trainer! Have you taken a look around Umigawa? It's such a beautiful place!"
             ],
             "input": [
                 "q.dialogue.set_page('b1');"
@@ -131,7 +131,7 @@
             "id": "b1",
             "speaker": "npc",
             "lines": [
-                "I see you've improved since our last battle. Not bad at all."
+                "I bet you've seen even more amazing sights while traveling around the region, huh?"
             ],
             "input": [
                 "q.dialogue.set_page('b2');",
@@ -142,7 +142,7 @@
             "id": "b2",
             "speaker": "npc",
             "lines": [
-                "I've been cooking up some new strategies since we last met too."
+                "I've been exploring and battling a lot too, and I think I've come up with a new battle strategy!"
             ],
             "input": [
                 "q.dialogue.set_page('b3');"
@@ -210,7 +210,7 @@
             "id": "c1",
             "speaker": "npc",
             "lines": [
-                "I've just been... battling for so long now. But our last mach... feels different."
+                "I've just been... trying for so long now. But our last mach... feels different."
             ],
             "input": [
                 "q.dialogue.set_page('c2');"
@@ -327,7 +327,7 @@
             "id": "d2",
             "speaker": "npc",
             "lines": [
-                "Just brute forcing my way to the top isn't the right way to go about things."
+                "Brute forcing my way to the top isn't the right way to go about things, and I should have known that."
             ],
             "input": [
                 "q.dialogue.set_page('d3');"
@@ -337,7 +337,7 @@
             "id": "d3",
             "speaker": "npc",
             "lines": [
-                "I've started studying, planning, and strategizing more. I think I'm finally starting to get it."
+                "I've started studying, planning, and strategizing more. I think I'm finally starting to understand."
             ],
             "input": [
                 "q.dialogue.set_page('d4');"
@@ -377,7 +377,7 @@
             "id": "d7",
             "speaker": "npc",
             "lines": [
-                "I want to keep learning, and I want to keep getting better."
+                "I want to keep learning, and I want to keep getting better..."
             ],
             "input": [
                 "q.dialogue.set_page('d8');"
@@ -407,7 +407,7 @@
             "id": "battle_prompt_d",
             "speaker": "npc",
             "lines": [
-                "Anyway, what do you say? Up for another battle?"
+                "So, what do you say? Are you up for another battle?"
             ],
             "input": {
                 "type": "option",
@@ -444,7 +444,7 @@
             "id": "interact5",
             "speaker": "npc",
             "lines": [
-                "Hey there! Seems like ages since we last battled!"
+                "Hey there! Seems like ages since we last talked!"
             ],
             "input": [
                 "q.run_script('cobblemon:cooldown_check') ? q.dialogue.set_page('on_cooldown') : q.dialogue.set_page('battle_prompt_e');"

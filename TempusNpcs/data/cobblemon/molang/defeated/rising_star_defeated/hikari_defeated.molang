@@ -16,7 +16,7 @@ t.defeat4 ? {
 } : (t.defeat2 && !t.defeat3 ? {
     q.player.data.hikari_defeated_3 = true;
     q.player.tell(q.npc.name + ': I still lost... even when I gave it everything I had...');
-    q.player.tell(q.npc.name + ': Am I... not strong enough...?');
+    q.player.tell(q.npc.name + ': Why... do I feel this way...?');
 } : (t.defeat1 && !t.defeat2 ? {
     q.player.data.hikari_defeated_2 = true;
     q.player.tell(q.npc.name + ': Awww, not again! How do you always know what I\'m going to do?');
