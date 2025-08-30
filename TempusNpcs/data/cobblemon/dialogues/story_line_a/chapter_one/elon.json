@@ -136,6 +136,7 @@
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 3E357CF572E28FBD');",
                             "q.player.data.dialogue.elon = true; q.player.save_data();",
+                            "q.run_command('jm waypoint temp create \"Talk to Elon\" minecraft:overworld 383 72 -720 gold @p')",
                             "q.dialogue.set_page('farewell');"
                         ]
                     }

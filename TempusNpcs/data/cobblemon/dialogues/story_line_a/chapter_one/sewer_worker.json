@@ -84,6 +84,7 @@
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 31706CE5228C4B35');",
                             "q.player.data.dialogue.sewer_worker = true; q.player.save_data();",
+                            "q.run_command('jm waypoint temp create \"Talk to Grace\" minecraft:overworld -456 147 -705 gold @p')",
                             "q.dialogue.set_page('farewell');"
                         ]
                     }
