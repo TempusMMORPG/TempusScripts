@@ -93,6 +93,7 @@
                         "value": "okay",
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 2DFB4F67B29B9C5D');",
+                            "q.run_command('jm waypoint temp create \"Giratina Ruins\" minecraft:overworld -1169 81 75 gold @p')",
                             "q.player.data.dialogue.dan = true; q.player.save_data();",
                             "q.dialogue.set_page('4');"
                         ]
