@@ -7,6 +7,7 @@
         "cobblemon:base_npc",
         "cobblemon:battle_npc",
         "cobblemon:looks_in_one_direction",
+        "cobblemon:name_tag",
         "cobblemon:battle_reward_pokedollars"
     ],
     "interaction": {

@@ -93,6 +93,7 @@
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 164F1406665193E8');",
                             "q.player.data.dialogue.professor_conifer_crypt = true; q.player.save_data();",
+                            "q.player.data.a_ch1_completed = true; q.player.save_data();",
                             "q.run_command('jm waypoint temp create Unity_City_Archives minecraft:overworld -213.98 65.34 -589.00 gold ' + q.player.username + ' false');",
                             "q.dialogue.set_page('farewell');"
                         ]
