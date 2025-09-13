@@ -7,7 +7,7 @@ t.roll <= 15 && t.roll >= 1 ? {
 };
 
 t.roll <= 45 && t.roll > 15 ? {
-    q.run_command('give ' + q.player.username + ' mcobblemon:relic_coin 1');
+    q.run_command('give ' + q.player.username + ' cobblemon:relic_coin 1');
     q.player.tell('§aYou have opened the chest! You found §d1x Relic Coin§a!');
     return 1;
 };
