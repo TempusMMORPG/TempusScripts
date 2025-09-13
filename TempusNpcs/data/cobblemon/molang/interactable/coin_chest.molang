@@ -1,5 +1,5 @@
-!c.player.main_held_item.is_of('cobblemon:coin_pouch') ? {
-    c.player.tell('§cYou need a §6Coin Pouch §cto interact with this');
+!c.player.main_held_item.is_of('cobblemon:relic_coin_pouch') ? {
+    c.player.tell('§cYou need a §6Relic Coin Pouch §cto interact with this');
     return 0;
 };
 
