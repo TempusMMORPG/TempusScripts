@@ -105,6 +105,7 @@
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 1A634AC2F160424F');",
                             "q.player.data.dialogue.lachlan = true; q.player.save_data();",
+                            "q.run_command('jm waypoint temp create \"Go to Unity City UBank\" minecraft:overworld 112 65 -483 gold @p')",
                             "q.dialogue.close();"
                         ]
                     }

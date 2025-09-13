@@ -93,6 +93,7 @@
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 046D664B94849D34');",
                             "q.player.data.dialogue.petra = true; q.player.save_data();",
+                            "q.run_command('jm waypoint temp create \"Investigate the old Regalis Manor\" minecraft:overworld -433 65 1102 gold @p')",
                             "q.dialogue.close();"
                         ]
                     }

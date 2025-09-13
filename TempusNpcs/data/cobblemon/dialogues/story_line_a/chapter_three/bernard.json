@@ -53,7 +53,7 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "How did you get passed my workers!?"
+                "How did you get past my workers!?"
             ],
             "input": {
                 "type": "option",
@@ -116,7 +116,7 @@
             "escapeAction": "0",
             "speaker": "npc",
             "lines": [
-                "Yeah? Do you have anyway to prove it?"
+                "Yeah? Do you have any way to prove it?"
             ],
             "input": {
                 "type": "option",
@@ -170,6 +170,7 @@
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 688F3FA107A60EE4');",
                             "q.player.data.dialogue.bernard_confront = true; q.player.save_data();",
+                            "q.run_command('jm waypoint temp create \"Speak to Receptionist Shelby\" minecraft:overworld -201 65 -593 gold @p')",
                             "q.dialogue.close();"
                         ]
                     }

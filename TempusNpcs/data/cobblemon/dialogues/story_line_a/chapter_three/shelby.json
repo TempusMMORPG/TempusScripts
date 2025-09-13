@@ -126,6 +126,7 @@
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 27117840E01DAC02');",
                             "q.player.data.dialogue.shelby = true; q.player.save_data();",
+                            "q.run_command('jm waypoint temp create \"Speak to Petra in Caligo\" minecraft:overworld -582 65 958 gold @p')",
                             "q.dialogue.close();"
                         ]
                     }

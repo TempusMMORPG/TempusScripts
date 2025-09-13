@@ -361,6 +361,7 @@
                         "action": [
                             "q.player.data.a_ch2_completed = 1;q.player.save_data();",
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 31084AC291C97BED');",
+                            "q.run_command('jm waypoint temp create \"Speak to Lachlan\" minecraft:overworld 1947 60 1081 gold @p')",
                             "q.dialogue.close();"
                         ]
                     }
