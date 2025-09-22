@@ -10,7 +10,7 @@ t.mons = q.array(
 'poochyena' + t.constants,
 'maschiff' + t.constants,
 'electrike' + t.constants,
-'greavard' + t.constants,
+'greavard' + t.constants
 );
 t.mons_length = q.length(t.mons);
 
