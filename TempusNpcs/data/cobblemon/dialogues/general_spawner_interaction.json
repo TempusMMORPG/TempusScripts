@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_script('cobblemon:spawner_cooldown_check') ? q.dialogue.set_page('on_cooldown');",
+        "q.run_script('cobblemon:spawner_cooldown_check') ? q.dialogue.set_page('on_cooldown') || q.player.data.dialogue.general_spawner_interaction == false ? q.dialogue.set_page('legendary_license_required');",
         "q.player.in_battle ? q.dialogue.close();"
     ],
     "speakers": {
@@ -57,6 +57,14 @@
                     "type": "expression",
                     "expression": "'§8§o' + q.run_script('cobblemon:spawner_cooldown_remaining_time');"
                 }
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "legendary_license_required",
+            "lines": [
+                "§8§oLegendary License Required!\n",
+                "§8§oComplete the Legendary License quest to use this Spawner.",
             ],
             "input": "q.dialogue.close();"
         }
