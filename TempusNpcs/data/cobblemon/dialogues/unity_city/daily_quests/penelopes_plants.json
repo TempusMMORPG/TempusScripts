@@ -1,0 +1,88 @@
+{
+    "initializationAction": [
+        "c.npc.set_chatting();",
+        "q.player.in_battle ? q.dialogue.close();", 
+        "q.player.data.dialogue.penelopes_plants_unity_city == false ? q.dialogue.set_page('greeting') : q.player.data.dialogue.penelopes_plants_unity_city == 'in_progress' ? q.dialogue.set_page('in_progress') : q.dialogue.close();"
+        ]
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();",
+            "gibber": {
+                "interval": 0.1
+            }
+        },
+        "player": {
+            "face": "q.player.face();",
+            "gibber": {
+                "interval": 0.1
+            },
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "q.npc.config.penelope_plants_unity_1;"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§a✉ Accept Job ✉§r",
+                        "value": "accept",
+                        "action": [
+                            "q.player.data.dialogue.penelopes_plants_unity_city = 'in_progress';",
+                            "q.player.data.save();",
+                            "q.run_script('cobblemon:penelope_plants_start');",
+                            "q.dialogue.close();"
+                        ]
+                    },
+                    {
+                        "text": "Sorry, not right now.",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "in_progress",
+            "speaker": "npc",
+            "lines": [
+                 "How's that job coming along?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§6Remind me what the job is again?§r",
+                        "value": "reminder",
+                        "action": [
+                            "q.dialogue.close();",
+                            "q.run_script('cobblemon:penelope_plants_start');"
+                        ]
+                    },
+                    {
+                        "text": "I'm all good for now, thanks.",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        }
+    ]
+}
