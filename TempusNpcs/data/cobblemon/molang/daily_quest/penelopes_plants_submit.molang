@@ -1,0 +1,29 @@
+t.required_item_id = q.player.get_npc_variable(q.npc.uuid, 'quest_item_id');
+t.required_amount = q.player.get_npc_variable(q.npc.uuid, 'quest_item_amount');
+
+t.required_amount == 0 ? {
+    q.player.tell('§eCome back when you have the items I asked for.');
+    return 0;
+};
+
+t.player_item_count = q.player.count_items(t.required_item_id);
+
+t.player_item_count >= t.required_amount ? {
+    q.run_command('clear ' + q.player.username + ' ' + t.required_item_id + ' ' + t.required_amount);
+    
+    q.run_command('give ' + q.player.username + ' minecraft:diamond 5');
+    q.player.tell('§aThank you! Exactly what I needed. Here is your reward.');
+    
+    t.cooldown_duration_millis = 24 * 3600 * 1000;
+    t.current_time = q.system_time_millis;
+    t.new_cooldown_time = t.current_time + t.cooldown_duration_millis;
+    q.player.set_npc_variable(q.npc.uuid, 'cooldown_time', t.new_cooldown_time);
+    
+    return 1;
+} : {
+    t.item_string_array = q.split_string(t.required_item_id, ':');
+    t.item_name = t.item_string_array[1];
+    q.player.tell('§cYou dont seem to have everything I need. I am still looking for ' + t.required_amount + ' ' + t.item_name + '.');
+    
+    return 0;
+};

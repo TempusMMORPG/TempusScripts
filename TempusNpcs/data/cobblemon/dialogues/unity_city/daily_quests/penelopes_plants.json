@@ -1,9 +1,7 @@
 {
     "initializationAction": [
-        "c.npc.set_chatting();",
-        "q.player.in_battle ? q.dialogue.close();", 
-        "q.player.data.dialogue.penelopes_plants_unity_city == false ? q.dialogue.set_page('greeting') : q.player.data.dialogue.penelopes_plants_unity_city == 'in_progress' ? q.dialogue.set_page('in_progress') : q.dialogue.close();"
-        ]
+        
+    ],
     "speakers": {
         "npc": {
             "name": {
@@ -31,23 +29,22 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
+                "Hello there! I could really use some help with a little job if you're up for it.",
                 {
                     "type": "expression",
-                    "expression": "q.npc.config.penelope_plants_unity_1;"
+                    "expression": "'I need someone to bring me §d' + q.run_script('cobblemon:penelopes_plants_giver') + '§r!'"
                 }
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "§a✉ Accept Job ✉§r",
                         "value": "accept",
                         "action": [
-                            "q.player.data.dialogue.penelopes_plants_unity_city = 'in_progress';",
-                            "q.player.data.save();",
-                            "q.run_script('cobblemon:penelope_plants_start');",
-                            "q.dialogue.close();"
+                            "q.player.set_npc_variable(q.npc.uuid, 'in_progress', 1);",
+                            "q.dialogue.set_page('in_progress');"
                         ]
                     },
                     {
@@ -61,27 +58,53 @@
         {
             "id": "in_progress",
             "speaker": "npc",
-            "lines": [
-                 "How's that job coming along?"
-            ],
+            "lines": ["How's the job coming along? Do you have the items for me?"],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
-                        "text": "§6Remind me what the job is again?§r",
-                        "value": "reminder",
-                        "action": [
-                            "q.dialogue.close();",
-                            "q.run_script('cobblemon:penelope_plants_start');"
-                        ]
+                        "text": "§aSubmit Items§r",
+                        "value": "submit",
+                        "action": "q.run_script('cobblemon:penelopes_plants_submit') == 1 ? q.dialogue.set_page('completed') : q.dialogue.close();"
                     },
                     {
-                        "text": "I'm all good for now, thanks.",
+                        "text": "§6What's the job again?§r",
+                        "value": "reminder",
+                        "action": "q.dialogue.set_page('reminder');"
+                    },
+                    {
+                        "text": "I'm still working on it.",
                         "value": "no",
                         "action": "q.dialogue.close();"
                     }
                 ]
+            }
+        },
+        {
+            "id": "reminder",
+            "speaker": "npc",
+            "lines": [
+                "Let me check my notes...",
+                {
+                    "type": "expression",
+                    "expression": "t.amt = q.player.get_npc_variable(q.npc.uuid, 'quest_item_amount'); t.id = q.player.get_npc_variable(q.npc.uuid, 'quest_item_id'); t.name = q.split_string(t.id, ':')[1]; 'I need you to bring me §d' + t.amt + ' ' + t.name + '§r. Thanks for the help!'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "options": [{"text": "Got it, thanks!", "value": "back", "action": "q.dialogue.set_page('in_progress');"}]
+            }
+        },
+        {
+            "id": "completed",
+            "speaker": "npc",
+            "lines": [
+                "You've already helped me out today. Thanks again!",
+            ],
+            "input": {
+                "type": "option",
+                "options": [{"text": "Goodbye", "value": "bye", "action": "q.dialogue.close();"}]
             }
         }
     ]
