@@ -1,0 +1,32 @@
+{
+  "name": "Scanner NPC",
+  "description": "Configuration for an NPC that scans Pokemon. Does not take the Pokemon away.",
+  "entityType": "cobblemon:npc",
+  "undo": [
+    "q.entity.unset_interaction();"
+  ],
+  "configurations": [
+    {
+      "type": "add_variables",
+      "variables": [
+        {
+          "variableName": "scan_requested_display",
+          "displayName": "Scan Requested Pokemon for GUI",
+          "description": "Scan Requested Pokemon (What is shown to user)",
+          "type": "TEXT",
+          "defaultValue": "Bidoof"
+        },
+        {
+          "variableName": "scan_requested",
+          "displayName": "Scan Request Pokemon for MoLang",
+          "description": "Scan Request Pokemon along with any properties (All lowercase)",
+          "type": "TEXT",
+          "defaultValue": "bidoof"
+        },
+      ],
+          "script": [
+        "q.entity.set_dialogue_interaction('cobblemon:pt_scan_interaction')"
+      ]
+    }
+  ]
+}

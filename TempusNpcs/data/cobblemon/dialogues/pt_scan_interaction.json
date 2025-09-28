@@ -1,0 +1,91 @@
+{
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();",
+            "gibber": {
+                "interval": 0.1
+            }
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            },
+            "gibber": {
+                "interval": 0.1
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hey there trainer! Could you by chance find me a ' + q.npc.config.scan_requested_display + '? so I can scan it for my studies?';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "isSelectable": "q.player.party.count_by_properties(q.npc.config.scan_requested) >= 1",
+                        "action": "q.dialogue.set_page('confirmation');"
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.set_page('okbye');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "confirmation",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Are you read for ' + q.npc.name + ' to scan your '  + q.npc.config.scan_requested_display + '.';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§b🔍 Scan 🔍§r",
+                        "value": "scan",
+                        "isSelectable": "q.player.party.count_by_properties(q.npc.config.scan_requested) >= 1",
+                        "action": [
+                            "q.run_script('pt_scan_pkmn');",
+                            "q.dialogue.close();"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.set_page('okbye');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "okbye",
+            "speaker": "npc",
+            "lines": [
+                "Alright, see you later!"
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}
