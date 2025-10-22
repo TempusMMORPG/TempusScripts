@@ -1,311 +1,322 @@
-t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=' + (q.player.party.highest_level);
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=100 friendship=255 uncatchable=true';
+t.minspeed = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=0 level=100 friendship=255 uncatchable=true';
+t.hppoison = ' hp_iv=31 attack_iv=31 defence_iv=30 special_attack_iv=30 special_defence_iv=30 speed_iv=31 level=100 friendship=255 uncatchable=true';
+t.hpfire = ' hp_iv=31 attack_iv=30 defence_iv=31 special_attack_iv=30 special_defence_iv=31 speed_iv=30 level=100 friendship=255 uncatchable=true';
+t.hpfighting = ' hp_iv=31 attack_iv=31 defence_iv=30 special_attack_iv=30 special_defence_iv=30 speed_iv=30 level=100 friendship=255 uncatchable=true';
+t.hpice = ' hp_iv=31 attack_iv=30 defence_iv=30 special_attack_iv=31 special_defence_iv=31 speed_iv=31 level=100 friendship=255 uncatchable=true';
+t.hpground = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=30 special_defence_iv=30 speed_iv=31 level=100 friendship=255 uncatchable=true';
 
-q.player.data.battle_tower_stage == 0 ? {
+t.mons = q.array(
+'snorlax moves=curse,return,firepunch,earthquake nature=adamant held_item=cobblemon:iapapa_berry hp_ev=252 special_defence_ev=252 ability=gluttony' + t.constants,
+'ditto moves=transform nature=hardy held_item=cobblemon:choice_scarf ability=imposter hp_ev=252 attack_ev=252' + t.constants,
+'blissey moves=seismictoss,softboiled,toxic,alluringvoice nature=bold held_item=cobblemon:leftovers defence_ev=252 special_defence_ev=252 ability=naturalcure' + t.constants,
+'smeargle moves=spore,spikyshield,leechseed,taunt nature=jolly held_item=cobblemon:focus_sash ability=moody hp_ev=252 speed_ev=252' + t.constants,
+'slaking moves=gigaimpact,knockoff,drainpunch,facade nature=adamant held_item=cobblemon:choice_band ability=truant hp_ev=252 attack_ev=252' + t.constants,
+'zangoose moves=facade,closecombat,knockoff,quickattack nature=jolly held_item=cobblemon:toxic_orb ability=toxicboost attack_ev=252 speed_ev=252' + t.constants,
+'porygonz moves=triattack,shadowball,thunderbolt,icebeam nature=timid held_item=cobblemon:expert_belt ability=download special_attack_ev=252 speed_ev=252' + t.constants,
+'lickilicky moves=powerwhip,icebeam,return,flamethrower nature=brave held_item=cobblemon:life_orb ability=owntempo attack_ev=252 special_attack_ev=252' + t.constants,
+'cinccino moves=tailslap,bulletseed,rockblast,tidyup nature=jolly held_item=cobblemon:loaded_dice ability=technician attack_ev=252 speed_ev=252' + t.constants,
+'braviary moves=bravebird,closecombat,return,shadowclaw nature=jolly held_item=cobblemon:life_orb ability=defiant attack_ev=252 speed_ev=252' + t.constants,
+'diggersby moves=return,earthquake,firepunch,knockoff nature=adamant held_item=cobblemon:life_orb ability=hugepower attack_ev=252 speed_ev=252' + t.constants,
+'pyroar moves=fireblast,hypervoice,fireblast,hypervoice nature=timid held_item=cobblemon:choice_specs ability=unnerve special_attack_ev=252 speed_ev=252' + t.constants,
+'bewear moves=return,drainpunch,darkestlariat,earthquake nature=adamant held_item=cobblemon:assault_vest ability=fluffy hp_ev=252 attack_ev=252' + t.constants,
+'komala moves=return,earthquake,uturn,knockoff nature=adamant held_item=cobblemon:assault_vest ability=comatose hp_ev=252 attack_ev=252' + t.constants,
+'indeedee moves=expandingforce,dazzlinggleam,energyball,shadowball nature=timid held_item=cobblemon:choice_specs ability=psychicsurge special_attack_ev=252 speed_ev=252' + t.constants,
+'wyrdeer moves=return,zenheadbutt,megahorn,earthquake nature=adamant held_item=cobblemon:bright_powder ability=intimidate hp_ev=252 attack_ev=252' + t.constants,
+'maushold moves=populationbomb,bite,trailblaze,tidyup nature=jolly held_item=cobblemon:wide_lens ability=technician attack_ev=252 speed_ev=252' + t.constants,
+'dudunsparce moves=hyperdrill,earthquake,throatchop,zenheadbutt nature=adamant held_item=cobblemon:chople_berry ability=rattled hp_ev=252 attack_ev=252' + t.constants,
+'venusaur moves=leafstorm,sludgebomb,earthpower,sleeppowder nature=timid held_item=cobblemon:white_herb ability=overgrow special_attack_ev=252 speed_ev=252' + t.constants,
+'exeggutor moves=psyshock,energyball,sludgebomb,sleeppowder nature=modest held_item=cobblemon:sitrus_berry ability=harvest hp_ev=252 special_attack_ev=252' + t.constants,
+'meganium moves=leechseed,substitute,dragontail,gigadrain nature=calm held_item=cobblemon:leftovers ability=overgrow hp_ev=252 special_defence_ev=252' + t.constants,
+'jumpluff moves=strengthsap,toxic,substitute,leechseed nature=timid held_item=cobblemon:bright_powder ability=infiltrator hp_ev=252 speed_ev=252' + t.constants,
+'sceptile moves=energyball,dragonpulse,focusblast,hiddenpower nature=modest held_item=cobblemon:grass_gem ability=unburden special_attack_ev=252 speed_ev=252' + t.hppoison,
+'breloom moves=bulletseed,machpunch,aerialace,rocktomb nature=adamant held_item=cobblemon:loaded_dice ability=technician hp_ev=252 attack_ev=252' + t.constants, 
+'torterra moves=shellsmash,bulletseed,rockblast,headlongrush nature=jolly held_item=cobblemon:loaded_dice ability=overgrow attack_ev=252 speed_ev=252' + t.constants,
+'leafeon moves=leafblade,return,knockoff,aerialace nature=jolly held_item=cobblemon:life_orb ability=chlorophyll attack_ev=252 speed_ev=252' + t.constants,
+'serperior moves=leafstorm,hiddenpower,dragonpulse,glare nature=timid held_item=cobblemon:miracle_seed ability=contrary special_attack_ev=252 speed_ev=252' + t.hpfire,
+'lilligant moves=quiverdance,energyball,alluringvoice,pollenpuff nature=timid held_item=cobblemon:life_orb ability=owntempo special_attack_ev=252 speed_ev=252' + t.constants,
+'chesnaught moves=woodhammer,closecombat,earthquake,stoneedge nature=adamant held_item=cobblemon:choice_band ability=bulletproof hp_ev=252 attack_ev=252' + t.constants,
+'gogoat moves=hornleech,earthquake,rockslide,milkdrink nature=adamant held_item=cobblemon:leftovers ability=sapsipper hp_ev=252 attack_ev=252' + t.constants,
+'decidueye moves=leafblade,spiritshackle,acrobatics,swordsdance nature=adamant held_item=cobblemon:flying_gem ability=longreach hp_ev=252 attack_ev=252' + t.constants,
+'tsareena moves=powerwhip,knockoff,tripleaxel,uturn nature=jolly held_item=cobblemon:choice_scarf ability=queenlymajesty attack_ev=252 speed_ev=252' + t.constants,
+'rillaboom moves=grassyglide,knockoff,highhorsepower,superpower nature=adamant held_item=cobblemon:choice_band ability=grassysurge hp_ev=252 attack_ev=252' + t.constants,
+'flapple moves=gravapple,acrobatics,suckerpunch,outrage nature=jolly held_item=cobblemon:flying_gem ability=hustle attack_ev=252 speed_ev=252' + t.constants,
+'meowscarada moves=knockoff,flowertrick,tripleaxel,uturn nature=jolly held_item=cobblemon:choice_band ability=protean attack_ev=252 speed_ev=252' + t.constants,
+'brambleghast moves=poltergeist,powerwhip,shadowsneak,strengthsap nature=jolly held_item=cobblemon:life_orb ability=windrider attack_ev=252 speed_ev=252' + t.constants,
+'charizard moves=fireblast,hurricane,scorchingsands,ancientpower nature=timid held_item=cobblemon:life_orb ability=blaze special_attack_ev=252 speed_ev=252' + t.constants,
+'flareon moves=flareblitz,trailblaze,facade,superpower nature=adamant held_item=cobblemon:toxic_orb ability=guts hp_ev=252 attack_ev=252' + t.constants,
+'typhlosion moves=eruption,eruption,eruption,scorchingsands nature=timid held_item=cobblemon:choice_scarf ability=flashfire special_attack_ev=252 speed_ev=252' + t.constants,
+'houndoom moves=darkpulse,fireblast,sludgebomb,hiddenpower nature=timid held_item=cobblemon:life_orb ability=flashfire special_attack_ev=252 speed_ev=252' + t.hpfighting,
+'blaziken moves=flareblitz,closecombat,thunderpunch,knockoff nature=adamant held_item=cobblemon:life_orb ability=speedboost attack_ev=252 speed_ev=252' + t.constants,
+'torkoal moves=weatherball,earthpower,bodypress,solarbeam nature=modest held_item=cobblemon:life_orb ability=drought hp_ev=252 special_attack_ev=252' + t.constants,
+'infernape moves=overheat,closecombat,gunkshot,uturn nature=naive held_item=cobblemon:white_herb ability=blaze attack_ev=252 speed_ev=252' + t.constants,
+'magmortar moves=fireblast,thunderbolt,focusblast,scorchingsands nature=modest held_item=cobblemon:choice_specs ability=flamebody special_attack_ev=252 speed_ev=252' + t.constants,
+'emboar moves=flareblitz,closecombat,wildcharge,earthquake nature=adamant held_item=cobblemon:choice_band ability=reckless hp_ev=252 attack_ev=252' + t.constants,
+'darmanitan moves=flareblitz,rockslide,earthquake,superpower nature=jolly held_item=cobblemon:life_orb ability=sheerforce attack_ev=252 speed_ev=252' + t.constants,
+'delphox moves=fireblast,psyshock,grassknot,focusblast nature=timid held_item=cobblemon:focus_sash ability=blaze special_attack_ev=252 speed_ev=252' + t.constants,
+'talonflame moves=acrobatics,acrobatics,acrobatics,flareblitz nature=adamant held_item=cobblemon:flying_gem ability=galewings attack_ev=252 speed_ev=252' + t.constants,
+'incineroar moves=flareblitz,knockoff,earthquake,uturn nature=adamant held_item=cobblemon:assault_vest ability=intimidate hp_ev=252 attack_ev=252' + t.constants,
+'turtonator moves=shellsmash,fireblast,dragonpulse,flashcannon nature=modest held_item=cobblemon:white_herb ability=shellarmor special_attack_ev=252 speed_ev=252' + t.constants,
+'cinderace moves=pyroball,gunkshot,highjumpkick,uturn nature=jolly held_item=cobblemon:choice_band ability=libero attack_ev=252 speed_ev=252' + t.constants,
+'coalossal moves=fireblast,powergem,earthpower,scald nature=modest held_item=cobblemon:air_balloon ability=steamengine hp_ev=252 special_attack_ev=252' + t.constants,
+'skeledirge moves=torchsong,shadowball,slackoff,earthpower nature=modest held_item=cobblemon:leftovers ability=unaware hp_ev=252 special_attack_ev=252' + t.constants,
+'scovillain moves=overheat,leafstorm,overheat,leafstorm nature=modest held_item=cobblemon:white_herb ability=moody hp_ev=252 special_attack_ev=252' + t.constants,
+'blastoise moves=shellsmash,hydropump,icebeam,aurasphere nature=modest held_item=cobblemon:white_herb ability=torrent special_attack_ev=252 speed_ev=252' + t.constants,
+'vaporeon moves=scald,wish,toxic,substitute nature=bold held_item=cobblemon:leftovers ability=waterabsorb hp_ev=252 defence_ev=252' + t.constants,
+'feraligatr moves=liquidation,crunch,icepunch,earthquake nature=jolly held_item=cobblemon:life_orb ability=sheerforce attack_ev=252 speed_ev=252' + t.constants,
+'mantine moves=substitute,roost,toxic,hurricane nature=bold held_item=cobblemon:bright_powder ability=waterabsorb hp_ev=252 defence_ev=252' + t.constants,
+'swampert moves=earthquake,liquidation,icepunch,flipturn nature=adamant held_item=cobblemon:sitrus_berry ability=torrent hp_ev=252 attack_ev=252' + t.constants,
+'crawdaunt moves=crabhammer,knockoff,aquajet,closecombat nature=adamant held_item=cobblemon:focus_sash ability=adaptability attack_ev=252 speed_ev=252' + t.constants,
+'empoleon moves=hydropump,flashcannon,icebeam,grassknot nature=modest held_item=cobblemon:sitrus_berry ability=competitive hp_ev=252 special_attack_ev=252' + t.constants,
+'gastrodon moves=toxic,recover,scald,earthquake nature=relaxed held_item=cobblemon:leftovers ability=stormdrain hp_ev=252 defence_ev=252' + t.constants, 
+'samurott moves=hydropump,icebeam,vacuumwave,grassknot nature=modest held_item=cobblemon:choice_specs ability=torrent hp_ev=252 special_attack_ev=252' + t.constants,
+'jellicent moves=scald,hex,recover,icebeam nature=modest held_item=cobblemon:leftovers ability=waterabsorb hp_ev=252 special_attack_ev=252' + t.constants,
+'greninja moves=hydropump,sludgewave,icebeam,darkpulse nature=timid held_item=cobblemon:choice_specs ability=protean special_attack_ev=252 speed_ev=252' + t.constants,
+'clawitzer moves=hydropump,darkpulse,aurasphere,flashcannon nature=modest held_item=cobblemon:choice_specs ability=megalauncher hp_ev=252 special_attack_ev=252' + t.constants,
+'primarina moves=moonblast,alluringvoice,icebeam,flipturn nature=modest held_item=cobblemon:assault_vest ability=liquidvoice hp_ev=252 special_attack_ev=252' + t.constants,
+'araquanid moves=liquidation,leechlife,liquidation,liquidation nature=adamant held_item=cobblemon:choice_band ability=waterbubble hp_ev=252 attack_ev=252' + t.constants,
+'inteleon moves=hydropump,darkpulse,icebeam,airslash nature=timid held_item=cobblemon:scope_lens ability=sniper special_attack_ev=252 speed_ev=252' + t.constants,
+'dracovish moves=fishiousrend,fishiousrend,fishiousrend,fishiousrend nature=jolly held_item=cobblemon:choice_scarf ability=strongjaw attack_ev=252 speed_ev=252' + t.constants,
+'quaquaval moves=aquastep,icespinner,closecombat,knockoff nature=jolly held_item=cobblemon:life_orb ability=moxie attack_ev=252 speed_ev=252' + t.constants,
+'dondozo moves=wavecrash,avalanche,earthquake,heavyslam nature=adamant held_item=cobblemon:assault_vest ability=unaware hp_ev=252 attack_ev=252' + t.constants,
+'jolteon moves=thunderbolt,voltswitch,alluringvoice,hiddenpower nature=timid held_item=cobblemon:focus_sash ability=quickfeet special_attack_ev=252 speed_ev=252' + t.hpice,
+'pikachu moves=fakeout,volttackle,extremespeed,knockoff nature=jolly held_item=cobblemon:light_ball ability=lightningrod attack_ev=252 speed_ev=252' + t.constants,
+'ampharos moves=thunderbolt,meteorbeam,focusblast,dazzlinggleam nature=modest held_item=cobblemon:power_herb ability=static hp_ev=252 special_attack_ev=252' + t.constants,
+'lanturn moves=scald,discharge,icebeam,confuseray nature=bold held_item=cobblemon:bright_powder ability=voltabsorb hp_ev=252 defence_ev=252' + t.constants,
+'manectric moves=thunderbolt,flamethrower,voltswitch,hiddenpower nature=timid held_item=cobblemon:life_orb ability=static special_attack_ev=252 speed_ev=252' + t.hpice,
+'raichu moves=thunderbolt,focusblast,surf,grassknot nature=timid held_item=cobblemon:life_orb ability=lightningrod special_attack_ev=252 speed_ev=252' + t.constants,
+'luxray moves=supercellslam,crunch,icefang,psychicfangs nature=adamant held_item=cobblemon:flame_orb ability=guts attack_ev=252 speed_ev=252' + t.constants,
+'electivire moves=supercellslam,earthquake,crosschop,firepunch nature=jolly held_item=cobblemon:choice_band ability=motordrive attack_ev=252 speed_ev=252' + t.constants,
+'galvantula moves=thunder,bugbuzz,energyball,voltswitch nature=timid held_item=cobblemon:life_orb ability=compoundeyes special_attack_ev=252 speed_ev=252' + t.constants,
+'eelektross moves=supercellslam,drainpunch,knockoff,gigadrain nature=brave held_item=cobblemon:assault_vest ability=levitate hp_ev=252 attack_ev=252' + t.constants,
+'heliolisk moves=thunderbolt,hypervoice,focusblast,grassknot nature=timid held_item=cobblemon:life_orb ability=dryskin special_attack_ev=252 speed_ev=252' + t.constants,
+'dedenne moves=superfang,recycle,toxic,paraboliccharge nature=bold held_item=cobblemon:maranga_berry ability=cheekpouch hp_ev=252 defence_ev=252' + t.constants,
+'vikavolt moves=thunderbolt,energyball,bugbuzz,voltswitch nature=modest held_item=cobblemon:choice_specs ability=levitate hp_ev=252 special_attack_ev=252' + t.constants,
+'togedemaru moves=zingzap,ironhead,reversal,poisonjab nature=jolly held_item=cobblemon:weakness_policy ability=sturdy attack_ev=252 speed_ev=252' + t.constants,
+'dracozolt moves=boltbeak,dragonclaw,earthquake,boltbeak nature=jolly held_item=cobblemon:choice_scarf ability=hustle attack_ev=252 speed_ev=252' + t.constants,
+'toxtricity moves=overdrive,boomburst,sludgewave,snarl nature=timid held_item=cobblemon:throat_spray ability=punkrock special_attack_ev=252 speed_ev=252' + t.constants,
+'pawmot moves=closecombat,supercellslam,revivalblessing,icepunch nature=jolly held_item=cobblemon:life_orb ability=ironfist attack_ev=252 speed_ev=252' + t.constants,
+'bellibolt moves=muddywater,paraboliccharge,slackoff,toxic nature=bold held_item=cobblemon:leftovers ability=electromorphosis hp_ev=252 defence_ev=252' + t.constants,
+'pinsir moves=closecombat,xscissor,earthquake,stoneedge nature=adamant held_item=cobblemon:choice_scarf ability=moxie attack_ev=252 speed_ev=252' + t.constants,
+'scyther moves=dualwingbeat,bugbite,knockoff,closecombat nature=jolly held_item=cobblemon:eviolite ability=technician attack_ev=252 speed_ev=252' + t.constants,
+'scizor moves=bulletpunch,uturn,knockoff,closecombat nature=adamant held_item=cobblemon:choice_band ability=technician hp_ev=252 attack_ev=252' + t.constants,
+'forretress moves=bodypress,gyroball,earthquake,protect nature=relaxed held_item=cobblemon:leftovers ability=sturdy hp_ev=252 defence_ev=252' + t.constants,
+'ninjask moves=acrobatics,leechlife,swordsdance,darkpulse nature=adamant held_item=cobblemon:flying_gem ability=speedboost hp_ev=252 attack_ev=252' + t.constants,
+'shedinja moves=shadowsneak,xscissor,willowisp,nightslash nature=adamant held_item=cobblemon:safety_goggles ability=wonderguard attack_ev=252 speed_ev=252' + t.constants,
+'yanmega moves=bugbuzz,bugbuzz,airslash,bugbuzz nature=timid held_item=cobblemon:throat_spray ability=tintedlens special_attack_ev=252 speed_ev=252' + t.constants,
+'vespiquen moves=attackorder,dualwingbeat,healorder,uturn nature=adamant held_item=cobblemon:life_orb ability=unnerve hp_ev=252 attack_ev=252' + t.constants,
+'volcarona moves=fierydance,bugbuzz,hiddenpower,quiverdance nature=timid held_item=cobblemon:focus_sash ability=swarm special_attack_ev=252 speed_ev=252' + t.hpground,
+'leavanny moves=leafblade,lunge,tripleaxel,lowkick nature=jolly held_item=cobblemon:focus_sash ability=overcoat attack_ev=252 speed_ev=252' + t.constants,
+'vivillon moves=sleeppowder,hurricane,bugbuzz,quiverdance nature=timid held_item=cobblemon:focus_sash ability=compoundeyes special_attack_ev=252 speed_ev=252' + t.constants,
+'accelgor moves=bugbuzz,energyball,sludgebomb,focusblast nature=modest held_item=cobblemon:throat_spray ability=unburden special_attack_ev=252 speed_ev=252' + t.constants,
+'ribombee moves=moonblast,bugbuzz,quiverdance,energyball nature=timid held_item=cobblemon:focus_sash ability=shielddust special_attack_ev=252 speed_ev=252' + t.constants,
+'golisopod moves=firstimpression,leechlife,liquidation,knockoff nature=adamant held_item=cobblemon:sitrus_berry ability=emergencyexit hp_ev=252 attack_ev=252' + t.constants,
+'centiskorch moves=firelash,leechlife,powerwhip,knockoff nature=adamant held_item=cobblemon:choice_band ability=flashfire hp_ev=252 attack_ev=252' + t.constants,
+'orbeetle moves=bugbuzz,psyshock,shadowball,energyball nature=timid held_item=cobblemon:bright_powder ability=swarm special_attack_ev=252 speed_ev=252' + t.constants,
+'lokix moves=suckerpunch,leechlife,knockoff,uturn nature=adamant held_item=cobblemon:life_orb ability=tintedlens attack_ev=252 speed_ev=252' + t.constants,
+'rabsca moves=bugbuzz,psychic,earthpower,energyball nature=modest held_item=cobblemon:choice_specs ability=synchronize hp_ev=252 special_attack_ev=252' + t.constants,
+'machamp moves=closecombat,stoneedge,earthquake,facade nature=adamant held_item=cobblemon:flame_orb ability=guts hp_ev=252 attack_ev=252' + t.constants,
+'poliwrath moves=liquidation,drainpunch,earthquake,knockoff nature=adamant held_item=cobblemon:assault_vest ability=waterabsorb hp_ev=252 attack_ev=252' + t.constants,
+'hitmontop moves=closecombat,tripleaxel,machpunch,aerialace nature=adamant held_item=cobblemon:choice_band ability=technician hp_ev=252 attack_ev=252' + t.constants,
+'heracross moves=closecombat,megahorn,facade,knockoff nature=jolly held_item=cobblemon:flame_orb ability=guts attack_ev=252 speed_ev=252' + t.constants,
+'hariyama moves=drainpunch,knockoff,heavyslam,earthquake nature=adamant held_item=cobblemon:leftovers ability=thickfat hp_ev=252 attack_ev=252' + t.constants,
+'medicham moves=closecombat,zenheadbutt,trailblaze,icepunch nature=jolly held_item=cobblemon:life_orb ability=purepower attack_ev=252 speed_ev=252' + t.constants,
+'lucario moves=focusblast,flashcannon,darkpulse,vacuumwave nature=timid held_item=cobblemon:choice_specs ability=steadfast special_attack_ev=252 speed_ev=252' + t.constants,
+'toxicroak moves=gunkshot,closecombat,suckerpunch,earthquake nature=jolly held_item=cobblemon:life_orb ability=dryskin attack_ev=252 speed_ev=252' + t.constants,
+'conkeldurr moves=machpunch,drainpunch,facade,knockoff nature=adamant held_item=cobblemon:flame_orb ability=guts hp_ev=252 attack_ev=252' + t.constants,
+'mienshao moves=closecombat,knockoff,uturn,tripleaxel nature=jolly held_item=cobblemon:life_orb ability=regenerator attack_ev=252 speed_ev=252' + t.constants,
+'hawlucha moves=acrobatics,closecombat,thunderpunch,swordsdance nature=adamant held_item=cobblemon:flying_gem ability=unburden attack_ev=252 speed_ev=252' + t.constants,
+'pangoro moves=closecombat,icepunch,darkestlariat,gunkshot nature=adamant held_item=cobblemon:choice_band ability=scrappy hp_ev=252 attack_ev=252' + t.constants,
+'passimian moves=closecombat,knockoff,rockslide,gunkshot nature=jolly held_item=cobblemon:choice_scarf ability=defiant attack_ev=252 speed_ev=252' + t.constants,
+'crabominable moves=icehammer,closecombat,earthquake,knockoff nature=adamant held_item=cobblemon:quick_claw ability=angerpoint hp_ev=252 attack_ev=252' + t.constants,
+'falinks moves=noretreat,closecombat,poisonjab,knockoff nature=jolly held_item=cobblemon:black_belt ability=defiant attack_ev=252 speed_ev=252' + t.constants,
+'sirfetchd moves=closecombat,leafblade,nightslash,bravebird nature=jolly held_item=cobblemon:leek ability=scrappy attack_ev=252 speed_ev=252' + t.constants,
+'annihilape moves=ragefist,drainpunch,nightslash,rest nature=adamant held_item=cobblemon:chesto_berry ability=defiant hp_ev=252 attack_ev=252' + t.constants,
+'flamigo moves=bravebird,closecombat,throatchop,uturn nature=adamant held_item=cobblemon:choice_scarf ability=scrappy attack_ev=252 speed_ev=252' + t.constants,
+'marowak moves=bonemerang,knockoff,stoneedge,aerialace nature=adamant held_item=cobblemon:thick_club ability=battlearmor hp_ev=252 attack_ev=252' + t.constants,
+'nidoking moves=sludgewave,icebeam,earthpower,flamethrower nature=timid held_item=cobblemon:life_orb ability=sheerforce special_attack_ev=252 speed_ev=252' + t.constants,
+'donphan moves=earthquake,seedbomb,icespinner,gunkshot nature=adamant held_item=cobblemon:assault_vest ability=sturdy hp_ev=252 attack_ev=252' + t.constants,
+'quagsire moves=toxic,recover,earthquake,icepunch nature=impish held_item=cobblemon:leftovers ability=unaware hp_ev=252 defence_ev=252' + t.constants,
+'flygon moves=earthquake,outrage,stoneedge,uturn nature=jolly held_item=cobblemon:choice_band ability=levitate attack_ev=252 speed_ev=252' + t.constants,
+'claydol moves=psychic,scorchingsands,dazzlinggleam,explosion nature=mild held_item=cobblemon:assault_vest ability=levitate hp_ev=252 special_attack_ev=252' + t.constants,
+'gliscor moves=earthquake,facade,swordsdance,knockoff nature=adamant held_item=cobblemon:toxic_orb ability=poisonheal hp_ev=252 attack_ev=252' + t.constants,
+'hippowdon moves=earthquake,stoneedge,slackoff,yawn nature=impish held_item=cobblemon:leftovers ability=sandstream hp_ev=252 defence_ev=252' + t.constants,
+'krookodile moves=earthquake,knockoff,gunkshot,closecombat nature=jolly held_item=cobblemon:life_orb ability=moxie attack_ev=252 speed_ev=252' + t.constants,
+'golurk moves=earthquake,dynamicpunch,stoneedge,poltergeist nature=adamant held_item=cobblemon:choice_band ability=noguard hp_ev=252 attack_ev=252' + t.constants,
+'palossand moves=shoreup,scorchingsands,shadowball,energyball nature=bold held_item=cobblemon:leftovers ability=watercompaction hp_ev=252 defence_ev=252' + t.constants,
+'mudsdale moves=earthquake,bodypress,heavyslam,stoneedge nature=careful held_item=cobblemon:assault_vest ability=stamina hp_ev=252 special_defence_ev' + t.constants,
+'ursaluna moves=facade,headlongrush,firepunch,icepunch nature=adamant held_item=cobblemon:flame_orb ability=guts hp_ev=252 attack_ev=252' + t.constants,
+'sandaconda moves=earthquake,stoneedge,rest,bodypress nature=impish held_item=cobblemon:leftovers ability=shedskin hp_ev=252 defence_ev=252' + t.constants,
+'toedscruel moves=spore,earthpower,gigadrain,sludgebomb nature=modest held_item=cobblemon:sitrus_berry ability=myceliummight hp_ev=252 special_attack_ev=252' + t.constants,
+'clodsire moves=earthquake,poisonjab,toxic,recover nature=careful held_item=cobblemon:leftovers ability=unaware hp_ev=252 special_defence_ev=252' + t.constants,
+'alakazam moves=psychic,focusblast,shadowball,dazzlinggleam nature=timid held_item=cobblemon:life_orb ability=magicguard special_attack_ev=252 speed_ev=252' + t.constants,
+'slowbro moves=scald,psychic,slackoff,bodypress nature=calm held_item=cobblemon:leftovers ability=regenerator hp_ev=252 defence_ev=252' + t.constants,
+'slowking moves=scald,psychic,icebeam,flamethrower nature=modest held_item=cobblemon:assault_vest ability=regenerator hp_ev=252 special_attack_ev=252' + t.constants,
+'wobbuffet moves=encore,destinybond,counter,mirrorcoat nature=bold held_item=cobblemon:sitrus_berry ability=shadowtag hp_ev=252 defence_ev=252' + t.constants,
+'espeon moves=psychic,alluringvoice,shadowball,hiddenpower nature=timid held_item=cobblemon:life_orb ability=magicbounce special_attack_ev=252 speed_ev=252' + t.hpfighting,
+'grumpig moves=psychic,earthpower,focusblast,shadowball nature=modest held_item=cobblemon:choice_specs ability=thickfat hp_ev=252 special_attack_ev=252' + t.constants,
+'chimecho moves=psychic,dazzlinggleam,thunderwave,healingwish nature=bold held_item=cobblemon:focus_sash ability=levitate hp_ev=252 defence_ev=252' + t.constants,
+'gallade moves=psychocut,sacredsword,leafblade,nightslash nature=jolly held_item=cobblemon:scope_lens ability=sharpness attack_ev=252 speed_ev=252' + t.constants,
+'bronzong moves=psychicnoise,nightshade,toxic,bodypress nature=bold held_item=cobblemon:leftovers ability=levitate hp_ev=252 defence_ev=252' + t.constants,
+'reuniclus moves=psychic,focusblast,energyball,shadowball nature=modest held_item=cobblemon:life_orb ability=magicguard hp_ev=252 special_attack_ev=252' + t.constants,
+'gothitelle moves=cosmicpower,rest,storedpower,focusblast nature=bold held_item=cobblemon:leftovers ability=shadowtag hp_ev=252 defence_ev=252' + t.constants,
+'meowstic gender=male moves=toxic,energyball,doubleteam,psychic nature=bold held_item=cobblemon:bright_powder ability=prankster hp_ev=252 defence_ev=252' + t.constants,
+'meowstic gender=female moves=psyshock,darkpulse,energyball,thunderbolt nature=timid held_item=cobblemon:expert_belt ability=competitive special_attack_ev=252 speed_ev=252' + t.constants,
+'oranguru moves=psychic,energyball,dazzlinggleam,shadowball nature=modest held_item=cobblemon:assault_vest ability=innerfocus hp_ev=252 special_attack_ev=252' + t.constants,
+'bruxish moves=psychicfangs,wavecrash,flipturn,crunch nature=jolly held_item=cobblemon:choice_scarf ability=strongjaw attack_ev=252 speed_ev=252' + t.constants,
+'mrrime moves=freezedry,grassknot,psychic,focusblast nature=timid held_item=cobblemon:expert_belt ability=tangledfeet special_attack_ev=252 speed_ev=252' + t.constants,
+'hatterene moves=psychicnoise,drainingkiss,nuzzle,mysticalfire nature=bold held_item=cobblemon:assault_vest ability=magicbounce hp_ev=252 defence_ev=252' + t.constants,
+'armarouge moves=armorcannon,energyball,psyshock,aurasphere nature=modest held_item=cobblemon:focus_sash ability=weakarmor special_attack_ev=252 speed_ev=252' + t.constants,
+'espathra moves=storedpower,dazzlinggleam,calmmind,protect nature=modest held_item=cobblemon:leftovers ability=speedboost hp_ev=252 defence_ev=252' + t.constants,
+'golem moves=earthquake,stoneedge,gyroball,heavyslam nature=brave held_item=cobblemon:weakness_policy ability=sturdy hp_ev=252 attack_ev=252' + t.minspeed,
+'aerodactyl moves=stoneedge,earthquake,dualwingbeat,thunderfang nature=jolly held_item=cobblemon:expert_belt ability=unnerve attack_ev=252 speed_ev=252' + t.constants,
+'shuckle moves=toxic,knockoff,protect,infestation nature=calm held_item=cobblemon:wiki_berry ability=sturdy hp_ev=252 special_defence_ev=252' + t.constants,
+'sudowoodo moves=headsmash,woodhammer,drainpunch,earthquake nature=adamant held_item=cobblemon:life_orb ability=rockhead hp_ev=252 attack_ev=252' + t.constants,
+'armaldo moves=xscissor,aquatail,knockoff,stoneedge nature=adamant held_item=cobblemon:quick_claw ability=battlearmor hp_ev=252 attack_ev=252' + t.constants,
+'cradily moves=recover,protect,toxic,leechseed nature=calm held_item=cobblemon:leftovers ability=stormdrain hp_ev=252 special_defence_ev=252' + t.constants,
+'rampardos moves=headsmash,headsmash,headsmash,headsmash nature=jolly held_item=cobblemon:choice_scarf ability=moldbreaker attack_ev=252 speed_ev=252' + t.constants,
+'bastiodon moves=fissure,metalburst,protect,bodypress nature=bold held_item=cobblemon:leftovers ability=sturdy hp_ev=252 defence_ev=252' + t.constants,
+'gigalith moves=stoneedge,earthquake,heavyslam,bodypress nature=impish held_item=cobblemon:assault_vest ability=sandstream hp_ev=252 defence_ev=252' + t.constants,
+'carracosta moves=shellsmash,stoneedge,liquidation,earthquake nature=jolly held_item=cobblemon:white_herb ability=solidrock attack_ev=252 speed_ev=252' + t.constants,
+'aurorus moves=blizzard,meteorbeam,earthpower,flashcannon nature=modest held_item=cobblemon:power_herb ability=snowwarning hp_ev=252 special_attack_ev=252' + t.constants,
+'tyrantrum moves=headsmash,closecombat,scaleshot,earthquake nature=jolly held_item=cobblemon:loaded_dice ability=rockhead attack_ev=252 speed_ev=252' + t.constants,
+'lycanroc moves=accelerock,stoneedge,closecombat,drillrun nature=jolly held_item=cobblemon:choice_band ability=sandrush attack_ev=252 speed_ev=252' + t.constants,
+'lycanroc midnight-form moves=stoneedge,closecombat,stompingtantrum,playrough nature=adamant held_item=cobblemon:expert_belt ability=noguard hp_ev=252 attack_ev=252' + t.constants,
+'drednaw moves=shellsmash,stoneedge,liquidation,earthquake nature=jolly held_item=cobblemon:white_herb ability=shellarmor attack_ev=252 speed_ev=252' + t.constants,
+'kleavor moves=stoneaxe,xscissor,nightslash,closecombat nature=jolly held_item=cobblemon:focus_sash ability=sharpness attack_ev=252 speed_ev=252' + t.constants,
+'garganacl moves=saltcure,recover,irondefense,bodypress nature=careful held_item=cobblemon:leftovers ability=purifyingsalt hp_ev=252 special_defence_ev=252' + t.constants,
+'glimmora moves=earthpower,meteorbeam,sludgewave,energyball nature=timid held_item=cobblemon:power_herb ability=toxicdebris special_attack_ev=252 speed_ev=252' + t.constants,
+'persian alolan moves=foulplay,knockoff,thunderwave,partingshot nature=jolly held_item=cobblemon:sitrus_berry ability=furcoat hp_ev=252 defence_ev=252' + t.constants,
+'muk alolan moves=drainpunch,poisonjab,knockoff,rockslide nature=careful held_item=cobblemon:assault_vest ability=poisontouch hp_ev=252 special_defence_ev=252' + t.constants,
+'tyranitar moves=knockoff,stoneedge,icepunch,earthquake nature=adamant held_item=cobblemon:assault_vest ability=sandstream hp_ev=252 attack_ev=252' + t.constants,
+'umbreon moves=foulplay,toxic,wish,protect nature=bold held_item=cobblemon:leftovers ability=synchronize hp_ev=252 defence_ev=252' + t.constants,
+'absol moves=nightslash,psychocut,closecombat,megahorn nature=jolly held_item=cobblemon:scope_lens ability=superluck attack_ev=252 speed_ev=252' + t.constants,
+'sharpedo moves=waterfall,crunch,closecombat,earthquake nature=adamant held_item=cobblemon:life_orb ability=speedboost attack_ev=252 speed_ev=252' + t.constants,
+'honchkrow moves=bravebird,knockoff,uturn,suckerpunch nature=adamant held_item=cobblemon:black_glasses ability=moxie hp_ev=252 attack_ev=252' + t.constants,
+'drapion moves=knockoff,earthquake,poisonjab,aquatail nature=adamant held_item=cobblemon:choice_band ability=sniper attack_ev=252 speed_ev=252' + t.constants,
+'zoroark moves=darkpulse,sludgebomb,flamethrower,focusblast nature=timid held_item=cobblemon:life_orb ability=illusion special_attack_ev=252 speed_ev=252' + t.constants,
+'scrafty moves=drainpunch,knockoff,rest,poisonjab nature=adamant held_item=cobblemon:leftovers ability=shedskin hp_ev=252 attack_ev=252' + t.constants,
+'malamar moves=superpower,superpower,superpower,knockoff nature=jolly held_item=cobblemon:choice_scarf ability=contrary attack_ev=252 speed_ev=252' + t.constants,
+'morpeko moves=aurawheel,knockoff,seedbomb,stompingtantrum nature=adamant held_item=cobblemon:choice_band ability=hungerswitch attack_ev=252 speed_ev=252' + t.constants,
+'obstagoon moves=knockoff,facade,icepunch,switcheroo nature=jolly held_item=cobblemon:flame_orb ability=guts attack_ev=252 speed_ev=252' + t.constants,
+'bombirdier moves=bravebird,knockoff,stoneedge,roost nature=jolly held_item=cobblemon:life_orb ability=rockypayload attack_ev=252 speed_ev=252' + t.constants,
+'mabosstiff moves=crunch,playrough,outrage,psychicfangs nature=adamant held_item=cobblemon:choice_band ability=intimidate hp_ev=252 attack_ev=252' + t.constants,
+'victreebel moves=strengthsap,powerwhip,poisonjab,knockoff nature=adamant held_item=cobblemon:quick_claw ability=chlorophyll hp_ev=252 attack_ev=252' + t.constants,
+'nidoqueen moves=earthpower,sludgewave,icebeam,toxic nature=bold held_item=cobblemon:black_sludge ability=sheerforce hp_ev=252 defence_ev=252' + t.constants,
+'crobat moves=sludgebomb,superfang,roost,uturn nature=timid held_item=cobblemon:black_sludge ability=infiltrator hp_ev=252 speed_ev=252' + t.constants,
+'qwilfish moves=barbbarrage,flipturn,toxic,painsplit nature=impish held_item=cobblemon:rocky_helmet ability=intimidate hp_ev=252 defence_ev=252' + t.constants,
+'swalot moves=earthquake,gunkshot,icepunch,firepunch nature=careful held_item=cobblemon:assault_vest ability=stickyhold hp_ev=252 special_defence_ev=252' + t.constants,
+'seviper moves=knockoff,seedbomb,gunkshot,earthquake nature=adamant held_item=cobblemon:bright_powder ability=infiltrator hp_ev=252 attack_ev=252' + t.constants,
+'skuntank moves=gunkshot,knockoff,toxic,protect nature=jolly held_item=cobblemon:bright_powder ability=aftermath hp_ev=252 attack_ev=252' + t.constants,
+'roserade moves=sleeppowder,sludgebomb,gigadrain,hiddenpower nature=timid held_item=cobblemon:life_orb ability=technician special_attack_ev=252 speed_ev=252' + t.hpfire,
+'garbodor moves=toxic,painsplit,protect,gunkshot nature=impish held_item=cobblemon:bright_powder ability=aftermath hp_ev=252 defence_ev=252' + t.constants,
+'scolipede moves=swordsdance,megahorn,poisonjab,earthquake nature=adamant held_item=cobblemon:life_orb ability=speedboost hp_ev=252 attack_ev=252' + t.constants,
+'dragalge moves=sludgewave,dracometeor,focusblast,hydropump nature=modest held_item=cobblemon:choice_specs ability=adaptability hp_ev=252 special_attack_ev=252' + t.constants,
+'toxapex moves=scald,recover,haze,toxic nature=bold held_item=cobblemon:black_sludge ability=regenerator hp_ev=252 defence_ev=252' + t.constants,
+'salazzle moves=fireblast,sludgewave,dragonpulse,toxic nature=timid held_item=cobblemon:life_orb ability=corrosion special_attack_ev=252 speed_ev=252' + t.constants,
+'overqwil moves=gunkshot,throatchop,liquidation,destinybond nature=jolly held_item=cobblemon:life_orb ability=intimidate attack_ev=252 speed_ev=252' + t.constants,
+'sneasler moves=closecombat,direclaw,acrobatics,rockslide nature=adamant held_item=cobblemon:flying_gem ability=unburden attack_ev=252 speed_ev=252' + t.constants,
+'revavroom moves=gunkshot,ironhead,highhorsepower,temperflare nature=jolly held_item=cobblemon:air_balloon ability=filter attack_ev=252 speed_ev=252' + t.constants,
+'grafaiai moves=gunkshot,knockoff,doubleedge,uturn nature=jolly held_item=cobblemon:choice_band ability=poisontouch attack_ev=252 speed_ev=252' + t.constants,
+'dodrio moves=bravebird,doubleedge,jumpkick,knockoff nature=jolly held_item=cobblemon:choice_band ability=tangledfeet attack_ev=252 speed_ev=252' + t.constants,
+'gyarados moves=dragondance,waterfall,powerwhip,temperflare nature=jolly held_item=cobblemon:lum_berry ability=moxie attack_ev=252 speed_ev=252' + t.constants,
+'xatu moves=calmmind,airslash,heatwave,calmmind nature=modest held_item=cobblemon:bright_powder ability=magicbounce hp_ev=252 special_attack_ev=252' + t.constants,
+'gligar moves=knockoff,earthquake,toxic,roost nature=impish held_item=cobblemon:eviolite ability=immunity hp_ev=252 defence_ev=252' + t.constants,
+'swellow moves=boomburst,boomburst,heatwave,airslash nature=timid held_item=cobblemon:throat_spray ability=scrappy special_attack_ev=252 speed_ev=252' + t.constants,
+'pelipper moves=weatherball,hurricane,icebeam, nature=modest held_item=cobblemon:choice_specs ability=drizzle hp_ev=252 special_attack_ev=252' + t.hpground,
+'staraptor moves=bravebird,closecombat,doubleedge,uturn nature=jolly held_item=cobblemon:choice_band ability=reckless attack_ev=252 speed_ev=252' + t.constants,
+'drifblim moves=acrobatics,thunderwave,strengthsap,knockoff nature=adamant held_item=cobblemon:flying_gem ability=unburden attack_ev=252 speed_ev=252' + t.constants,
+'archeops moves=stoneedge,earthquake,dualwingbeat,roost nature=jolly held_item=cobblemon:sitrus_berry ability=defeatist attack_ev=252 speed_ev=252' + t.constants,
+'mandibuzz moves=foulplay,roost,knockoff,irondefense nature=impish held_item=cobblemon:leftovers ability=overcoat hp_ev=252 defence_ev=252' + t.constants,
+'noivern moves=dracometeor,hurricane,flamethrower,boomburst nature=timid held_item=cobblemon:choice_specs ability=infiltrator special_attack_ev=252 speed_ev=252' + t.constants,
+'minior moves=shellsmash,acrobatics,stoneedge,earthquake nature=adamant held_item=cobblemon:white_herb ability=shieldsdown attack_ev=252 speed_ev=252' + t.constants,
+'toucannon moves=bravebird,return,bulletseed,rockblast nature=adamant held_item=cobblemon:life_orb ability=skilllink hp_ev=252 attack_ev=252' + t.constants,
+'corviknight moves=bravebird,bodypress,roost,uturn nature=impish held_item=cobblemon:leftovers ability=mirrorarmor hp_ev=252 defence_ev=252' + t.constants,
+'cramorant moves=surf,roost,icebeam,hurricane nature=modest held_item=cobblemon:bright_powder ability=gulpmissile hp_ev=252 special_attack_ev=252' + t.constants,
+'flamigo moves=closecombat,acrobatics,swordsdance,roost nature=jolly held_item=cobblemon:flying_gem ability=scrappy attack_ev=252 speed_ev=252' + t.constants,
+'kilowattrel moves=thunderbolt,hurricane,voltswitch,roost nature=timid held_item=cobblemon:life_orb ability=competitive special_attack_ev=252 speed_ev=252' + t.constants,
+'dugtrio alolan moves=earthquake,ironhead,stoneedge,shadowclaw nature=jolly held_item=cobblemon:choice_band ability=tanglinghair attack_ev=252 speed_ev=252' + t.constants,
+'sandslash alolan moves=tripleaxel,ironhead,earthquake,knockoff nature=jolly held_item=cobblemon:expert_belt ability=slushrush attack_ev=252 speed_ev=252' + t.constants,
+'steelix moves=curse,gyroball,bodypress,earthquake nature=sassy held_item=cobblemon:leftovers ability=sturdy hp_ev=252 special_defence_ev=252' + t.minspeed,
+'skarmory moves=bodypress,irondefense,bravebird,roost nature=impish held_item=cobblemon:rocky_helmet ability=sturdy hp_ev=252 defence_ev=252' + t.constants,
+'aggron moves=headsmash,headsmash,earthquake,headsmash nature=adamant held_item=cobblemon:choice_band ability=rockhead hp_ev=252 attack_ev=252' + t.constants,
+'metagross moves=meteormash,psychicfangs,earthquake,icepunch nature=adamant held_item=cobblemon:life_orb ability=clearbody hp_ev=252 attack_ev=252' + t.constants,
+'magnezone moves=thunderbolt,flashcannon,voltswitch,hiddenpower nature=modest held_item=cobblemon:assault_vest ability=analytic hp_ev=252 special_attack_ev=252' + t.hpground,
+'probopass moves=bodypress,voltswitch,flashcannon,zapcannon nature=impish held_item=cobblemon:assault_vest ability=sturdy hp_ev=252 defence_ev=252' + t.constants,
+'excadrill moves=ironhead,earthquake,rockslide,xscissor nature=jolly held_item=cobblemon:choice_band ability=moldbreaker attack_ev=252 speed_ev=252' + t.constants,
+'ferrothorn moves=leechseed,toxic,protect,gyroball nature=relaxed held_item=cobblemon:leftovers ability=ironbarbs hp_ev=252 defence_ev=252' + t.minspeed,
+'aegislash moves=closecombat,shadowball,flashcannon,shadowsneak nature=mild held_item=cobblemon:life_orb ability=stancechange hp_ev=252 special_attack_ev=252' + t.constants,
+'klefki moves=foulplay,dazzlinggleam,toxic,protect nature=calm held_item=cobblemon:leftovers ability=prankster hp_ev=252 special_defence_ev=252' + t.constants,
+'perrserker moves=ironhead,knockoff,uturn,closecombat nature=adamant held_item=cobblemon:quick_claw ability=toughclaws hp_ev=252 attack_ev=252' + t.constants,
+'copperajah moves=heavyslam,earthquake,powerwhip,heatcrash nature=adamant held_item=cobblemon:assault_vest ability=heavymetal hp_ev=252 attack_ev=252' + t.constants,
+'kingambit moves=knockoff,ironhead,suckerpunch,lowkick nature=adamant held_item=cobblemon:black_glasses ability=supremeoverlord hp_ev=252 attack_ev=252' + t.constants,
+'orthworm moves=ironhead,irondefense,bodypress,earthquake nature=impish held_item=cobblemon:leftovers ability=eartheater hp_ev=252 defence_ev=252' + t.constants,
+'gengar moves=sludgewave,shadowball,focusblast,dazzlinggleam nature=timid held_item=cobblemon:life_orb ability=cursedbody special_attack_ev=252 speed_ev=252' + t.constants,
+'marowak alolan moves=shadowbone,flareblitz,lowkick,earthquake nature=adamant held_item=cobblemon:thick_club ability=rockhead hp_ev=252 attack_ev=252' + t.constants,
+'corsola galarian moves=strengthsap,willowisp,nightshade,whirlpool nature=calm held_item=cobblemon:eviolite ability=cursedbody hp_ev=252 special_defence_ev' + t.constants,
+'mismagius moves=shadowball,dazzlinggleam,mysticalfire,destinybond nature=timid held_item=cobblemon:life_orb ability=levitate special_attack_ev=252 speed_ev=252' + t.constants,
+'banette moves=poltergeist,knockoff,gunkshot,destinybond nature=adamant held_item=cobblemon:quick_claw ability=cursedbody hp_ev=252 attack_ev=252' + t.constants,
+'sableye moves=encore,willowisp,recover,knockoff nature=impish held_item=cobblemon:sitrus_berry ability=prankster hp_ev=252 defence_ev=252' + t.constants,
+'spiritomb moves=foulplay,painsplit,willowisp,hex nature=bold held_item=cobblemon:leftovers ability=infiltrator hp_ev=252 defence_ev=252' + t.constants,
+'dusknoir moves=poltergeist,brickbreak,leechlife,darkestlariat nature=adamant held_item=cobblemon:choice_band ability=pressure hp_ev=252 attack_ev=252' + t.constants,
+'cofagrigus moves=irondefense,bodypress,toxic,painsplit nature=impish held_item=cobblemon:sitrus_berry ability=mummy hp_ev=252 defence_ev=252' + t.constants,
+'chandelure moves=fireblast,shadowball,energyball,hiddenpower nature=timid held_item=cobblemon:choice_specs ability=flashfire special_attack_ev=252 speed_ev' + t.hpground,
+'trevenant moves=poltergeist,woodhammer,suckerpunch,earthquake nature=adamant held_item=cobblemon:sitrus_berry ability=harvest hp_ev=252 attack_ev=252' + t.constants,
+'gourgeist pumpkin-size-super moves=powerwhip,poltergeist,flamecharge,rockslide nature=adamant held_item=cobblemon:bright_powder ability=insomnia hp_ev=252 attack_ev=252' + t.constants,
+'dhelmise moves=powerwhip,poltergeist,anchorshot,earthquake nature=adamant held_item=cobblemon:quick_claw ability=steelworker hp_ev=252 attack_ev=252' + t.constants,
+'runerigus moves=earthquake,poltergeist,stoneedge,bodypress nature=impish held_item=cobblemon:assault_vest ability=wanderingspirit hp_ev=252 defence_ev=252' + t.constants,
+'ceruledge moves=bitterblade,poltergeist,shadowsneak,closecombat nature=jolly held_item=cobblemon:weakness_policy ability=weakarmor attack_ev=252 speed_ev=252' + t.constants,
+'sinistcha moves=matchagotcha,shadowball,strengthsap,scald nature=modest held_item=cobblemon:leftovers ability=heatproof hp_ev=252 special_attack_ev=252' + t.constants,
+'jynx moves=icebeam,psychic,focusblast,lovelykiss nature=timid held_item=cobblemon:bright_powder ability=dryskin special_attack_ev=252 speed_ev=252' + t.constants,
+'cloyster moves=shellsmash,iciclespear,rockblast,liquidation nature=adamant held_item=cobblemon:white_herb ability=skilllink attack_ev=252 speed_ev=252' + t.constants,
+'mamoswine moves=iciclecrash,earthquake,stoneedge,knockoff nature=adamant held_item=cobblemon:choice_band ability=thickfat hp_ev=252 attack_ev=252' + t.constants,
+'weavile moves=tripleaxel,knockoff,lowkick,iceshard nature=jolly held_item=cobblemon:life_orb ability=pressure attack_ev=252 speed_ev=252' + t.constants,
+'walrein moves=freezedry,hydropump,sheercold,yawn nature=impish held_item=cobblemon:bright_powder ability=thickfat hp_ev=252 defence_ev=252' + t.constants,
+'glalie moves=freezedry,darkpulse,shadowball,explosion nature=mild held_item=cobblemon:bright_powder ability=innerfocus attack_ev=252 special_attack_ev=252' + t.constants,
+'froslass moves=tripleaxel,poltergeist,crunch,destinybond nature=jolly held_item=cobblemon:focus_sash ability=cursedbody attack_ev=252 speed_ev=252' + t.constants,
+'glaceon moves=freezedry,shadowball,alluringvoice,hiddenpower nature=modest held_item=cobblemon:choice_specs ability=snowcloak hp_ev=252 special_attack_ev=252' + t.hpground,
+'beartic moves=iciclecrash,closecombat,crunch,earthquake nature=adamant held_item=cobblemon:quick_claw ability=swiftswim hp_ev=252 attack_ev=252' + t.constants,
+'vanilluxe moves=blizzard,freezedry,flashcannon,hiddenpower nature=modest held_item=cobblemon:choice_specs ability=snowwarning special_attack_ev=252 speed_ev=252' + t.hpfire,
+'avalugg moves=bodypress,recover,earthquake,icespinner nature=careful held_item=cobblemon:maranga_berry ability=sturdy hp_ev=252 special_defence_ev=252' + t.constants,
+'arctovish moves=fishiousrend,iciclecrash,fishiousrend,fishiousrend nature=jolly held_item=cobblemon:choice_scarf ability=slushrush attack_ev=252 speed_ev=252' + t.constants,
+'arctozolt moves=boltbeak,boltbeak,iciclecrash,boltbeak nature=jolly held_item=cobblemon:choice_scarf ability=static attack_ev=252 speed_ev=252' + t.constants,
+'cetitan moves=iciclecrash,iceshard,playrough,liquidation nature=adamant held_item=cobblemon:bright_powder ability=sheerforce hp_ev=252 attack_ev=252' + t.constants,
+'baxcalibur moves=iciclespear,earthquake,scaleshot,swordsdance nature=jolly held_item=cobblemon:loaded_dice ability=thermalexchange attack_ev=252 speed_ev=252' + t.constants,
+'dragonite moves=dragondance,earthquake,dualwingbeat,dragonclaw nature=jolly held_item=cobblemon:dragon_fang ability=multiscale attack_ev=252 speed_ev=252' + t.constants,
+'exeggutor alolan moves=dracometeor,leafstorm,flamethrower,sludgebomb nature=modest held_item=cobblemon:white_herb ability=frisk hp_ev=252 special_attack_ev=252' + t.constants,
+'kingdra moves=hydropump,hurricane,icebeam,dragonpulse nature=timid held_item=cobblemon:choice_specs ability=sniper special_attack_ev=252 speed_ev=252' + t.constants,
+'salamence moves=outrage,dualwingbeat,earthquake,shadowclaw nature=jolly held_item=cobblemon:life_orb ability=moxie attack_ev=252 speed_ev=252' + t.constants,
+'altaria moves=perishsong,firespin,roost,willowisp nature=impish held_item=cobblemon:leftovers ability=naturalcure hp_ev=252 defence_ev=252' + t.constants,
+'garchomp moves=earthquake,outrage,stoneedge,poisonjab nature=jolly held_item=cobblemon:choice_band ability=roughskin attack_ev=252 speed_ev=252' + t.constants,
+'haxorus moves=outrage,earthquake,poisonjab,closecombat nature=jolly held_item=cobblemon:choice_band ability=moldbreaker attack_ev=252 speed_ev=252' + t.constants,
+'hydreigon moves=dracometeor,darkpulse,uturn,flashcannon nature=timid held_item=cobblemon:life_orb ability=levitate special_attack_ev=252 speed_ev=252' + t.constants,
+'goodra moves=dracometeor,fireblast,sludgewave,hydropump nature=modest held_item=cobblemon:sitrus_berry ability=sapsipper hp_ev=252 special_attack_ev=252' + t.constants,
+'kommoo moves=clangingscales,boomburst,flamethrower,aurasphere nature=timid held_item=cobblemon:throat_spray ability=soundproof special_attack_ev=252 speed_ev=252' + t.constants,
+'drampa moves=hypervoice,dragonpulse,flamethrower,roost nature=modest held_item=cobblemon:sitrus_berry ability=berserk hp_ev=252 special_attack_ev=252' + t.constants,
+'dragapult moves=dragondarts,phantomforce,uturn,dragondance nature=adamant held_item=cobblemon:power_herb ability=clearbody attack_ev=252 speed_ev=252' + t.constants,
+'appletun moves=appleacid,dracometeor,leechseed,recover nature=bold held_item=cobblemon:leftovers ability=thickfat hp_ev=252 defence_ev=252' + t.constants,
+'archaludon moves=electroshot,dragonpulse,bodypress,flashcannon nature=modest held_item=cobblemon:power_herb ability=stamina hp_ev=252 special_attack_ev=252' + t.constants,
+'hydrapple moves=ficklebeam,gigadrain,earthpower,nastyplot nature=modest held_item=cobblemon:life_orb ability=regenerator hp_ev=252 special_attack_ev=252' + t.constants,
+'clefable moves=calmmind,moonblast,flamethrower,thunderbolt nature=modest held_item=cobblemon:life_orb ability=magicguard hp_ev=252 special_attack_ev=252' + t.constants,
+'mrmime moves=psychic,icywind,dazzlinggleam,chargebeam nature=timid held_item=cobblemon:life_orb ability=technician special_attack_ev=252 speed_ev=252' + t.constants,
+'azumarill moves=liquidation,playrough,aquajet,knockoff nature=adamant held_item=cobblemon:choice_band ability=hugepower hp_ev=252 attack_ev=252' + t.constants,
+'granbull moves=playrough,earthquake,closecombat,stoneedge nature=adamant held_item=cobblemon:quick_claw ability=intimidate hp_ev=252 attack_ev=252' + t.constants,
+'gardevoir moves=moonblast,psychic,mysticalfire,focusblast nature=timid held_item=cobblemon:choice_specs ability=trace special_attack_ev=252 speed_ev=252' + t.constants,
+'mawile moves=playrough,ironhead,knockoff,icepunch nature=adamant held_item=cobblemon:bright_powder ability=intimidate hp_ev=252 attack_ev=252' + t.constants,
+'togekiss moves=airslash,airslash,airslash,airslash nature=timid held_item=cobblemon:choice_scarf ability=serenegrace special_attack_ev=252 speed_ev=252' + t.constants,
+'whimsicott moves=moonblast,energyball,hurricane,psychic nature=timid held_item=cobblemon:choice_specs ability=infiltrator special_attack_ev=252 speed_ev=252' + t.constants,
+'florges moves=moonblast,psychic,energyball,synthesis nature=modest held_item=cobblemon:leftovers ability=flowerveil hp_ev=252 special_attack_ev=252' + t.constants,
+'sylveon moves=hypervoice,psychic,shadowball,hiddenpower nature=modest held_item=cobblemon:life_orb ability=pixilate hp_ev=252 special_attack_ev=252' + t.hpground,
+'comfey moves=drainingkiss,calmmind,gigadrain,calmmind nature=bold held_item=cobblemon:sitrus_berry ability=triage hp_ev=252 defence_ev=252' + t.constants,
+'mimikyu moves=shadowclaw,drainpunch,playrough,swordsdance nature=adamant held_item=cobblemon:life_orb ability=disguise hp_ev=252 attack_ev=252' + t.constants,
+'grimmsnarl moves=playrough,thunderwave,crunch,partingshot nature=adamant held_item=cobblemon:sitrus_berry ability=prankster hp_ev=252 attack_ev=252' + t.constants,
+'alcremie moves=recover,dazzlinggleam,mysticalfire,psychic nature=modest held_item=cobblemon:sitrus_berry ability=sweetveil hp_ev=252 special_attack_ev=252' + t.constants,
+'tinkaton moves=gigatonhammer,playrough,knockoff,thunderwave nature=adamant held_item=cobblemon:air_balloon ability=pickpocket hp_ev=252 attack_ev=252' + t.constants,
+'dachsbun moves=playrough,bodypress,psychicfangs,wish nature=adamant held_item=cobblemon:sitrus_berry ability=wellbakedbody hp_ev=252 attack_ev=252' + t.constants
+);
+t.mons_length = q.length(t.mons);
 
-t.1 = 'charmander moves=flameburst,dragonbreath,slash,metalclaw ability=blaze held_item=cobblemon:charcoal_stick nature=hardy' + t.constants;
-t.2 = 'bulbasaur moves=venoshock,sleeppowder,seedbomb,grassyterrain ability=overgrow held_item=cobblemon:miracle_seed nature=hardy' + t.constants;
-t.3 = 'squirtle moves=waterpulse,bite,icywind,rapidspin ability=torrent held_item=cobblemon:mystic_water nature=hardy' + t.constants;
-t.4 = 'chikorita moves=magicalleaf,reflect,lightscreen,poisonpowder ability=overgrow held_item=cobblemon:sitrus_berry nature=hardy' + t.constants;
-t.5 = 'cyndaquil moves=incinerate,quickattack,roar,aerialace ability=blaze held_item=cobblemon:shuca_berry nature=hardy' + t.constants;
-t.6 = 'totodile moves=bite,flipturn,icefang,metalclaw ability=torrent held_item=cobblemon:wacan_berry nature=hardy' + t.constants;
-t.7 = 'treecko moves=gigadrain,quickattack,assurance,lowkick ability=overgrow held_item=cobblemon:yache_berry nature=hardy' + t.constants;
-t.8 = 'mudkip moves=rockslide,avalanche,lowkick,waterpulse ability=torrent held_item=cobblemon:rindo_berry nature=hardy' + t.constants;
-t.9 = 'torchic moves=aerialace,incinerate,reversal,slash ability=blaze held_item=cobblemon:charti_berry nature=hardy' + t.constants;
-t.10 = 'stufful moves=strength,payback,bulldoze,lowsweep ability=cutecharm held_item=cobblemon:sitrus_berry nature=hardy' + t.constants;
-t.11 = 'eevee moves=bite,facade,trailblaze,doublekick ability=adaptability held_item=cobblemon:silk_scarf nature=hardy' + t.constants;
-t.12 = 'porygon moves=psybeam,thundershock,recover,triattack ability=trace held_item=cobblemon:chople_berry nature=hardy' + t.constants;
-t.13 = 'mankey moves=lowkick,assurance,seismictoss,acrobatics ability=vitalspirit held_item=cobblemon:payapa_berry nature=hardy' + t.constants;
-t.14 = 'makuhita moves=forcepalm,knockoff,bulkup,bulldoze ability=thickfat held_item=cobblemon:coba_berry nature=hardy' + t.constants;
-t.15 = 'riolu moves=vacuumwave,metalclaw,forcepalm,aerialace ability=steadfast held_item=cobblemon:black_belt nature=hardy' + t.constants;
-t.16 = 'hoothoot moves=airslash,extrasensory,reflect,protect ability=insomnia held_item=cobblemon:sharp_beak nature=hardy' + t.constants;
-t.17 = 'yanma moves=aircutter,skittersmack,thief,psychicnoise ability=compoundeyes held_item=cobblemon:charti_berry nature=hardy' + t.constants;
-t.18 = 'zubat moves=poisonfang,bite,steelwing,wingattack ability=innerfocus held_item=cobblemon:sitrus_berry nature=hardy' + t.constants;
-t.19 = 'ekans moves=acid,glare,bite,mudshot ability=intimidate held_item=cobblemon:poison_barb nature=hardy' + t.constants;
-t.20 = 'venonat moves=sleeppowder,bugbuzz,psybeam,acidspray ability=tintedlens held_item=cobblemon:occa_berry nature=hardy' + t.constants;
-t.21 = 'tentacool moves=waterpulse,acidspray,confuseray,mudshot ability=clearbody held_item=cobblemon:payapa_berry nature=hardy' + t.constants;
-t.22 = 'swinub moves=iceshard,mudslap,bodyslam,icefang ability=oblivious held_item=cobblemon:chople_berry nature=hardy' + t.constants;
-t.23 = 'phanpy moves=rollout,bulldoze,facade,knockoff ability=pickup held_item=cobblemon:soft_sand nature=hardy' + t.constants;
-t.24 = 'golett moves=shadowpunch,stompingtantrum,megapunch,brickbreak ability=ironfist held_item=cobblemon:kasib_berry nature=hardy' + t.constants;
-t.25 = 'geodude moves=smackdown,selfdestruct,bulldoze,bodyslam ability=rockhead held_item=cobblemon:rindo_berry nature=hardy' + t.constants;
-t.26 = 'cranidos moves=rocksmash,ancientpower,scaryface,headbutt ability=moldbreaker held_item=cobblemon:hard_stone nature=hardy' + t.constants;
-t.27 = 'nacli moves=smackdown,headbutt,recover,dig ability=purifyingsalt held_item=cobblemon:passho_berry nature=hardy' + t.constants;
-t.28 = 'paras moves=thief,spore,growth,slash ability=effectspore held_item=cobblemon:kebia_berry nature=hardy' + t.constants;
-t.29 = 'wimpod moves=strugglebug,round,mudshot,spikes ability=wimpout held_item=cobblemon:charti_berry nature=hardy' + t.constants;
-t.30 = 'venipede moves=poisontail,rollout,bugbite,payback ability=poisonpoint held_item=cobblemon:silver_powder nature=hardy' + t.constants;
-t.31 = 'gastly moves=nightshade,hypnosis,hex,gigadrain ability=levitate held_item=cobblemon:spell_tag nature=hardy' + t.constants;
-t.32 = 'duskull moves=willowisp,hex,curse,nightshade ability=levitate held_item=cobblemon:colbur_berry nature=hardy' + t.constants;
-t.33 = 'drifloon moves=shadowball,aircutter,curse,painsplit ability=unburden held_item=cobblemon:kasib_berry nature=hardy' + t.constants;
-t.34 = 'beldum moves=zenheadbutt,ironhead,takedown,headbutt ability=clearbody held_item=cobblemon:occa_berry nature=hardy' + t.constants;
-t.35 = 'cufant moves=bulldoze,strength,ironhead,zenheadbutt ability=sheerforce held_item=cobblemon:metal_coat nature=hardy' + t.constants;
-t.36 = 'tinkatink moves=metalclaw,drainingkiss,brutalswing,rocksmash ability=moldbreaker held_item=cobblemon:shuca_berry nature=hardy' + t.constants;
-t.37 = 'magnemite moves=spark,thunderwave,mirrorshot,shockwave ability=sturdy held_item=cobblemon:magnet nature=hardy' + t.constants;
-t.38 = 'voltorb hisuian moves=chargebeam,stunspore,grassknot,leechseed ability=soundproof held_item=cobblemon:shuca_berry nature=hardy' + t.constants;
-t.39 = 'pichu moves=nuzzle,charm,sweetkiss,thundershock ability=static held_item=cobblemon:shuca_berry nature=hardy' + t.constants;
-t.40 = 'abra moves=grassknot,confusion,triattack,thunderwave ability=synchronize held_item=cobblemon:colbur_berry nature=hardy' + t.constants;
-t.41 = 'woobat moves=aircutter,confusion,assurance,gigadrain ability=unaware held_item=cobblemon:yache_berry nature=hardy' + t.constants;
-t.42 = 'elgyem moves=psybeam,teleport,chargebeam,hiddenpower ability=synchronize held_item=cobblemon:twisted_spoon nature=hardy' + t.constants;
-t.43 = 'bergmite moves=avalanche,takedown,bite,recover ability=owntempo held_item=cobblemon:babiri_berry nature=hardy' + t.constants;
-t.44 = 'amaura moves=round,ancientpower,thunderwave,mudshot ability=refrigerate held_item=cobblemon:chople_berry nature=hardy' + t.constants;
-t.45 = 'cetoddle moves=avalanche,bodyslam,iceshard,bounce ability=thickfat held_item=cobblemon:never_melt_ice nature=hardy' + t.constants;
-t.46 = 'deino moves=crunch,dragontail,firefang,icefang ability=hustle held_item=cobblemon:roseli_berry nature=hardy' + t.constants;
-t.47 = 'dratini moves=thunderwave,slam,scaleshot,aquajet ability=shedskin held_item=cobblemon:dragon_fang nature=hardy' + t.constants;
-t.48 = 'tyrunt moves=dragontail,rockslide,bite,bulldoze ability=strongjaw held_item=cobblemon:haban_berry nature=hardy' + t.constants;
-t.49 = 'poochyena moves=bite,firefang,icefang,poisonfang ability=quickfeet held_item=cobblemon:tanga_berry nature=hardy' + t.constants;
-t.50 = 'zigzagoon galarian moves=headbutt,assurance,pinmissile,lick ability=pickup held_item=cobblemon:black_glasses nature=hardy' + t.constants;
-t.51 = 'sandile moves=bite,dig,bulldoze,firefang ability=intimidate held_item=cobblemon:passho_berry nature=hardy' + t.constants;
-t.52 = 'ralts moves=drainingkiss,psybeam,magicalleaf,icywind ability=trace held_item=cobblemon:babiri_berry nature=hardy' + t.constants;
-t.53 = 'cutiefly moves=strugglebug,drainingkiss,stunspore,grassknot ability=shielddust held_item=cobblemon:fairy_feather nature=hardy' + t.constants;
-t.54 = 'cottonee moves=gigadrain,fairywind,stunspore,leechseed ability=prankster held_item=cobblemon:coba_berry nature=hardy' + t.constants;
-loop(3, { t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7, t.8, t.9, t.10, t.11, t.12, t.13, t.14, t.15, t.16, t.17, t.18, t.19, t.20, t.21, t.22, t.23, t.24, t.25, t.26, t.27, t.28, t.29, t.30, t.31, t.32, t.33, t.34, t.35, t.36, t.37, t.38, t.39, t.40, t.41, t.42, t.43, t.44, t.45, t.46, t.47, t.48, t.49, t.50, t.51, t.52, t.53, t.54);
- q.party.add_by_properties(t.result)});
- return 1;
-};
-
-q.player.data.battle_tower_stage == 1 ? {
-
-t.1 = 'charmeleon moves=flamethrower,aircutter,dragonpulse,ancientpower ability=blaze held_item=cobblemon:charcoal_stick nature=hardy' + t.constants;
-t.2 = 'ivysaur moves=energyball,sludgebomb,synthesis,toxic ability=overgrow held_item=cobblemon:miracle_seed nature=hardy' + t.constants;
-t.3 = 'wartortle moves=surf,icebeam,dragonpulse,aurasphere ability=torrent held_item=cobblemon:mystic_water nature=hardy' + t.constants;
-t.4 = 'bayleef moves=gigadrain,leechseed,lightscreen,reflect ability=overgrow held_item=cobblemon:coba_berry nature=hardy' + t.constants;
-t.5 = 'quilava moves=flamethrower,wildcharge,zenheadbutt,overheat ability=blaze held_item=cobblemon:shuca_berry nature=hardy' + t.constants;
-t.6 = 'croconaw moves=icefang,aquatail,shadowclaw,brickbreak ability=torrent held_item=cobblemon:wacan_berry nature=hardy' + t.constants;
-t.7 = 'grovyle moves=gigadrain,vacuumwave,dragonbreath,leechseed ability=overgrow held_item=cobblemon:occa_berry nature=hardy' + t.constants;
-t.8 = 'marshtomp moves=rockslide,liquidation,earthquake,lowkick ability=torrent held_item=cobblemon:rindo_berry nature=hardy' + t.constants;
-t.9 = 'combusken moves=flamethrower,brickbreak,thunderpunch,shadowclaw ability=blaze held_item=cobblemon:passho_berry nature=hardy' + t.constants;
-t.10 = 'furret moves=bodyslam,brickbreak,firepunch,shadowclaw ability=keeneye held_item=cobblemon:chople_berry nature=hardy' + t.constants;
-t.11 = 'staravia moves=dualwingbeat,uturn,steelwing,roost ability=intimidate held_item=cobblemon:yache_berry nature=hardy' + t.constants;
-t.12 = 'vigoroth moves=bodyslam,throatchop,lowkick,shadowclaw ability=vitalspirit held_item=cobblemon:silk_scarf nature=hardy' + t.constants;
-t.13 = 'machoke moves=dynamicpunch,stompingtantrum,poisonjab,rockslide ability=noguard held_item=cobblemon:payapa_berry nature=hardy' + t.constants;
-t.14 = 'gurdurr moves=hammerarm,firepunch,thunderpunch,poisonjab ability=guts held_item=cobblemon:black_belt nature=hardy' + t.constants;
-t.15 = 'monferno moves=machpunch,firepunch,thunderpunch,shadowclaw ability=ironfist held_item=cobblemon:coba_berry nature=hardy' + t.constants;
-t.16 = 'noctowl moves=extrasensory,moonblast,airslash,heatwave ability=tintedlens held_item=cobblemon:sharp_beak nature=hardy' + t.constants;
-t.17 = 'gligar moves=acrobatics,rockslide,highhorsepower,spikes ability=immunity held_item=cobblemon:yache_berry nature=hardy' + t.constants;
-t.18 = 'golbat moves=leechlife,poisonfang,acrobatics,zenheadbutt ability=innerfocus held_item=cobblemon:wacan_berry nature=hardy' + t.constants;
-t.19 = 'nidorino moves=poisonjab,drillrun,smartstrike,shadowclaw ability=poisonpoint held_item=cobblemon:shuca_berry nature=hardy' + t.constants;
-t.20 = 'nidorina moves=poisonjab,crunch,stompingtantrum,shadowclaw ability=poisonpoint held_item=cobblemon:payapa_berry nature=hardy' + t.constants;
-t.21 = 'beedrill moves=uturn,poisonjab,drillrun,knockoff ability=sniper held_item=cobblemon:poison_barb nature=hardy' + t.constants;
-t.22 = 'krokorok moves=stompingtantrum,crunch,brickbreak,aquatail ability=moxie held_item=cobblemon:soft_sand nature=hardy' + t.constants;
-t.23 = 'graveler moves=highhorsepower,rockslide,ironhead,brickbreak ability=sturdy held_item=cobblemon:rindo_berry nature=hardy' + t.constants;
-t.24 = 'golett moves=stompingtantrum,phantomforce,hammerarm,firepunch ability=ironfist held_item=cobblemon:yache_berry nature=hardy' + t.constants;
-t.25 = 'graveler alolan moves=thunderpunch,rockslide,firepunch,brickbreak ability=sturdy held_item=cobblemon:shuca_berry nature=hardy' + t.constants;
-t.26 = 'corsola moves=recover,powergem,icebeam,surf ability=regenerator held_item=cobblemon:rindo_berry nature=hardy' + t.constants;
-t.27 = 'naclstack moves=stoneedge,zenheadbutt,earthquake,ironhead ability=purifyingsalt held_item=cobblemon:hard_stone nature=hardy' + t.constants;
-t.28 = 'shuckle moves=stickyweb,stealthrock,finalgambit,toxic ability=sturdy held_item=cobblemon:sitrus_berry nature=hardy' + t.constants;
-t.29 = 'swadloon moves=skittersmack,protect,toxic,payback ability=overcoat held_item=cobblemon:occa_berry nature=hardy' + t.constants;
-t.30 = 'whirlipede moves=poisonjab,bugbite,protect,payback ability=speedboost held_item=cobblemon:silver_powder nature=hardy' + t.constants;
-t.31 = 'haunter moves=shadowclaw,darkpulse,icywind,sludgewave ability=levitate held_item=cobblemon:spell_tag nature=hardy' + t.constants;
-t.32 = 'sableye moves=shadowsneak,knockoff,brickbreak,zenheadbutt ability=keeneye held_item=cobblemon:roseli_berry nature=hardy' + t.constants;
-t.33 = 'lampent moves=flamethrower,shadowball,energyball,darkpulse ability=flamebody held_item=cobblemon:kasib_berry nature=hardy' + t.constants;
-t.34 = 'metang moves=bulletpunch,meteormash,zenheadbutt,rockslide ability=clearbody held_item=cobblemon:metal_coat nature=hardy' + t.constants;
-t.35 = 'mawile moves=playrough,psychicfangs,ironhead,crunch ability=intimidate held_item=cobblemon:occa_berry nature=hardy' + t.constants;
-t.36 = 'tinkatuff moves=fakeout,playrough,brickbreak,rockslide ability=moldbreaker held_item=cobblemon:shuca_berry nature=hardy' + t.constants;
-t.37 = 'flaaffy moves=thunderbolt,dazzlinggleam,powergem,thunderwave ability=static held_item=cobblemon:magnet nature=hardy' + t.constants;
-t.38 = 'luxio moves=wildcharge,crunch,icefang,psychicfangs ability=intimidate held_item=cobblemon:shuca_berry nature=hardy' + t.constants;
-t.39 = 'pachirisu moves=superfang,sweetkiss,nuzzle,encore ability=voltabsorb held_item=cobblemon:sitrus_berry nature=hardy' + t.constants;
-t.40 = 'kadabra moves=psyshock,dazzlinggleam,energyball,shadowball ability=magicguard held_item=cobblemon:twisted_spoon nature=hardy' + t.constants;
-t.41 = 'chimecho moves=extrasensory,shadowball,snarl,energyball ability=levitate held_item=cobblemon:colbur_berry nature=hardy' + t.constants;
-t.42 = 'xatu moves=airslash,extrasensory,gigadrain,dazzlinggleam ability=magicbounce held_item=cobblemon:kasib_berry nature=hardy' + t.constants;
-t.43 = 'sneasel moves=knockoff,iciclespear,brickbreak,iceshard ability=innerfocus held_item=cobblemon:never_melt_ice nature=hardy' + t.constants;
-t.44 = 'sealeo moves=surf,icebeam,fissure,yawn ability=thickfat held_item=cobblemon:charti_berry nature=hardy' + t.constants;
-t.45 = 'eiscue moves=icespinner,ironhead,zenheadbutt,flipturn ability=iceface held_item=cobblemon:chople_berry nature=hardy' + t.constants;
-t.46 = 'sliggoo moves=dragonpulse,thunderbolt,icebeam,sludgebomb ability=sapsipper held_item=cobblemon:haban_berry nature=hardy' + t.constants;
-t.47 = 'dragonair moves=extremespeed,outrage,dragondance,aquatail ability=shedskin held_item=cobblemon:dragon_fang nature=hardy' + t.constants;
-t.48 = 'vibrava moves=dragonrush,rockslide,uturn,earthquake ability=levitate held_item=cobblemon:yache_berry nature=hardy' + t.constants;
-t.49 = 'mightyena moves=crunch,icefang,firefang,thunderfang ability=intimidate held_item=cobblemon:black_glasses nature=hardy' + t.constants;
-t.50 = 'raticate alolan moves=hyperfang,crunch,suckerpunch,uturn ability=hustle held_item=cobblemon:chople_berry nature=hardy' + t.constants;
-t.51 = 'nuzleaf moves=leafblade,knockoff,rockslide,fakeout ability=pickpocket held_item=cobblemon:tanga_berry nature=hardy' + t.constants;
-t.52 = 'kirlia moves=drainingkiss,psychic,shadowball,icywind ability=trace held_item=cobblemon:fairy_feather nature=hardy' + t.constants;
-t.53 = 'comfey moves=drainingkiss,gigadrain,leechseed,pollenpuff ability=triage held_item=cobblemon:kebia_berry nature=hardy' + t.constants;
-t.54 = 'floette moves=alluringvoice,pollenpuff,psychic,gigadrain ability=flowerveil held_item=cobblemon:babiri_berry nature=hardy' + t.constants;
-loop(3, { t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7, t.8, t.9, t.10, t.11, t.12, t.13, t.14, t.15, t.16, t.17, t.18, t.19, t.20, t.21, t.22, t.23, t.24, t.25, t.26, t.27, t.28, t.29, t.30, t.31, t.32, t.33, t.34, t.35, t.36, t.37, t.38, t.39, t.40, t.41, t.42, t.43, t.44, t.45, t.46, t.47, t.48, t.49, t.50, t.51, t.52, t.53, t.54);
- q.party.add_by_properties(t.result)});
- return 1;
-};
-
-q.player.data.battle_tower_stage == 2 ? {
-
-t.1 = 'venusaur moves=gigadrain,earthpower,sludgewave,synthesis ability=chlorophyll held_item=cobblemon:life_orb nature=modest hp_ev=180 special_attack_ev=180' + t.constants;
-t.2 = 'meganium moves=synthesis,bodypress,leechseed,gigadrain ability=overgrow held_item=cobblemon:leftovers nature=bold hp_ev=180 defence_ev=180' + t.constants;
-t.3 = 'sceptile moves=leafblade,acrobatics,earthquake,drainpunch ability=unburden held_item=cobblemon:flying_gem nature=adamant hp_ev=180 attack_ev=180' + t.constants;
-t.4 = 'charizard moves=fireblast,hurricane,scorchingsands,focusblast ability=blaze held_item=cobblemon:choice_specs nature=timid special_attack_ev=180 speed_ev=180' + t.constants;
-t.5 = 'typhlosion moves=eruption,eruption,eruption,scorchingsands ability=flashfire held_item=cobblemon:choice_scarf nature=timid special_attack_ev=180 speed_ev=180' + t.constants;
-t.6 = 'blaziken moves=closecombat,flareblitz,swordsdance,protect ability=speedboost held_item=cobblemon:leftovers nature=adamant hp_ev=180 attack_ev=180' + t.constants;
-t.7 = 'blastoise moves=shellsmash,surf,icebeam,aurasphere ability=torrent held_item=cobblemon:white_herb nature=modest special_attack_ev=180 speed_ev=180' + t.constants;
-t.8 = 'feraligatr moves=liquidation,icepunch,crunch,dragondance ability=sheerforce held_item=cobblemon:life_orb nature=adamant attack_ev=180 speed_ev=180' + t.constants;
-t.9 = 'swampert moves=earthquake,flipturn,liquidation,icepunch ability=torrent held_item=cobblemon:leftovers nature=adamant hp_ev=180 attack_ev=180' + t.constants;
-t.10 = 'luxray moves=supercellslam,facade,psychicfangs,icefang ability=guts held_item=cobblemon:flame_orb nature=jolly attack_ev=180 speed_ev=180' + t.constants;
-t.11 = 'electrode moves=explosion,thunderbolt,voltswitch,taunt ability=aftermath held_item=cobblemon:focussash nature=naive special_attack_ev=180 speed_ev=180' + t.constants;
-t.12 = 'lanturn moves=surf,thunderbolt,icebeam,flipturn ability=voltabsorb held_item=cobblemon:assault_vest nature=bold hp_ev=180 defence_ev=180' + t.constants;
-t.13 = 'hitmonchan moves=drainpunch,machpunch,knockoff,icepunch ability=ironfist held_item=cobblemon:punching_glove nature=adamant hp_ev=180 attack_ev=180' + t.constants;
-t.14 = 'hitmonlee moves=closecombat,acrobatics,poisonjab,knockoff ability=unburden held_item=cobblemon:white_herb nature=adamant hp_ev=180 attack_ev=180' + t.constants;
-t.15 = 'hitmontop moves=closecombat,tripleaxel,bulletpunch,thief ability=technician held_item=cobblemon:life_orb nature=jolly attack_ev=180 speed_ev=180' + t.constants;
-t.16 = 'scyther moves=dualwingbeat,bugbite,roost,closecombat ability=technician held_item=cobblemon:eviolite nature=jolly attack_ev=180 speed_ev=180' + t.constants;
-t.17 = 'heracross moves=closecombat,megahorn,trailblaze,stoneedge ability=guts held_item=cobblemon:flame_orb nature=jolly attack_ev=180 speed_ev=180' + t.constants;
-t.18 = 'pinsir moves=xscissor,closecombat,stoneedge,earthquake ability=moxie held_item=cobblemon:choice_scarf nature=jolly attack_ev=180 speed_ev=180' + t.constants;
-t.19 = 'flygon moves=earthquake,outrage,stoneedge,dragondance ability=levitate held_item=cobblemon:life_orb nature=jolly attaack_ev=180 speed_ev=180' + t.constants;
-t.20 = 'golem moves=stoneedge,earthquake,firepunch,explosion ability=sturdy held_item=cobblemon:custap_berry nature=adamant hp_ev=180 attack_ev=180' + t.constants;
-t.21 = 'camerupt moves=fireblast,earthpower,flashcannon,ancientpower ability=solidrock held_item=cobblemon:choice_specs nature=modest hp_ev=180 special_attack_ev=180' + t.constants;
-t.22 = 'hypno moves=hypnosis,zenheadbutt,drainpunch,knockoff ability=innerfocus held_item=cobblemon:leftovers nature=adamant hp_ev=180 attack_ev=180' + t.constants;
-t.23 = 'xatu moves=psychic,roost,grassknot,heatwave ability=magicbounce held_item=cobblemon:expert_belt nature=timid special_attack_ev=180 speed_ev=180' + t.constants;
-t.24 = 'farigiraf moves=nastyplot,psyshock,hypervoice,shadowball ability=armortail held_item=cobblemon:leftovers nature=modest hp_ev=180 special_attack_ev=180' + t.constants;
-t.25 = 'aerodactyl moves=stoneedge,earthquake,roost,dualwingbeat ability=unnerve held_item=cobblemon:life_orb nature=jolly attack_ev=180 speed_ev=180' + t.constants;
-t.26 = 'omastar moves=meteorbeam,surf,icebeam,earthpower ability=weakarmor held_item=cobblemon:power_herb nature=modest special_attack_ev=180 speed_ev=180' + t.constants;
-t.27 = 'tyrantrum moves=headsmash,outrage,closecombat,earthquake ability=rockhead held_item=cobblemon:choice_band nature=jolly attack_ev=180 speed_ev=180' + t.constants;
-t.28 = 'absol moves=knockoff,playrough,closecombat,megahorn ability=superluck held_item=cobblemon:life_orb nature=jolly attack_ev=180 speed_ev=180' + t.constants;
-t.29 = 'houndoom moves=darkpulse,flamethrower,sludgebomb,willowisp ability=flashfire held_item=cobblemon:life_orb nature=timid special_attack_ev=180 speed_ev=180' + t.constants;
-t.30 = 'honchkrow moves=knockoff,bravebird,superpower,uturn ability=superluck held_item=cobblemon:life_orb nature=jolly attack_ev=180 speed_ev=180' + t.constants;
-t.31 = 'salazzle moves=flamethrower,sludgewave,overheat,dragonpulse ability=corrosion held_item=cobblemon:choice_specs nature=timid special_attack_ev=180 speed_ev=180' + t.constants;
-t.32 = 'grafaiai moves=gunkshot,knockoff,uturn,doubleedge ability=poisontouch held_item=cobblemon:choice_scarf nature=jolly attack_ev=180 speed_ev=180' + t.constants;
-t.33 = 'scolipede moves=megahorn,poisonjab,aquatail,swordsdance ability=speedboost held_item=cobblemon:black_sludge nature=adamant hp_ev=180 attack_ev=180' + t.constants;
-t.34 = 'corviknight moves=bodypress,bravebird,ironhead,roost ability=pressure held_item=cobblemon:leftovers nature=adamant attack_ev=180 defence_ev=180' + t.constants;
-t.35 = 'braviary moves=bravebird,doubleedge,closecombat,ironhead ability=defiant held_item=cobblemon:choice_scarf nature=jolly attack_ev=180 speed_ev=180' + t.constants;
-t.36 = 'kilowattrel moves=thunderbolt,voltswitch,hurricane,roost ability=voltabsorb held_item=cobblemon:life_orb nature=timid special_attack_ev=180 speed_ev=180' + t.constants;
-t.37 = 'copperajah moves=heavyslam,earthquake,powerwhip,heatcrash ability=heavymetal held_item=cobblemon:assault_vest nature=adamant hp_ev=180 attack_ev=180' + t.constants;
-t.38 = 'perrserker moves=ironhead,uturn,closecombat,seedbomb ability=toughclaws held_item=cobblemon:choice_band nature=adamant hp_ev=180 attack_ev=180' + t.constants;
-t.39 = 'aegislash moves=shadowball,flashcannon,steelbeam,airslash ability=stancechange held_item=cobblemon:choice_specs nature=modest hp_ev=180 special_attack_ev=180' + t.constants;
-t.40 = 'revavroom moves=gunkshot,ironhead,shiftgear,highhorsepower ability=filter held_item=cobblemon:air_balloon nature=adamant attack_ev=180 speed_ev=180' + t.constants;
-t.41 = 'mimikyu moves=playrough,shadowclaw,shadowsneak,drainpunch ability=disguise held_item=cobblemon:life_orb nature=jolly attack_ev=180 speed_ev=180' + t.constants;
-t.42 = 'golurk moves=earthquake,dynamicpunch,poltergeist,stoneedge ability=noguard held_item=cobblemon:life_orb nature=adamant hp_ev=180 attack_ev=180' + t.constants;
-t.43 = 'beartic moves=iciclecrash,earthquake,closecombat,liquidation ability=slushrush held_item=cobblemon:choice_band nature=jolly attack_ev=180 speed_ev=180' + t.constants;
-t.44 = 'lapras moves=freezedry,sparklingaria,alluringvoice,psychicnoise ability=shellarmor held_item=cobblemon:throat_spray nature=modest hp_ev=180 special_attack_ev=180' + t.constants;
-t.45 = 'walrein moves=surf,icebeam,bodypress,toxic ability=thickfat nature=bold held_item=cobblemon:leftovers defence_ev=180 special_attack_ev=180' + t.constants;
-t.46 = 'dragalge moves=dracometeor,sludgebomb,surf,thunderbolt ability=adaptability held_item=cobblemon:choice_specs nature=timid special_attack_ev=180 speed_ev=180' + t.constants;
-t.47 = 'altaria moves=dragondance,earthquake,outrage,playrough ability=cloudnine held_item=cobblemon:leftovers nature=adamant hp_ev=180 attack_ev=180' + t.constants;
-t.48 = 'tatsugiri moves=dracometeor,surf,nastyplot,taunt ability=stormdrain held_item=cobblemon:dragon_fang nature=modest special_attack_ev=180 speed_ev=180' + t.constants;
-t.49 = 'florges moves=moonblast,psychic,synthesis,calmmind ability=flowerveil held_item=cobblemon:leftovers nature=modest hp_ev=180 special_attack_ev=180' + t.constants;
-t.50 = 'tinkaton moves=gigatonhammer,playrough,icehammer,knockoff ability=pickpocket held_item=cobblemon:air_balloon nature=adamant hp_ev=180 attack_ev=180' + t.constants;
-t.51 = 'gardevoir moves=moonblast,psychic,focusblast,mysticalfire ability=trace held_item=cobblemon:choice_specs nature=timid special_attack_ev=180 speed_ev=180' + t.constants;
-t.52 = 'tauros moves=bodyslam,throatchop,closecombat,rockslide ability=sheerforce held_item=cobblemon:life_orb nature=jolly attack_ev=180 speed_ev=180' + t.constants;
-t.53 = 'snorlax moves=bodyslam,heatcrash,earthquake,curse ability=thickfat held_item=cobblemon:leftovers nature=careful hp_ev=180 special_defence_ev=180' + t.constants;
-t.54 = 'blissey moves=seismictoss,toxic,softboiled,protect ability=naturalcure held_item=cobblemon:leftovers nature=bold hp_ev=180 defence_ev=180' + t.constants;
-loop(3, { t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7, t.8, t.9, t.10, t.11, t.12, t.13, t.14, t.15, t.16, t.17, t.18);
- q.party.add_by_properties(t.result)});
- return 1;
-};
-
-q.player.data.battle_tower_stage == 3 ? {
-    
-t.1 = 'ditto moves=transform ability=imposter held_item=cobblemon:choice_scarf nature=adamant hp_ev=252 special_attack_ev=252' + t.constants;
-t.2 = 'porygon2 moves=icebeam,thunderbolt,foulplay,recover ability=trace held_item=cobblemon:eviolite nature=bold hp_ev=252 defence_ev=252' + t.constants;
-t.3 = 'porygonz moves=triattack,thunderbolt,icebeam,shadowball ability=download held_item=cobblemon:choice_specs nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.4 = 'cinderace moves=pyroball,highjumpkick,gunkshot,uturn ability=libero held_item=cobblemon:life_orb nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.5 = 'arcanine hisuian moves=flareblitz,headsmash,extremespeed,closecombat ability=rockhead held_item=cobblemon:choice_band nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.6 = 'skeledirge moves=torchsong,shadowball,slackoff,alluringvoice ability=unaware held_item=cobblemon:leftovers nature=modest hp_ev=252 defence_ev=252' + t.constants;
-t.7 = 'empoleon moves=flashcannon,surf,icebeam,flipturn ability=competitive held_item=cobblemon:leftovers nature=modest hp_ev=252 special_attack_ev=252' + t.constants;
-t.8 = 'gyarados moves=earthquake,waterfall,crunch,powerwhip ability=moxie held_item=cobblemon:choice_scarf nature=adamant attack_ev=252 speed_ev=252' + t.constants;
-t.9 = 'barraskewda moves=liquidation,flipturn,closecombat,crunch ability=swiftswim held_item=cobblemon:choice_band nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.10 = 'ferrothorn moves=gyroball,powerwhip,bodypress,stealthrock ability=ironbarbs held_item=cobblemon:leftovers nature=impish hp_ev=252 defence_ev=252' + t.constants;
-t.11 = 'lilligant hisuian moves=closecombat,tripleaxel,victorydance,leafblade ability=chlorophyll held_item=cobblemon:life_orb nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.12 = 'hydrapple moves=ficklebeam,gigadrain,earthpower,nastyplot ability=stickyhold held_item=cobblemon:leftovers nature=modest hp_ev=252 special_attack_ev=252' + t.constants;
-t.13 = 'golem alolan moves=earthquake,firepunch,wildcharge,stoneedge ability=sturdy held_item=cobblemon:choice_band nature=adamant hp_ev=252 attack_ev=252' + t.constants;
-t.14 = 'galvantula moves=stickyweb,thunder,bugbuzz,energyball ability=compoundeyes held_item=cobblemon:focus_sash nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.15 = 'kilowattrel moves=airslash,thunderbolt,voltswitch,roost ability=competitive held_item=cobblemon:life_orb nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.16 = 'hawlucha moves=closecombat,acrobatics,swordsdance,stoneedge ability=unburden held_item=cobblemon:flying_gem nature=adamant attack_ev=252 speed_ev=252' + t.constants;
-t.17 = 'gallade moves=swordsdance,sacredsword,psychocut,leafblade ability=sharpness held_item=cobblemon:life_orb nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.18 = 'lucario moves=aurasphere,flashcannon,shadowball,nastyplot ability=innerfocus held_item=cobblemon:life_orb nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.19 = 'heracross moves=closecombat,megahorn,trailblaze,earthquake ability=guts held_item=cobblemon:flame_orb nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.20 = 'lokix moves=knockoff,uturn,leechlife,suckerpunch ability=tintedlens held_item=cobblemon:black_glasses nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.21 = 'armaldo moves=stoneedge,knockoff,xscissor,earthquake ability=battlearmor held_item=cobblemon:life_orb nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.22 = 'nidoking moves=sludgewave,flamethrower,icebeam,earthpower ability=sheerforce held_item=cobblemon:life_orb nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.23 = 'quagsire moves=earthquake,scald,recover,toxic ability=unaware held_item=cobblemon:leftovers nature=relaxed hp_ev=252 defence_ev=252' + t.constants;
-t.24 = 'golurk moves=earthquake,dynamicpunch,poltergeist,icepunch ability=noguard held_item=cobblemon:choice_band nature=adamant hp_ev=252 attack_ev=252' + t.constants;
-t.25 = 'armarouge moves=armorcannon,psychic,focusblast,energyball ability=weakarmor held_item=cobblemon:weakness_policy nature=modest hp_ev=252 special_attack_ev=252' + t.constants;
-t.26 = 'reuniclus moves=psychic,focusblast,shadowball,recover ability=magicguard held_item=cobblemon:leftovers nature=bold hp_ev=252 defence_ev=252' + t.constants;
-t.27 = 'alakazam moves=psychic,focusblast,shadowball,recover ability=magicguard held_item=cobblemon:life_orb nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.28 = 'omastar moves=meteorbeam,icebeam,hydropump,earthpower ability=weakarmor held_item=cobblemon:power_herb nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.29 = 'rhyperior moves=stoneedge,firepunch,megahorn,earthquake ability=solidrock held_item=cobblemon:leftovers nature=adamant hp_ev=252 attack_ev=252' + t.constants;
-t.30 = 'crustle moves=xscissor,stoneedge,earthquake,shellsmash ability=sturdy held_item=cobblemon:white_herb nature=adamant attack_ev=252 speed_ev=252' + t.constants;
-t.31 = 'crawdaunt moves=crabhammer,aquajet,knockoff,closecombat ability=adaptability held_item=cobblemon:life_orb nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.32 = 'overqwil moves=gunkshot,crunch,liquidation,scaleshot ability=intimidate held_item=cobblemon:life_orb nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.33 = 'krookodile moves=earthquake,knockoff,gunkshot,closecombat ability=moxie held_item=cobblemon:moxie nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.34 = 'salazzle moves=fireblast,sludgebomb,dragonpulse,toxic ability=corrosion held_item=cobblemon:black_sludge nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.35 = 'scolipede moves=megahorn,poisonjab,swordsdance,earthquake ability=speedboost held_item=cobblemon:focus_sash nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.36 = 'roserade moves=gigadrain,sludgebomb,sleeppowder,synthesis ability=poisonpoint held_item=cobblemon:black_sludge nature=bold hp_ev=252 defence_ev=252' + t.constants;
-t.37 = 'corviknight moves=bravebird,ironhead,bodypress,roost ability=pressure held_item=cobblemon:leftovers nature=impish hp_ev=252 defence_ev=252' + t.constants;
-t.38 = 'staraptor moves=bravebird,doubleedge,closecombat,quickattack ability=reckless held_item=cobblemon:choice_band nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.39 = 'aerodactyl moves=stoneedge,earthquake,dualwingbeat,roost ability=unnerve held_item=cobblemon:life_orb nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.40 = 'tinkaton moves=gigatonhammer,icehammer,playrough,knockoff ability=moldbreaker held_item=cobblemon:choice_band nature=adamant hp_ev=252 attack_ev=252' + t.constants;
-t.41 = 'skarmory moves=spikes,bodypress,roost,ironhead ability=sturdy held_item=cobblemon:rocky_helmet nature=impish hp_ev=252 defence_ev=252' + t.constants;
-t.42 = 'duraludon moves=flashcannon,dracometeor,bodypress,thunderbolt ability=lightmetal held_item=cobblemon:eviolite nature=modest hp_ev=252 special_attack_ev=252' + t.constants;
-t.43 = 'cetitan moves=iciclecrash,earthquake,iceshard,bellydrum ability=sheerforce held_item=cobblemon:sitrus_berry nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.44 = 'cloyster moves=shellsmash,iciclespear,rockblast,liquidation ability=skilllink held_item=cobblemon:white_herb nature=adamant attack_ev=252 speed_ev=252' + t.constants;
-t.45 = 'ninetales alolan moves=freezedry,moonblast,auroraveil,foulplay ability=snowwarning held_item=cobblemon:light_clay nature=timid hp_ev=252 speed_ev=252' + t.constants;
-t.46 = 'chandelure moves=fireblast,shadowball,energyball,psychic ability=flashfire held_item=cobblemon:choice_specs nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.47 = 'decidueye moves=leafblade,spiritshackle,lowsweep,uturn ability=longreach held_item=cobblemon:choice_band nature=adamant hp_ev=252 attack_ev=252' + t.constants;
-t.48 = 'aegislash moves=kingsshield,ironhead,closecombat,shadowsneak ability=stancechange held_item=cobblemon:life_orb nature=adamant hp_ev=252 attack_ev=252' + t.constants;
-t.49 = 'noivern moves=dracometeor,hurricane,flamethrower,boomburst ability=infiltrator held_item=cobblemon:choice_specs nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.50 = 'dragalge moves=sludgewave,dracometeor,flipturn,focusblast ability=adaptability held_item=cobblemon:eject_pack nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.51 = 'dracovish moves=fishiousrend,outrage,fishiousrend,fishiousrend ability=strongjaw held_item=cobblemon:choice_scarf nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.52 = 'grimmsnarl moves=bulkup,spiritbreak,thunderwave,falsesurrender ability=prankster held_item=cobblemon:leftovers nature=adamant hp_ev=252 attack_ev=252' + t.constants;
-t.53 = 'ribombee moves=moonblast,bugbuzz,stickyweb,energyball ability=shielddust held_item=cobblemon:focussash nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.54 = 'clefable moves=moonblast,moonlight,knockoff,thunderwave ability=magicguard held_item=cobblemon:leftovers nature=bold hp_ev=252 defence_ev=252' + t.constants;
-loop(3, { t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7, t.8, t.9, t.10, t.11, t.12, t.13, t.14, t.15, t.16, t.17, t.18, t.19, t.20, t.21, t.22, t.23, t.24, t.25, t.26, t.27, t.28, t.29, t.30, t.31, t.32, t.33, t.34, t.35, t.36, t.37, t.38, t.39, t.40, t.41, t.42, t.43, t.44, t.45, t.46, t.47, t.48, t.49, t.50, t.51, t.52, t.53, t.54);
- q.party.add_by_properties(t.result)});
- return 1;
-};
-
-q.player.data.battle_tower_stage == 4 ? {
-    
-t.1 = 'zoroark hisuian moves=hypervoice,shadowball,flamethrower,grassknot ability=illusion held_item=cobblemon:choice_specs nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.2 = 'ursaluna moves=facade,earthquake,crunch,firepunch ability=guts held_item=cobblemon:flame_orb nature=adamant hp_ev=252 attack_ev=252' + t.constants;
-t.3 = 'ceruledge moves=poltergeist,bitterblade,shadowsneak,closecombat ability=weakarmor held_item=cobblemon:focus_sash nature=adamant attack_ev=252 speed_ev=252' + t.constants;
-t.4 = 'blaziken moves=flareblitz,closecombat,knockoff,thunderpunch ability=speedboost held_item=cobblemon:life_orb nature=adamant attack_ev=252 speed_ev=252' + t.constants;
-t.5 = 'samurott hisuian moves=ceaselessedge,razorshell,flipturn,sacredsword ability=sharpness held_item=cobblemon:assault_vest nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.6 = 'greninja moves=surf,darkpulse,icebeam,sludgewave ability=protean held_item=cobblemon:choice_specs nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.7 = 'meowscarada moves=flowertrick,knockoff,tripleaxel,thunderpunch ability=protean held_item=cobblemon:choice_band nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.8 = 'ferrothorn moves=gyroball,powerwhip,bodypress,leechseed ability=ironbarbs held_item=cobblemon:rocky_helmet nature=relaxed hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=0 hp_ev=252 defence_ev=252 level=' + (q.player.party.highest_level);
-t.9 = 'golem alolan moves=explosion,stoneedge,earthquake,firepunch ability=sturdy held_item=cobblemon:custap_berry nature=adamant attack_ev=252 speed_ev=252' + t.constants;
-t.10 = 'magnezone moves=thunderbolt,flashcannon,voltswitch,bodypress ability=analytic held_item=cobblemon:assault_vest nature=quiet hp_ev=252 special_attack_ev=252' + t.constants;
-t.11 = 'kommoo moves=clangingscales,boomburst,flamethrower,aurasphere ability=soundproof held_item=cobblemon:throat_spray nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.12 = 'breloom moves=spore,bulletseed,rocktomb,machpunch ability=technician held_item=cobblemon:life_orb nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.13 = 'volcarona moves=quiverdance,flamethrower,bugbuzz,energyball ability=swarm held_item=cobblemon:life_orb nature=modest special_attack_ev=252 speed_ev=252' + t.constants;
-t.14 = 'scizor moves=bulletpunch,uturn,knockoff,closecombat ability=technician held_item=cobblemon:choice_band nature=adamant attack_ev=252 speed_ev=252' + t.constants;
-t.15 = 'empoleon moves=surf,icebeam,flashcannon,grassknot ability=competitive held_item=cobblemon:choice_scarf nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.16 = 'garchomp moves=earthquake,scaleshot,swordsdance,fireblast ability=roughskin held_item=cobblemon:loaded_dice nature=naughty attack_ev=252 speed_ev=252' + t.constants;
-t.17 = 'slowbro moves=psychic,surf,slackoff,bodypress ability=regenerator held_item=cobblemon:eject_button nature=bold hp_ev=252 defence_ev=252' + t.constants;
-t.18 = 'hatterene moves=psyshock,mysticalfire,drainingkiss,calmmind ability=magicbounce held_item=cobblemon:leftovers nature=modest hp_ev=252 special_attack_ev=252' + t.constants;
-t.19 = 'garganacl moves=saltcure,recover,bodypress,stealthrock ability=purifyingsalt held_item=cobblemon:leftovers nature=impish hp_ev=252 defence_ev=252' + t.constants;
-t.20 = 'glimmora moves=meteorbeam,powergem,sludgewave,energyball ability=toxicdebris held_item=cobblemon:power_herb nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.21 = 'hydreigon moves=dragonpulse,flashcannon,darkpulse,fireblast ability=levitate held_item=cobblemon:choice_specs nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.22 = 'weavile moves=tripleaxel,knockoff,lowkick,iceshard ability=pickpocket held_item=cobblemon:choice_band nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.23 = 'sneasler moves=acrobatics,closecombat,direclaw,throatchop ability=unburden held_item=cobblemon:flying_gem nature=adamant attack_ev=252 speed_ev=252' + t.constants;
-t.24 = 'clodsire moves=earthquake,toxic,recover,stealthrock ability=unaware held_item=cobblemon:black_sludge nature=impish hp_ev=252 defence_ev=252' + t.constants;
-t.25 = 'dragonite moves=dragondance,earthquake,outrage,dualwingbeat ability=multiscale held_item=cobblemon:heavy_duty_boots nature=adamant attack_ev=252 speed_ev=252' + t.constants;
-t.26 = 'gliscor moves=earthquake,facade,protect,knockoff ability=poisonheal held_item=cobblemon:toxic_orb nature=adamant hp_ev=252 attack_ev=252' + t.constants;
-t.27 = 'gholdengo moves=makeitrain,dazzlinggleam,focusblast,shadowball ability=goodasgold held_item=cobblemon:choice_specs nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.28 = 'goodra hisuian moves=heavyslam,bodypress,dracometeor,toxic ability=sapsipper held_item=cobblemon:leftovers nature=relaxed hp_ev=252 defence_ev=252' + t.constants;
-t.29 = 'mimikyu moves=playrough,shadowclaw,drainpunch,shadowsneak ability=disguise held_item=cobblemon:red_card nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.30 = 'corsola galarian moves=strengthsap,willowisp,nightshade,stealthrock ability=cursedbody held_item=cobblemon:eviolite nature=calm hp_ev=252 special_defence_ev=252' + t.constants;
-t.31 = 'arctozolt moves=iciclecrash,boltbeak,boltbeak,boltbeak ability=slushrush held_item=cobblemon:choice_scarf nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.32 = 'mamoswine moves=earthquake,iciclecrash,knockoff,trailblaze ability=thickfat held_item=cobblemon:life_orb nature=adamant attack_ev=252 speed_ev=252' + t.constants;
-t.33 = 'dragapult moves=phantomforce,dragondarts,uturn,suckerpunch ability=clearbody held_item=cobblemon:choice_band nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.34 = 'archaludon moves=electroshot,flashcannon,dragonpulse,bodypress ability=stamina held_item=cobblemon:power_herb nature=modest hp_ev=252 special_attack_ev=252' + t.constants;
-t.35 = 'klefki moves=foulplay,thunderwave,lightscreen,reflect ability=prankster held_item=cobblemon:light_clay nature=calm hp_ev=252 special_defence_ev=252' + t.constants;
-t.36 = 'ninetales alolan moves=blizzard,moonblast,freezedry,auroraveil ability=snowwarning held_item=cobblemon:life_orb nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-loop(2, { t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7, t.8, t.9, t.10, t.11, t.12, t.13, t.14, t.15, t.16, t.17, t.18, t.19, t.20, t.21, t.22, t.23, t.24, t.25, t.26, t.27, t.28, t.29, t.30, t.31, t.32, t.33, t.34, t.35, t.36);
- q.party.add_by_properties(t.result)});
-
-t.1 = 'lopunny mega moves=return,closecombat,tripleaxel,fakeout ability=scrappy held_item=mega_showdown:lopunnite nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.2 = 'charizard mega-x moves=dragondance,dragonclaw,flareblitz,earthquake ability=toughclaws held_item=mega_showdown:charizardite_x nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.3 = 'blastoise mega moves=shellsmash,icebeam,hydropump,aurasphere ability=megalauncher held_item=mega_showdown:blastoisinite nature=modest special_attack_ev=252 speed_ev=252' + t.constants;
-t.4 = 'venusaur mega moves=gigadrain,sludgebomb,earthpower,synthesis ability=thickfat held_item=mega_showdown:venusaurite nature=modest hp_ev=252 special_attack_ev=252' + t.constants;
-t.5 = 'manectric mega moves=thunderbolt,voltswitch,overheat,substitute ability=intimidate held_item=mega_showdown:manectite nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.6 = 'medicham mega moves=fakeout,zenheadbutt,closecombat,icepunch ability=purepower held_item=mega_showdown:medichamite nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.7 = 'pinsir mega moves=doubleedge,quickattack,closecombat,megahorn ability=aerilate held_item=mega_showdown:pinsirite nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.8 = 'garchomp mega moves=scaleshot,earthquake,stoneedge,fireblast ability=sandforce held_item=mega_showdown:garchompite nature=adamant attack_ev=252 speed_ev=252' + t.constants;
-t.9 = 'alakazam mega moves=psyshock,shadowball,focusblast,recover ability=trace held_item=mega_showdown:alakazite nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.10 = 'aerodactyl mega moves=stoneedge,dualwingbeat,earthquake,dragondance ability=toughclaws held_item=mega_showdown:aerodactylite nature=adamant attack_ev=252 speed_ev=252' + t.constants;
-t.11 = 'tyranitar mega moves=stoneedge,crunch,earthquake,dragondance ability=sandstream held_item=mega_showdown:tyranitarite nature=adamant attack_ev=252 speed_ev=252' + t.constants;
-t.12 = 'gengar mega moves=shadowball,sludgewave,focusblast,nastyplot ability=shadowtag held_item=mega_showdown:gengarite nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.13 = 'pidgeot mega moves=hurricane,hypervoice,heatwave,roost ability=noguard held_item=mega_showdown:pidgeotite nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.14 = 'scizor mega moves=bulletpunch,closecombat,knockoff,swordsdance ability=technician held_item=mega_showdown:scizorite nature=adamant hp_ev=252 attack_ev=252' + t.constants;
-t.15 = 'sableye mega moves=recover,knockoff,willowisp,hex ability=magicbounce held_item=mega_showdown:sablenite nature=relaxed hp_ev=252 special_defence_ev=252' + t.constants;
-t.16 = 'glalie mega moves=doubleedge,earthquake,crunch,ironhead ability=refrigerate held_item=mega_showdown:glalitite nature=adamant hp_ev=252 attack_ev=252' + t.constants;
-t.17 = 'gardevoir mega moves=hypervoice,mysticalfire,psyshock,calmmind ability=pixilate held_item=mega_showdown:gardevoirite nature=timid special_attack_ev=252 speed_ev=252' + t.constants;
-t.18 = 'salamence mega moves=doubleedge,outrage,dragondance,earthquake ability=aerilate held_item=mega_showdown:salamencite nature=jolly attack_ev=252 speed_ev=252' + t.constants;
-t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7, t.8, t.9, t.10, t.11, t.12, t.13, t.14, t.15, t.16, t.17, t.18);
- q.party.add_by_properties(t.result);
- return 1;
-};
-
-return 0;
+loop(3, {
+t.index = math.random_integer(0, t.mons_length);
+q.party.add_by_properties(t.mons[t.index]);
+});
