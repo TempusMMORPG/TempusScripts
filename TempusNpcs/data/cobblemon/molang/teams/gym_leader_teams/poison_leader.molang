@@ -1,4 +1,4 @@
-t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true';
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true pokeball=ultra_ball';
 
 t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
 
@@ -25,7 +25,7 @@ t.data == 'HARD' ? {
     q.party.add_by_properties('overqwil moves=gunkshot,aquajet,crunch,liquidation nature=jolly held_item=cobblemon:life_orb ability=intimidate attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('glimmora moves=meteorbeam,sludgewave,energyball,earthpower nature=timid held_item=cobblemon:power_herb ability=toxicdebris special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('crobat moves=acrobatics,leechlife,roost,toxic nature=jolly held_item=cobblemon:flying_gem ability=innerfocus attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('venusaur mega moves=gigadrain,sludgebomb,earthpower,synthesis nature=modest ability=thickfat hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level + 1) + t.constants);
+    q.party.add_by_properties('venusaur mega_evolution=mega moves=gigadrain,sludgebomb,earthpower,synthesis nature=modest held_item=mega_showdown:venusaurite ability=thickfat hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level + 1) + t.constants);
     return 1;
 };
 

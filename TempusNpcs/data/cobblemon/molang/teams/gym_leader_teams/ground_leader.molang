@@ -1,4 +1,4 @@
-t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true';
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true pokeball=ultra_ball';
 
 t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
 
@@ -24,7 +24,7 @@ t.data == 'HARD' ? {
     q.party.add_by_properties('gliscor moves=earthquake,facade,knockoff,protect nature=adamant held_item=cobblemon:toxic_orb ability=poisonheal hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);  
     q.party.add_by_properties('donphan moves=earthquake,knockoff,icespinner,rapidspin nature=adamant held_item=cobblemon:red_card ability=sturdy attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);  
     q.party.add_by_properties('golurk moves=dynamicpunch,earthquake,stoneedge,icepunch nature=adamant held_item=cobblemon:rindo_berry ability=noguard hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);  
-    q.party.add_by_properties('steelix mega moves=heavyslam,bodypress,curse,rest nature=careful held_item=mega_showdown:steelixite ability=sandforce hp_ev=252 special_defence_ev=252 level=' + (q.player.party.highest_level) + t.constants);  
+    q.party.add_by_properties('steelix mega_evolution=mega moves=heavyslam,bodypress,curse,rest nature=careful held_item=mega_showdown:steelixite ability=sandforce hp_ev=252 special_defence_ev=252 level=' + (q.player.party.highest_level) + t.constants);  
     q.party.add_by_properties('golem moves=stoneedge,earthquake,firepunch,rockpolish nature=jolly held_item=cobblemon:weakness_policy ability=sturdy attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level + 1) + t.constants);  
     return 1;
 };

@@ -1,4 +1,4 @@
-t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true';
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true pokeball=ultra_ball';
 
 t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
 
@@ -24,7 +24,7 @@ t.data == 'HARD' ? {
     q.party.add_by_properties('skarmory moves=agility,ironhead,reversal,dualwingbeat nature=adamant held_item=cobblemon:weakness_policy ability=sturdy attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('tinkaton moves=gigatonhammer,knockoff,thunderwave,playrough nature=jolly held_item=cobblemon:air_balloon ability=pickpocket attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('perrserker moves=ironhead,closecombat,seedbomb,playrough nature=adamant held_item=cobblemon:assault_vest ability=toughclaws hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('scizor moves=bulletpunch,closecombat,trailblaze,dualwingbeat nature=adamant ability=technician level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('scizor mega_evolution=mega moves=bulletpunch,closecombat,trailblaze,dualwingbeat nature=adamant held_item=mega_showdown:scizorite ability=technician attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('aegislash moves=swordsdance,ironhead,shadowsneak,closecombat nature=adamant held_item=cobblemon:life_orb ability=stancechange hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level + 1) + t.constants);
     return 1;
 };

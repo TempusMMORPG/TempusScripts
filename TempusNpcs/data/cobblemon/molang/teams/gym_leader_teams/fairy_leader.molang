@@ -1,4 +1,4 @@
-t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true';
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true pokeball=ultra_ball';
 
 t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
 
@@ -23,7 +23,7 @@ t.data == 'HARD' ? {
     q.party.add_by_properties('ribombee moves=stickyweb,moonblast,stunspore,psychicnoise nature=timid held_item=cobblemon:focus_sash ability=shielddust special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('hatterene moves=psyshock,mysticalfire,calmmind,drainingkiss nature=bold held_item=cobblemon:leftovers ability=magicbounce hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('comfey moves=calmmind,drainingkiss,gigadrain,synthesis nature=modest held_item=cobblemon:life_orb ability=triage hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('gardevoir moves=hypervoice,psychic,focusblast,mysticalfire nature=timid ability=pixilate special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('gardevoir mega_evolution=mega moves=hypervoice,psychic,focusblast,mysticalfire nature=timid held_item=mega_showdown:gardevoirite ability=pixilate special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('shiinotic moves=strengthsap,spore,moonblast,gigadrain nature=bold held_item=cobblemon:rocky_helmet ability=effectspore hp_ev=252 defence_ev=252 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('florges flower=pink moves=moonblast,psychic,gigadrain,calmmind nature=modest held_item=cobblemon:leftovers ability=symbiosis hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level + 1) + t.constants);
     return 1;

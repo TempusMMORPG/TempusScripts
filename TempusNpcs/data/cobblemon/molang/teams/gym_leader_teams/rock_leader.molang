@@ -1,4 +1,4 @@
-t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true';
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true pokeball=ultra_ball';
 
 t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
 
@@ -12,7 +12,7 @@ t.data == 'EASY' ? {
 
 t.data == 'MEDIUM' ? {
     q.party.add_by_properties('boldore moves=rockslide,stealthrock,heavyslam,bulldoze nature=brave held_item=cobblemon:custap_berry ability=sturdy hp_ev=128 attack_ev=128 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('lycanroc moves=accelerock,brickbreak,drillrun,rockslide nature=lonely held_item=cobblemon:hard_stone ability=toughclaws attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('lycanroc wolf_form=dusk moves=accelerock,brickbreak,drillrun,rockslide nature=lonely held_item=cobblemon:hard_stone ability=toughclaws attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('rhydon moves=rockslide,highhorsepower,icepunch,poisonjab nature=naughty held_item=cobblemon:rindo_berry ability=rockhead hp_ev=128 attack_ev=128 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('aerodactyl moves=dualwingbeat,rockslide,icefang,firefang nature=naughty held_item=cobblemon:sharp_beak ability=unnerve attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('coalossal moves=rockslide,heatcrash,heavyslam,highhorsepower nature=adamant held_item=cobblemon:passho_berry ability=steamengine hp_ev=160 attack_ev=160 level=' + (q.player.party.highest_level + 1) + t.constants);
@@ -22,9 +22,9 @@ t.data == 'MEDIUM' ? {
 t.data == 'HARD' ? {
     q.party.add_by_properties('gigalith moves=stealthrock,stoneedge,earthquake,heavyslam nature=adamant held_item=cobblemon:smooth_rock ability=sandstream hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('minior moves=acrobatics,stoneedge,earthquake,shellsmash nature=jolly held_item=cobblemon:flying_gem ability=shieldsdown attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('lycanroc moves=accelerock,stoneedge,closecombat,earthquake nature=jolly held_item=cobblemon:life_orb ability=toughclaws attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('lycanroc wolf_form=dusk moves=accelerock,stoneedge,closecombat,earthquake nature=jolly held_item=cobblemon:life_orb ability=toughclaws attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('rhyperior moves=stoneedge,earthquake,temperflare,icepunch nature=adamant held_item=cobblemon:rindo_berry ability=solidrock hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('aerodactyl moves=dualwingbeat,stoneedge,earthquake,icefang nature=adamant ability=toughclaws attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('aerodactyl mega_evolution=mega moves=dualwingbeat,stoneedge,earthquake,icefang nature=adamant held_item=mega_showdown:aerodactylite ability=toughclaws attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('coalossal moves=stoneedge,heatcrash,heavyslam,earthquake nature=adamant held_item=cobblemon:passho_berry ability=steamengine hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level + 1) + t.constants);
     return 1;
 };

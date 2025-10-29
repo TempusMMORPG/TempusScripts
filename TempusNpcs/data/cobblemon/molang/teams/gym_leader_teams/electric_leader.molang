@@ -1,4 +1,4 @@
-t.constants = ' hp_iv=31 attack_iv=30 defence_iv=30 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true';
+t.constants = ' hp_iv=31 attack_iv=30 defence_iv=30 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true pokeball=ultra_ball';
 
 t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
 
@@ -24,7 +24,7 @@ t.data == 'HARD' ? {
     q.party.add_by_properties('eelektross moves=supercellslam,drainpunch,uturn,aquatail nature=adamant held_item=cobblemon:assault_vest ability=levitate hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('togedemaru moves=zingzap,ironhead,nuzzle,poisonjab nature=jolly held_item=cobblemon:red_card ability=sturdy attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('electivire moves=supercellslam,icepunch,earthquake,trailblaze nature=adamant held_item=cobblemon:life_orb ability=vitalspirit attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('ampharos moves=thunderbolt,hiddenpower,focusblast,dragonpulse nature=modest ability=moldbreaker hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);
+    q.party.add_by_properties('ampharos mega_evolution=mega moves=thunderbolt,hiddenpower,focusblast,dragonpulse nature=modest held_item=mega_showdown:ampharosite ability=moldbreaker hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);
     q.party.add_by_properties('rotom moves=shadowball,thunderbolt,hiddenpower,voltswitch nature=timid held_item=cobblemon:life_orb ability=levitate special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level + 1) + t.constants);
     return 1;
 };
