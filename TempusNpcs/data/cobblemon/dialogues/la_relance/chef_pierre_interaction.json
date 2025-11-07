@@ -323,7 +323,7 @@
                         "value": "syrupy_apple",
                         "action": [
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 66B7176F32BD60A9');",
-                            "q.run_command('give ' + q.player.username + ' minecraft:apple');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:syrupy_apple');",
                             "q.player.data.dialogue.apple_complete = true; q.player.save_data();",
                             "q.dialogue.set_page('apple_completion_2');"
                         ]
