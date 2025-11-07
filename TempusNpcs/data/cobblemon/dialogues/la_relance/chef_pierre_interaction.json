@@ -119,7 +119,7 @@
                         "text": "Okay",
                         "value": "accept",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 6278379B57A4CC51');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 1BB01B2CB74DA48C');",
                             "q.player.data.dialogue.apple_accepted = true; q.player.save_data();",
                             "q.dialogue.close();"
                         ]
@@ -180,7 +180,7 @@
                         "text": "Got it",
                         "value": "1",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 6C160C08CC228F0A');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 047E32B0E85D3992');",
                             "q.player.data.dialogue.sweet_apple_complete = true; q.player.save_data();",
                             "q.dialogue.close();"
                         ]
@@ -241,7 +241,7 @@
                         "text": "Sure",
                         "value": "1",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 3FD1D89D9F649A2E');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 3D73B2BBAB100722');",
                             "q.player.data.dialogue.tart_apple_complete = true; q.player.save_data();",
                             "q.dialogue.close();"
                         ]
@@ -302,7 +302,7 @@
                         "text": "Sweet Apple",
                         "value": "sweet_apple",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 25EEE70BE36B004A');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 66B7176F32BD60A9');",
                             "q.run_command('give ' + q.player.username + ' cobblemon:sweet_apple');",
                             "q.player.data.dialogue.apple_complete = true; q.player.save_data();",
                             "q.dialogue.set_page('apple_completion_2');"
@@ -312,7 +312,7 @@
                         "text": "Tart Apple",
                         "value": "tart_apple",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 25EEE70BE36B004A');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 66B7176F32BD60A9');",
                             "q.run_command('give ' + q.player.username + ' cobblemon:tart_apple');",
                             "q.player.data.dialogue.apple_complete = true; q.player.save_data();",
                             "q.dialogue.set_page('apple_completion_2');"
@@ -322,7 +322,7 @@
                         "text": "Syrupy Apple",
                         "value": "syrupy_apple",
                         "action": [
-                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 25EEE70BE36B004A');",
+                            "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 66B7176F32BD60A9');",
                             "q.run_command('give ' + q.player.username + ' minecraft:apple');",
                             "q.player.data.dialogue.apple_complete = true; q.player.save_data();",
                             "q.dialogue.set_page('apple_completion_2');"
