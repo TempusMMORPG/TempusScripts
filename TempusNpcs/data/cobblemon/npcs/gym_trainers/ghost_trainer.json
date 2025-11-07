@@ -1,7 +1,7 @@
 {
   "resourceIdentifier": "cobblemon:global_skins",
   "names": [
-    "§lBall Patron§r"
+    "§lServer§r"
   ],
   "hitbox": "player",
   "canDespawn": false,
