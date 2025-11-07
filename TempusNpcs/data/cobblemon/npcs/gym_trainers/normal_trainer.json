@@ -1,7 +1,7 @@
 {
   "resourceIdentifier": "cobblemon:global_skins",
   "names": [
-    "§lLibrarian§r"
+    "§lClerk§r"
   ],
   "hitbox": "player",
   "canDespawn": false,
