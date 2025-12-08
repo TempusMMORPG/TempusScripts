@@ -1,0 +1,1 @@
+q.run_command('daycare other ' + c.player.username + ' ')

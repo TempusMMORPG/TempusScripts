@@ -1,0 +1,16 @@
+{
+  "name": "Daycare",
+  "description": "A behaviour that opens the Daycare when interacted with. Requires Zonary Daycare to be installed.",
+  "entityType": "cobblemon:npc",
+  "undo": [
+    "q.entity.unset_interaction();"
+  ],
+  "configurations": [
+    {
+      "type": "script",
+      "script": [
+        "q.entity.set_script_interaction('cobblemon:daycare')"
+      ]
+    }
+  ]
+}
