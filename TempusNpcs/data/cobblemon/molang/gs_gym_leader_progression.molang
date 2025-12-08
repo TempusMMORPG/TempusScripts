@@ -9,4 +9,5 @@ t.stage >= 18 ? {
 };
 
 q.player.data.gym_stage = t.stage;
+q.run_command('lp user ' + c.player.username + ' meta set tempus.gymbadge.count ' + q.player.data.gym_stage);
 q.player.save_data();
