@@ -1,0 +1,57 @@
+{
+  "initializationAction": "c.npc.set_chatting();q.player.run_command('playsound cobblemon:evolution.notification master')",
+  "speakers": {
+    "npc": {
+      "name": {
+        "type": "expression",
+        "expression": "q.npc.name"
+      },
+      "face": "q.npc.face();",
+      "gibber": {
+        "interval": 0.1
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "daycare_welcome",
+      "speaker": "npc",
+      "lines": [
+        "Welcome to the Pokemon Daycare Center!", 
+        "Would you like us to take care of your Pokemon?"
+              ],
+      "input": {
+        "type": "option",
+        "vertical": true,
+        "options": [
+          {
+            "text": "§aBox 1§r",
+            "value": "box1",
+            "action": [
+              "q.player.open_daycare(0);"
+            ]
+          },
+          {
+            "text": "§aBox 2§r",
+            "value": "box2",
+            "action": [
+              "q.player.open_daycare(1);"
+            ]
+          },
+          {
+            "text": "§aBox 3§r",
+            "value": "box3",
+            "action": [
+              "q.player.open_daycare(2);"
+            ]
+          },
+          {
+            "text": "§cLeave§r",
+            "value": "leave",
+            "action": "q.dialogue.close();"
+          }
+        ]
+      }
+    }
+  ]
+}
