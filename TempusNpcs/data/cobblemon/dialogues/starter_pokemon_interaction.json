@@ -1,4 +1,12 @@
 {
+"initializationAction": [
+        "q.npc.config.starter_name == 'mankey' ? q.dialogue.set_page('mankey_intro');",
+        "q.npc.config.starter_name == 'lillipup' ? q.dialogue.set_page('lillipup_intro');",
+        "q.npc.config.starter_name == 'eevee' ? q.dialogue.set_page('eevee_intro');",
+        "q.npc.config.starter_name == 'froakie' ? q.dialogue.set_page('froakie_intro');",
+        "q.npc.config.starter_name == 'sandile' ? q.dialogue.set_page('sandile_intro');"
+
+    ],
     "speakers": {
         "npc": {
             "name": {
@@ -22,6 +30,186 @@
         }
     },
     "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'§oThe ' + q.npc.config.starter_name_display + ' looks at you curiously.§r';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "§aAdopt this Pokemon?",
+                        "value": "yes",
+                        "isVisible": "q.player.party.count() == 0 && q.player.data.dialogue.starter_selected == 0;",
+                        "action": "q.dialogue.set_page('confirmation');"
+                    },
+                    {
+                        "text": "§6Pet",
+                        "value": "pet",
+                        "action": [
+                            "q.npc.play_animation('cry');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "mankey_intro",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'§oThe ' + q.npc.config.starter_name_display + ' stops destroying things to look at you.§r';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "§aAdopt this Pokemon?",
+                        "value": "yes",
+                        "isVisible": "q.player.party.count() == 0 && q.player.data.dialogue.starter_selected == 0;",
+                        "action": "q.dialogue.set_page('confirmation');"
+                    },
+                    {
+                        "text": "§6Pet",
+                        "value": "pet",
+                        "action": [
+                            "q.npc.play_animation('cry');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "lillipup_intro",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'§oThe ' + q.npc.config.starter_name_display + ' stops eating the delcious Italian pizza to look at you. You seem to be interrupting something.§r';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "§aAdopt this Pokemon?",
+                        "value": "yes",
+                        "isVisible": "q.player.party.count() == 0 && q.player.data.dialogue.starter_selected == 0;",
+                        "action": "q.dialogue.set_page('confirmation');"
+                    },
+                    {
+                        "text": "§6Pet",
+                        "value": "pet",
+                        "action": [
+                            "q.npc.play_animation('cry');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "eevee_intro",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'§oThe ' + q.npc.config.starter_name_display + ' stares at you with a mouth full of pizza crust. You seem to be interrupting something.§r';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "§aAdopt this Pokemon?",
+                        "value": "yes",
+                        "isVisible": "q.player.party.count() == 0 && q.player.data.dialogue.starter_selected == 0;",
+                        "action": "q.dialogue.set_page('confirmation');"
+                    },
+                    {
+                        "text": "§6Pet",
+                        "value": "pet",
+                        "action": [
+                            "q.npc.play_animation('cry');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "froakie_intro",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'§oThe ' + q.npc.config.starter_name_display + ' blinks at you innocently, seemingly offended from being called a frog.§r';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "§aAdopt this Pokemon?",
+                        "value": "yes",
+                        "isVisible": "q.player.party.count() == 0 && q.player.data.dialogue.starter_selected == 0;",
+                        "action": "q.dialogue.set_page('confirmation');"
+                    },
+                    {
+                        "text": "§6Pet",
+                        "value": "pet",
+                        "action": [
+                            "q.npc.play_animation('cry');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "sandile_intro",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'§oThe ' + q.npc.config.starter_name_display + ' sinks into the sand shyly as you approach.§r';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "§aAdopt this Pokemon?",
+                        "value": "yes",
+                        "isVisible": "q.player.party.count() == 0 && q.player.data.dialogue.starter_selected == 0;",
+                        "action": "q.dialogue.set_page('confirmation');"
+                    },
+                    {
+                        "text": "§6Pet",
+                        "value": "pet",
+                        "action": [
+                            "q.npc.play_animation('cry');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
         {
             "id": "greeting",
             "speaker": "npc",
