@@ -28,7 +28,7 @@
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'The ' + q.npc.config.starter_name_display + ' looks at you curiously.';"
+                    "expression": "'§oThe ' + q.npc.config.starter_name_display + ' looks at you curiously.§r';"
                 }
             ],
             "input": {
@@ -36,13 +36,13 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Adopt this Pokemon?",
+                        "text": "§aAdopt this Pokemon?",
                         "value": "yes",
                         "isVisible": "q.player.party.count() == 0 && q.player.data.dialogue.starter_selected == 0;",
                         "action": "q.dialogue.set_page('confirmation');"
                     },
                     {
-                        "text": "Pet",
+                        "text": "§6Pet",
                         "value": "pet",
                         "action": [
                             "q.npc.play_animation('cry');",
@@ -58,7 +58,7 @@
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'Are you sure you would like ' + q.npc.config.starter_name_display + ' as your starter Pokemon? (This action cannot be undone).';"
+                    "expression": "'§oAre you sure you would like ' + q.npc.config.starter_name_display + ' as your starter Pokemon? (This action cannot be undone).§r';"
                 }
             ],
             "input": {
@@ -86,7 +86,7 @@
             "id": "okbye",
             "speaker": "player",
             "lines": [
-                "You decide to leave this Pokemon alone."
+                "§oI think I should leave this Pokemon alone...§r"
             ],
             "input": "q.dialogue.close();"
         }
