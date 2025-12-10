@@ -1,0 +1,21 @@
+{
+  "canDespawn": false,
+  "isMovable": false,
+  "isInvulnerable": true,
+  "isLeashable": false,
+  "allowProjectileHits": false,
+  "names": [
+    "Shapeshifter"
+  ],
+  "ai": [
+    {
+      "type": "apply_behaviours",
+      "behaviours": [
+        "cobblemon:core",
+        "cobblemon:resource_identifier",
+        "cobblemon:looking",
+        "cobblemon:looks_in_one_direction"
+      ]
+    }
+  ]
+}
