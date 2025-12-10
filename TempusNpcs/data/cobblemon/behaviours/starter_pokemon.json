@@ -1,0 +1,32 @@
+{
+  "name": "Starter Pokemon NPC",
+  "description": "Configuration for an NPC that is the player's starter Pokemon giver.",
+  "entityType": "cobblemon:npc",
+  "undo": [
+    "q.entity.unset_interaction();"
+  ],
+  "configurations": [
+    {
+      "type": "add_variables",
+      "variables": [
+        {
+          "variableName": "starter_name_display",
+          "displayName": "Starter Pokemon Name for GUI",
+          "description": "Starter Pokemon Name (What is shown to user in dialogue)",
+          "type": "TEXT",
+          "defaultValue": "Bidoof"
+        },
+        {
+          "variableName": "starter_name",
+          "displayName": "Starter Pokemon Name for MoLang",
+          "description": "Sets the starter Pokemon along with any properties (level is set to 5) in the script",
+          "type": "TEXT",
+          "defaultValue": "bidoof"
+        },
+      ],
+          "script": [
+        "q.entity.set_dialogue_interaction('cobblemon:starter_pokemon_interaction')"
+      ]
+    }
+  ]
+}

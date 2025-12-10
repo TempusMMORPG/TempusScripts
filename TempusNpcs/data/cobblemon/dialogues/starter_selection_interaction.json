@@ -1,0 +1,91 @@
+{
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();",
+            "gibber": {
+                "interval": 0.1
+            }
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            },
+            "gibber": {
+                "interval": 0.1
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'The ' + q.npc.config.starter_name_display + ' looks at you curiously.';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Take care of this Pokemon?",
+                        "value": "yes",
+                        "isSelectable": "q.player.party.count() == 0",
+                        "action": "q.dialogue.set_page('confirmation');"
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.set_page('okbye');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "confirmation",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Are you sure you would like ' + q.npc.config.starter_name_display + ' as your starter Pokemon? (This action cannot be undone).';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§a Choose Starter§r",
+                        "value": "scan",
+                        "action": [
+                            "q.run_script('starter_pokemon');",
+                            "q.player.data.dialogue.starter_selected = true; q.player.save_data();",
+                            "q.dialogue.close();"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.set_page('okbye');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "okbye",
+            "speaker": "player",
+            "lines": [
+                "You decide to leave this Pokemon alone."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}
