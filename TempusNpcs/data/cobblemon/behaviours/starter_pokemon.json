@@ -22,7 +22,7 @@
           "description": "Sets the starter Pokemon along with any properties (level is set to 5) in the script",
           "type": "TEXT",
           "defaultValue": "bidoof"
-        },
+        }
       ],
           "script": [
         "q.entity.set_dialogue_interaction('cobblemon:starter_pokemon_interaction');"
