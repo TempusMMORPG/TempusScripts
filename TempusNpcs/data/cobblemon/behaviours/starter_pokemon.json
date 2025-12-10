@@ -25,7 +25,7 @@
         },
       ],
           "script": [
-        "q.entity.set_dialogue_interaction('cobblemon:starter_pokemon_interaction')"
+        "q.entity.set_dialogue_interaction('cobblemon:starter_pokemon_interaction');"
       ]
     }
   ]
