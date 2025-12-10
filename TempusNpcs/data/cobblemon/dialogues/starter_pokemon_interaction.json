@@ -33,18 +33,21 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
-                        "text": "Take care of this Pokemon?",
+                        "text": "Adopt this Pokemon?",
                         "value": "yes",
-                        "isSelectable": "q.player.party.count() == 0",
+                        "isVisible": "q.player.party.count() == 0 && q.player.data.dialogue.starter_selected == 0;",
                         "action": "q.dialogue.set_page('confirmation');"
                     },
                     {
-                        "text": "No",
-                        "value": "no",
-                        "action": "q.dialogue.set_page('okbye');"
+                        "text": "Pet",
+                        "value": "pet",
+                        "action": [
+                            "q.npc.play_animation('cry');",
+                            "q.dialogue.close();"
+                        ]
                     }
                 ]
             }
