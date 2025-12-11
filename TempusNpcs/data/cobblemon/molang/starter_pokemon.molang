@@ -9,5 +9,14 @@ t.held_item = ' helditem=';
 q.npc.config.starter_name == 'chimchar' ? {
     t.held_item = ' helditem=minecraft:bread'; 
 };
+q.npc.config.starter_name == 'scorbunny' ? {
+    t.held_item = ' helditem=minecraft:carrot'; 
+};
+q.npc.config.starter_name == 'torchic' ? {
+    t.held_item = ' helditem=minecraft:wheat'; 
+};
+q.npc.config.starter_name == 'mankey' ? {
+    t.held_item = ' helditem=cobblemon:pewter_crunchies'; 
+};
 q.player.tell('§a§l[✔] ' + q.npc.config.starter_name_display + '§a§l was added to your party [✔]§r');
 q.run_command('pokegiveother ' + q.player.username + ' ' + q.npc.config.starter_name + ' lvl=5' + t.held_item);

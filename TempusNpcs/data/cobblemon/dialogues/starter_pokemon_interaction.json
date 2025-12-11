@@ -12,7 +12,10 @@
         "q.npc.config.starter_name == 'spheal' ? q.dialogue.set_page('spheal_intro');",
         "q.npc.config.starter_name == 'snivy' ? q.dialogue.set_page('snivy_intro');",
         "q.npc.config.starter_name == 'venipede' ? q.dialogue.set_page('venipede_intro');",
-        "q.npc.config.starter_name == 'chimchar' ? q.dialogue.set_page('chimchar_intro');"
+        "q.npc.config.starter_name == 'chimchar' ? q.dialogue.set_page('chimchar_intro');",
+        "q.npc.config.starter_name == 'grookey' ? q.dialogue.set_page('grookey_intro');",
+        "q.npc.config.starter_name == 'rolycoly' ? q.dialogue.set_page('rolycoly_intro');",
+        "q.npc.config.starter_name == 'zubat' ? q.dialogue.set_page('zubat_intro');"
 
     ],
     "speakers": {
@@ -465,6 +468,66 @@
                 {
                     "type": "expression",
                     "expression": "'§o' + q.npc.config.starter_name_display + ' hangs from a branch of the tree, swinging playfully.§r';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "§aAdopt this Pokemon?",
+                        "value": "yes",
+                        "isVisible": "q.player.party.count() == 0 && q.player.data.dialogue.starter_selected == 0;",
+                        "action": "q.dialogue.set_page('confirmation');"
+                    },
+                    {
+                        "text": "§6Pet",
+                        "value": "pet",
+                        "action": [
+                            "q.npc.play_animation('cry');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "rolycoly_intro",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'§o' + q.npc.config.starter_name_display + ' rolls on its wheel, stopping its rampage to look at you.§r';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "§aAdopt this Pokemon?",
+                        "value": "yes",
+                        "isVisible": "q.player.party.count() == 0 && q.player.data.dialogue.starter_selected == 0;",
+                        "action": "q.dialogue.set_page('confirmation');"
+                    },
+                    {
+                        "text": "§6Pet",
+                        "value": "pet",
+                        "action": [
+                            "q.npc.play_animation('cry');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "zubat_intro",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'§oThe ' + q.npc.config.starter_name_display + ' is stuck in the tree. It looks at you for help.§r';"
                 }
             ],
             "input": {
