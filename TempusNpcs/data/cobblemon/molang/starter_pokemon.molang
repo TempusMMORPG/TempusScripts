@@ -1,6 +1,13 @@
 'Give the pokemon to the player if their data matches and party is empty.';
-q.player.party.count == 0  && q.player.data.dialogue.starter_selected == 0 ? {
-    q.player.tell('§a§l[✔] ' + q.npc.config.starter_name_display + '§a§l was added to your party [✔]§r');
-    q.run_command('pokegiveother ' + q.player.username + ' ' + q.npc.config.starter_name + ' lvl=5');
-} : {
-    q.player.tell('§c§lYou have already selected a starter');}
+
+q.player.party.count != 0 || q.player.data.dialogue.starter_selected != 0 ? {
+    q.player.tell('§c§lYou have already selected a starter');
+    return 1;
+};
+
+t.held_item = ' helditem=';
+q.npc.config.starter_name == 'chimchar' ? {
+    t.held_item = ' helditem=minecraft:bread'; 
+};
+q.player.tell('§a§l[✔] ' + q.npc.config.starter_name_display + '§a§l was added to your party [✔]§r');
+q.run_command('pokegiveother ' + q.player.username + ' ' + q.npc.config.starter_name + ' lvl=5' + t.held_item);
