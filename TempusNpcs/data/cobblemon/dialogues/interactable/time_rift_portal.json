@@ -42,7 +42,7 @@
                             "q.run_command('title ' + q.player.username + ' times 0 10 20');",
                             "q.run_command('title ' + q.player.username + ' title {\"text\":\"a\",\"font\":\"filter:fill\",\"color\":\"#000000\"}');",
                             "q.run_command('mw tp ' + q.npc.config.portal_world + ' ' + q.player.username);",
-                            "q.dialogue.close();",
+                            "q.dialogue.close();"
                         ]
                     },
                     {
