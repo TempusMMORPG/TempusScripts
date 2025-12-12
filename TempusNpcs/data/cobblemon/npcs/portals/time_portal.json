@@ -1,0 +1,24 @@
+{
+    "resourceIdentifier": "cobblemon:interactable",
+    "hitbox": "player",
+    "canDespawn": false,
+    "isMovable": false,
+    "isInvulnerable": true,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "names": [
+        "Time Portal"
+    ],
+    "hideNameTag": true,
+    "ai": [
+        {
+            "type": "apply_behaviours",
+            "behaviours": [
+                "cobblemon:core",
+                "cobblemon:looking",
+                "cobblemon:portal",
+                "cobblemon:looks_in_one_direction"
+            ]
+        }
+    ]
+}

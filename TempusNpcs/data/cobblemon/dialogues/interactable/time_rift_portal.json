@@ -17,14 +17,16 @@
     },
     "pages": [
         {
-            "id": "teleport",
+            "id": "portal_active",
             "speaker": "npc",
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'Where do you want to go? The trip will cost you 1x ' + q.npc.config.consume_item_display + '. When you are ready, show it in your hands so I can see it.';"
+                    "expression": "'Power courses through the ancient portal as it opens. Would you like to enter? ';"
                 }
             ],
+            "textColor": "FFFFFF",
+            "background": "cobblemon:textures/gui/dialogue/dialogue_box_info.png",
             "input": {
                 "type": "option",
                 "vertical": true,
@@ -32,28 +34,15 @@
                     {
                         "text": {
                             "type": "expression",
-                            "expression": "q.npc.config.teleport_display_1"
+                            "expression": "'Enter the Rift'"
                         },
-                        "value": "location1",
-                        "isSelectable": "q.player.main_held_item.is_of(q.npc.config.consume_item) || q.player.off_held_item.is_of(q.npc.config.consume_item)",
+                        "value": "teleport",
+                        "isSelectable": "q.npc.config.is_portal_active == true",
                         "action": [
-                            "q.run_command('clear ' + q.player.username + ' ' + q.npc.config.consume_item + ' 1');",
                             "q.run_command('title ' + q.player.username + ' times 0 10 20');",
                             "q.run_command('title ' + q.player.username + ' title {\"text\":\"a\",\"font\":\"filter:fill\",\"color\":\"#000000\"}');",
-                            "q.run_command('tp ' + q.player.username + ' ' + q.npc.config.teleport_location_1);",
+                            "q.run_command('mw tp ' + q.npc.config.portal_world + ' ' + q.player.username);",
                             "q.dialogue.close();",
-                            "q.player.tell('§a§l[✔] Used x1 ' + q.npc.config.consume_item_display + ' to travel to ' + q.npc.config.teleport_display_1 + ' [✔]§r');"
-                        ]
-                    },
-                    {
-                        "text": {
-                            "type": "expression",
-                            "expression": "'§b₽ Buy Tickets ₽§r'"
-                        },
-                        "value": "buy",
-                        "action": [
-                            "q.dialogue.close();",
-                            "q.run_command('shop other ' + q.player.username + ' ' + q.npc.config.shop_command + ' false');"
                         ]
                     },
                     {

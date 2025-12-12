@@ -1,0 +1,41 @@
+{
+  "name": "Portal NPC",
+  "description": "An NPC that functions as a portal to teleport players.",
+  "entityType": "cobblemon:npc",
+  "undo": [
+    "q.entity.unset_interaction();"
+  ],
+  "configurations": [
+    {
+      "type": "script",
+      "variables": [
+        {
+          "variableName": "portal_world",
+          "displayName": "Portal World",
+          "description": "The world where the portal will teleport the player",
+          "type": "TEXT",
+          "defaultValue": "world"
+        },
+        {
+          "variableName": "portal_teleport_location",
+          "displayName": "Portal Teleport Location",
+          "description": "The coordinates where the portal will teleport the player",
+          "type": "TEXT",
+          "defaultValue": "0 0 0"
+        },
+        {
+          "variableName": "is_portal_active",
+          "displayName": "Portal Activator",
+          "description": "Toggle to activate or deactivate the portal",
+          "type": "BOOLEAN",
+          "defaultValue": "false"
+        }
+      ],
+      "script": [
+        "q.entity.set_dialogue_interaction('cobblemon:time_rift_portal');",
+        "q.npc.config.is_portal_active == false ? q.npc.add_aspect('inactive');",
+        "q.npc.config.is_portal_active == true ? q.npc.remove_aspect('inactive');"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+    "resourceIdentifier": "cobblemon:interactable",
+    "hitbox": "player",
+    "canDespawn": false,
+    "isMovable": false,
+    "isInvulnerable": true,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "names": [
+        "Worhmhole"
+    ],
+    "hideNameTag": true,
+    "ai": [
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "core",
+            "tasksByPriority": {
+                "0": [{
+                    "type": "stay_afloat",
+                    "chance": "1"
+                }]
+            }
+        },
+        {
+            "type": "apply_behaviours",
+            "behaviours": [
+                "cobblemon:core",
+                "cobblemon:looking",
+                "cobblemon:looks_in_one_direction"
+            ]
+        }
+    ]
+}
