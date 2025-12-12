@@ -1,0 +1,68 @@
+{
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "teleport",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Where do you want to go? The trip will cost you 1x ' + q.npc.config.consume_item_display + '. When you are ready, show it in your hands so I can see it.';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "q.npc.config.teleport_display_1"
+                        },
+                        "value": "location1",
+                        "isSelectable": "q.player.main_held_item.is_of(q.npc.config.consume_item) || q.player.off_held_item.is_of(q.npc.config.consume_item)",
+                        "action": [
+                            "q.run_command('clear ' + q.player.username + ' ' + q.npc.config.consume_item + ' 1');",
+                            "q.run_command('title ' + q.player.username + ' times 0 10 20');",
+                            "q.run_command('title ' + q.player.username + ' title {\"text\":\"a\",\"font\":\"filter:fill\",\"color\":\"#000000\"}');",
+                            "q.run_command('tp ' + q.player.username + ' ' + q.npc.config.teleport_location_1);",
+                            "q.dialogue.close();",
+                            "q.player.tell('§a§l[✔] Used x1 ' + q.npc.config.consume_item_display + ' to travel to ' + q.npc.config.teleport_display_1 + ' [✔]§r');"
+                        ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "'§b₽ Buy Tickets ₽§r'"
+                        },
+                        "value": "buy",
+                        "action": [
+                            "q.dialogue.close();",
+                            "q.run_command('shop other ' + q.player.username + ' ' + q.npc.config.shop_command + ' false');"
+                        ]
+                    },
+                    {
+                        "text": "Exit",
+                        "value": "exit",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        }
+    ]
+}
