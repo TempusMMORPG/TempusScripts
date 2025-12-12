@@ -1,0 +1,2 @@
+    q.npc.config.is_portal_active == false ? q.npc.add_aspect('inactive');
+    q.npc.config.is_portal_active == true ? q.npc.remove_aspect('inactive');
