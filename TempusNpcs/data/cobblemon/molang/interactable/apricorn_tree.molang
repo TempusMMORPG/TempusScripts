@@ -24,7 +24,7 @@ t.health = t.health - 1;
 q.run_command('playsound cobblemon:rustling_grass master ' + q.player.username + ' ' + q.npc.x + ' ' + q.npc.y + ' ' + q.npc.z);
 
 t.health <= 0 ? {
-    q.run_molang('q.run_script(\'q.npc.config.reward_pool\')', 2);
+    q.run_molang('q.run_script("q.npc.config.reward_pool")', 2);
     q.npc.play_animation('obtain', q.player.uuid);
     q.run_command('playsound cobblemon:block.display_case.add_item master ' + q.player.username + ' ' + q.npc.x + ' ' + q.npc.y + ' ' + q.npc.z);
     t.health = t.max_health;

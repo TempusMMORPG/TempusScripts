@@ -23,18 +23,6 @@
                 "cobblemon:portal",
                 "cobblemon:looks_in_one_direction"
             ]
-        },
-        {
-            "type": "add_tasks_to_activity",
-            "activity": "minecraft:idle",
-            "tasksByPriority": {
-                "0": [
-                    {
-                        "type": "run_script",
-                        "script": "cobblemon:portal_appearance"
-                    }
-                ]
-            }
         }
     ]
 }
