@@ -7,6 +7,6 @@ t.battle = t.player.battle;
 
 for_each(t.battle_actor, t.battle.actors, {
     t.battle_actor.npc.config.no_experience_toggle ? {
-        q.set_amount(0);
+        q.cancel();
     };
 });
