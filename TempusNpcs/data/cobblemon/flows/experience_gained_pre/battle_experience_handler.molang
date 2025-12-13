@@ -1,0 +1,12 @@
+c.source != 'battle' ? return 0;
+
+t.player = c.pokemon.owner;
+t.battle = t.player.battle;
+
+!t.battle.is_pvn ? return 0;
+
+for_each(t.battle_actor, t.battle.actors, {
+    t.battle_actor.npc.config.no_experience_toggle ? {
+        q.cancel();
+    };
+});
