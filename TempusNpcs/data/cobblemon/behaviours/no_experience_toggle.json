@@ -1,24 +1,22 @@
 {
-    "name": "No Experience Toggle",
-    "description": "If enabled, the opposing player will not obtain experience.",
-    "entityType": "cobblemon:npc",
-    "undo": [
-      "q.entity.delete_variable('no_experience_toggle');"
-    ],
-    "configurations": [
-      {
-        "type": "script",
-        "variables": [
-          {
-            "variableName": "no_experience_toggle",
-            "displayName": "No Experience Toggle",
-            "description": "If enabled, the opposing player will not obtain experience.",
-            "type": "BOOLEAN",
-            "defaultValue": "true"
-          }
-        ],
-        "script": [
-        ]
-      }
-    ]
-  }
+  "name": "No Experience Toggle",
+  "description": "If enabled, the opposing player will not obtain experience.",
+  "entityType": "cobblemon:npc",
+  "undo": [
+    "q.entity.delete_variable('no_experience_toggle');"
+  ],
+  "configurations": [
+    {
+      "type": "add_variables",
+      "variables": [
+        {
+          "variableName": "no_experience_toggle",
+          "displayName": "No Experience Toggle",
+          "description": "If enabled, the opposing player will not obtain experience.",
+          "type": "BOOLEAN",
+          "defaultValue": "true"
+        }
+      ]
+    }
+  ]
+}

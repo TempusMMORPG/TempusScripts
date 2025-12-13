@@ -22,7 +22,7 @@
           "description": "Scan Request Pokemon along with any properties (All lowercase)",
           "type": "TEXT",
           "defaultValue": "bidoof"
-        },
+        }
       ],
           "script": [
         "q.entity.set_dialogue_interaction('cobblemon:pt_scan_interaction')"

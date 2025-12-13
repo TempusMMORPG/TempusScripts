@@ -7,7 +7,6 @@ t.battle = t.player.battle;
 
 for_each(t.battle_actor, t.battle.actors, {
     t.battle_actor.npc.config.no_experience_toggle ? {
-        t.result = q.set_amount(0);
-        t.player.tell(q.to_string(t.result));
+        q.set_amount(0);
     };
 });
