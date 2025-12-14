@@ -1,3 +1,4 @@
+q.run_command('playsound cobblemon:block.display_case.add_item master ' + q.player.username + ' ' + q.npc.x + ' ' + q.npc.y + ' ' + q.npc.z);
 t.roll = math.random_integer(1, 100);
 
 t.roll <= 15 && t.roll >= 1 ? {

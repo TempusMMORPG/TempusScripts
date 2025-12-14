@@ -1,3 +1,4 @@
+q.run_command('playsound cobblemon:block.display_case.add_item master ' + q.player.username + ' ' + q.npc.x + ' ' + q.npc.y + ' ' + q.npc.z);
 t.time = q.system_time_millis;
 t.cooldown_time = c.player.get_npc_variable(q.npc, 'cooldown_time');
 
@@ -26,7 +27,6 @@ q.run_command('playsound cobblemon:rustling_grass master ' + q.player.username +
 t.health <= 0 ? {
     q.run_molang('q.run_script("q.npc.config.reward_pool")', 2);
     q.npc.play_animation('obtain', q.player.uuid);
-    q.run_command('playsound cobblemon:block.display_case.add_item master ' + q.player.username + ' ' + q.npc.x + ' ' + q.npc.y + ' ' + q.npc.z);
     t.health = t.max_health;
     t.cooldown = t.time + math.floor(q.npc.config.node_cooldown * 3600000);
     t.cooldown_time = q.player.set_npc_variable(q.npc.uuid, 'cooldown_time', t.cooldown, true);

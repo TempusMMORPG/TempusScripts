@@ -1,0 +1,181 @@
+{
+"initializationAction": [
+        "q.npc.play_animation('angry', q.player.username);",
+        "q.player.active_dialogue == 'shop' ? q.npc.play_animation('chatting', q.player.username);",
+        "q.player.active_dialogue == 'mankey_intro' ? q.pokemon.play_animation('cry', q.player.username);",
+        "q.player.data.dialogue.m_familymart == true ? q.dialogue.set_page('shop');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();",
+            "gibber": {
+                "interval": 0.1
+            }
+        },
+        "mankey": {
+            "name": "Mischievious Mankey",
+            "gibber": {
+                "interval": 0.1
+            },
+            "face": {
+                "type": "artificial",
+                "modelType": "pokemon",
+                "identifier": "cobblemon:mankey",
+                "isLeftSide": true
+            }
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            },
+            "gibber": {
+                "interval": 0.1
+            },
+            "isLeftSide": false
+        }
+    },
+    "pages": [
+        {
+            "id": "shopkeeper_intro",
+            "lines": [
+                "§oThe Mankey hurls snacks from on top of the shelf whilst the panicked shopkeeper cries out.§r"
+                ],
+            "background": "cobblemon:textures/gui/dialogue/dialogue_box_info.png",
+            "textColor": "FFFFFF",
+            "input": "q.dialogue.set_page('greeting');"
+        },
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "MANKEY GET DOWN FROM THERE!!!"
+            ],
+            "input": "q.dialogue.set_page('greet_familymart');"
+        },
+        {
+            "id": "greet_familymart",
+            "speaker": "player",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hi there.. my name is ' + q.player.username + '. Are you alright?';"
+                }
+            ],
+            "input": [
+            "q.dialogue.set_page('shop');", 
+            "q.player.data.dialogue.m_familymart = true;", 
+            "q.player.save_data();"
+            ]
+        },
+        {
+            "id": "shop",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'MANKEY- Oh hey there... uhm... what can I do for you?';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "§aWhat have you got for sale?",
+                        "value": "yes",
+                        "action": "q.run_command('execute as ' + q.player.username + ' run shop familymart');"
+                    },
+                    {
+                        "text": "§6Help with Mankey",
+                        "value": "mankey_help",
+                        "isVisible": "q.player.party.count() == 0 && q.player.data.dialogue.starter_selected == 0;",
+                        "action": [
+                            "q.dialogue.set_page('mankey_intro');"
+                        ]
+                    },
+                    {
+                        "text": "§cLeave",
+                        "value": "leave",
+                        "action": "q.dialogue.set_page('okbye');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "mankey_intro",
+            "speaker": "mankey",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'§oThe ' + q.npc.config.starter_name_display + ' stops destroying things to look at you.§r';"
+                }
+            ],
+            "background": "cobblemon:textures/gui/dialogue/dialogue_box_info.png",
+            "textColor": "FFFFFF",
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "§aAdopt this Pokemon?",
+                        "value": "yes",
+                        "isVisible": "q.player.party.count() == 0 && q.player.data.dialogue.starter_selected == 0;",
+                        "action": "q.dialogue.set_page('confirmation');"
+                    },
+                    {
+                        "text": "§cBack",
+                        "value": "back",
+                        "action": [
+                            "q.dialogue.set_page('shop');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "confirmation",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'§oAre you sure you would like Mankey as your starter Pokemon? (This action cannot be undone).§r';"
+                }
+            ],
+            "textColor": "FFFFFF",
+            "background": "cobblemon:textures/gui/dialogue/dialogue_box_info.png",
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§a Choose Starter§r",
+                        "value": "scan",
+                        "action": [
+                            "q.run_script('starter_pokemon');",
+                            "q.player.data.dialogue.starter_selected = 1; q.player.save_data();",
+                            "q.dialogue.close();"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.set_page('okbye');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "okbye",
+            "speaker": "npc",
+            "lines": [
+                "§oGoodbye...§r"
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}
