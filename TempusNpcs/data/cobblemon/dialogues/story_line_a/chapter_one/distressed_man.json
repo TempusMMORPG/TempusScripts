@@ -11,7 +11,7 @@
             }
         },
         "player": {
-            "face": "q.player.face();",
+            "face": "q.player.face(true);",
             "gibber": {
                 "interval": 0.1
             },
@@ -23,23 +23,30 @@
     },
     "pages": [
         {
-            "id": "teleport",
+            "id": "man_intro",
+            "lines": [
+                "§oThe man looks up in the tree, scratching his head with a worried look on his face. He see's you approach and waves.§r"
+            ],
+            "background": "cobblemon:textures/gui/dialogue/dialogue_box_info.png",
+            "textColor": "FFFFFF",
+            "input": "q.dialogue.set_page('greeting');"
+        },
+        {
+            "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Hello there, you must be a new Trainer. Welcome to the Tempus Region! The Professor at the Lab in Unity City has asked for you. Would you like me to send you there now?"
+                "Hey you! Could you help me out? I'm going to be in big trouble if I can't round up these Pokémon!"
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Go to Unity City Lab",
-                        "value": "location1",
+                        "text": "I'll help you",
+                        "value": "accept",
                         "action": [
-                            "q.run_command('tp ' + q.player.username + ' 345 65 -707 -89 5.4');",
                             "q.run_command('ftbquests change_progress ' + q.player.username + ' complete 0B6A97171EA4BC42');",
-                            "q.dialogue.close();",
-                            "q.player.tell('§a§l[✔] Travelled to Unity City Lab [✔]§r');"
+                            "q.dialogue.set_page('task');"
                         ]
                     },
                     {
@@ -49,6 +56,14 @@
                     }
                 ]
             }
-        }
+        },
+        {
+            "id": "task",
+            "lines": [
+                "Great! There's 43 Pokemon to find around Marino, that's at least one of each type, plus a few extra Grass, Fire and Water types.",
+                "You can adopt one of them to take them off my hands."
+            ],
+            "input": "q.dialogue.close();"
+        },
     ]
 }

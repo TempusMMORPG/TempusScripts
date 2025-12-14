@@ -1,5 +1,5 @@
 {
-"initializationAction": [
+    "initializationAction": [
         "q.npc.play_animation('angry', q.player.username);",
         "q.player.active_dialogue == 'shop' ? q.npc.play_animation('chatting', q.player.username);",
         "q.player.active_dialogue == 'mankey_intro' ? q.pokemon.play_animation('cry', q.player.username);",
@@ -11,7 +11,7 @@
                 "type": "expression",
                 "expression": "q.npc.name"
             },
-            "face": "q.npc.face();",
+            "face": "q.npc.face(false);",
             "gibber": {
                 "interval": 0.1
             }
@@ -25,19 +25,18 @@
                 "type": "artificial",
                 "modelType": "pokemon",
                 "identifier": "cobblemon:mankey",
-                "isLeftSide": true
+                "isLeftSide": false
             }
         },
         "player": {
-            "face": "q.player.face();",
+            "face": "q.player.face(true);",
             "name": {
                 "type": "expression",
                 "expression": "q.player.username"
             },
             "gibber": {
                 "interval": 0.1
-            },
-            "isLeftSide": false
+            }
         }
     },
     "pages": [
@@ -45,7 +44,7 @@
             "id": "shopkeeper_intro",
             "lines": [
                 "§oThe Mankey hurls snacks from on top of the shelf whilst the panicked shopkeeper cries out.§r"
-                ],
+            ],
             "background": "cobblemon:textures/gui/dialogue/dialogue_box_info.png",
             "textColor": "FFFFFF",
             "input": "q.dialogue.set_page('greeting');"
@@ -64,13 +63,13 @@
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'Hi there.. my name is ' + q.player.username + '. Are you alright?';"
+                    "expression": "'Hi there... Are you alright?';"
                 }
             ],
             "input": [
-            "q.dialogue.set_page('shop');", 
-            "q.player.data.dialogue.m_familymart = true;", 
-            "q.player.save_data();"
+                "q.dialogue.set_page('shop');",
+                "q.player.data.dialogue.m_familymart = true;",
+                "q.player.save_data();"
             ]
         },
         {
