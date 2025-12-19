@@ -50,7 +50,7 @@
                         ]
                     },
                     {
-                        "text": "Exit",
+                        "text": "Goodbye",
                         "value": "exit",
                         "action": "q.dialogue.close();"
                     }
@@ -65,5 +65,30 @@
             ],
             "input": "q.dialogue.close();"
         },
+        {
+            "id": "post_starter",
+            "speaker": "npc",
+            "lines": [
+                "Oh wow, you've chosen a Pokemon! I could still use your help rounding up the rest of them around Marino. Find and Pet them for me to calm them down, will you?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "I'll help you",
+                        "value": "accept",
+                        "action": [
+                            "q.dialogue.set_page('task');"
+                        ]
+                    },
+                    {
+                        "text": "Exit",
+                        "value": "exit",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        }
     ]
 }

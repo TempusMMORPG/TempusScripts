@@ -1,6 +1,6 @@
 {
 "initializationAction": [
-        "q.npc.play_animation('cry');",
+        "q.npc.play_animation('cry', q.player.username);",
         "q.npc.config.starter_name == 'mankey' ? q.dialogue.set_page('mankey_intro');",
         "q.npc.config.starter_name == 'lillipup' ? q.dialogue.set_page('lillipup_intro');",
         "q.npc.config.starter_name == 'eevee' ? q.dialogue.set_page('eevee_intro');",
