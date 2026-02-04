@@ -1,10 +1,9 @@
 t.cooldown_time = q.system_time_millis + 604800000;
-q.print(v.pokemon_name);
+
 t.pokemon_name_var = q.replace(v.pokemon_name, ' ', '_');
 t.pokemon_name_var = q.replace(t.pokemon_name_var, '-', '_');
 t.pokemon_name_var = q.replace(t.pokemon_name_var, '.', '_');
 t.pokemon_name_var = q.replace(t.pokemon_name_var, '__', '_');
-q.print(t.pokemon_name_var);
 
 q.run_molang('q.player.data.' + t.pokemon_name_var + '_cooldown = ' + t.cooldown_time + ';');
 q.player.save_data();
