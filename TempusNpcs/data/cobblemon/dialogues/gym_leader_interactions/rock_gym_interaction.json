@@ -1,0 +1,101 @@
+{
+    "initializationAction": [
+        "q.player.data.rock_gym_defeated ? q.dialogue.set_page('post_defeat');",
+        "q.player.data.rock_trainer_defeat_count >= 4 ? q.dialogue.set_page('greeting');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "reject",
+            "speaker": "npc",
+            "lines": [
+                "Howdy, glad yer eager, but my men are gettin' restless. Give em' some entertainment first."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Howdy there, name's Silus leader of the Lone Tree gym"
+            ],
+            "input": [
+                "q.npc.play_animation('chatting', q.player.uuid);",
+                "q.dialogue.set_page('greeting2');"
+            ]
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                "Glad ya came down to a backwater town like this. Sure it's home, but nothin really happens 'round here."
+            ],
+            "input": [
+                "q.npc.play_animation('thinking', q.player.uuid);",
+                "q.dialogue.set_page('battle_prompt');"
+            ]
+        },
+        {
+            "id": "battle_prompt",
+            "speaker": "npc",
+            "lines": [
+                "Now then, ya ready ta tussle?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "isSelectable": "q.player.data.dragon_gym_defeated == false",
+                        "action": [
+                            "q.npc.play_animation('salute', q.player.uuid);",
+                            "q.dialogue.set_page('battle_start');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "battle_start",
+            "speaker": "npc",
+            "lines": [
+                "Careful now, I can be a lil' rough."
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "There ain't much to do round here. Skedaddle now, sure ya got important things to do."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

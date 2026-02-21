@@ -1,0 +1,100 @@
+{
+    "initializationAction": [
+        "q.player.data.dragon_gym_defeated ? q.dialogue.set_page('post_defeat');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "reject",
+            "speaker": "npc",
+            "lines": [
+                "I'm busy. Don't talk to me unless absolutely necessary."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Can't believe there's the possibility of a real Deoxys landing here in Tempus, and I'm stuck dealing with challengers."
+            ],
+            "input": [
+                "q.npc.play_animation('chatting', q.player.uuid);",
+                "q.dialogue.set_page('greeting2');"
+            ]
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                "Well as I'm missing out on alien life landing here in Tempus might as well take my anger out on you."
+            ],
+            "input": [
+                "q.npc.play_animation('thinking', q.player.uuid);",
+                "q.dialogue.set_page('battle_prompt');"
+            ]
+        },
+        {
+            "id": "battle_prompt",
+            "speaker": "npc",
+            "lines": [
+                "I'm Cassie, leader of the Dell Village Gym blah blah blah let's get this over with."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "isSelectable": "q.player.data.dragon_gym_defeated == false",
+                        "action": [
+                            "q.npc.play_animation('salute', q.player.uuid);",
+                            "q.dialogue.set_page('battle_start');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "battle_start",
+            "speaker": "npc",
+            "lines": [
+                "Maybe this'll distract me for a few seconds..."
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "I'm getting new information on the crash. I don't have time for you."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

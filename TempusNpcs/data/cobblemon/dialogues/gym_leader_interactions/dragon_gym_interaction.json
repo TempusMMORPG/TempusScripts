@@ -1,0 +1,102 @@
+{
+    "initializationAction": [
+        "q.player.data.dragon_gym_defeated ? q.dialogue.set_page('post_defeat');",
+        "q.player.data.dragon_trainer_defeat_count >= 4 ? q.dialogue.set_page('greeting');"
+
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "reject",
+            "speaker": "npc",
+            "lines": [
+                "I can't tell if you are a grand feast, or a mere morsel yet. Defeat the other warriors first."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Hahaha! I got goosebumps watching you battle!"
+            ],
+            "input": [
+                "q.npc.play_animation('chatting', q.player.uuid);",
+                "q.dialogue.set_page('greeting2');"
+            ]
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                "I am Sigurd, greatest warrior of Drekar!"
+            ],
+            "input": [
+                "q.npc.play_animation('thinking', q.player.uuid);",
+                "q.dialogue.set_page('battle_prompt');"
+            ]
+        },
+        {
+            "id": "battle_prompt",
+            "speaker": "npc",
+            "lines": [
+                "I cannot wait any longer, let us battle!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "isSelectable": "q.player.data.dragon_gym_defeated == false",
+                        "action": [
+                            "q.npc.play_animation('salute', q.player.uuid);",
+                            "q.dialogue.set_page('battle_start');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "battle_start",
+            "speaker": "npc",
+            "lines": [
+                "I can tell this will be a great battle!"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "You were too much for me. I need to train more before our rematch."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

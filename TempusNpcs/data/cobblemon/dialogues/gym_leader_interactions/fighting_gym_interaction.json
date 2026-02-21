@@ -1,0 +1,101 @@
+{
+    "initializationAction": [
+        "q.player.data.fighting_gym_defeated ? q.dialogue.set_page('post_defeat');",
+        "q.player.data.fighting_trainer_defeat_count >= 4 ? q.dialogue.set_page('greeting');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": { 
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "reject",
+            "speaker": "player",
+            "lines": [
+                "(She seems to be meditating, you have a feeling that by the time you defeat all the gym trainers she'll be done)"
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "A strong mind requires a strong body. A strong body requires a strong mind."
+            ],
+            "input": [
+                "q.npc.play_animation('chatting', q.player.uuid);",
+                "q.dialogue.set_page('greeting2');"
+            ]
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                "Greetings challenger. I am Tomoe, the head of this dojo, and the Seikatsu Gym Leader."
+            ],
+            "input": [
+                "q.npc.play_animation('thinking', q.player.uuid);",
+                "q.dialogue.set_page('battle_prompt');"
+            ]
+        },
+        {
+            "id": "battle_prompt",
+            "speaker": "npc",
+            "lines": [
+                "Shall we have our match now?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "isSelectable": "q.player.data.fighting_gym_defeated == false",
+                        "action": [
+                            "q.npc.play_animation('salute', q.player.uuid);",
+                            "q.dialogue.set_page('battle_start');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "battle_start",
+            "speaker": "npc",
+            "lines": [
+                "Very well. Let us begin."
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "player",
+            "lines": [
+                "(She seems to be meditating, better not bother her.)"
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}
