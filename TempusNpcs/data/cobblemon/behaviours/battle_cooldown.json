@@ -9,11 +9,18 @@
       "type": "add_variables",
       "variables": [
         {
-          "variableName": "base_defeat_count",
-          "displayName": "Defeat Count",
-          "description": "Defeat Count",
+          "variableName": "battle_cooldown_time",
+          "displayName": "Cooldown Time (IN HOURS)",
+          "description": "The time in hours that the player must wait before utilizing this NPC again.",
           "type": "NUMBER",
-          "defaultValue": "4.0"
+          "defaultValue": "4"
+        },
+        {
+          "variableName": "toggle_battle_cooldown",
+          "displayName": "Toggle Battle Cooldown",
+          "description": "Toggles the battle cooldown",
+          "type": "BOOLEAN",
+          "defaultValue": "0"
         }
       ]
     }
