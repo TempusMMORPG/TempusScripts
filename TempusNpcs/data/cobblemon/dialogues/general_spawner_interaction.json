@@ -1,7 +1,7 @@
 {
     "initializationAction": [
         "q.run_script('cobblemon:spawner_cooldown_check') ? q.dialogue.set_page('on_cooldown');",
-        "q.player.data.dialogue.has_legendary_license == false ? q.dialogue.set_page('legendary_license_required');",
+        "q.player.data.dialogue.legendary_license_complete == false ? q.dialogue.set_page('legendary_license_required');",
         "q.player.in_battle ? q.dialogue.close();"
     ],
     "speakers": {
