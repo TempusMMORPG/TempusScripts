@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        
+        "q.npc.config.toggle_battle_cooldown && q.run_script('cobblemon:cooldown_check') ? q.dialogue.set_page('completed');"
     ],
     "speakers": {
         "npc": {
@@ -66,6 +66,7 @@
                     {
                         "text": "§aSubmit Items§r",
                         "value": "submit",
+                        "isSelectable": "q.player.main_held_item.is_of(q.npc.config.consume_item) || q.player.off_held_item.is_of(q.npc.config.consume_item)",
                         "action": "q.run_script('cobblemon:penelopes_plants_submit') == 1 ? q.dialogue.set_page('completed') : q.dialogue.close();"
                     },
                     {
@@ -101,6 +102,11 @@
             "speaker": "npc",
             "lines": [
                 "You've already helped me out today. Thanks again!",
+                "I'll have another job for you in:",
+                        {
+                    "type": "expression",
+                    "expression": "'§8§o' + q.run_script('cobblemon:cooldown_remaining_time');"
+                }
             ],
             "input": {
                 "type": "option",
