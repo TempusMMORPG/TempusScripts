@@ -1,0 +1,460 @@
+{
+    "initializationAction": [
+        "q.npc.play_animation('chatting', q.player.uuid);",
+        "q.npc.config.location == 'fumia' && q.player.data.fumia_registered == 0 ? q.dialogue.set_page('fumia_register');",
+        "q.npc.config.location == 'unity' && q.player.data.unity_registered == 0 ? q.dialogue.set_page('unity_register');",
+        "q.npc.config.location == 'la_relance' && q.player.data.la_relance_registered == 0 ? q.dialogue.set_page('la_relance_register');",
+        "q.npc.config.location == 'gelina' && q.player.data.gelina_registered == 0 ? q.dialogue.set_page('gelina_register');",
+        "q.npc.config.location == 'lone_tree' && q.player.data.lone_tree_registered == 0 ? q.dialogue.set_page('lone_tree_register');",
+        "q.npc.config.location == 'umigawa' && q.player.data.umigawa_registered == 0 ? q.dialogue.set_page('umigawa_register');",
+        "q.npc.config.location == 'caligo' && q.player.data.caligo_registered == 0 ? q.dialogue.set_page('caligo_register');",
+        "q.npc.config.location == 'rimal' && q.player.data.rimal_registered == 0 ? q.dialogue.set_page('rimal_register');",
+        "q.npc.config.location == 'hana_village' && q.player.data.hana_village_registered == 0 ? q.dialogue.set_page('hana_village_register');",
+        "q.npc.config.location == 'seikatsu' && q.player.data.seikatsu_registered == 0 ? q.dialogue.set_page('seikatsu_register');",
+        "q.npc.config.location == 'marino' && q.player.data.marino_registered == 0 ? q.dialogue.set_page('marino_register');",
+        "q.npc.config.location == 'odyssey_city' && q.player.data.odyssey_city_registered == 0 ? q.dialogue.set_page('odyssey_city_register');",
+        "q.npc.config.location == 'hwa_village' && q.player.data.hwa_village_registered == 0 ? q.dialogue.set_page('hwa_village_register');",
+        "q.npc.config.location == 'safari_zone' && q.player.data.safari_zone_registered == 0 ? q.dialogue.set_page('safari_zone_register');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();",
+            "gibber": {
+                "interval": 0.1
+            }
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hello ' + q.player.username + '!';"
+                }
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "unity_register",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hello ' + q.player.username + '! Welcome to Unity!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "isSelectable": "q.player.data.unity_registered == 0",
+                "options": [
+                    {
+                        "text": "Register Location",
+                        "value": "register",
+                        "action": [
+                            "q.player.data.unity_registered = 1;",
+                            "q.player.save_data();",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:rare_candy 1');",
+                            "q.dialogue.set_page('post_register');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "fumia_register",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hello ' + q.player.username + '! Welcome to Fumia!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Register Location",
+                        "isSelectable": "q.player.data.fumia_registered == 0",
+                        "value": "register",
+                        "action": [
+                            "q.player.data.fumia_registered = 1;",
+                            "q.player.save_data();",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:rare_candy 1');",
+                            "q.dialogue.set_page('post_register');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "la_relance_register",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hello ' + q.player.username + '! Welcome to La Relance!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Register Location",
+                        "isSelectable": "q.player.data.la_relance_registered == 0",
+                        "value": "register",
+                        "action": [
+                            "q.player.data.la_relance_registered = 1;",
+                            "q.player.save_data();",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:rare_candy 1');",
+                            "q.dialogue.set_page('post_register');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "gelina_register",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hello ' + q.player.username + '! Welcome to Gelina!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Register Location",
+                        "isSelectable": "q.player.data.gelina_registered == 0",
+                        "value": "register",
+                        "action": [
+                            "q.player.data.gelina_registered = 1;",
+                            "q.player.save_data();",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:rare_candy 1');",
+                            "q.dialogue.set_page('post_register');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "lone_tree_register",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hello ' + q.player.username + '! Welcome to Lone Tree!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Register Location",
+                        "isSelectable": "q.player.data.lone_tree_registered == 0",
+                        "value": "register",
+                        "action": [
+                            "q.player.data.lone_tree_registered = 1;",
+                            "q.player.save_data();",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:rare_candy 1');",
+                            "q.dialogue.set_page('post_register');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "umigawa_register",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hello ' + q.player.username + '! Welcome to Umigawa!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Register Location",
+                        "isSelectable": "q.player.data.umigawa_registered == 0",
+                        "value": "register",
+                        "action": [
+                            "q.player.data.umigawa_registered = 1;",
+                            "q.player.save_data();",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:rare_candy 1');",
+                            "q.dialogue.set_page('post_register');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "caligo_register",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hello ' + q.player.username + '! Welcome to Caligo!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Register Location",
+                        "isSelectable": "q.player.data.caligo_registered == 0",
+                        "value": "register",
+                        "action": [
+                            "q.player.data.caligo_registered = 1;",
+                            "q.player.save_data();",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:rare_candy 1');",
+                            "q.dialogue.set_page('post_register');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "rimal_register",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hello ' + q.player.username + '! Welcome to Rimal Village!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Register Location",
+                        "isSelectable": "q.player.data.rimal_registered == 0",
+                        "value": "register",
+                        "action": [
+                            "q.player.data.rimal_registered = 1;",
+                            "q.player.save_data();",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:rare_candy 1');",
+                            "q.dialogue.set_page('post_register');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "hana_village_register",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hello ' + q.player.username + '! Welcome to Hana Village!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Register Location",
+                        "isSelectable": "q.player.data.hana_village_registered == 0",
+                        "value": "register",
+                        "action": [
+                            "q.player.data.hana_village_registered = 1;",
+                            "q.player.save_data();",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:rare_candy 1');",
+                            "q.dialogue.set_page('post_register');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "seikatsu_register",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hello ' + q.player.username + '! Welcome to Seikatsu!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Register Location",
+                        "isSelectable": "q.player.data.seikatsu_registered == 0",
+                        "value": "register",
+                        "action": [
+                            "q.player.data.seikatsu_registered = 1;",
+                            "q.player.save_data();",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:rare_candy 1');",
+                            "q.dialogue.set_page('post_register');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "hwa_village_register",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hello ' + q.player.username + '! Welcome to Hwa Village!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Register Location",
+                        "isSelectable": "q.player.data.hwa_village_registered == 0",
+                        "value": "register",
+                        "action": [
+                            "q.player.data.hwa_village_registered = 1;",
+                            "q.player.save_data();",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:rare_candy 1');",
+                            "q.dialogue.set_page('post_register');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "marino_register",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hello ' + q.player.username + '! Welcome to Marino!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Register Location",
+                        "isSelectable": "q.player.data.marino_registered == 0",
+                        "value": "register",
+                        "action": [
+                            "q.player.data.marino_registered = 1;",
+                            "q.player.save_data();",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:rare_candy 1');",
+                            "q.dialogue.set_page('post_register');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "odyssey_register",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hello ' + q.player.username + '! Welcome to Odyssey City!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Register Location",
+                        "isSelectable": "q.player.data.odyssey_registered == 0",
+                        "value": "register",
+                        "action": [
+                            "q.player.data.odyssey_registered = 1;",
+                            "q.player.save_data();",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:rare_candy 1');",
+                            "q.dialogue.set_page('post_register');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "safari_zone_register",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hello ' + q.player.username + '! Welcome to the Safari Zone!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Register Location",
+                        "isSelectable": "q.player.data.safari_zone_registered == 0",
+                        "value": "register",
+                        "action": [
+                            "q.player.data.safari_zone_registered = 1;",
+                            "q.player.save_data();",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:rare_candy 1');",
+                            "q.dialogue.set_page('post_register');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "post_register",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Thanks for registering, ' + q.player.username + '!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "&cClose",
+                        "value": "back",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "okbye",
+            "speaker": "npc",
+            "lines": [
+                "Alright, see you later!"
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}
