@@ -14,6 +14,7 @@
         "q.npc.config.location == 'marino' && q.player.data.marino_registered == 0 ? q.dialogue.set_page('marino_register');",
         "q.npc.config.location == 'odyssey_city' && q.player.data.odyssey_city_registered == 0 ? q.dialogue.set_page('odyssey_city_register');",
         "q.npc.config.location == 'hwa_village' && q.player.data.hwa_village_registered == 0 ? q.dialogue.set_page('hwa_village_register');",
+        "q.npc.config.location == 'newtown' && q.player.data.newtown_registered == 0 ? q.dialogue.set_page('newtown_register');",
         "q.npc.config.location == 'safari_zone' && q.player.data.safari_zone_registered == 0 ? q.dialogue.set_page('safari_zone_register');"
     ],
     "speakers": {
@@ -59,7 +60,7 @@
             "input": {
                 "type": "option",
                 "vertical": true,
-                "isSelectable": "q.player.data.unity_registered == 0",
+                "isSelectable": "q.player.data.unity_registered == 0 && q.player.has_inventory_space == 1",
                 "options": [
                     {
                         "text": "Register Location",
@@ -89,7 +90,7 @@
                 "options": [
                     {
                         "text": "Register Location",
-                        "isSelectable": "q.player.data.fumia_registered == 0",
+                        "isSelectable": "q.player.data.fumia_registered == 0 && q.player.has_inventory_space == 1",
                         "value": "register",
                         "action": [
                             "q.player.data.fumia_registered = 1;",
@@ -116,7 +117,7 @@
                 "options": [
                     {
                         "text": "Register Location",
-                        "isSelectable": "q.player.data.la_relance_registered == 0",
+                        "isSelectable": "q.player.data.la_relance_registered == 0 && q.player.has_inventory_space == 1",
                         "value": "register",
                         "action": [
                             "q.player.data.la_relance_registered = 1;",
@@ -143,7 +144,7 @@
                 "options": [
                     {
                         "text": "Register Location",
-                        "isSelectable": "q.player.data.gelina_registered == 0",
+                        "isSelectable": "q.player.data.gelina_registered == 0 && q.player.has_inventory_space == 1",
                         "value": "register",
                         "action": [
                             "q.player.data.gelina_registered = 1;",
@@ -170,7 +171,7 @@
                 "options": [
                     {
                         "text": "Register Location",
-                        "isSelectable": "q.player.data.lone_tree_registered == 0",
+                        "isSelectable": "q.player.data.lone_tree_registered == 0 && q.player.has_inventory_space == 1",
                         "value": "register",
                         "action": [
                             "q.player.data.lone_tree_registered = 1;",
@@ -197,7 +198,7 @@
                 "options": [
                     {
                         "text": "Register Location",
-                        "isSelectable": "q.player.data.umigawa_registered == 0",
+                        "isSelectable": "q.player.data.umigawa_registered == 0 && q.player.has_inventory_space == 1",
                         "value": "register",
                         "action": [
                             "q.player.data.umigawa_registered = 1;",
@@ -224,7 +225,7 @@
                 "options": [
                     {
                         "text": "Register Location",
-                        "isSelectable": "q.player.data.caligo_registered == 0",
+                        "isSelectable": "q.player.data.caligo_registered == 0 && q.player.has_inventory_space == 1",
                         "value": "register",
                         "action": [
                             "q.player.data.caligo_registered = 1;",
@@ -251,7 +252,7 @@
                 "options": [
                     {
                         "text": "Register Location",
-                        "isSelectable": "q.player.data.rimal_registered == 0",
+                        "isSelectable": "q.player.data.rimal_registered == 0 && q.player.has_inventory_space == 1",
                         "value": "register",
                         "action": [
                             "q.player.data.rimal_registered = 1;",
@@ -278,7 +279,7 @@
                 "options": [
                     {
                         "text": "Register Location",
-                        "isSelectable": "q.player.data.hana_village_registered == 0",
+                        "isSelectable": "q.player.data.hana_village_registered == 0 && q.player.has_inventory_space == 1",
                         "value": "register",
                         "action": [
                             "q.player.data.hana_village_registered = 1;",
@@ -305,7 +306,7 @@
                 "options": [
                     {
                         "text": "Register Location",
-                        "isSelectable": "q.player.data.seikatsu_registered == 0",
+                        "isSelectable": "q.player.data.seikatsu_registered == 0 && q.player.has_inventory_space == 1",
                         "value": "register",
                         "action": [
                             "q.player.data.seikatsu_registered = 1;",
@@ -332,7 +333,7 @@
                 "options": [
                     {
                         "text": "Register Location",
-                        "isSelectable": "q.player.data.hwa_village_registered == 0",
+                        "isSelectable": "q.player.data.hwa_village_registered == 0 && q.player.has_inventory_space == 1",
                         "value": "register",
                         "action": [
                             "q.player.data.hwa_village_registered = 1;",
@@ -359,7 +360,7 @@
                 "options": [
                     {
                         "text": "Register Location",
-                        "isSelectable": "q.player.data.marino_registered == 0",
+                        "isSelectable": "q.player.data.marino_registered == 0 && q.player.has_inventory_space == 1",
                         "value": "register",
                         "action": [
                             "q.player.data.marino_registered = 1;",
@@ -372,7 +373,7 @@
             }
         },
         {
-            "id": "odyssey_register",
+            "id": "odyssey_city_register",
             "speaker": "npc",
             "lines": [
                 {
@@ -386,7 +387,7 @@
                 "options": [
                     {
                         "text": "Register Location",
-                        "isSelectable": "q.player.data.odyssey_registered == 0",
+                        "isSelectable": "q.player.data.odyssey_registered == 0 && q.player.has_inventory_space == 1",
                         "value": "register",
                         "action": [
                             "q.player.data.odyssey_registered = 1;",
@@ -413,10 +414,37 @@
                 "options": [
                     {
                         "text": "Register Location",
-                        "isSelectable": "q.player.data.safari_zone_registered == 0",
+                        "isSelectable": "q.player.data.safari_zone_registered == 0 && q.player.has_inventory_space == 1",
                         "value": "register",
                         "action": [
                             "q.player.data.safari_zone_registered = 1;",
+                            "q.player.save_data();",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:rare_candy 1');",
+                            "q.dialogue.set_page('post_register');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "newtown_register",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hello ' + q.player.username + '! Welcome to Newtown!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Register Location",
+                        "isSelectable": "q.player.data.newtown_registered == 0 && q.player.has_inventory_space == 1",
+                        "value": "register",
+                        "action": [
+                            "q.player.data.newtown_registered = 1;",
                             "q.player.save_data();",
                             "q.run_command('give ' + q.player.username + ' cobblemon:rare_candy 1');",
                             "q.dialogue.set_page('post_register');"
@@ -439,7 +467,7 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": "&cClose",
+                        "text": "Close",
                         "value": "back",
                         "action": [
                             "q.dialogue.close();"

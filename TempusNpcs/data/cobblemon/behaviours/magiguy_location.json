@@ -1,0 +1,23 @@
+{
+    "name": "Magiguy Location Config",
+    "description": "Configures the Magiguy NPC's location registration dialogue.",
+    "entityType": "cobblemon:npc",
+    "undo": [
+    ],
+    "configurations": [
+        {
+            "type": "script",
+            "variables": [
+                {
+                    "variableName": "location",
+                    "displayName": "Location",
+                    "description": "The location for the NPC (Required)",
+                    "type": "TEXT",
+                    "defaultValue": "unity"
+                }
+            ],
+            "script": [
+            ]
+        }
+    ]
+}
