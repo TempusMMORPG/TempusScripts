@@ -1,0 +1,25 @@
+{
+  "name": "Mail Locker",
+  "description": "A behaviour that opens the Mail Locker when interacted with.",
+  "entityType": "cobblemon:npc",
+  "undo": [
+    "q.entity.unset_interaction();"
+  ],
+  "configurations": [
+    {
+      "type": "script",
+      "variables": [
+        {
+          "variableName": "locker_enabled",
+          "displayName": "Mail Locker Enabled",
+          "description": "Whether the mail locker is enabled",
+          "type": "BOOLEAN",
+          "defaultValue": "false"
+        }
+      ],
+      "script": [
+        "q.entity.set_script_interaction('cobblemon:mail_locker')"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+q.npc.config.locker_enabled ? q.player.run_command('mail locker');
