@@ -1,1 +1,1 @@
-q.npc.config.locker_enabled ? q.player.run_command('mail locker');
+q.npc.config.locker_enabled == true ? {q.player.run_command('mail locker');} : {q.player.tell('§cThe mail locker is currently disabled. Come back later!');};
