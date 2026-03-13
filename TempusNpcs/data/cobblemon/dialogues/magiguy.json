@@ -46,7 +46,19 @@
                     "expression": "'Hello ' + q.player.username + '!';"
                 }
             ],
-            "input": "q.dialogue.close();"
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "§aVenture Quests",
+                        "value": "venture",
+                        "action": [
+                            "q.player.run_command('venture start');"
+                        ]
+                    }
+                ]
+            }
         },
         {
             "id": "unity_register",
