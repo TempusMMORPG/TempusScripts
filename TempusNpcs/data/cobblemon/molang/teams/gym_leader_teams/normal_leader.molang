@@ -1,31 +1,66 @@
-t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true pokeball=ultra_ball';
+t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 uncatchable=true friendship=255 pokeball=ultra_ball';
 
 t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
 
-t.data == 'EASY' ? {
-    q.party.add_by_properties('minccino moves=sing,swift,encore,charm nature=relaxed held_item=cobblemon:sitrus_berry ability=technician special_attack_ev=64 speed_ev=64 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('porygon moves=shockwave,psybeam,swift,icywind nature=lax held_item=cobblemon:sitrus_berry ability=trace hp_ev=64 special_attack_ev=64 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('ditto moves=transform nature=naughty held_item=cobblemon:sitrus_berry ability=limber hp_ev=64 speed_ev=64 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('aipom moves=trailblaze,facade,aerialace,thief nature=naughty held_item=cobblemon:silk_scarf ability=pickup attack_ev=80 speed_ev=80 level=' + (q.player.party.highest_level + 1) + t.constants);
+t.data == 'SPLITONE' && q.player.data.hard_mode ? {
+    q.party.add_by_properties('natu moves=reflect,lightscreen,aircutter,roost nature=calm held_item=cobblemon:light_clay ability=magicbounce hp_ev=252 special_defence_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('gumshoos moves=firefang,thunderfang,icefang,bite nature=adamant held_item=cobblemon:expert_belt ability=stongjaw hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('ditto moves=transform nature=lonely held_item=cobblemon:choice_scarf ability=imposter hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('greavard moves=headbutt,bite,shadowsneak,thunderfang nature=impish held_item=cobblemon:leftovers ability=fluffy hp_ev=252 defence_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('aipom tera_type=normal moves=fakeout,tailslap,thief,poweruppunch nature=jolly held_item=cobblemon:life_orb ability=skilllink attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('porygon moves=psybeam,shockwave,icywind,recover nature=quiet held_item=cobblemon:eviolite ability=analytic hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
     return 1;
 };
 
-t.data == 'MEDIUM' ? {
-    q.party.add_by_properties('cinccino moves=bulletseed,rockblast,tailslap,tidyup nature=naughty held_item=cobblemon:expert_belt ability=skilllink attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('porygon2 moves=icebeam,triattack,recover,psychic nature=mild held_item=cobblemon:chople_berry ability=trace hp_ev=128 special_attack_ev=128 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('kangaskhan moves=fakeout,doubleedge,earthquake,drainpunch nature=brave held_item=cobblemon:silk_scarf ability=scrappy hp_ev=128 attack_ev=128 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('oranguru moves=psyshock,energyball,shadowball,thunderbolt nature=rash held_item=cobblemon:wise_glasses ability=innerfocus hp_ev=128 special_attack_ev=128 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('ambipom moves=fakeout,tripleaxel,tailslap,knockoff nature=jolly held_item=cobblemon:loaded_dice ability=technician attack_ev=160 speed_ev=160 level=' + (q.player.party.highest_level + 1) + t.constants);
+t.data == 'SPLITONE' ? {
+    q.party.add_by_properties('minccino moves=charm,sing,echoedvoice,echoedvoice nature=lonely held_item=cobblemon:sitrus_berry ability=technician level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('porygon moves=thundershock,psybeam,tackle,psybeam nature=hardy held_item=cobblemon:sitrus_berry ability=trace hp_ev=80 special_attack_ev=80 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('aipom moves=furyswipes,scratch,astonish,tickle nature=quiet held_item=cobblemon:sitrus_berry ability=pickup level=' + (q.player.party.highest_level) + t.constants); 
     return 1;
 };
 
-t.data == 'HARD' ? {
-    q.party.add_by_properties('cinccino moves=bulletseed,rockblast,tailslap,tripleaxel nature=jolly held_item=cobblemon:life_orb ability=skilllink attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('porygon2 moves=icebeam,recover,shadowball,psychic nature=modest held_item=cobblemon:eviolite ability=trace hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('ditto moves=transform nature=lonely held_item=cobblemon:choice_scarf ability=imposter hp_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('oranguru moves=psyshock,shadowball,energyball,thunderbolt nature=modest held_item=cobblemon:assault_vest ability=innerfocus hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('kangaskhan mega_evolution=mega moves=fakeout,bodyslam,poweruppunch,crunch nature=jolly held_item=mega_showdown:kangaskhanite ability=parentalbond attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('ambipom moves=fakeout,tripleaxel,tailslap,knockoff nature=jolly held_item=cobblemon:loaded_dice ability=technician attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level + 1) + t.constants);
+t.data == 'SPLITTWO' ? {
+    q.party.add_by_properties('minccino moves=knockoff,facade,bulletseed,trailblaze nature=hasty held_item=cobblemon:silk_scarf ability=technician attack_ev=80 speed_ev=80 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('porygon moves=psybeam,chargebeam,triattack,recover nature=quiet held_item=cobblemon:sitrus_berry ability=download hp_ev=120 special_attack_ev=120 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('ditto moves=transform nature=lonely held_item=cobblemon:quick_powder ability=limber hp_ev=80 attack_ev=80 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('aipom moves=aerialace,furyswipes,lowsweep,thief nature=naughty held_item=cobblemon:expert_belt ability=technician level=' + (q.player.party.highest_level) + t.constants); 
+    return 1;
+};
+
+t.data == 'SPLITTHREE' ? {
+    q.party.add_by_properties('cinccino moves=encore,tailslap,bulletseed,sing nature=hasty held_item=cobblemon:sitrus_berry ability=technician attack_ev=120 speed_ev=120 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('porygon2 moves=discharge,recover,triattack,psybeam nature=quiet held_item=cobblemon:eviolite ability=download hp_ev=160 special_attack_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('ditto moves=transform nature=lonely held_item=cobblemon:quick_powder ability=limber hp_ev=120 attack_ev=120 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('ambipom moves=doublehit,fakeout,thief,uturn nature=naughty held_item=cobblemon:silk_scarf ability=technician attack_ev=120 speed_ev=120 level=' + (q.player.party.highest_level) + t.constants); 
+    return 1;
+};
+
+t.data == 'SPLITFOUR' ? {
+    q.party.add_by_properties('cinccino moves=bulletseed,tailslap,encore,tidyup nature=jolly held_item=cobblemon:focus_sash ability=skilllink attack_ev=160 speed_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('ditto moves=transform nature=lonely held_item=cobblemon:choice_scarf ability=imposter hp_ev=160 attack_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('porygon2 moves=recover,icebeam,toxic,teleport nature=impish held_item=cobblemon:eviolite ability=trace hp_ev=180 defence_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('oranguru moves=psychic,energyball,thunderbolt,shadowball nature=quiet held_item=cobblemon:expert_belt ability=innerfocus hp_ev=160 special_attack_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('ambipom moves=doublehit,fakeout,thief,uturn nature=jolly held_item=cobblemon:silk_scarf ability=technician attack_ev=160 speed_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    return 1;
+};
+
+t.data == 'SPLITFIVE' ? {
+    q.party.add_by_properties('cinccino moves=tripleaxel,encore,tailslap,tidyup nature=jolly held_item=cobblemon:focus_sash ability=skilllink attack_ev=180 speed_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('ditto moves=transfrom nature=lonely held_item=cobblemon:choice_scarf ability=imposter hp_ev=180 attack_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('kangaskhan moves=fakeout,doubleedge,suckerpunch,earthquake nature=adamant held_item=cobblemon:life_orb ability=scrappy hp_ev=180 attack_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('porygon2 moves=recover,toxic,teleport,icebeam nature=bold held_item=cobblemon:eviolite ability=trace hp_ev=220 defence_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('oranguru moves=psychic,thunderbolt,shadowball,nastyplot nature=modest held_item=cobblemon:quick_claw ability=innerfocus hp_ev=180 special_attack_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('ambipom moves=doublehit,fakeout,thief,uturn nature=jolly held_item=cobblemon:silk_scarf ability=technician attack_ev=180 speed_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    return 1;
+};
+
+t.data == 'SPLITSIX' ? {
+    q.party.add_by_properties('cinccino moves=tripleaxel,encore,tailslap,tidyup nature=jolly held_item=cobblemon:focus_sash ability=skilllink attack_ev=220 speed_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('ditto moves=transfrom nature=lonely held_item=cobblemon:choice_scarf ability=imposter hp_ev=220 attack_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('porygon2 moves=icebeam,toxic,recover,teleport nature=bold held_item=cobblemon:eviolite hp_ev=252 defence_ev=252 ability=trace level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('kangaskhan moves=return,suckerpunch,poweruppunch,crunch nature=jolly held_item=mega_showdown:kangaskhanite ability=scrappy attack_ev=220 speed_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('oranguru moves=psychic,thunderbolt,shadowball,nastyplot nature=modest held_item=cobblemon:quick_claw ability=innerfocus hp_ev=220 special_attack_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('ambipom moves=doublehit,fakeout,thief,uturn nature=jolly held_item=cobblemon:silk_scarf ability=technician level=' + (q.player.party.highest_level) + t.constants); 
     return 1;
 };
 

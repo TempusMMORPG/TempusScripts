@@ -2,30 +2,55 @@ t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special
 
 t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
 
-t.data == 'EASY' ? {
-    q.party.add_by_properties('torkoal moves=flamewheel,rapidspin,clearsmog,withdraw nature=hardy held_item=cobblemon:sitrus_berry ability=whitesmoke hp_ev=52 special_defence_ev=52 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('slugma moves=ember,clearsmog,yawn,harden nature=serious held_item=cobblemon:sitrus_berry ability=flamebody special_attack_ev=52 speed_ev=52 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('pignite moves=flamecharge,armthrust,rollout,tailwhip nature=hardy held_item=cobblemon:sitrus_berry ability=blaze hp_ev=52 attack_ev=52 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('houndour moves=incinerate,smog,roar,snarl nature=mild held_item=cobblemon:charcoal_stick ability=unnerve special_attack_ev=80 speed_ev=80 level=' + (q.player.party.highest_level + 1) + t.constants); 
+t.data == 'SPLITONE' ? {
+    q.party.add_by_properties('slugma moves=clearsmog,rockthrow,yawn,ember nature=mild held_item=cobblemon:passho_berry ability=flamebody level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('torkoal moves=flamewheel,clearsmog,smog,withdraw nature=gentle held_item=cobblemon:sitrus_berry ability=whitesmoke level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('houndour moves=incinerate,bite,smog,roar nature=rash held_item=cobblemon:sitrus_berry ability=flashfire special_attack_ev=80 speed_ev=80 level=' + (q.player.party.highest_level) + t.constants); 
     return 1;
 };
 
-t.data == 'MEDIUM' ? {
-    q.party.add_by_properties('torkoal moves=yawn,lavaplume,stealthrock,bodypress nature=lax held_item=cobblemon:eject_button ability=drought hp_ev=128 defence_ev=128 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('magcargo moves=recover,flamethrower,powergem,scorchingsands nature=mild held_item=cobblemon:shuca_berry ability=flamebody attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('emboar moves=heatcrash,hammerarm,trailblaze,wildcharge nature=lonely held_item=cobblemon:charcoal_stick ability=blaze attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level) + t.constants);  
-    q.party.add_by_properties('scovillain moves=growth,flamethrower,gigadrain,solarbeam nature=naive held_item=cobblemon:miracle_seed ability=chlorophyll special_attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('houndoom moves=flamethrower,darkpulse,shadowball,sludgebomb nature=timid held_item=cobblemon:choice_specs ability=unnerve attack_ev=160 speed_ev=160 level=' + (q.player.party.highest_level + 1) + t.constants); 
+t.data == 'SPLITTWO' ? {
+    q.party.add_by_properties('slugma moves=incinerate,rockslide,clearsmog,yawn nature=mild held_item=cobblemon:passho_berry ability=flamebody hp_ev=80 special_attack_ev=80 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('torkoal moves=lavaplume,clearsmog,withdraw,protect nature=gentle held_item=cobblemon:sitrus_berry hp_ev=80 special_defence_ev=80 ability=whitesmoke level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('tauros moves=flamecharge,doublekick,headbutt,workup nature=hasty held_item=cobblemon:black_belt ability=intimidate attack_ev=80 speed_ev=80 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('houndoom moves=nastyplot,incinerate,snarl,mudshot nature=rash held_item=cobblemon:expert_belt ability=flashfire special_attack_ev=120 speed_ev=120 level=' + (q.player.party.highest_level) + t.constants); 
     return 1;
 };
 
-t.data == 'HARD' ? {
-    q.party.add_by_properties('torkoal moves=stealthrock,overheat,overheat,explosion nature=sassy held_item=cobblemon:eject_pack ability=drought hp_ev=252 special_defence_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('rotom appliance=heat moves=overheat,voltswitch,painsplit,sunnyday nature=modest held_item=cobblemon:white_herb ability=levitate special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('magcargo moves=shellsmash,flamethrower,powergem,scorchingsands nature=timid held_item=cobblemon:focus_sash ability=weakarmor special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('emboar moves=flareblitz,wildcharge,closecombat,headsmash nature=jolly held_item=cobblemon:choice_band ability=reckless attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('scovillain moves=growth,flamethrower,solarbeam,stompingtantrum nature=naive held_item=cobblemon:life_orb ability=chlorophyll special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('houndoom mega_evolution=mega moves=flamethrower,darkpulse,solarbeam,sludgebomb nature=timid held_item=mega_showdown:houndoominite ability=solarpower special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level + 1) + t.constants); 
+t.data == 'SPLITTHREE' ? {
+    q.party.add_by_properties('torkoal moves=lavaplume,bodyslam,willowisp,protect nature=gentle held_item=cobblemon:heat_rock ability=drought hp_ev=120 special_defence_ev=120 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('magcargo moves=ancientpower,lavaplume,scorchingsands,shellsmash nature=mild held_item=cobblemon:white_herb ability=flamebody special_attack_ev=120 speed_ev=120 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('tauros moves=ragingbull,doublekick,bulkup,rockslide nature=hasty held_item=cobblemon:sitrus_berry ability=intimidate level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('houndoom moves=nastyplot,incinerate,snarl,mudshot nature=rash held_item=cobblemon:life_orb ability=flashfire special_attack_ev=160 speed_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    return 1;
+};
+
+t.data == 'SPLITFOUR' ? {
+    q.party.add_by_properties('torkoal moves=lavaplume,stealthrock,yawn,rapidspin nature=calm held_item=cobblemon:heat_rock ability=drought hp_ev=160 special_defence_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('magcargo moves=flamethrower,powergem,shellsmash,earthpower nature=timid held_item=cobblemon:white_herb ability=weakarmor special_attack_ev=160 speed_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('tauros moves=ragingbull,rockslide,bulkup,reversal nature=jolly held_item=cobblemon:sitrus_berry ability=cudchew attack_ev=160 speed_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('scovillain moves=flamethrower,gigadrain,growth,stompingtantrum nature=naive held_item=cobblemon:focus_sash ability=chlorophyll special_attack_ev=160 speed_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('houndoom moves=flamethrower,shadowball,sludgebomb,darkpulse nature=timid held_item=cobblemon:choice_specs ability=unnerve special_attack_ev=180 speed_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    return 1;
+};
+
+t.data == 'SPLITFIVE' ? {
+    q.party.add_by_properties('torkoal moves=lavaplume,stealthrock,rapidspin,yawn nature=calm held_item=cobblemon:heat_rock ability=drought hp_ev=180 special_defence_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('magcargo moves=shellsmash,flamethrower,powergem,earthpower nature=timid held_item=cobblemon:white_herb ability=weakarmor special_attack_ev=180 speed_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('tauros moves=closecombat,flareblitz,earthquake,wildcharge nature=jolly held_item=cobblemon:choice_band ability=intimidate attack_ev=180 speed_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('rotom moves=voltswitch,thunderbolt,overheat,painsplit nature= held_item=cobblemon:passho_berry ability=levitate hp_ev=180 special_attack_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('scovillain moves=solarbeam,fireblast,growth,stompingtantrum nature=naive held_item=cobblemon:focus_sash ability=chlorophyll special_attack_ev=180 speed_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('houndoom moves=fireblast,darkpulse,sludgebomb,overheat nature=timid held_item=cobblemon:choice_specs ability=unnerve special_attack_ev=220 speed_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    return 1;
+};
+
+t.data == 'SPLITSIX' ? {
+    q.party.add_by_properties('torkoal moves=lavaplume,stealthrock,rapidspin,yawn nature=calm held_item=cobblemon:heat_rock ability=drought hp_ev=220 special_defence_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('rotom moves=overheat,volswitch,painsplit,thunderbolt nature=modest held_item=cobblemon:passho_berry ability=levitate hp_ev=220 special_attack_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('tauros moves=closecombat,flareblitz,earthquake,wildcharge nature=jolly held_item=cobblemon:choice_band ability=intimidate attack_ev=220 speed_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('scovillain moves=solarbeam,fireblast,stompingtantrum,growth nature=naive held_item=cobblemon:focus_sash ability=chlorophyll special_attack_ev=220 speed_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('magcargo moves=shellsmash,flamethrower,powergem,earthpower nature=timid held_item=cobblemon:white_herb ability=weakarmor special_attack_ev=220 speed_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('houndoom moves=fireblast,darkpulse,sludgebomb,nastyplot nature=timid held_item=mega_showdown:houndoominite ability=flashfire special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
     return 1;
 };
 
