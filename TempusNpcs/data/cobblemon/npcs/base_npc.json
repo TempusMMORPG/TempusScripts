@@ -6,6 +6,7 @@
   "isInvulnerable": true,
   "isLeashable": false,
   "allowProjectileHits": false,
+  "battleAIConfigID": "smarttrainers:test",
   "names": [
     "Tempus Tester"
   ],
