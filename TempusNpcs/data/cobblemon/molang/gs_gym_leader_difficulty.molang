@@ -2,16 +2,28 @@
 
 t.stage = q.player.data.gym_stage;
 
-t.stage < 6 ? {
-    return 'EASY';
+t.stage < 3 ? {
+    return 'SPLITONE';
 };
 
-t.stage < 12 && t.stage > 5 ? {
-    return 'MEDIUM';
+t.stage < 6 && t.stage > 2 ? {
+    return 'SPLITTWO';
 };
 
-t.stage < 18 && t.stage > 11 ? {
-    return 'HARD';
+t.stage < 9 && t.stage > 5 ? {
+    return 'SPLITTHREE';
+};
+
+t.stage < 12 && t.stage > 8 ? {
+    return 'SPLITFOUR';
+};
+
+t.stage < 15 && t.stage > 11 ? {
+    return 'SPLITFIVE';
+};
+
+t.stage < 18 && t.stage > 14 ? {
+    return 'SPLITSIX';
 };
 
 return 'UNKNOWN';
