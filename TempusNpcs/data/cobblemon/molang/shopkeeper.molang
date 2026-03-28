@@ -1,1 +1,1 @@
-q.run_command('shop other ' + c.player.username + ' ' + q.npc.config.shop_name + ' false');
+q.run_command('shops open ' + q.npc.config.shop_name + ' ' + c.player.username);
