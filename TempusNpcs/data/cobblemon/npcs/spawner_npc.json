@@ -15,7 +15,7 @@
                 "cobblemon:core",
                 "cobblemon:spawner_npc",
                 "cobblemon:resource_texture",
-                "cobblemon:name_tag"
+                "cobblemon:name_tag_display"
             ]
         }
     ]
