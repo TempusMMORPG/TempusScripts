@@ -2,30 +2,55 @@ t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special
 
 t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
 
-t.data == 'EASY' ? {
-    q.party.add_by_properties('bronzor moves=hypnosis,payback,confusion,gyroball nature=docile held_item=cobblemon:sitrus_berry ability=levitate hp_ev=64 defence_ev=64 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('beldum moves=tackle,headbutt,takedown,zenheadbutt nature=lax held_item=cobblemon:sitrus_berry ability=clearbody attack_ev=64 speed_ev=64 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('dottler moves=confusion,lightscreen,reflect,strugglebug nature=brave held_item=cobblemon:sitrus_berry ability=swarm hp_ev=64 special_attack_ev=64 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('elgyem moves=psybeam,headbutt,chargebeam,thunderwave nature=quiet held_item=cobblemon:twisted_spoon ability=synchronize hp_ev=80 special_attack_ev=80 level=' + (q.player.party.highest_level + 1) + t.constants);
+t.data == 'SPLITONE' ? {
+    q.party.add_by_properties('dottler moves=reflect,lightscreen,strugglebug,confusion nature=relaxed held_item=cobblemon:sitrus_berry ability=swarm level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('metang moves=zenheadbutt,metalclaw,bulletpunch nature=brave held_item=cobblemon:sitrus_berry ability=clearbody level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('elgyem moves=psybeam,psybeam,teleport,growl nature=rash held_item=cobblemon:sitrus_berry ability=synchronize hp_ev=80 special_attack_ev=80 level=' + (q.player.party.highest_level) + t.constants); 
     return 1;
 };
 
-t.data == 'MEDIUM' ? {
-    q.party.add_by_properties('bronzong moves=reflect,lightscreen,explosion,psychic nature=timid held_item=cobblemon:light_clay ability=levitate hp_ev=128 attack_ev=128 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('orbeetle moves=psychic,bugbuzz,bodypress,energyball nature=mild held_item=cobblemon:colbur_berry ability=swarm special_attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('lunatone moves=powergem,psychic,earthpower,moonblast nature=rash held_item=cobblemon:expert_belt ability=levitate special_attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('metang moves=ironhead,zenheadbutt,bulletpunch,hammerarm nature=lonely held_item=cobblemon:muscle_band ability=clearbody attacK_ev=128 speed_ev=128 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('beheeyem moves=psychic,thunderbolt,shadowball,energyball nature=quiet held_item=cobblemon:choice_specs ability=analytic hp_ev=160 special_attack_ev=160 level=' + (q.player.party.highest_level + 1) + t.constants);
+t.data == 'SPLITTWO' ? {
+    q.party.add_by_properties('elgyem moves=psybeam,teleport,thunderwave,round nature=rash held_item=cobblemon:sitrus_berry ability=synchronize hp_ev=120 special_attack_ev=120 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('orbeetle moves=psybeam,hypnosis,bugbuzz,confuseray nature=relaxed held_item=cobblemon:colbur_berry ability=swarm hp_ev=80 special_attack_ev=80 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('metang moves=metalclaw,zenheadbutt,bulletpunch,honeclaws nature=brave held_item=cobblemon:metal_coat ability=clearbody attack_ev=80 speed_ev=80 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('lunatone moves=psyshock,rockslide,hypnosis,moonlight nature=mild held_item=cobblemon:wide_lens ability=levitate hp_ev=80 special_attack_ev=80 level=' + (q.player.party.highest_level) + t.constants); 
     return 1;
 };
 
-t.data == 'HARD' ? {
-    q.party.add_by_properties('bronzong moves=reflect,lightscreen,explosion,gyroball nature=sassy held_item=cobblemon:light_clay ability=levitate hp_ev=252 special_defence_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('orbeetle moves=psychic,bugbuzz,bodypress,energyball nature=modest held_item=cobblemon:colbur_berry ability=swarm special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('lunatone moves=meteorbeam,psyshock,earthpower,moonblast nature=timid held_item=cobblemon:power_herb ability=levitate special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('starmie moves=hydropump,psychic,icebeam,thunderbolt nature=timid held_item=cobblemon:life_orb ability=analytic special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('metagross mega_evolution=mega moves=bulletpunch,psychicfangs,meteormash,knockoff nature=jolly held_item=mega_showdown:metagrossite ability=toughclaws attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);
-    q.party.add_by_properties('beheeyem moves=psychic,thunderbolt,shadowball,energyball nature=quiet held_item=cobblemon:choice_specs ability=analytic hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level + 1) + t.constants);
+t.data == 'SPLITTHREE' ? {
+    q.party.add_by_properties('orbeetle moves=hypnosis,bugbuzz,psychic,uturn nature=relaxed held_item=cobblemon:colbur_berry ability=swarm hp_ev=120 defence_ev=120 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('beheeyem moves=shadowball,psychicterrain,chargebeam,psyshock nature=rash held_item=cobblemon:twisted_spoon ability=synchronize hp_ev=160 special_attack_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('metang moves=zenheadbutt,bulletpunch,honeclaws,ironhead nature=brave held_item=cobblemon:metal_coat ability=clearbody attack_ev=120 speed_ev=120 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('lunatone moves=moonblast,psyshock,futuresight,hypnosis nature=mild held_item=cobblemon:tanga_berry ability=levitate hp_ev=120 special_attack_ev=120 level=' + (q.player.party.highest_level) + t.constants); 
+    return 1;
+};
+
+t.data == 'SPLITFOUR' ? {
+    q.party.add_by_properties('indeedee moves=expandingforce,mysticalfire,hypervoice,encore nature=bold held_item=cobblemon:terrain_extender ability=psychicsurge hp_ev=160 defence_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('lunatone moves=moonblast,powergem,psyshock,hypnosis nature=modest held_item=cobblemon:expert_belt ability=levitate special_attack_ev=160 hp_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('orbeetle moves=recover,bugbuzz,bodypress,irondefense nature=bold held_item=cobblemon:colbur_berry ability=swarm hp_ev=160 defence_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('beheeyem moves=expandingforce,energyball,signalbeam,shadowball nature=modest held_item=cobblemon:choice_specs ability=analytic hp_ev=180 special_attack_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('metagross moves=psychicfangs,heavyslam,earthquake,bulletpunch nature=jolly held_item=cobblemon:choice_band ability=clearbody attack_ev=160 speed_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    return 1;
+};
+
+t.data == 'SPLITFIVE' ? {
+    q.party.add_by_properties('indeedee moves=expandingforce,mysticalfire,hypervoice,encore nature=bold held_item=cobblemon:terrain_extender ability=psychicsurge hp_ev=180 defence_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('orbeetle moves=recover,bugbuzz,bodypress,irondefense nature=bold held_item=cobblemon:colbur_berry ability=swarm hp_ev=180 defence_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('beheeyem moves=expandingforce,signalbeam,recover,nastyplot nature=modest held_item=cobblemon:psychic_seed ability=analytic hp_ev=220 special_attack_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('sigilyph moves=airslash,heatwave,psychic,roost nature=timid held_item=cobblemon:life_orb ability=magicguard special_attack_ev=180 speed_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('lunatone moves=meteorbeam,psyshock,earthpower,rockpolish nature=modest held_item=cobblemon:power_herb ability=levitate special_attack_ev=180 speed_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('metagross moves=psychicfangs,heavyslam,earthquake,bulletpunch nature=jolly held_item=cobblemon:choice_band ability=clearbody attack_ev=180 speed_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    return 1;
+};
+
+t.data == 'SPLITSIX' ? {
+    q.party.add_by_properties('indeedee moves=expandingforce,mysticalfire,hypervoice,encore nature=bold held_item=cobblemon:terrain_extender ability=psychicsurge hp_ev=220 defence_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('orbeetle moves=recover,bugbuzz,bodypress,irondefense nature=bold held_item=cobblemon:colbur_berry ability=swarm hp_ev=220 defence_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('beheeyem moves=expandingforce,signalbeam,nastyplot,recover nature=modest held_item=cobblemon:leftovers ability=analytic hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('sigilyph moves=airslash,heatwave,psychic,roost nature=timid held_item=cobblemon:life_orb ability=magicguard special_attack_ev=220 speed_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('lunatone moves=meteorbeam,psyshock,earthpower,rockpolish nature=modest held_item=cobblemon:power_herb ability=levitate special_attack_ev=220 speed_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('metagross moves=psychicfangs,heavyslam,earthquake,bulletpunch nature=jolly held_item=mega_showdown:metagrossite ability=clearbody attack_ev=220 speed_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
     return 1;
 };
 

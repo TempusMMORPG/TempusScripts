@@ -2,30 +2,55 @@ t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special
 
 t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
 
-t.data == 'EASY' ? {
-    q.party.add_by_properties('drifloon moves=aircutter,nightshade,thunderwave,shadowball nature=lax held_item=cobblemon:sitrus_berry ability=aftermath special_attack_ev=52 speed_ev=52 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('wingull moves=aircutter,waterpulse,supersonic,icywind nature=gentle held_item=cobblemon:sitrus_berry ability=keeneye hp_ev=52 defence=52 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('corvisquire moves=pluck,rocksmash,roost,uturn nature=impish held_item=cobblemon:sitrus_berry ability=unnerve hp_ev=52 defence=52 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('pidgeotto moves=roost,aerialace,quickattack,steelwing nature=naughty held_item=cobblemon:sharp_beak ability=keeneye attack_ev=80 speed_ev=80 level=' + (q.player.party.highest_level + 1) + t.constants); 
+t.data == 'SPLITONE' ? {
+    q.party.add_by_properties('drifloon moves=hex,payback,gust,minimize nature=quiet held_item=cobblemon:sitrus_berry ability=unburden level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('corvisquire moves=pluck,furyattack,honeclaws,powertrip nature=naughty held_item=cobblemon:sitrus_berry ability=unnerve level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('staravia moves=wingattack,quickattack,endeavor,doubleteam nature=hasty held_item=cobblemon:sitrus_berry ability=intimidate attack_ev=80 speed_ev=80 level=' + (q.player.party.highest_level) + t.constants); 
     return 1;
 };
 
-t.data == 'MEDIUM' ? {
-    q.party.add_by_properties('pelipper moves=scald,hurricane,uturn,roost nature=rash held_item=cobblemon:mystic_water ability=drizzle hp_ev=128 special_attack_ev=128 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('drifblim moves=acrobatics,willowisp,destinybond,knockoff nature=lonely held_item=cobblemon:flying_gem ability=unburden attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('charizard moves=flamethrower,scorchingsands,weatherball,hurricane nature=hasty held_item=cobblemon:passho_berry ability=blaze special_attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level) + t.constants);  
-    q.party.add_by_properties('corviknight moves=drillpeck,bodypress,roost,uturn nature=impish held_item=cobblemon:wacan_berry ability=unnerve hp_ev=128 defence_ev=128 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('pidgeot moves=doubleedge,bravebird,roost,uturn nature=jolly held_item=cobblemon:life_orb ability=keeneye attack_ev=160 speed_ev=160 level=' + (q.player.party.highest_level + 1) + t.constants); 
+t.data == 'SPLITTWO' ? {
+    q.party.add_by_properties('drifblim moves= nature= held_item=cobblemon: ability=  level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('pelipper moves= nature= held_item=cobblemon: ability= level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('corvisquire moves= nature= held_item=cobblemon: ability= level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('staravia moves= nature= held_item=cobblemon: ability= level=' + (q.player.party.highest_level) + t.constants); 
     return 1;
 };
 
-t.data == 'HARD' ? {
-    q.party.add_by_properties('pelipper moves=hurricane,scald,uturn,roost nature=bold held_item=cobblemon:damp_rock ability=drizzle hp_ev=200 defence_ev=200 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('drifblim moves=acrobatics,willowisp,destinybond,knockoff nature=adamant held_item=cobblemon:flying_gem ability=unburden attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('charizard moves=hurricane,weatherball,scorchingsands,fireblast nature=timid held_item=cobblemon:choice_specs ability=blaze special_attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('corviknight moves=bravebird,bodypress,roost,uturn nature=impish held_item=cobblemon:leftovers ability=unnerve hp_ev=200 defence_ev=200 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('dragonite moves=extremespeed,outrage,icespinner,earthquake nature=adamant held_item=cobblemon:yache_berry ability=multiscale attack_ev=200 speed_ev=200 level=' + (q.player.party.highest_level) + t.constants); 
-    q.party.add_by_properties('pidgeot mega_evolution=mega moves=roost,hurricane,heatwave,uturn nature=timid held_item=mega_showdown:pidgeotite ability=noguard special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level + 1) + t.constants); 
+t.data == 'SPLITTHREE' ? {
+    q.party.add_by_properties('drifblim moves= nature= held_item=cobblemon: ability= level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('pelipper moves= nature= held_item=cobblemon: ability= level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('corviknight moves= nature= held_item=cobblemon: ability= level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('staraptor moves= nature= held_item=cobblemon: ability= level=' + (q.player.party.highest_level) + t.constants); 
+    return 1;
+};
+
+t.data == 'SPLITFOUR' ? {
+    q.party.add_by_properties('pelipper moves= nature= held_item=cobblemon: ability= level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('drifblim moves= nature= held_item=cobblemon: ability= level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('corviknight moves= nature= held_item=cobblemon: ability= level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('charizard moves= nature= held_item=cobblemon: ability= level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('staraptor moves= nature= held_item=cobblemon: ability= level=' + (q.player.party.highest_level) + t.constants); 
+    return 1;
+};
+
+t.data == 'SPLITFIVE' ? {
+    q.party.add_by_properties('pelipper moves=weatherball,hurricane,uturn,roost nature=calm held_item=cobblemon:wacan_berry ability=drizzle hp_ev=180 special_defence_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('drifblim moves=acrobatics,destinybond,knockoff,willowisp nature=adamant held_item=cobblemon:flying_gem ability=unburden attack_ev=180 speed_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('corviknight moves=irondefense,bodypress,roost,bravebird nature=impish held_item=cobblemon:leftovers ability=mirrorarmor hp_ev=180 special_defence_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('charizard moves=hurricane,weatherball,fireblast,scorchingsands nature=timid held_item=cobblemon:life_orb ability=blaze special_attack_ev=180 speed_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('dragonite moves=scaleshot,icespinner,earthquake,extremespeed nature=adamant held_item=cobblemon:weakness_policy ability=multiscale attack_ev=180 speed_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('staraptor moves=bravebird,closecombat,doubleedge,uturn nature=jolly held_item=cobblemon:choice_band ability=reckless attack_ev=220 speed_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    return 1;
+};
+
+t.data == 'SPLITSIX' ? {
+    q.party.add_by_properties('pelipper moves=hurricane,weatherball,uturn,roost nature=calm held_item=cobblemon:wacan_berry ability=drizzle hp_ev=220 special_defence_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('dragonite moves=dragondance,icespinner,earthquake,extremespeed nature=adamant held_item=cobblemon:weakness_policy ability=multiscale attack_ev=220 speed_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('corviknight moves=irondefense,bodypress,roost,bravebird nature=impish held_item=cobblemon:leftovers ability=mirrorarmor hp_ev=220 special_defence_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('charizard moves=hurricane,weatherball,fireblast,scorchingsands nature=timid held_item=cobblemon:life_orb ability=blaze special_attack_ev=220 speed_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('drifblim moves=acrobatics,destinybond,knockoff,willowisp nature=adamant held_item=cobblemon:flying_gem ability=unburden attack_ev=220 speed_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('staraptor moves=bravebird,closecombat,quickattack,uturn nature=jolly ability=intimidate attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
     return 1;
 };
 

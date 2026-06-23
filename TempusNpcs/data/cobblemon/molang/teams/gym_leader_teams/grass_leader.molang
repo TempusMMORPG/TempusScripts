@@ -2,30 +2,55 @@ t.constants = ' hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special
 
 t.data = q.run_script('cobblemon:gs_gym_leader_difficulty');
 
-t.data == 'EASY' ? {
-    q.party.add_by_properties('lileep moves=megadrain,ancientpower,brine,acid nature=serious held_item=cobblemon:sitrus_berry ability=suctioncups hp_ev=52 special_defence_ev=52 level=' + (q.player.party.highest_level) + t.constants);  
-    q.party.add_by_properties('tangela moves=megadrain,ancientpower,knockoff,stunspore nature=hardy held_item=cobblemon:sitrus_berry ability=chlorophyll hp_ev=52 defence_ev=52 level=' + (q.player.party.highest_level) + t.constants);  
-    q.party.add_by_properties('grovyle moves=gigadrain,assurance,furycutter,quickattack nature=relaxed held_item=cobblemon:sitrus_berry ability=overgrow special_attack_ev=52 speed_ev=52 level=' + (q.player.party.highest_level) + t.constants);  
-    q.party.add_by_properties('carnivine moves=seedbomb,feintattack,naturepower,facade nature=naughty held_item=cobblemon:miracle_seed ability=levitate hp_ev=80 attack_ev=80 level=' + (q.player.party.highest_level + 1) + t.constants);  
+t.data == 'SPLITONE' ? {
+    q.party.add_by_properties('lileep moves=ancientpower,megadrain,ingrain,acid nature=mild held_item=cobblemon:sitrus_berry ability=suctioncups level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('tangela moves=vinewhip,poisonpowder,growth,megadrain nature=lax held_item=cobblemon:sitrus_berry ability=chlorophyll level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('weepinbell moves=vinewhip,sleeppowder,growth,wrap nature=lonely held_item=cobblemon:miracle_seed ability=chlorophyll hp_ev=80 attack_ev=80 level=' + (q.player.party.highest_level) + t.constants); 
     return 1;
 };
 
-t.data == 'MEDIUM' ? {
-    q.party.add_by_properties('roselia moves=toxicspikes,gigadrain,sludgebomb,extrasensory nature=hasty held_item=cobblemon:black_sludge ability=poisonpoint hp_ev=128 speed_ev=128 level=' + (q.player.party.highest_level) + t.constants);  
-    q.party.add_by_properties('tangrowth moves=gigadrain,sludgebomb,synthesis,sleeppowder nature=relaxed held_item=cobblemon:occa_berry ability=leafguard hp_ev=128 defence_ev=128 level=' + (q.player.party.highest_level) + t.constants);  
-    q.party.add_by_properties('sceptile moves=leafstorm,dragonpulse,leechseed,protect nature=naive held_item=cobblemon:miracle_seed ability=overgrow special_attack_ev=128 speed_ev=128 level=' + (q.player.party.highest_level) + t.constants);  
-    q.party.add_by_properties('cradily moves=toxic,recover,leechseed,gigadrain nature=careful held_item=cobblemon:sitrus_berry ability=suctioncups hp_ev=128 special_defence_ev=128 level=' + (q.player.party.highest_level) + t.constants);  
-    q.party.add_by_properties('carnivine moves=powerwhip,knockoff,return nature=adamant held_item=cobblemon:choice_band ability=levitate hp_ev=160 attack_ev=160 level=' + (q.player.party.highest_level + 1) + t.constants);  
+t.data == 'SPLITTWO' ? {
+    q.party.add_by_properties('lileep moves=ancientpower,megadrain,brine nature=mild held_item=cobblemon:sitrus_berry ability=suctioncups hp_ev=80 defence_ev=80 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('phantump moves=hornleech,willowisp,phantomforce,leechseed nature=brave held_item=cobblemon:spell_tag attack_ev=80 hp_ev=80 ability=naturalcure level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('tangela moves=knockoff,gigadrain,ancientpower,bodyslam nature=lax held_item=cobblemon:occa_berry ability=chlorophyll attack_ev=80 special_attack_ev=80 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('weepinbell moves=seedbomb,growth,sleeppowder,acidspray nature=lonely held_item=cobblemon:miracle_seed ability=chlorophyll hp_ev=120 attack_ev=120 level=' + (q.player.party.highest_level) + t.constants); 
     return 1;
 };
 
-t.data == 'HARD' ? {
-    q.party.add_by_properties('roserade moves=toxicspikes,sludgebomb,synthesis,gigadrain nature=timid held_item=cobblemon:black_sludge ability=poisonpoint hp_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);  
-    q.party.add_by_properties('tangrowth moves=powerwhip,earthquake,superpower,knockoff nature=adamant held_item=cobblemon:assault_vest ability=regenerator hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);  
-    q.party.add_by_properties('cradily moves=toxic,recover,leechseed,gigadrain nature=bold held_item=cobblemon:leftovers ability=stormdrain hp_ev=252 defence_ev=252 level=' + (q.player.party.highest_level) + t.constants);  
-    q.party.add_by_properties('sceptile mega_evolution=mega moves=leafstorm,focusblast,dragonpulse,substitute nature=timid held_item=mega_showdown:sceptilite ability=lightningrod special_attack_ev=252 speed_ev=252 level=' + (q.player.party.highest_level) + t.constants);  
-    q.party.add_by_properties('exeggutor moves=leafstorm,psychic,sludgebomb,sleeppowder nature=modest held_item=cobblemon:tanga_berry ability=harvest hp_ev=252 special_attack_ev=252 level=' + (q.player.party.highest_level) + t.constants);  
-    q.party.add_by_properties('carnivine moves=powerwhip,knockoff,sleeppowder,swordsdance nature=adamant held_item=cobblemon:life_orb ability=levitate hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level + 1) + t.constants);  
+t.data == 'SPLITTHREE' ? {
+    q.party.add_by_properties('cradily moves=toxic,leechseed,stealthrock,rockblast nature=lonely held_item=cobblemon:leftovers ability=suctioncups hp_ev=120 special_defence_ev=120 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('trevenant moves=hornleech,phantomforce,curse,leechseed nature=brave held_item=cobblemon:power_herb hp_ev=120 attack_ev=120 ability=naturalcure level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('tangrowth moves=gigadrain,sleeppowder,knockoff,stompingtantrum nature=lax held_item=cobblemon:occa_berry ability=chlorophyll hp_ev=120 defence_ev=120 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('victreebel moves=swordsdance,poisonjab,leafblade,strengthsap nature=lonely held_item=cobblemon:figy_berry ability=gluttony hp_ev=160 attack_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    return 1;
+};
+
+t.data == 'SPLITFOUR' ? {
+    q.party.add_by_properties('trevenant moves=woodhammer,shadowclaw,curse,trickroom nature=relaxed held_item=cobblemon:mental_herb ability=naturalcure hp_ev=160 defence_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('cradily moves=toxic,leechseed,protect,rockblast nature=relaxed held_item=cobblemon:leftovers ability=stormdrain hp_ev=160 defence_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('tangrowth moves=gigadrain,earthquake,sleeppowder,knockoff nature=sassy held_item=cobblemon:occa_berry ability=regenerator hp_ev=160 special_defence_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('exeggutor moves=psychic,energyball,ancientpower,synthesis nature=quiet held_item=cobblemon:tanga_berry ability=harvest hp_ev=160 special_attack_ev=160 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('victreebel moves=swordsdance,poisonjab,leafblade,strengthsap nature=brave held_item=cobblemon:figy_berry ability=gluttony hp_ev=180 attack_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    return 1;
+};
+
+t.data == 'SPLITFIVE' ? {
+    q.party.add_by_properties('trevenant moves=trickroom,woodhammer,shadowclaw,curse nature=relaxed held_item=cobblemon:mental_herb ability=naturalcure hp_ev=180 defence_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('cradily moves=toxic,leechseed,protect,rockblast nature=relaxed held_item=cobblemon:leftovers ability=stormdrain hp_ev=180 defence_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('tangrowth moves=gigadrain,earthquake,sludgebomb,focusblast nature=sassy held_item=cobblemon:assault_vest ability=regenerator hp_ev=180 special_defence_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('lurantis moves=superpower,leafstorm,knockoff,synthesis nature=sassy held_item=cobblemon:coba_berry ability=contrary hp_ev=180 special_defence_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('exeggutor moves=trickroom,leafstorm,psyshock,ancientpower nature=quiet held_item=cobblemon:eject_pack ability=harvest hp_ev=180 special_attack_ev=180 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('victreebel moves=swordsdance,poisonjab,leafblade,strengthsap nature=brave held_item=cobblemon:figy_berry ability=gluttony hp_ev=220 attack_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    return 1;
+};
+
+t.data == 'SPLITSIX' ? {
+    q.party.add_by_properties('trevenant moves=trickroom,woodhammer,shadowclaw,curse nature=relaxed held_item=cobblemon:mental_herb ability=naturalcure hp_ev=220 defence_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('cradily moves=toxic,leechseed,protect,rockblast nature=relaxed held_item=cobblemon:leftovers ability=stormdrain hp_ev=220 defence_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('tangrowth moves=gigadrain,earthquake,sludgebomb,focusblast nature=sassy held_item=cobblemon:assault_vest ability=regenerator hp_ev=220 special_defence_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('lurantis moves=superpower,leafstorm,knockoff,synthesis nature=sassy held_item=cobblemon:miracle_seed ability=contrary hp_ev=220 special_defence_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('exeggutor moves=trickroom,leafstorm,psyshock,ancientpower nature=quiet held_item=cobblemon:eject_pack ability=harvest hp_ev=220 special_attack_ev=220 level=' + (q.player.party.highest_level) + t.constants); 
+    q.party.add_by_properties('victreebel moves=swordsdance,poisonjab,leafblade,strengthsap nature=brave ability=chlorophyll hp_ev=252 attack_ev=252 level=' + (q.player.party.highest_level) + t.constants); 
     return 1;
 };
 
