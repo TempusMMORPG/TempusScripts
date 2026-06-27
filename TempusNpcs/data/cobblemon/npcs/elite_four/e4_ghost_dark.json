@@ -12,6 +12,7 @@
     "battleConfiguration": {
         "canChallenge": true
     },
+    "battleAIConfigId": "smarttrainers:basic",
     "autoHealParty": true,
     "ai": [
         {
@@ -26,19 +27,19 @@
         {
             "type": "set_variables",
             "variableValues": {
-                "on_player_wins": "'q.run_script(\\'cobblemon:e4_fire_psychic_defeated\\');'",
+                "on_player_wins": "'q.run_script(\\'cobblemon:e4_ghost_dark_defeated\\');'",
                 "on_player_loses": "'q.run_script(\\'cobblemon:elite_four_fail\\');'"
             }
         }
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:e4_fire_psychic_interaction"
+        "dialogue": "cobblemon:e4_ghost_dark_interaction"
     },
     "skill": 5,
     "party": {
         "type": "script",
-        "script": "cobblemon:e4_fire_psychic",
+        "script": "cobblemon:e4_ghost_dark",
         "isStatic": false
     }
 }
