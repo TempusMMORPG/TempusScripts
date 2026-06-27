@@ -12,6 +12,7 @@
   "battleConfiguration": {
     "canChallenge": true
   },
+  "battleAIConfigId": "smarttrainers:basic",
   "autoHealParty": true,
   "ai": [
     {
