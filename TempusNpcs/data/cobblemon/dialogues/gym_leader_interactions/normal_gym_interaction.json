@@ -20,10 +20,26 @@
     },
     "pages": [
         {
+            "id": "reject",
+            "speaker": "npc",
+            "lines": [
+                "Listen I'm trying to get my doctorate and I'm working on my dissertation. I'm not going to waste my time fighting third rates."
+            ],
+            "input": "q.dialogue.set_page('reject_2');"
+        },
+        {
+            "id": "reject_2",
+            "speaker": "npc",
+            "lines": [
+                "Once you beat the others in the library, I'll hear you out."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Well, well. Another challenger, huh? I hope you didn't come here expecting a warm welcome."
+                "Can't be interrupted for 5 minutes... Fine I'll do my job."
             ],
             "input": [
                 "q.npc.play_animation('thinking', q.player.uuid);",
@@ -34,7 +50,7 @@
             "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "You think you have what it takes to outsmart me and my team? Don't waste my time if you're not serious."
+                "I'm Reid, temporary Gym Leader of La Relance, I wanna get this over with as soon as possible."
             ],
             "input": {
                 "type": "option",
@@ -61,7 +77,7 @@
             "id": "battle_start",
             "speaker": "npc",
             "lines": [
-                "Interesting. Let's see if you can back up your words with skill."
+                "Okay, I guess beating you up should count as my study break."
             ],
             "escapeAction": "0",
             "input": [
@@ -73,7 +89,7 @@
             "id": "post_defeat",
             "speaker": "npc",
             "lines": [
-                "Even in defeat, I find something to learn. I strongly encourage you to do the same."
+                "Sorry for being an asshole earlier, you're strong, but don't stop learning."
             ],
             "input": "q.dialogue.close();"
         }

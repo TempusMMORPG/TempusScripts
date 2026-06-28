@@ -90,7 +90,7 @@
             "id": "post_defeat",
             "speaker": "npc",
             "lines": [
-                "Feel free to take a look around the factory and town. If you run into Eira...tell her I hope she is doing well..."
+                "Feel free to take a look around the factory and town. Don't take any samples though."
             ],
             "input": "q.dialogue.close();"
         }

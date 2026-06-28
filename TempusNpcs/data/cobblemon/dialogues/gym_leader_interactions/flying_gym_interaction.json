@@ -40,7 +40,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Nice battling trainer! I could here the cheers from economy class all the way up here! I'm Capt. Atlas, the pilot of this flight and a proud gym leader."
+                "Nice battling trainer! I could here the cheers from economy class all the way up here!"
             ],
             "input": [
                 "q.npc.play_animation('chatting', q.player.uuid);",
@@ -51,7 +51,7 @@
             "id": "greeting2",
             "speaker": "npc",
             "lines": [
-                "So, I take it you are here for a battle? Well, the skies are only for those who demand precision and determination."
+                "I'm Capt. Atlas, the pilot of this flight and the proud Gym Leader for Unity City."
             ],
             "input": [
                 "q.npc.play_animation('thinking', q.player.uuid);",
@@ -89,7 +89,7 @@
             "id": "battle_start",
             "speaker": "npc",
             "lines": [
-                "I see, then let's see if you can truly soar higher!"
+                "Well then, be careful to not get shot down!"
             ],
             "escapeAction": "0",
             "input": [

@@ -26,7 +26,10 @@
             "lines": [
                 "Hmm... Sorry can't talk if it's urgent talk to one of the other rangers."
             ],
-            "input": "q.dialogue.close();"
+            "input": [
+                "q.npc.play_animation('shake_head', q.player.uuid);",
+                "q.dialogue.close;"
+            ]
         },
         {
             "id": "greeting",
@@ -43,7 +46,17 @@
             "id": "1",
             "speaker": "npc",
             "lines": [
-                "Oh! My apologies, you must be a new challenger! Sorry, we have been getting a lot of offers as of late."
+                "Oh! Sorry, you must be a new challenger! Sorry, we have been getting a lot of offers as of late."
+            ],
+            "input": [
+                "q.dialogue.set_page('2');"
+            ]
+        },
+        {
+            "id": "2",
+            "speaker": "npc",
+            "lines": [
+                "I'm Holly, protector of this park, and Gym Leader of Newtown."
             ],
             "input": [
                 "q.dialogue.set_page('battle_prompt');"
@@ -53,7 +66,7 @@
             "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "Anyway, I believe progress shouldn't erase nature. Do you believe that too?"
+                "As long as you're not trying to chase us out, you're welcome to battle me!"
             ],
             "input": {
                 "type": "option",
@@ -80,7 +93,7 @@
             "id": "battle_start",
             "speaker": "npc",
             "lines": [
-                "Well, I expect you to show me that progress through battle!"
+                "Alright! I'll show you the power that comes with nature!"
             ],
             "escapeAction": "0",
             "input": [
