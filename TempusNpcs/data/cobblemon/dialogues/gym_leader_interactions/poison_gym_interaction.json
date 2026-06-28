@@ -1,6 +1,7 @@
 {
     "initializationAction": [
-        "q.player.data.poison_gym_defeated ? q.dialogue.set_page('post_defeat');"
+        "q.player.data.poison_gym_defeated ? q.dialogue.set_page('post_defeat');",
+        "q.player.data.poison_trainer_defeat_count >= 4 ? q.dialogue.set_page('greeting');"
     ],
     "speakers": {
         "npc": {
@@ -19,6 +20,14 @@
         }
     },
     "pages": [
+        {
+            "id": "reject",
+            "speaker": "npc",
+            "lines": [
+                "Sorry man, I only fight challengers when I'm on the clock. Catch me after my break."
+            ],
+            "input": "q.dialogue.close();"
+        },
         {
             "id": "greeting",
             "speaker": "npc",
@@ -73,7 +82,7 @@
             "id": "post_defeat",
             "speaker": "npc",
             "lines": [
-                "Don't take this the wrong way, but I kinda envy you—being able to come and go as you please..."
+                "Don't take this the wrong way, but I kinda envy you being able to come and go as you please..."
             ],
             "input": "q.dialogue.close();"
         }

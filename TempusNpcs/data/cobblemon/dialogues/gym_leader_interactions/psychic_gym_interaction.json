@@ -1,6 +1,7 @@
 {
     "initializationAction": [
-        "q.player.data.dragon_gym_defeated ? q.dialogue.set_page('post_defeat');"
+        "q.player.data.psychic_gym_defeated ? q.dialogue.set_page('post_defeat');",
+        "q.player.data.psychic_trainer_defeat_count >= 4 ? q.dialogue.set_page('greeting');"
     ],
     "speakers": {
         "npc": {
@@ -31,7 +32,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Can't believe there's the possibility of a real Deoxys landing here in Tempus, and I'm stuck dealing with challengers."
+                "Great a challenger, the reason why I'm missing out on the greatest thing to happen to this region."
             ],
             "input": [
                 "q.npc.play_animation('chatting', q.player.uuid);",
@@ -42,7 +43,7 @@
             "id": "greeting2",
             "speaker": "npc",
             "lines": [
-                "Well as I'm missing out on alien life landing here in Tempus might as well take my anger out on you."
+                "I'm Cassie, leader of the Dell Village Gym blah blah blah let's get this over with."
             ],
             "input": [
                 "q.npc.play_animation('thinking', q.player.uuid);",
@@ -53,7 +54,7 @@
             "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "I'm Cassie, leader of the Dell Village Gym blah blah blah let's get this over with."
+                "Sooner this day is done with, sooner I can go to the crash site. Don't waste my time any longer."
             ],
             "input": {
                 "type": "option",
@@ -62,7 +63,7 @@
                     {
                         "text": "§c⚔ Battle ⚔§r",
                         "value": "battle",
-                        "isSelectable": "q.player.data.dragon_gym_defeated == false",
+                        "isSelectable": "q.player.data.psychic_gym_defeated == false",
                         "action": [
                             "q.npc.play_animation('salute', q.player.uuid);",
                             "q.dialogue.set_page('battle_start');"
@@ -80,7 +81,7 @@
             "id": "battle_start",
             "speaker": "npc",
             "lines": [
-                "Maybe this'll distract me for a few seconds..."
+                "Time to vent my frustrations on you."
             ],
             "escapeAction": "0",
             "input": [
@@ -92,7 +93,7 @@
             "id": "post_defeat",
             "speaker": "npc",
             "lines": [
-                "I'm getting new information on the crash. I don't have time for you."
+                "I have better things to do than talk to you. Leave."
             ],
             "input": "q.dialogue.close();"
         }

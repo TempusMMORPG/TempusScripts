@@ -1,5 +1,6 @@
 {
     "initializationAction": [
+        "q.player.data.grass_trainer_defeat_count >= 4 ? q.dialogue.set_page('greeting');",
         "q.player.data.grass_gym_defeated ? q.dialogue.set_page('post_defeat');"
     ],
     "speakers": {
@@ -19,6 +20,14 @@
         }
     },
     "pages": [
+        {
+            "id": "reject",
+            "speaker": "npc",
+            "lines": [
+                "Hmm... Sorry can't talk if it's urgent talk to one of the other rangers."
+            ],
+            "input": "q.dialogue.close();"
+        },
         {
             "id": "greeting",
             "speaker": "npc",

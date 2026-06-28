@@ -1,5 +1,6 @@
 {
     "initializationAction": [
+        "q.player.data.ice_trainer_defeat_count >= 4 ? q.dialogue.set_page('greeting');",
         "q.player.data.ice_gym_defeated ? q.dialogue.set_page('post_defeat');"
     ],
     "speakers": {
@@ -20,6 +21,22 @@
     },
     "pages": [
         {
+            "id": "reject",
+            "speaker": "npc",
+            "lines": [
+                "Hey there! I'm a bit busy right now, the workers have been restless lately due to long hours."
+            ],
+            "input": "q.dialogue.set_page('reject_2');"
+        },
+        {
+            "id": "reject_2",
+            "speaker": "npc",
+            "lines": [
+                "I think battling them will lower their stress once you help them out I'll make time for you."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
             "id": "greeting",
             "speaker": "npc",
             "lines": [
@@ -34,7 +51,7 @@
             "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "So, you wanna battle, huh? I warn ya, my team hits like a blizzard..."
+                "So, you wanna battle, huh? I got a few minutes to spare."
             ],
             "input": {
                 "type": "option",

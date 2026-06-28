@@ -1,5 +1,6 @@
 {
     "initializationAction": [
+        "q.player.data.fire_trainer_defeat_count >= 4 ? q.dialogue.set_page('greeting');",
         "q.player.data.fire_gym_defeated ? q.dialogue.set_page('post_defeat');"
     ],
     "speakers": {
@@ -25,6 +26,14 @@
         }
     },
     "pages": [
+        {
+            "id": "reject",
+            "speaker": "npc",
+            "lines": [
+                "A challenger? I don't got time for you, got too many customers to serve."
+            ],
+            "input": "q.dialogue.close();"
+        },
         {
             "id": "greeting",
             "speaker": "npc",

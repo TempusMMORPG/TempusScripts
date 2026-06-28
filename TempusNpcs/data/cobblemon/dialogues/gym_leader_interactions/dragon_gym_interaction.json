@@ -25,7 +25,7 @@
             "id": "reject",
             "speaker": "npc",
             "lines": [
-                "I can't tell if you are a grand feast, or a mere morsel yet. Defeat the other warriors first."
+                "Only warriors can stand in this ring. Prove yourself first, then return to me."
             ],
             "input": "q.dialogue.close();"
         },
@@ -55,7 +55,7 @@
             "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "I cannot wait any longer, let us battle!"
+                "Come now, I can hardly wait any longer!"
             ],
             "input": {
                 "type": "option",
@@ -82,7 +82,7 @@
             "id": "battle_start",
             "speaker": "npc",
             "lines": [
-                "I can tell this will be a great battle!"
+                "Let us find glory in this battle!"
             ],
             "escapeAction": "0",
             "input": [

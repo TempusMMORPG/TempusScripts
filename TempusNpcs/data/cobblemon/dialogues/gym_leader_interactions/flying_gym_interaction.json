@@ -1,5 +1,6 @@
 {
     "initializationAction": [
+        "q.player.data.flying_trainer_defeat_count >= 4 ? q.dialogue.set_page('greeting');",
         "q.player.data.flying_gym_defeated ? q.dialogue.set_page('post_defeat');"
     ],
     "speakers": {
@@ -20,10 +21,26 @@
     },
     "pages": [
         {
+            "id": "reject",
+            "speaker": "npc",
+            "lines": [
+                "Hey there! You're here to fight me right? The special thing about this flight is the in-flight entertainment is live battles!"
+            ],
+            "input": "q.dialogue.set_page('reject_2');"
+        },
+        {
+            "id": "reject_2",
+            "speaker": "npc",
+            "lines": [
+                "Fight the Flight Attendants first so the other passengers get their money's worth."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Oh? Another trainer? I'm Capt. Atlas, the pilot of this flight and a proud gym leader."
+                "Nice battling trainer! I could here the cheers from economy class all the way up here! I'm Capt. Atlas, the pilot of this flight and a proud gym leader."
             ],
             "input": [
                 "q.npc.play_animation('chatting', q.player.uuid);",

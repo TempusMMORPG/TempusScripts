@@ -24,7 +24,7 @@
             "id": "reject",
             "speaker": "npc",
             "lines": [
-                "Why are you trying to skip to the boss? Go back and defeat the grunts first."
+                "Why are you trying to skip to the champion of the arena? Go back and defeat the fodder first."
             ],
             "input": "q.dialogue.close();"
         },
