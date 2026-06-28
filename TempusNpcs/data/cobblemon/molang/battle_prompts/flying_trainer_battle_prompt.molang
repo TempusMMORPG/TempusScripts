@@ -1,0 +1,13 @@
+t.battle_prompts = q.array(
+    'Are you interested in complementary peanuts?',
+    'We are about to experience some turbulence, try not to lose your footing',
+    'I am going to show you a first class experience',
+    'In-flight entertainment is about to start, are you ready?',
+    'Captain is near retirement, I wonder if his co-pilot is ready to replace him',
+    'We have reached our target altitude, best time for a battle'
+);
+
+t.array_length = q.length(t.battle_prompts);
+t.random_int = math.random_integer(0, (t.array_length - 1));
+
+return t.battle_prompts[t.random_int];

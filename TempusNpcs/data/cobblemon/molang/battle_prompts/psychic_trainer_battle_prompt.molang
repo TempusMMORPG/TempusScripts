@@ -1,0 +1,13 @@
+t.battle_prompts = q.array(
+    'A Deoxys might have landed near Rimal! I cant wait to get more information',
+    'Cassiopeia is the lead researcher in this observatory. Be careful around her she's in a really bad mood.',
+    'Sometimes when were lucky we see Rayquaza in the ozone layer from the observatory!',
+    'The mysteries of the Psychic type have to be connected to space...',
+    'I told a girl I work in Astronomy and she asked me my star sign...',
+    'I hope once the rangers take care of Deoxys theyll sent it to us for study.'
+);
+
+t.array_length = q.length(t.battle_prompts);
+t.random_int = math.random_integer(0, (t.array_length - 1));
+
+return t.battle_prompts[t.random_int];

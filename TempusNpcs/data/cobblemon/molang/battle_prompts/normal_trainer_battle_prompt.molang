@@ -1,0 +1,13 @@
+t.battle_prompts = q.array(
+    'Reid is such a prick, why did professor leave him in charge.',
+    'I got a test in a few hours, maybe you can help me cram.',
+    'Professor used to buy us drinks all the time after helping him. Reid doesnt go drinking at all.',
+    'Reids supposed to be the interim Gym Leader, but hes held this position for almost a year by now.',
+    'Most of the people here go to Unity University. I graduated but havent been able to find a job though...',
+    'Im going to college to be a professional battler, but Reid says Im not even good enough to be a practice partner.'
+);
+
+t.array_length = q.length(t.battle_prompts);
+t.random_int = math.random_integer(0, (t.array_length - 1));
+
+return t.battle_prompts[t.random_int];

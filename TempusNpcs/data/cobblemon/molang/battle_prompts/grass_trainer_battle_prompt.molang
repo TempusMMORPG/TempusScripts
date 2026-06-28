@@ -1,0 +1,13 @@
+t.battle_prompts = q.array(
+    'We keep on fighting off real estate developers for months now. They dont understand the importance of nature.',
+    'Have you tried eating a Sitrus Berry before? Theyre kinda bland.',
+    'Be sure not to trample anything!',
+    'Next time I have a day off, Im gonna visit the Safari Zone.',
+    'Newtown is really nice! Kind of boring though.',
+    'I love nature and all, but I hate bug-types. All of my Pokemon do so poorly against them.'
+);
+
+t.array_length = q.length(t.battle_prompts);
+t.random_int = math.random_integer(0, (t.array_length - 1));
+
+return t.battle_prompts[t.random_int];

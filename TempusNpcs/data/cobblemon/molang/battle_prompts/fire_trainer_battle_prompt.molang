@@ -1,0 +1,13 @@
+t.battle_prompts = q.array(
+    'Got burned earlier today from touching a hot plate. Maybe burning you will make me feel better',
+    'I hope I can get a good tip out of this battle',
+    'Customers today havent been tipping much...',
+    'Welcome sir, todays special is a generous helping of defeat',
+    'Cant wait to clock out',
+    'Gordon looks scary, but he is a nice guy!'
+);
+
+t.array_length = q.length(t.battle_prompts);
+t.random_int = math.random_integer(0, (t.array_length - 1));
+
+return t.battle_prompts[t.random_int];

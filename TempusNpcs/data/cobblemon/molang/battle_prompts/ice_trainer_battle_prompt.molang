@@ -1,0 +1,13 @@
+t.battle_prompts = q.array(
+    'I bit into a Vanillite the other day and I still cant feel my tongue',
+    'Hey youre dressed a bit lightly, dont get frostbite in here!',
+    'Huh I dont think its supposed to be that color.',
+    'Melba apparently has a sister, but I havent seen her around before.',
+    'I have so many layers and its still so cold...',
+    'No one will notice if I take a bite...'
+);
+
+t.array_length = q.length(t.battle_prompts);
+t.random_int = math.random_integer(0, (t.array_length - 1));
+
+return t.battle_prompts[t.random_int];
