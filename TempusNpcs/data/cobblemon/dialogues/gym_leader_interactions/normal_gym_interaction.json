@@ -1,6 +1,7 @@
 {
     "initializationAction": [
-        "q.player.data.normal_gym_defeated ? q.dialogue.set_page('post_defeat');"
+        "q.player.data.normal_gym_defeated ? q.dialogue.set_page('post_defeat');",
+        "q.player.data.normal_trainer_defeat_count >= 4 ? q.dialogue.set_page('greeting');"
     ],
     "speakers": {
         "npc": {
